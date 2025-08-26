@@ -12,11 +12,15 @@ import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-1">
           <MapPin size={16} className="text-accent" />
-          <span class="text-xs">1510 Glen Ayr Dr, Lakewood, CO 80215</span>
+          <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noreferrer" class="text-xs hover:text-accent transition-colors">
+            1510 Glen Ayr Dr, Lakewood, CO 80215
+          </a>
         </div>
         <div class="flex items-center gap-1">
           <Phone size={16} className="text-accent" />
-          <span class="text-xs">(970) 473-7080</span>
+          <a href="tel:9706164481" class="text-xs hover:text-accent transition-colors phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            (970) 616-4481
+          </a>
         </div>
       </div>
       <div>

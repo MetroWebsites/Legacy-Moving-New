@@ -27,5 +27,27 @@ const { title, description, ogImage } = Astro.props;
       <NewWebsiteBanner />
       <Footer />
     </div>
+    
+    <script>
+      // Handle phone links differently on desktop vs mobile
+      document.addEventListener('DOMContentLoaded', () => {
+        const phoneLinks = document.querySelectorAll('.phone-link');
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        phoneLinks.forEach(link => {
+          if (!isMobile && link.hasAttribute('data-google-link')) {
+            const googleLink = link.getAttribute('data-google-link');
+            
+            link.addEventListener('click', (e) => {
+              if (!isMobile) {
+                e.preventDefault();
+                window.open(googleLink, '_blank');
+              }
+              // On mobile, the default tel: behavior will work
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
