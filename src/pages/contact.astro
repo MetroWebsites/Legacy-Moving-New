@@ -1,0 +1,182 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { MapPin, Phone, Clock, Mail, Facebook, Instagram } from "lucide-react";
+---
+
+<BaseLayout
+  title="Contact Us | Legacy Moving Denver | Get a Free Moving Quote"
+  description="Contact Legacy Moving Denver for a free moving quote. Our professional team is ready to help with your residential or commercial move in Denver, Colorado."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Contact Us</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Have questions about our moving services? Get in touch with our team for a free quote or to learn more about how we can help with your move.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Get in Touch</h2>
+          <p class="text-muted-foreground mb-8">
+            Fill out the form below and our team will get back to you as soon as possible. We're here to answer any questions you may have about our services.
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <ContactForm client:load />
+          </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Contact Information</h2>
+          <p class="text-muted-foreground mb-8">
+            You can reach us by phone, email, or by visiting our office in Lakewood. We're available 7 days a week to assist with your moving needs.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin size={20} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Our Location</h3>
+                  <p class="text-muted-foreground">
+                    1510 Glen Ayr Dr, Suite 9<br>
+                    Lakewood, CO 80215
+                  </p>
+                  <a 
+                    href="https://maps.google.com/?q=1510+Glen+Ayr+Dr+Suite+9+Lakewood+CO+80215" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    class="text-primary font-medium inline-flex items-center hover:underline mt-2"
+                  >
+                    Get Directions
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone size={20} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Phone</h3>
+                  <p class="text-muted-foreground mb-2">
+                    Call us to speak directly with our team:
+                  </p>
+                  <a 
+                    href="tel:9706164481" 
+                    class="text-primary font-medium text-lg hover:underline"
+                  >
+                    (970) 616-4481
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail size={20} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Email</h3>
+                  <p class="text-muted-foreground mb-2">
+                    Send us an email with your questions or quote request:
+                  </p>
+                  <a 
+                    href="mailto:legacymovingdenver@gmail.com" 
+                    class="text-primary font-medium hover:underline"
+                  >
+                    legacymovingdenver@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Clock size={20} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Business Hours</h3>
+                  <p class="text-muted-foreground">
+                    Monday - Sunday<br>
+                    8:00 AM - 6:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Facebook size={20} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Connect With Us</h3>
+                  <p class="text-muted-foreground mb-2">
+                    Follow us on social media for updates and moving tips:
+                  </p>
+                  <div class="flex space-x-4">
+                    <a 
+                      href="https://facebook.com/LegacyMovingDenver" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      class="text-primary font-medium hover:underline flex items-center"
+                    >
+                      <Facebook size={16} className="mr-1" />
+                      Facebook
+                    </a>
+                    <a 
+                      href="https://www.yelp.com/biz/legacy-moving-denver-lakewood" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      class="text-primary font-medium hover:underline flex items-center"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M18 6V4H6v2"/><path d="M18 12v-2H6v2"/><path d="M18 18v-2H6v2"/><path d="M12 6v12"/></svg>
+                      Yelp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-8 pb-16">
+    <div class="container">
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.835928738856!2d-105.09994348480753!3d39.74178997944934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b81e1a85d5373%3A0x42ea3df8a6cbbaa5!2s1510%20Glen%20Ayr%20Dr%2C%20Lakewood%2C%20CO%2080215%2C%20USA!5e0!3m2!1sen!2sca!4v1625598560000!5m2!1sen!2sca" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          title="Legacy Moving Denver location map"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

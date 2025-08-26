@@ -1,0 +1,208 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Trophy, Clock, TruckIcon, Users, MapPin } from "lucide-react";
+---
+
+<BaseLayout
+  title="About Us | Legacy Moving Denver | Professional Movers in Colorado"
+  description="Learn about Legacy Moving Denver, our team, and our commitment to providing exceptional moving services. Established in 2018, we serve the Denver metropolitan area with residential and commercial moving services."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600518464441-9306b01a3248?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">About Legacy Moving Denver</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          We're more than just a moving company – we're your partners in making transitions smooth and stress-free.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Story</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Established in 2018, Legacy Moving Denver was founded with a simple mission: to provide the best moving service possible for customers in the Denver metropolitan area.
+            </p>
+            <p class="text-muted-foreground">
+              We understand that moving can be stressful, which is why we strive to make the process as smooth as possible. Whether you're moving across town or across the country, our team is committed to handling your belongings with the utmost care and attention.
+            </p>
+            <p class="text-muted-foreground">
+              At Legacy Moving Denver, we are in this business to serve you. Each item is handled as if it were our own, and you can trust our professional movers to take care of you every step of the way.
+            </p>
+            <div class="pt-4">
+              <a href="/contact" class={buttonVariants({ className: 'mt-2' })}>
+                Contact Us Today
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&q=80" 
+              alt="Legacy Moving Denver team"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-5 -right-5 bg-white p-5 rounded-lg shadow-lg border border-gray-100">
+            <div class="flex flex-col items-center text-center">
+              <span class="text-xl font-display font-bold text-secondary">Est. 2018</span>
+              <p class="text-sm text-muted-foreground">Serving Denver & Beyond</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Meet Our Team</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Our dedicated team of professionals is committed to making your move as seamless and stress-free as possible.
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/3">
+              <div class="rounded-lg overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&q=80" 
+                  alt="Andrew McFarland - CEO & Founder"
+                  class="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="font-display font-bold text-2xl mb-2 text-secondary">Andrew McFarland</h3>
+              <p class="text-primary font-medium mb-4">CEO & Founder</p>
+              <div class="space-y-4">
+                <p class="text-muted-foreground">
+                  As the founder and CEO of Legacy Moving Denver, Andrew McFarland ensures that everything runs smoothly. Whether his team is taking phone calls, setting the schedule, or showing up for moves throughout the week, Andrew ensures the customer experience is as seamless as possible.
+                </p>
+                <p class="text-muted-foreground">
+                  With a background in customer service and logistics, Andrew founded Legacy Moving Denver in 2018 with a vision to create a moving company that truly puts the customer first.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Our Values</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          These core principles guide everything we do and are the foundation of our commitment to excellence.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Value 1 -->
+        <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <Trophy size={32} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary text-center">Excellence</h3>
+          <p class="text-muted-foreground text-center">
+            We strive for excellence in every aspect of our service, from the first phone call to the final box being unloaded.
+          </p>
+        </div>
+        
+        <!-- Value 2 -->
+        <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <Users size={32} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary text-center">Customer Focus</h3>
+          <p class="text-muted-foreground text-center">
+            We are in this business to serve you. Your satisfaction is our primary goal, and we tailor our services to meet your specific needs.
+          </p>
+        </div>
+        
+        <!-- Value 3 -->
+        <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <TruckIcon size={32} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary text-center">Care & Respect</h3>
+          <p class="text-muted-foreground text-center">
+            We handle each item as if it were our own, treating your belongings with the utmost care and respect throughout the moving process.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Service Area</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Based in Lakewood, Colorado, Legacy Moving Denver proudly serves the entire Denver metropolitan area and beyond. Whether you're moving within Denver, to a neighboring city, or across the country, our team is here to help.
+            </p>
+            <p class="text-muted-foreground">
+              We offer both local and long-distance moving services, ensuring that no matter where you're headed, we can help get you there.
+            </p>
+            <div class="pt-4 space-y-3">
+              <div class="flex items-center gap-2">
+                <MapPin size={20} className="text-primary" />
+                <span class="text-secondary font-medium">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <Clock size={20} className="text-primary" />
+                <span class="text-secondary font-medium">Mon-Sun: 8:00am - 6:00pm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=1200&auto=format&q=80" 
+            alt="Denver skyline"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Experience the Legacy Difference?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact us today for a free, no-obligation quote and let us help make your next move a smooth one.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-white/90 font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ variant: 'outline', size: 'lg', className: 'border-white text-white hover:bg-white hover:text-primary' })}>
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

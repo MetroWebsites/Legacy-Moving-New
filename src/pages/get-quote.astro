@@ -1,0 +1,223 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { CircleCheck, Clock, ShieldCheck, Award } from "lucide-react";
+---
+
+<BaseLayout
+  title="Get a Free Moving Quote | Legacy Moving Denver | Reliable Movers"
+  description="Request a free, no-obligation quote for your next move with Legacy Moving Denver. Our experienced team provides accurate estimates for residential and commercial moves."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Get a Free Moving Quote</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Fill out the form below to receive a free, no-obligation quote for your upcoming move. Our team will respond promptly with a detailed estimate.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Quote Form -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Request Your Free Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            We'll provide you with a detailed quote based on your specific moving needs. The more information you can provide, the more accurate your estimate will be.
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <ContactForm client:load />
+          </div>
+        </div>
+        
+        <!-- Benefits -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Why Choose Legacy Moving?</h2>
+          <p class="text-muted-foreground mb-8">
+            We're committed to providing exceptional service and value for your move. Here's what sets us apart:
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CircleCheck size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Transparent Pricing</h3>
+                  <p class="text-muted-foreground">
+                    No hidden fees or surprises. We provide clear, upfront pricing with no obligation. Unlike other companies, we don't start charging until we're on site.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <ShieldCheck size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Professional Care</h3>
+                  <p class="text-muted-foreground">
+                    Our experienced team treats your belongings as if they were their own, ensuring safe handling throughout the entire moving process.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Clock size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Efficient Service</h3>
+                  <p class="text-muted-foreground">
+                    Our customers consistently mention how our team completes moves in less time than expected, without sacrificing quality or care.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Award size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Highly Rated</h3>
+                  <p class="text-muted-foreground">
+                    With a 4.7-star rating across review platforms and 174+ positive reviews, our reputation speaks for itself.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Frequently Asked Questions</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Have questions about our quote process or services? Here are answers to some common questions.
+        </p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-6">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How do you determine the cost of my move?</h3>
+            <p class="text-muted-foreground">
+              We determine the cost of your move based on several factors, including the distance of the move, the volume and weight of your belongings, any specialty items that require special handling, and any additional services you request (such as packing or storage). We provide free, detailed estimates to ensure transparency.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How far in advance should I book my move?</h3>
+            <p class="text-muted-foreground">
+              We recommend booking your move as soon as you know your moving date, especially during peak moving season (May through September). For local moves, 2-4 weeks notice is ideal. For long-distance moves, 4-6 weeks notice is preferred. However, we do our best to accommodate last-minute moves when possible.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do you offer packing services?</h3>
+            <p class="text-muted-foreground">
+              Yes, we offer full-service packing as well as partial packing services. Our team can pack your entire home or just specific items that require special care. We use high-quality packing materials to ensure your belongings are protected during the move.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What forms of payment do you accept?</h3>
+            <p class="text-muted-foreground">
+              We accept various forms of payment, including credit cards (American Express, Discover, MasterCard, Visa), cash, and checks. Payment is typically due upon completion of the move.
+            </p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Are there any items you won't move?</h3>
+            <p class="text-muted-foreground">
+              For safety and legal reasons, there are certain items we cannot transport, including hazardous materials, perishable items, plants, and certain high-value items. We're happy to provide a full list of non-transportable items upon request.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Other Ways to Reach Us</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Prefer to contact us directly? Here are alternative ways to get in touch with our team.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Call Us</h3>
+          <p class="text-muted-foreground mb-4">
+            Speak directly with our team
+          </p>
+          <a 
+            href="tel:9706164481" 
+            class={buttonVariants({ variant: 'outline', className: 'w-full' })}
+          >
+            (970) 616-4481
+          </a>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Email Us</h3>
+          <p class="text-muted-foreground mb-4">
+            Send us an email anytime
+          </p>
+          <a 
+            href="mailto:legacymovingdenver@gmail.com" 
+            class={buttonVariants({ variant: 'outline', className: 'w-full text-xs sm:text-sm' })}
+          >
+            legacymovingdenver@gmail.com
+          </a>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Visit Us</h3>
+          <p class="text-muted-foreground mb-4">
+            Stop by our office
+          </p>
+          <a 
+            href="https://maps.google.com/?q=1510+Glen+Ayr+Dr+Suite+9+Lakewood+CO+80215" 
+            target="_blank"
+            rel="noreferrer"
+            class={buttonVariants({ variant: 'outline', className: 'w-full' })}
+          >
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

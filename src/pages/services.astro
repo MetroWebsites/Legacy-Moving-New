@@ -1,0 +1,357 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lucide-react";
+---
+
+<BaseLayout
+  title="Our Moving Services | Legacy Moving Denver | Local & Long Distance Movers"
+  description="Explore our comprehensive moving services including local & long-distance moving, packing, loading, and storage solutions. Get a free quote for your next move in Denver, CO."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600518464441-9306b01a3248?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Our Moving Services</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          From single-item deliveries to full home packing and moving, we make your Denver move easy, affordable, and stress-free.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residential Moving -->
+  <section id="residential" class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Package size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Residential Moving</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Whether you're moving from a studio apartment or a multi-bedroom house, our residential moving services are designed to make your relocation as smooth and stress-free as possible.
+            </p>
+            <p class="text-muted-foreground">
+              Our team of experienced movers will handle your belongings with care, ensuring that everything arrives at your new home safely and efficiently. We understand that every move is different, which is why we tailor our services to meet your specific needs.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Apartment moves</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Home relocations</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Senior moving assistance</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Small-scale relocations</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&auto=format&q=80" 
+            alt="Residential moving services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Moving -->
+  <section id="commercial" class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&q=80" 
+              alt="Commercial moving services"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Building size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Commercial Moving</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Our commercial moving services are designed to minimize downtime and disruption to your business operations. We understand that time is money, which is why we work efficiently to get your business up and running in its new location as quickly as possible.
+            </p>
+            <p class="text-muted-foreground">
+              From small office relocations to large corporate moves, our team has the experience and expertise to handle your commercial move with professionalism and care.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Office relocations</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Retail store moves</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Corporate relocations</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Equipment transportation</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Long Distance Moving -->
+  <section id="long-distance" class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Truck size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Long Distance Moving</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              If you're moving across the state or across the country, our long-distance moving services can help make your transition smoother. We provide the same level of care and attention to detail for our long-distance moves as we do for our local moves.
+            </p>
+            <p class="text-muted-foreground">
+              Our team will work with you to create a customized moving plan that meets your specific needs and timeline, ensuring a seamless relocation experience regardless of the distance.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Interstate moves</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Cross-country relocations</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Detailed planning and coordination</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Reliable delivery timelines</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1623767527904-0e6a3c436ac6?w=1200&auto=format&q=80" 
+            alt="Long distance moving services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packing Services -->
+  <section id="packing" class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1601585517830-7a3644a9de8d?w=1200&auto=format&q=80" 
+              alt="Packing services"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <PackageCheck size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Packing Services</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Packing can be one of the most time-consuming aspects of moving. Our professional packing services can help save you time and ensure that your belongings are packed securely for transportation.
+            </p>
+            <p class="text-muted-foreground">
+              Our team uses high-quality packing materials and techniques to protect your items, from delicate glassware to bulky furniture. We can pack your entire home or just specific items that require special care.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Full-home packing</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Partial packing services</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">High-quality packing materials</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Special care for fragile items</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading & Unloading -->
+  <section id="loading" class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <TruckIcon size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Loading & Unloading</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Need help with just the heavy lifting? Our loading and unloading services provide professional assistance with loading your packed items onto a moving truck and unloading them at your destination.
+            </p>
+            <p class="text-muted-foreground">
+              Our experienced team knows how to properly load a truck to maximize space and minimize the risk of damage during transit. We also take care to place your items exactly where you want them in your new home or office.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Efficient loading techniques</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Careful handling of all items</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Proper securing of items for transit</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Placement according to your preferences</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200&auto=format&q=80" 
+            alt="Loading and unloading services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storage Solutions -->
+  <section id="storage" class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1581281863883-2469417a1668?w=1200&auto=format&q=80" 
+              alt="Storage solutions"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Warehouse size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Storage Solutions</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Sometimes there's a gap between when you need to move out of your current location and when you can move into your new one. Our storage solutions provide a secure place for your belongings during this transition period.
+            </p>
+            <p class="text-muted-foreground">
+              We offer both short-term and long-term storage options in our secure facility in the Lakewood area. Your items are carefully inventoried and stored, giving you peace of mind during your transition.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Short-term storage</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Long-term storage</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Secure facility</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Flexible storage options</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get a Quote Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Get a Free Quote</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto mb-8">
+          Fill out the form below to request a free, no-obligation quote for your upcoming move. Our team will get back to you promptly with a detailed estimate.
+        </p>
+        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
