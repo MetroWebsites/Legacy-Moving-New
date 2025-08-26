@@ -1,21 +1,60 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
 import { buttonVariants } from "@/components/ui/button";
+import { Home, Truck, MapPin } from "lucide-react";
 ---
 
 <BaseLayout
-  title="404 - Not Found"
-  description="404 Error — this page was not found"
+  title="Page Not Found | Legacy Moving Denver"
+  description="The page you're looking for doesn't exist or has been moved. Return to the Legacy Moving Denver homepage."
 >
-  <div class="mt-32 flex flex-col items-center justify-center px-8">
-    <p class="text-muted-foreground text-sm">404</p>
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-      Page not found
-    </h1>
-    <p class="mb-4 leading-7 [&:not(:first-child)]:mt-6">
-      Sorry, we couldn't find the page you're looking for.
-    </p>
-    <a href="/" rel="noreferrer" class={buttonVariants()}> Go back home</a>
-  </div>
+  <section class="container flex items-center justify-center py-20 min-h-[calc(100vh-28rem)]">
+    <div class="flex max-w-[980px] flex-col items-center gap-6 text-center">
+      <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
+        <Truck size={40} className="text-primary" />
+      </div>
+      <h1
+        class="text-4xl sm:text-5xl font-display font-bold text-secondary"
+      >
+        404: Page Not Found
+      </h1>
+      <p class="text-muted-foreground max-w-[600px] text-lg mb-4">
+        The page you're looking for has moved or doesn't exist. Let us help you get back on the right route.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <a
+          href="/"
+          class={buttonVariants({ size: 'lg', className: 'gap-2' })}
+        >
+          <Home size={18} />
+          Back to Home
+        </a>
+        <a
+          href="/contact"
+          class={buttonVariants({ variant: 'outline', size: 'lg', className: 'gap-2' })}
+        >
+          <MapPin size={18} />
+          Contact Us
+        </a>
+      </div>
+      
+      <div class="mt-12 border-t border-gray-200 pt-8 w-full max-w-md">
+        <h2 class="text-xl font-display font-semibold mb-4 text-secondary">Popular Pages</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+          <li>
+            <a href="/services" class="text-primary hover:underline">Our Services</a>
+          </li>
+          <li>
+            <a href="/about-us" class="text-primary hover:underline">About Us</a>
+          </li>
+          <li>
+            <a href="/pricing" class="text-primary hover:underline">Pricing</a>
+          </li>
+          <li>
+            <a href="/get-quote" class="text-primary hover:underline">Get a Quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

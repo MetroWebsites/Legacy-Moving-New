@@ -5,33 +5,241 @@ import { buttonVariants } from "@/components/ui/button";
 ---
 
 <BaseLayout
-  title="Example title"
-  description="Example description"
+  title="Legacy Moving Denver | Professional Moving Services in Denver, CO"
+  description="Legacy Moving Denver offers affordable, reliable moving services for residential and commercial customers in Denver, Colorado. Call us today for a free quote!"
 >
-  <section class="container grid items-center gap-6 pt-6 pb-8 md:py-10">
-    <div class="flex max-w-[980px] flex-col items-start gap-2">
-      <h1
-        class="text-3xl leading-tight font-extrabold tracking-tighter md:text-4xl"
-      >
-        Example header
-      </h1>
-      <p class="text-muted-foreground max-w-[700px] text-lg">
-        Example introductory text
-      </p>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576158114254-e748df9a9b41?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative grid lg:grid-cols-2 gap-8 py-16 md:py-24">
+      <div class="flex flex-col justify-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Your Trusted <span class="text-accent">Moving Partner</span> in Denver
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
+          Professional, reliable, and affordable moving services for homes and businesses throughout Denver, Colorado.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-accent text-secondary font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="/services" class={buttonVariants({ variant: 'outline', size: 'lg', className: 'border-white text-white hover:bg-white/10' })}>
+            Our Services
+          </a>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-md">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <!-- KEEP ALL FORMS client:load !! DO NOT USE client:visible AS THIS CAUSES HYDRATION ISSUES!!-->
+          <ContactForm client:load />
+        </div>
+      </div>
     </div>
-    <div class="flex gap-4">
-      <a
-        href="https://ui.shadcn.com"
-        target="_blank"
-        rel="noreferrer"
-        class={buttonVariants()}
-      >
-        Example link
-      </a>
-    </div>
-    <!-- KEEP ALL FORMS client:load !! DO NOT USE client:visible AS THIS CAUSES HYDRATION ISSUES!!-->
-    <ContactForm client:load />
   </section>
+
+  <!-- Services Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Our Moving Services</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">We offer a comprehensive range of moving services designed to make your relocation as smooth and stress-free as possible.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Residential Moving</h3>
+          <p class="text-muted-foreground mb-4">We help families and individuals move homes with care and precision, from apartments to houses of any size.</p>
+          <a href="/services#residential" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Commercial Moving</h3>
+          <p class="text-muted-foreground mb-4">Our team specializes in office relocations, minimizing downtime and ensuring your business is back up quickly.</p>
+          <a href="/services#commercial" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Packing Services</h3>
+          <p class="text-muted-foreground mb-4">Let our experts carefully pack your belongings with premium materials for safe transportation.</p>
+          <a href="/services#packing" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m12 15 2 2 4-4"></path><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Loading & Unloading</h3>
+          <p class="text-muted-foreground mb-4">Our trained professionals will carefully load and unload your items, ensuring everything arrives safely.</p>
+          <a href="/services#loading" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M6 20h4"></path><path d="M14 10h4"></path><path d="M6 14h2"></path><path d="M6 4h2"></path><path d="M14 4h4"></path><path d="M14 14h4"></path><rect width="8" height="16" x="2" y="4" rx="1"></rect><rect width="8" height="16" x="14" y="4" rx="1"></rect></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Storage Solutions</h3>
+          <p class="text-muted-foreground mb-4">Secure, climate-controlled storage options for both short and long-term needs during your transition.</p>
+          <a href="/services#storage" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Specialty Moving</h3>
+          <p class="text-muted-foreground mb-4">Expert handling of pianos, antiques, artwork, and other high-value or delicate items requiring special care.</p>
+          <a href="/services#specialty" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Choose Legacy Moving Denver</h2>
+          <p class="text-muted-foreground mb-8">With years of experience serving the Denver community, we've built our reputation on reliability, professionalism, and exceptional customer service.</p>
+          
+          <div class="space-y-6">
+            <!-- Benefit 1 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-accent/20 text-accent rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Experienced Team</h3>
+                <p class="text-muted-foreground">Our highly trained and experienced movers handle your belongings with the utmost care and efficiency.</p>
+              </div>
+            </div>
+            
+            <!-- Benefit 2 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-accent/20 text-accent rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Customer Satisfaction</h3>
+                <p class="text-muted-foreground">Our 4.7-star rating speaks for itself. We prioritize your complete satisfaction with every move.</p>
+              </div>
+            </div>
+            
+            <!-- Benefit 3 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-accent/20 text-accent rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"></path><path d="m4.93 10.93 1.41 1.41"></path><path d="M2 18h2"></path><path d="M20 18h2"></path><path d="m19.07 10.93-1.41 1.41"></path><path d="M22 22H2"></path><path d="M16 6 8 14"></path><path d="m16 14-2-3-3-1-3 3"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Transparent Pricing</h3>
+                <p class="text-muted-foreground">No hidden fees or surprises. We provide clear, upfront pricing with free detailed estimates.</p>
+              </div>
+            </div>
+            
+            <!-- Benefit 4 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-accent/20 text-accent rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Reliable & Punctual</h3>
+                <p class="text-muted-foreground">We value your time and always arrive on schedule, completing moves efficiently within the agreed timeframe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1600518464441-9306b01a3248?w=1200&auto=format&q=80" 
+              alt="Professional movers carrying boxes"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-accent p-6 rounded-lg shadow-lg">
+            <div class="flex flex-col items-center text-center">
+              <span class="text-4xl font-display font-bold text-secondary">4.7</span>
+              <div class="flex text-secondary mb-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon><line x1="12" y1="2" x2="12" y2="17.77"></line><polygon points="12 2 8.91 8.26 2 9.27 7 14.14 5.82 21.02 12 17.77" fill="currentColor"></polygon></svg>
+              </div>
+              <span class="text-xs text-secondary/80">174 Reviews on Yelp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Make Your Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact us today for a free, no-obligation quote and experience the Legacy Moving Denver difference.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-accent hover:text-secondary font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9704737080" class={buttonVariants({ variant: 'outline', size: 'lg', className: 'border-white text-white hover:bg-white/10' })}>
+            Call (970) 473-7080
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form for Mobile Only (shown below services on mobile) -->
+  <section class="py-16 bg-gray-50 lg:hidden">
+    <div class="container">
+      <div class="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto">
+        <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+        <!-- KEEP ALL FORMS client:load !! DO NOT USE client:visible AS THIS CAUSES HYDRATION ISSUES!!-->
+        <ContactForm client:load />
+      </div>
+    </div>
+  </section>
+  
   <!-- DO NOT REMOVE - Necessary for making visual edits via new.website! -->
   <script src="https://api.new.website/static/new-website.js"></script>
 </BaseLayout>

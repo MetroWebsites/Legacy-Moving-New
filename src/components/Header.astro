@@ -1,29 +1,123 @@
 ---
 import { buttonVariants } from "@/components/ui/button";
+import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
 ---
 
 <header
-  class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur"
+  class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur shadow-sm"
 >
-  <div
-    class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
-  >
-    <div class="flex gap-6 md:gap-10">
-      <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold">Home</span>
-      </a>
-    </div>
-    <div class="flex flex-1 items-center justify-end space-x-4">
-      <nav class="flex items-center space-x-1">
-        <a
-          href="https://github.com/"
-          target="_blank"
-          rel="noreferrer"
-          class={buttonVariants({ variant: 'ghost' })}
-        >
-          Example link
-        </a>
-      </nav>
+  <!-- Top bar with contact info -->
+  <div class="bg-secondary text-white py-2 hidden md:block">
+    <div class="container flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1">
+          <MapPin size={16} className="text-accent" />
+          <span class="text-xs">1510 Glen Ayr Dr, Lakewood, CO 80215</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <Phone size={16} className="text-accent" />
+          <span class="text-xs">(970) 473-7080</span>
+        </div>
+      </div>
+      <div>
+        <span class="text-xs">Mon-Sun: 8:00am - 6:00pm</span>
+      </div>
     </div>
   </div>
+  
+  <!-- Main navigation -->
+  <div
+    class="container flex h-16 items-center justify-between"
+  >
+    <div class="flex items-center gap-2">
+      <Truck size={28} className="text-primary" />
+      <a href="/" class="flex items-center">
+        <span class="font-display font-bold text-xl md:text-2xl tracking-tight">Legacy<span class="text-primary">Moving</span></span>
+      </a>
+    </div>
+    
+    <!-- Mobile menu button -->
+    <button 
+      id="mobile-menu-button" 
+      class="md:hidden flex items-center p-2"
+      aria-label="Toggle menu"
+    >
+      <Menu size={24} className="menu-icon" />
+      <X size={24} className="close-icon hidden" />
+    </button>
+    
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex items-center space-x-1">
+      <a
+        href="/"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        Home
+      </a>
+      <a
+        href="/about-us"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        About Us
+      </a>
+      <a
+        href="/services"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        Services
+      </a>
+      <a
+        href="/pricing"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        Pricing
+      </a>
+      <a
+        href="/contact"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        Contact
+      </a>
+      <a
+        href="/get-quote"
+        class={buttonVariants({ size: 'sm' })}
+      >
+        Get a Quote
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Mobile navigation menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+    <nav class="container flex flex-col py-4">
+      <a href="/" class="py-2 px-4 hover:bg-muted rounded">Home</a>
+      <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
+      <a href="/services" class="py-2 px-4 hover:bg-muted rounded">Services</a>
+      <a href="/pricing" class="py-2 px-4 hover:bg-muted rounded">Pricing</a>
+      <a href="/contact" class="py-2 px-4 hover:bg-muted rounded">Contact</a>
+      <a href="/get-quote" class="mt-2 mx-4">
+        <button class="w-full bg-primary text-white py-2 px-4 rounded font-medium">
+          Get a Quote
+        </button>
+      </a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    
+    if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

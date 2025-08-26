@@ -1,19 +1,86 @@
-<footer class="border-t py-6 md:px-8 md:py-0">
-  <div
-    class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row"
-  >
-    <p
-      class="text-muted-foreground text-center text-sm leading-loose md:text-left"
-    >
-      Built with{' '}
-      <a
-        href="https://new.website"
-        target="_blank"
-        rel="noreferrer"
-        class="font-medium underline underline-offset-4"
-      >
-        new.website
-      </a>
-    </p>
+<footer class="bg-secondary text-white pt-12 pb-6">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Company info -->
+      <div class="col-span-1 md:col-span-1 lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="font-display font-bold text-xl tracking-tight">Legacy<span class="text-accent">Moving</span></span>
+        </div>
+        <p class="text-sm text-gray-300 mb-4">
+          Professional moving services in Denver, Colorado. We make your move stress-free and affordable.
+        </p>
+        <div class="flex space-x-4">
+          <a href="https://facebook.com/LegacyMovingDenver" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white">
+            <span class="sr-only">Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://yelp.com/biz/legacy-moving-denver-lakewood" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white">
+            <span class="sr-only">Yelp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6V4H6v2"/><path d="M18 12v-2H6v2"/><path d="M18 18v-2H6v2"/><path d="M12 6v12"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="/services#residential" class="hover:text-white">Residential Moving</a></li>
+          <li><a href="/services#commercial" class="hover:text-white">Commercial Moving</a></li>
+          <li><a href="/services#packing" class="hover:text-white">Packing Services</a></li>
+          <li><a href="/services#loading" class="hover:text-white">Loading & Unloading</a></li>
+          <li><a href="/services#storage" class="hover:text-white">Storage Solutions</a></li>
+        </ul>
+      </div>
+      
+      <!-- Quick links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="/about-us" class="hover:text-white">About Us</a></li>
+          <li><a href="/pricing" class="hover:text-white">Pricing</a></li>
+          <li><a href="/faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="/testimonials" class="hover:text-white">Testimonials</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-1"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>1510 Glen Ayr Dr, Suite 9<br>Lakewood, CO 80215</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(970) 473-7080</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 2h.01"/><path d="M17 16h.01"/><path d="M14 20h.01"/><path d="M12 11h.01"/><path d="M7 16h.01"/><path d="M3 12h.01"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>Mon-Sun: 8:00am - 6:00pm</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
+    <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-gray-400 mb-4 md:mb-0">
+        &copy; {new Date().getFullYear()} Legacy Moving Denver. All rights reserved.
+      </p>
+      <p class="text-sm text-gray-400">
+        Built with{' '}
+        <a
+          href="https://new.website"
+          target="_blank"
+          rel="noreferrer"
+          class="text-gray-300 hover:text-white underline underline-offset-4"
+        >
+          new.website
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
