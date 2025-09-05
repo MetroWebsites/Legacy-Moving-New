@@ -61,6 +61,7 @@ export default function QuickQuoteForm() {
       </p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="hidden" name="form_name" value={formData.form_name} />
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
             <label htmlFor="fromZip" className="block text-sm font-medium text-gray-700 mb-1">
