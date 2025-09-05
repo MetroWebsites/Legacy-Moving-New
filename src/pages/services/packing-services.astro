@@ -1,0 +1,346 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { Package, MapPin, Box, Phone, Clock, Shield, CheckSquare, PackageCheck } from "lucide-react";
+import { Image } from 'astro:assets';
+import packingImage from '../../assets/services/packing.jpg';
+import packingPhoto from '../../assets/working-ad-legacy-moving-denver_nw_c7ceaf8e.jpeg';
+---
+
+<BaseLayout
+  title="Professional Packing Services Denver | Packing & Unpacking | Legacy Moving"
+  description="Expert packing and unpacking services in Denver. Our professional packers handle your belongings with care using quality materials. Full-service packing, partial packing, and specialty item protection."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={packingPhoto} alt="Legacy Moving Denver professional packers carefully wrapping items" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Professional Packing & Unpacking Services
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Leave the packing to the experts. Our professional packers use premium materials and proven techniques to protect your belongings during your move.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Package size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Expert Packing Services in Denver</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Proper packing is the foundation of a successful move. At Legacy Moving Denver, our professional packers are trained in the latest techniques to ensure your belongings arrive safely at your new destination.
+            </p>
+            <p class="text-muted-foreground">
+              From fragile china to bulky furniture, we handle each item with the appropriate care, using high-quality packing materials specifically suited to each item's requirements.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Full-service packing for your entire home</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Partial packing for specific rooms or items</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Specialty item wrapping and crating</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Unpacking services to get settled quickly</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={packingImage} 
+            alt="Legacy Moving Denver professional packing services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Packing Services -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Comprehensive Packing Solutions</h2>
+        <p class="text-muted-foreground">
+          We offer a variety of packing options to suit your specific needs, timeline, and budget.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3.8 5a2 2 0 0 1 2-2h12.4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5.8a2 2 0 0 1-2-2Z"></path><path d="M9 15h6"></path><path d="M17 15h.01"></path><path d="M9 19h6"></path><path d="M17 19h.01"></path><path d="M3.5 9h17"></path><path d="M8.8 3 6 9"></path><path d="M15.2 3 18 9"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Full-Service Packing</h3>
+          <p class="text-muted-foreground mb-4">Our most comprehensive option where our team packs your entire home or office. We bring all necessary supplies and systematically pack everything with proper labeling for easy unpacking and identification.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Partial Packing</h3>
+          <p class="text-muted-foreground mb-4">Perfect if you want to pack some items yourself but need help with difficult rooms like the kitchen or specific items. You decide which areas or items you want our professional packers to handle.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7l8-4 10 4Z"></path><path d="M7.5 11h9"></path><path d="M7.5 15h9"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Kitchen Packing</h3>
+          <p class="text-muted-foreground mb-4">Our specialized kitchen packing service focuses on safely wrapping and boxing dishes, glassware, appliances, and other kitchenware using dish pack boxes and specialized packing techniques.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Shield size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Specialty Item Protection</h3>
+          <p class="text-muted-foreground mb-4">For valuable or delicate items like artwork, antiques, pianos, and electronics, we provide specialized packing solutions including custom crating, climate control, and extra padding for maximum protection.</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <PackageCheck size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Unpacking Services</h3>
+          <p class="text-muted-foreground mb-4">After your move, our team can unpack your belongings, place items where they belong, assemble furniture, and remove all packing materials, allowing you to immediately enjoy your new space.</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Box size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Packing Supply Delivery</h3>
+          <p class="text-muted-foreground mb-4">If you prefer to pack yourself, we can deliver high-quality moving boxes, packing paper, bubble wrap, tape, and other supplies directly to your door at competitive prices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Our Packing Services -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Trained Packing Professionals</h3>
+                <p class="text-muted-foreground">Our packers receive extensive training in proper techniques for handling and packing a wide variety of household and office items to prevent damage during transport.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="9" x2="15" y1="9" y2="15"></line><line x1="15" x2="9" y1="9" y2="15"></line></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Premium Materials</h3>
+                <p class="text-muted-foreground">We use only high-quality packing materials including sturdy boxes, cushioned wrapping paper, bubble wrap, and specialized containers to ensure maximum protection.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><polyline points="8 9 12 5 16 9"></polyline><line x1="12" x2="12" y1="5" y2="15"></line></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Systematic Organization</h3>
+                <p class="text-muted-foreground">We implement a detailed labeling and inventory system that makes unpacking efficient and helps you locate specific items quickly at your new location.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Time and Stress Savings</h3>
+                <p class="text-muted-foreground">Professional packing services save you countless hours of work and significantly reduce the stress associated with preparing for a move.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Choose Our Packing Services</h2>
+          <p class="text-muted-foreground mb-8">
+            Professional packing makes a significant difference in the safety of your belongings during a move. Our Denver packing specialists bring expertise, quality materials, and efficiency to what is often the most time-consuming part of any relocation.
+          </p>
+          <CheckSquare size={24} className="text-primary mb-4" />
+          <blockquote class="text-lg italic text-muted-foreground">
+            "Having Legacy Moving pack our home was the best decision we made. Their team was incredibly efficient and careful with our belongings. Everything arrived perfectly intact, and the unpacking service made settling in so much easier. Worth every penny!"
+            <footer class="mt-2 text-sm not-italic">
+              - Jennifer L., Denver Resident
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Simplify Your Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our packing specialists today for a free, detailed quote on our professional packing services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-secondary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked Questions About Packing Services
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How long before my move should packing begin?</h3>
+            <p class="text-muted-foreground">
+              For full-service packing, we typically schedule packing 1-2 days before your move date for average homes. Larger homes may require 2-3 days. For partial packing services, we can often complete this the day before your move.
+            </p>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do I need to prepare anything before your packers arrive?</h3>
+            <p class="text-muted-foreground">
+              While our team can handle everything, it's helpful if you set aside items you'll be taking personally (medications, valuable documents, etc.), dispose of food that won't be moved, and identify any items requiring special care. We'll provide specific preparation guidelines before your packing day.
+            </p>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How do you ensure fragile items are protected?</h3>
+            <p class="text-muted-foreground">
+              We use specialized packing techniques for fragile items including double-boxing, custom crating when necessary, acid-free paper for delicate surfaces, foam inserts, and clear labeling. Our packers are trained in specific protocols for items like artwork, electronics, and china.
+            </p>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How are my belongings organized during packing?</h3>
+            <p class="text-muted-foreground">
+              We implement a detailed labeling system, marking each box with its contents, originating room, and any special handling instructions. We can create a comprehensive inventory list if requested, making it easy to track all your belongings throughout the move.
+            </p>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What's included in your unpacking services?</h3>
+            <p class="text-muted-foreground">
+              Our comprehensive unpacking includes unwrapping all items, placing them on flat surfaces, assembling furniture, making beds, hanging clothes, and removing all packing materials. We can also arrange items in cabinets and closets according to your preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Packing Service Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to help with your packing needs. Fill out the form for a detailed quote, or call us directly to speak with our packing specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:9706164481" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  (970) 616-4481
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

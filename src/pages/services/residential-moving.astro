@@ -1,0 +1,346 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { Home, MapPin, Box, Phone, Clock, Truck, CheckSquare, ShieldCheck } from "lucide-react";
+import { Image } from 'astro:assets';
+import residentialImage from '../../assets/services/residential.jpg';
+import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpeg';
+---
+
+<BaseLayout
+  title="Professional Residential Moving Services Denver | Local Movers | Legacy Moving"
+  description="Expert residential movers in Denver offering stress-free local moving services. Professional packing, furniture handling, and reliable home moving solutions for apartments, houses, and condos."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver professional movers handling furniture" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Professional Residential Moving Services
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Your trusted Denver residential movers providing stress-free home relocations. From apartments to houses, we move your belongings with care and precision.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Home size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Denver's Trusted Residential Movers</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              At Legacy Moving Denver, we understand that moving your home is more than just transporting belongings—it's relocating your life. Our professional residential moving services are designed to make your local move seamless, whether you're moving from an apartment, house, or condo.
+            </p>
+            <p class="text-muted-foreground">
+              With our team of experienced local movers, we handle every aspect of your residential relocation with care, efficiency, and professionalism.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Expert home moving for houses, apartments, and condos</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Careful handling of furniture and fragile items</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Efficient packing and unpacking services</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Local Denver moves completed on time, every time</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={residentialImage} 
+            alt="Legacy Moving Denver residential moving services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Residential Services -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Comprehensive Residential Moving Services</h2>
+        <p class="text-muted-foreground">
+          From full-service packing to furniture assembly, we provide everything you need for a stress-free home move in the Denver area.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Box size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Full-Service Packing</h3>
+          <p class="text-muted-foreground mb-4">Our professional packers use high-quality materials to ensure your belongings are safe and secure during transport. We handle everything from dishes to clothing with precision and care.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Truck size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Furniture Moving</h3>
+          <p class="text-muted-foreground mb-4">Our team specializes in safely transporting furniture of all sizes. We disassemble, protect, transport, and reassemble your furniture in your new home with expert care.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h7"></path><path d="M21 16.5c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59-.53 0-1.04-.21-1.41-.59-.38-.37-.59-.88-.59-1.41 0-.53.21-1.04.59-1.41.37-.38.88-.59 1.41-.59.53 0 1.04.21 1.41.59.38.37.59.88.59 1.41Z"></path><path d="M21 16.5v-2.7l-2.42-2.41a.6.6 0 0 0-.66-.12l-2.58 1.03a.6.6 0 0 0-.34.34l-1.03 2.58a.6.6 0 0 0 .12.66l2.41 2.42h2.7"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Apartment Moving</h3>
+          <p class="text-muted-foreground mb-4">We have extensive experience navigating the challenges of apartment moves, including elevators, tight hallways, and parking restrictions. Your move will be handled efficiently with minimal disruption.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Specialty Item Handling</h3>
+          <p class="text-muted-foreground mb-4">From pianos to artwork, we have the expertise to move your specialty items. Our team uses specialized equipment and techniques to ensure these valuable possessions arrive safely.</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V7H2Z"></path><path d="M6 11V7"></path><path d="M12 11V7"></path><path d="M18 11V7"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Same-Day Services</h3>
+          <p class="text-muted-foreground mb-4">Need to move quickly? Our same-day residential moving services are perfect for urgent situations. We'll work efficiently to complete your move in just one day while maintaining our high standards.</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <ShieldCheck size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Transparent Pricing</h3>
+          <p class="text-muted-foreground mb-4">No hidden fees or surprises. We provide clear, detailed estimates for our residential moving services so you know exactly what to expect. Our pricing is competitive and fair.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"></path><path d="M17 3h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1"></path><path d="M12 3v10"></path><path d="m7 21 5-5 5 5"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Local Expertise</h3>
+                <p class="text-muted-foreground">As Denver locals, we know the neighborhoods, buildings, and logistics of moving in our city. Our familiarity with the area helps your move go smoothly and efficiently.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Experienced Team</h3>
+                <p class="text-muted-foreground">Our residential movers have extensive training and experience. They're equipped to handle all aspects of your move, from packing delicate items to navigating tight spaces.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">No Hidden Fees</h3>
+                <p class="text-muted-foreground">We believe in transparent pricing. Our estimates include all aspects of your move, so you won't be surprised by additional charges on moving day.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Customer-First Approach</h3>
+                <p class="text-muted-foreground">Your satisfaction is our priority. We tailor our residential moving services to meet your specific needs and preferences, ensuring a personalized and positive experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Denver Homeowners Choose Legacy Moving</h2>
+          <p class="text-muted-foreground mb-8">
+            Since 2018, we've built our reputation as Denver's trusted residential movers by prioritizing quality, efficiency, and customer care. Here's why homeowners across Denver choose us for their local moves:
+          </p>
+          <CheckSquare size={24} className="text-primary mb-4" />
+          <blockquote class="text-lg italic text-muted-foreground">
+            "Legacy Moving handled our home relocation with incredible care and professionalism. Their team made what could have been a stressful day into a smooth, efficient experience. Everything arrived safely and on time!"
+            <footer class="mt-2 text-sm not-italic">
+              - Sarah J., Denver Homeowner
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Move Your Home?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our residential moving specialists today for a free, detailed quote on your local Denver move.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-secondary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked Questions About Residential Moving
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How far in advance should I book my residential move?</h3>
+            <p class="text-muted-foreground">
+              We recommend booking 2-4 weeks in advance for local residential moves, especially during peak season (May-September). However, we also accommodate last-minute and same-day moving requests when possible.
+            </p>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How do you price residential moves?</h3>
+            <p class="text-muted-foreground">
+              Our residential moving rates are typically based on an hourly rate multiplied by the number of movers needed. Factors affecting price include home size, amount of furniture, special items, stairs/elevators, and distance. We provide clear, detailed estimates after understanding your specific needs.
+            </p>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do I need to empty my drawers before moving?</h3>
+            <p class="text-muted-foreground">
+              We recommend emptying drawers of fragile, valuable, or loose items. Lightweight clothing can often remain in dresser drawers, but heavy items should be removed to make furniture lighter and prevent damage. Our team can provide specific guidance during your consultation.
+            </p>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What about packing supplies? Do I need to provide them?</h3>
+            <p class="text-muted-foreground">
+              We provide all necessary packing supplies for our full-service moves, including boxes, bubble wrap, packing paper, tape, mattress covers, and furniture blankets. If you prefer to pack yourself, we can provide supplies at a reasonable cost or advise on what you'll need.
+            </p>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How long will my residential move take?</h3>
+            <p class="text-muted-foreground">
+              Most local residential moves are completed in a single day. A typical two-bedroom apartment move takes 3-5 hours with a team of 2-3 movers. Larger homes may require more time. We'll provide a time estimate based on your specific situation during the quote process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Residential Moving Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to help with your home move. Fill out the form for a detailed quote, or call us directly to speak with our residential moving specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:9706164481" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  (970) 616-4481
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
