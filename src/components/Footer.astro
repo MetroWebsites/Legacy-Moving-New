@@ -3,16 +3,14 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <!-- Company info -->
       <div class="col-span-1 md:col-span-1 lg:col-span-1">
-        <div class="flex items-center gap-2 mb-4 overflow-hidden">
-          <div id="logo-container" class="transform -translate-x-full opacity-0 transition-all duration-1000">
-            <img 
-              src="/assets/legacy-logo_nw_1c856f89.png" 
-              alt="Legacy Moving Denver Logo" 
-              width="150" 
-              height="35"
-              class="h-8 w-auto filter brightness-0 invert" 
-            />
-          </div>
+        <div class="flex items-center gap-2 mb-4">
+          <img 
+            src="/assets/legacy-logo_nw_1c856f89.png" 
+            alt="Legacy Moving Denver Logo" 
+            width="150" 
+            height="35"
+            class="h-8 w-auto filter brightness-0 invert" 
+          />
         </div>
         <p class="text-sm text-gray-300 mb-4">
           Professional moving services in Denver, Colorado. We make your move stress-free and affordable.
@@ -119,31 +117,3 @@
   </div>
 </footer>
 
-<script>
-  // Intersection Observer for logo animation
-  document.addEventListener('DOMContentLoaded', () => {
-    const logoContainer = document.getElementById('logo-container');
-    
-    if (logoContainer) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // When the logo container is visible in the viewport, animate it
-            setTimeout(() => {
-              logoContainer.classList.remove('-translate-x-full', 'opacity-0');
-              logoContainer.classList.add('translate-x-0', 'opacity-100');
-            }, 300);
-            
-            // Once animation is triggered, disconnect the observer
-            observer.disconnect();
-          }
-        });
-      }, {
-        root: null,
-        threshold: 0.1  // Trigger when at least 10% of the target is visible
-      });
-      
-      observer.observe(logoContainer);
-    }
-  });
-</script>
