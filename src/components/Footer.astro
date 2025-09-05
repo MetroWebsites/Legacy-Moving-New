@@ -1,16 +1,18 @@
-<footer class="bg-primary text-white pt-12 pb-6">
+<footer class="bg-secondary text-white pt-12 pb-6">
   <div class="container">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <!-- Company info -->
       <div class="col-span-1 md:col-span-1 lg:col-span-1">
-        <div class="flex items-center gap-2 mb-4">
-          <img 
-            src="/assets/legacy-logo_nw_1c856f89.png" 
-            alt="Legacy Moving Denver Logo" 
-            width="150" 
-            height="35"
-            class="h-8 w-auto filter brightness-0 invert" 
-          />
+        <div class="flex items-center gap-2 mb-4 overflow-hidden">
+          <div id="logo-container" class="transform -translate-x-full opacity-0 transition-all duration-1000">
+            <img 
+              src="/assets/legacy-logo_nw_1c856f89.png" 
+              alt="Legacy Moving Denver Logo" 
+              width="150" 
+              height="35"
+              class="h-8 w-auto filter brightness-0 invert" 
+            />
+          </div>
         </div>
         <p class="text-sm text-gray-300 mb-4">
           Professional moving services in Denver, Colorado. We make your move stress-free and affordable.
@@ -40,7 +42,7 @@
         <div>
           <a 
             href="/feedback" 
-            class="inline-flex items-center text-sm py-2 px-4 bg-secondary/90 text-white rounded hover:bg-secondary transition-colors shadow-md"
+            class="inline-flex items-center text-sm py-2 px-4 bg-primary/90 text-white rounded hover:bg-primary transition-colors shadow-md"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             Leave Feedback
@@ -117,3 +119,31 @@
   </div>
 </footer>
 
+<script>
+  // Intersection Observer for logo animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const logoContainer = document.getElementById('logo-container');
+    
+    if (logoContainer) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // When the logo container is visible in the viewport, animate it
+            setTimeout(() => {
+              logoContainer.classList.remove('-translate-x-full', 'opacity-0');
+              logoContainer.classList.add('translate-x-0', 'opacity-100');
+            }, 300);
+            
+            // Once animation is triggered, disconnect the observer
+            observer.disconnect();
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.1  // Trigger when at least 10% of the target is visible
+      });
+      
+      observer.observe(logoContainer);
+    }
+  });
+</script>
