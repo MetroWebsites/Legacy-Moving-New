@@ -2,29 +2,20 @@
 import { Star, ThumbsUp, MessageSquare } from "lucide-react";
 ---
 
-<div class="bg-accent text-secondary py-2">
+<div class="bg-primary/10 text-secondary py-2">
   <div class="container">
     <div class="flex flex-col sm:flex-row justify-between items-center">
       <div class="flex items-center gap-2 mb-2 sm:mb-0">
-        <Star size={18} className="text-secondary" />
-        <span class="text-sm font-medium">Had a great experience with us? We'd love your feedback!</span>
+        <Star size={18} className="text-primary" />
+        <span class="text-sm font-medium">How was your moving experience with Legacy Moving Denver?</span>
       </div>
-      <div class="flex gap-2">
+      <div>
         <a 
-          href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" 
-          target="_blank" 
-          rel="noreferrer"
-          class="inline-flex items-center text-xs py-1 px-3 bg-secondary text-white rounded hover:bg-secondary/90 transition-colors"
-        >
-          <ThumbsUp size={14} className="mr-1" />
-          Leave a Google Review
-        </a>
-        <a 
-          href="/contact" 
+          href="/feedback" 
           class="inline-flex items-center text-xs py-1 px-3 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
         >
           <MessageSquare size={14} className="mr-1" />
-          Send Feedback
+          Share Your Feedback
         </a>
       </div>
     </div>
@@ -32,17 +23,9 @@ import { Star, ThumbsUp, MessageSquare } from "lucide-react";
 </div>
 
 <script>
-  // Track which button was clicked for analytics purposes
+  // Track feedback link clicks for analytics purposes
   document.addEventListener('DOMContentLoaded', () => {
-    const googleReviewLink = document.querySelector('a[href*="maps.app.goo.gl"]');
-    const feedbackLink = document.querySelector('a[href="/contact"]');
-    
-    if (googleReviewLink) {
-      googleReviewLink.addEventListener('click', () => {
-        console.log('Google Review link clicked');
-        // Add analytics tracking here if needed
-      });
-    }
+    const feedbackLink = document.querySelector('a[href="/feedback"]');
     
     if (feedbackLink) {
       feedbackLink.addEventListener('click', () => {
