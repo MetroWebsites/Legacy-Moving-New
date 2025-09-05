@@ -1,0 +1,189 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Medal, Calendar, Package, Phone, DollarSign } from "lucide-react";
+---
+
+<BaseLayout
+  title="Moving Discounts & Special Offers | Legacy Moving Denver"
+  description="Take advantage of exclusive moving discounts from Legacy Moving Denver. Military discounts, early booking savings, and bundle offers available. Save on your next move!"
+>
+  <!-- Hero Section -->
+  <section class="bg-secondary text-white py-16 md:py-24">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Moving Discounts & <span class="text-primary/90">Special Offers</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          We're committed to providing exceptional moving services at competitive prices. Check out our current specials and save on your next move with Legacy Moving Denver.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discounts Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Military Discount -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 flex flex-col h-full">
+            <div class="bg-primary/10 p-6 flex items-center gap-3">
+              <Medal size={24} className="text-primary flex-shrink-0" />
+              <h2 class="text-xl font-bold text-secondary">Military & Repeat Customer Discounts</h2>
+            </div>
+            <div class="p-6 flex-grow">
+              <p class="text-muted-foreground mb-6">
+                We honor our service members and loyal customers. Enjoy special discounts on your next move with Legacy Moving.
+              </p>
+              <p class="font-medium text-secondary mb-4">Call now to claim your discount!</p>
+              <div class="bg-gray-50 p-4 rounded-md border border-gray-100 mb-6 text-xs text-muted-foreground">
+                Not valid with any other offers or promotions. Restrictions apply. Must mention this coupon at the time of scheduling.
+              </div>
+              <div class="flex items-center justify-between">
+                <a href="tel:9706164481" class="flex items-center gap-1 text-primary font-medium phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  <Phone size={16} />
+                  <span>(720) 340-1849</span>
+                </a>
+                <a href="/discounts/military" class={buttonVariants({ variant: 'outline', size: 'sm' })}>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Early Bird Discount -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 flex flex-col h-full">
+            <div class="bg-primary/10 p-6 flex items-center gap-3">
+              <Calendar size={24} className="text-primary flex-shrink-0" />
+              <h2 class="text-xl font-bold text-secondary">Early-Bird Out-of-State Savings</h2>
+            </div>
+            <div class="p-6 flex-grow">
+              <p class="text-muted-foreground mb-6">
+                Plan ahead and save big. Book your out-of-state move 30 days in advance for exclusive discounts.
+              </p>
+              <p class="font-medium text-secondary mb-4">Schedule early, save more. Contact us today!</p>
+              <div class="bg-gray-50 p-4 rounded-md border border-gray-100 mb-6 text-xs text-muted-foreground">
+                Not valid with any other offers or promotions. Restrictions apply. Must mention this coupon at the time of scheduling.
+              </div>
+              <div class="flex items-center justify-between">
+                <a href="tel:9706164481" class="flex items-center gap-1 text-primary font-medium phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  <Phone size={16} />
+                  <span>(720) 340-1849</span>
+                </a>
+                <a href="/discounts/early-bird" class={buttonVariants({ variant: 'outline', size: 'sm' })}>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bundle & Save -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 flex flex-col h-full">
+            <div class="bg-primary/10 p-6 flex items-center gap-3">
+              <Package size={24} className="text-primary flex-shrink-0" />
+              <h2 class="text-xl font-bold text-secondary">Bundle & Save!</h2>
+            </div>
+            <div class="p-6 flex-grow">
+              <p class="text-muted-foreground mb-6">
+                Our professional team will handle everything from carefully packing your belongings to safely transporting them to your new location. Enjoy a stress-free experience with our reliable and efficient service, all while saving money with our exclusive bundle deal.
+              </p>
+              <p class="font-medium text-secondary mb-4">Don't wait—make your next move the easiest one yet!</p>
+              <div class="bg-gray-50 p-4 rounded-md border border-gray-100 mb-6 text-xs text-muted-foreground">
+                Not valid with any other offers or promotions. Restrictions apply. Must mention this coupon at the time of scheduling.
+              </div>
+              <div class="flex items-center justify-between">
+                <a href="tel:9706164481" class="flex items-center gap-1 text-primary font-medium phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  <Phone size={16} />
+                  <span>(720) 340-1849</span>
+                </a>
+                <a href="/discounts/bundle" class={buttonVariants({ variant: 'outline', size: 'sm' })}>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white' })}>
+            <DollarSign size={18} className="mr-2" />
+            Request Your Discount Today
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Claim -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-secondary text-center mb-8">How to Claim Your Discount</h2>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100">
+          <ol class="space-y-6">
+            <li class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
+              <div>
+                <h3 class="font-semibold text-lg text-secondary mb-1">Choose Your Discount</h3>
+                <p class="text-muted-foreground">Browse through our available discounts and select the one that best fits your moving needs and situation.</p>
+              </div>
+            </li>
+            
+            <li class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">2</div>
+              <div>
+                <h3 class="font-semibold text-lg text-secondary mb-1">Request a Quote</h3>
+                <p class="text-muted-foreground">Use our online quote form or call us directly to request a moving estimate. Be sure to mention the specific discount you'd like to apply.</p>
+              </div>
+            </li>
+            
+            <li class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">3</div>
+              <div>
+                <h3 class="font-semibold text-lg text-secondary mb-1">Verify Eligibility</h3>
+                <p class="text-muted-foreground">Our team will confirm your eligibility for the selected discount. For military discounts, please have proof of service ready.</p>
+              </div>
+            </li>
+            
+            <li class="flex gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">4</div>
+              <div>
+                <h3 class="font-semibold text-lg text-secondary mb-1">Schedule Your Move</h3>
+                <p class="text-muted-foreground">Once your discount is verified, we'll schedule your move and apply the savings to your final invoice. It's that simple!</p>
+              </div>
+            </li>
+          </ol>
+          
+          <div class="mt-8 bg-gray-50 p-4 rounded-md border border-gray-100">
+            <p class="text-sm text-muted-foreground">
+              <strong>Note:</strong> Discounts cannot be combined with other promotional offers. Availability may vary based on season and schedule. Please mention your discount at the time of booking to ensure it is applied to your quote.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Start Saving on Your Move Today</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Don't miss out on these limited-time offers. Contact us now to secure your discount and experience the Legacy Moving Denver difference.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-gray-100' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

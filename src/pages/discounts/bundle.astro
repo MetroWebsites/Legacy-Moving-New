@@ -1,0 +1,188 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactForm from '@/components/ContactForm';
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from 'astro:assets';
+import { Package, Phone, CheckSquare, DollarSign, Truck, PackageOpen } from "lucide-react";
+import packingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpeg';
+---
+
+<BaseLayout
+  title="Bundle & Save Discount | Moving & Packing Services | Legacy Moving Denver"
+  description="Save on your move when you bundle moving and packing services with Legacy Moving Denver. Get professional packing, safe transport, and expert handling for less."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={packingImage} alt="Legacy Moving Denver - Bundle & Save" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative py-16 md:py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Bundle & <span class="text-primary/90">Save!</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8">
+          Combine moving and packing services and save big on your next relocation. Our professional team will handle everything from carefully packing your belongings to safely transporting them to your new location.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get Your Bundle Discount
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-primary/20 text-white hover:bg-primary/90 hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount Details -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-primary/10">
+          <div class="bg-primary/10 p-6 border-b border-primary/20">
+            <div class="flex items-center gap-4">
+              <Package size={32} className="text-primary" />
+              <h2 class="text-2xl md:text-3xl font-bold text-secondary">Bundle & Save Discount</h2>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">Discount Details:</h3>
+              <ul class="space-y-2 text-muted-foreground">
+                <li class="flex items-center gap-2">
+                  <DollarSign size={18} className="text-primary flex-shrink-0" />
+                  <span><strong>Save up to 20%</strong> when you bundle moving and professional packing services</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <PackageOpen size={18} className="text-primary flex-shrink-0" />
+                  <span>Professional packing services include high-quality materials and expert handling</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <Truck size={18} className="text-primary flex-shrink-0" />
+                  <span>Bundle includes loading, transport, and unloading at your new location</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <CheckSquare size={18} className="text-primary flex-shrink-0" />
+                  <span>Available for both local and long-distance moves, residential and commercial</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">How Our Bundle Works:</h3>
+              <p class="text-muted-foreground mb-4">
+                When you choose our Bundle & Save option, our professional team will arrive at your home prior to moving day to carefully pack your belongings using industry-standard materials and techniques. On moving day, we'll load everything into our trucks, transport it to your new location, and unload everything. This comprehensive service saves you time, reduces stress, and now saves you money too!
+              </p>
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-md border border-gray-200 mb-6">
+              <p class="text-sm text-muted-foreground">
+                <strong>Note:</strong> Discount varies based on move size and services selected. Cannot be combined with other promotional offers. Must mention this promotion when scheduling. Packing materials (boxes, tape, etc.) are included in the bundle price.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <a 
+                href="/get-quote" 
+                class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+              >
+                Request Your Bundle Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-secondary text-center mb-12">What's Included in Your Bundle</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold text-secondary border-b border-primary/20 pb-2 mb-4">Professional Packing Services</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Room-by-room professional packing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>High-quality packing materials included</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Special care for fragile and valuable items</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Furniture disassembly and protective wrapping</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Organized labeling system for easy unpacking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Electronics disconnection and proper packing</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-secondary border-b border-primary/20 pb-2 mb-4">Full-Service Moving</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Professional loading of all items into trucks</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Secure transport to your new location</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Careful unloading and placement of items</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Furniture reassembly at your new home</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Room-specific placement according to your plan</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Basic unpacking assistance upon request</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+          <div class="bg-secondary text-white p-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">Bundle Your Services & Save</h2>
+            <p class="text-white/90">Fill out the form below to receive a customized bundle quote. Be sure to mention you're interested in the Bundle & Save discount!</p>
+          </div>
+          <div class="p-6">
+            <!-- KEEP ALL FORMS client:load !! DO NOT USE client:visible AS THIS CAUSES HYDRATION ISSUES!!-->
+            <ContactForm client:load />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

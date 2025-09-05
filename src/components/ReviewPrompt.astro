@@ -2,17 +2,21 @@
 import { Star, ThumbsUp, MessageSquare } from "lucide-react";
 ---
 
-<div class="bg-primary/10 text-secondary py-2">
-  <div class="container">
-    <div class="flex flex-col sm:flex-row justify-between items-center">
-      <div class="flex items-center gap-2 mb-2 sm:mb-0 text-center sm:text-left">
+<div class="relative overflow-hidden text-secondary py-2">
+  <!-- Background image with overlay -->
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+  <div class="absolute inset-0 bg-cover bg-center opacity-40 z-0" style="background-image: url('/assets/316550678_506021318211474_228316229773797537_n_nw_727420e9.jpg');"></div>
+  
+  <div class="container relative z-10">
+    <div class="flex flex-row justify-between items-center">
+      <div class="flex items-center gap-2 text-left">
         <Star size={16} className="text-primary hidden sm:block" />
-        <span class="text-xs sm:text-sm font-medium">Rate your experience</span>
+        <span class="text-xs sm:text-sm font-medium text-white">Rate your experience</span>
       </div>
       <div>
         <a 
           href="/feedback" 
-          class="inline-flex items-center text-xs py-1 px-3 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+          class="inline-flex items-center text-xs py-1 px-3 bg-primary text-white rounded hover:bg-primary/90 transition-colors shadow-md"
         >
           <MessageSquare size={12} className="mr-1" />
           Feedback

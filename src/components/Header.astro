@@ -1,6 +1,6 @@
 ---
 import { buttonVariants } from "@/components/ui/button";
-import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
+import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide-react";
 ---
 
 <header
@@ -26,6 +26,20 @@ import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
       <div>
         <span class="text-xs">Mon-Sun: 8:00am - 6:00pm</span>
       </div>
+    </div>
+  </div>
+
+  <!-- Mobile only top action bar -->
+  <div class="bg-secondary py-1 md:hidden">
+    <div class="container flex justify-between items-center">
+      <a href="tel:9706164481" class="flex items-center justify-center text-white text-xs py-1 px-2 rounded font-medium phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+        <PhoneCall size={14} className="mr-1" />
+        (970) 616-4481
+      </a>
+      <a href="/get-quote" class="flex items-center justify-center bg-primary text-white text-xs py-1 px-2 rounded font-medium shadow-sm">
+        <ClipboardCheck size={14} className="mr-1" />
+        Get a Quote
+      </a>
     </div>
   </div>
   
@@ -82,17 +96,26 @@ import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
         Pricing
       </a>
       <a
+        href="/discounts"
+        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+      >
+        Discounts
+      </a>
+      <a
         href="/contact"
         class={buttonVariants({ variant: 'ghost', size: 'sm' })}
       >
         Contact
       </a>
-      <a
-        href="/get-quote"
-        class={buttonVariants({ size: 'sm' })}
-      >
-        Get a Quote
-      </a>
+      <div class="ml-1 pl-1 border-l">
+        <a
+          href="/get-quote"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium bg-primary text-white hover:bg-primary/90 shadow-sm"
+        >
+          <ClipboardCheck size={16} className="mr-2" />
+          Get a Free Quote
+        </a>
+      </div>
     </nav>
   </div>
   
@@ -115,6 +138,7 @@ import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
       <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
       <a href="/services" class="py-2 px-4 hover:bg-muted rounded">Services</a>
       <a href="/pricing" class="py-2 px-4 hover:bg-muted rounded">Pricing</a>
+      <a href="/discounts" class="py-2 px-4 hover:bg-muted rounded">Discounts</a>
       <a href="/contact" class="py-2 px-4 hover:bg-muted rounded">Contact</a>
     </nav>
   </div>
