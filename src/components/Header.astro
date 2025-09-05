@@ -98,17 +98,24 @@ import { Truck, MapPin, Phone, Menu, X } from "lucide-react";
   
   <!-- Mobile navigation menu (hidden by default) -->
   <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+    <!-- Mobile call and quote buttons -->
+    <div class="container grid grid-cols-2 gap-3 py-3 border-b">
+      <a href="tel:9706164481" class="flex items-center justify-center bg-secondary text-white py-3 px-2 rounded-md font-medium phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+        <Phone size={16} className="mr-2" />
+        Call Us
+      </a>
+      <a href="/get-quote" class="flex items-center justify-center bg-primary text-white py-3 px-2 rounded-md font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        Get a Quote
+      </a>
+    </div>
+
     <nav class="container flex flex-col py-4">
       <a href="/" class="py-2 px-4 hover:bg-muted rounded">Home</a>
       <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
       <a href="/services" class="py-2 px-4 hover:bg-muted rounded">Services</a>
       <a href="/pricing" class="py-2 px-4 hover:bg-muted rounded">Pricing</a>
       <a href="/contact" class="py-2 px-4 hover:bg-muted rounded">Contact</a>
-      <a href="/get-quote" class="mt-2 mx-4">
-        <button class="w-full bg-primary text-white py-2 px-4 rounded font-medium">
-          Get a Quote
-        </button>
-      </a>
     </nav>
   </div>
 </header>

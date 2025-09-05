@@ -3,6 +3,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { buttonVariants } from "@/components/ui/button";
 import ContactForm from '@/components/ContactForm';
 import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lucide-react";
+import { Image } from 'astro:assets';
+import heroImage from '../assets/services/hero.jpg';
+import residentialImage from '../assets/services/residential.jpg';
+import commercialImage from '../assets/services/commercial.jpg';
+import packingImage from '../assets/services/packing.jpg';
+import longDistanceImage from '../assets/services/longdistance.jpg';
+import loadingImage from '../assets/services/loading.jpg';
+import storageImage from '../assets/services/storage.jpg';
 ---
 
 <BaseLayout
@@ -11,7 +19,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
 >
   <!-- Hero Section -->
   <section class="relative bg-secondary py-20 text-white overflow-hidden">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600518464441-9306b01a3248?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={heroImage} alt="Legacy Moving Denver truck" class="w-full h-full object-cover" />
+    </div>
     <div class="container relative z-10">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Our Moving Services</h1>
@@ -64,9 +74,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
           </div>
         </div>
         <div class="rounded-lg overflow-hidden shadow-xl">
-          <img 
-            src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&auto=format&q=80" 
-            alt="Residential moving services"
+          <Image 
+            src={residentialImage} 
+            alt="Legacy Moving Denver residential moving services"
             class="w-full h-auto object-cover"
           />
         </div>
@@ -80,9 +90,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="order-2 md:order-1">
           <div class="rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&q=80" 
-              alt="Commercial moving services"
+            <Image 
+              src={commercialImage} 
+              alt="Legacy Moving Denver commercial moving services"
               class="w-full h-auto object-cover"
             />
           </div>
@@ -162,17 +172,20 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
                 <p class="text-muted-foreground">Reliable delivery timelines</p>
               </div>
             </div>
-            <div class="pt-4">
+            <div class="pt-4 flex flex-col sm:flex-row gap-3">
               <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
                 Get a Free Quote
+              </a>
+              <a href="/services/long-distance-moving" class={buttonVariants({ variant: 'outline', className: 'mt-2' })}>
+                Learn More
               </a>
             </div>
           </div>
         </div>
         <div class="rounded-lg overflow-hidden shadow-xl">
-          <img 
-            src="https://images.unsplash.com/photo-1623767527904-0e6a3c436ac6?w=1200&auto=format&q=80" 
-            alt="Long distance moving services"
+          <Image 
+            src={longDistanceImage} 
+            alt="Legacy Moving Denver long distance moving services"
             class="w-full h-auto object-cover"
           />
         </div>
@@ -186,9 +199,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="order-2 md:order-1">
           <div class="rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://images.unsplash.com/photo-1601585517830-7a3644a9de8d?w=1200&auto=format&q=80" 
-              alt="Packing services"
+            <Image 
+              src={packingImage} 
+              alt="Legacy Moving Denver packing services"
               class="w-full h-auto object-cover"
             />
           </div>
@@ -276,9 +289,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
           </div>
         </div>
         <div class="rounded-lg overflow-hidden shadow-xl">
-          <img 
-            src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200&auto=format&q=80" 
-            alt="Loading and unloading services"
+          <Image 
+            src={loadingImage} 
+            alt="Legacy Moving Denver loading and unloading services"
             class="w-full h-auto object-cover"
           />
         </div>
@@ -292,9 +305,9 @@ import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lu
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="order-2 md:order-1">
           <div class="rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="https://images.unsplash.com/photo-1581281863883-2469417a1668?w=1200&auto=format&q=80" 
-              alt="Storage solutions"
+            <Image 
+              src={storageImage} 
+              alt="Legacy Moving Denver storage solutions"
               class="w-full h-auto object-cover"
             />
           </div>

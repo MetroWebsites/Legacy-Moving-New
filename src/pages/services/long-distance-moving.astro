@@ -1,0 +1,370 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { Truck, MapPin, Route, Phone, Clock } from "lucide-react";
+import { Image } from 'astro:assets';
+import longDistanceImage from '../../assets/services/longdistance.jpg';
+import truckImage from '../../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+---
+
+<BaseLayout
+  title="Long Distance & Out of State Moving Services | Legacy Moving Denver"
+  description="Expert long distance movers providing stress-free out of state moving services. Cross-country relocations with transparent pricing & professional handling. Denver's trusted long distance moving company."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={truckImage} alt="Legacy Moving Denver truck for long distance moves" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Long Distance & Out of State Moving
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Professional, reliable long distance moving services for seamless cross-country relocations. Your belongings are safe with our experienced team.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Route size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Expert Long Distance Moving Services</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Moving across state lines requires specialized planning and execution. At Legacy Moving Denver, we have the expertise to handle your out of state move with the same care and attention to detail that has made us Denver's trusted local mover.
+            </p>
+            <p class="text-muted-foreground">
+              We understand that long distance moving presents unique challenges, which is why we offer a comprehensive service package designed to give you peace of mind during your cross-country relocation.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Specialized interstate moving expertise</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Careful handling of belongings for long journeys</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Transparent cross-state pricing</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Reliable delivery timelines</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={longDistanceImage} 
+            alt="Legacy Moving Denver long distance moving services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us for Long Distance -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Choose Us For Your Out of State Move</h2>
+        <p class="text-muted-foreground">
+          Long distance moves require a special approach. Here's why Legacy Moving Denver is your ideal partner for interstate relocations:
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Distance Experience</h3>
+          <p class="text-muted-foreground">Our team has extensive experience with cross-country moves, understanding the unique logistics required for moving across state lines.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Detailed Planning</h3>
+          <p class="text-muted-foreground">We create custom moving plans for each long distance move, accounting for timing, special handling needs, and state-specific requirements.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><line x1="9.09" y1="9" x2="9.09" y2="9.01"></line><line x1="15.09" y1="9" x2="15.09" y2="9.01"></line><line x1="12.09" y1="13" x2="12.09" y2="13.01"></line></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Specialized Packing</h3>
+          <p class="text-muted-foreground">We use premium packing materials and techniques specifically designed for long distance moves to ensure your items arrive safely.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">No Hidden Fees</h3>
+          <p class="text-muted-foreground">Our transparent pricing means no surprise costs. We provide a detailed estimate that accounts for distance, fuel, and any special requirements.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Regular Communication</h3>
+          <p class="text-muted-foreground">Throughout your long distance move, we maintain clear communication so you always know the status of your belongings and expected arrival times.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Peace of Mind</h3>
+          <p class="text-muted-foreground">Our proven track record of successful out-of-state moves gives you the confidence that your relocation is in capable, experienced hands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Long Distance Moving Process</h2>
+        <p class="text-muted-foreground">
+          We follow a systematic approach to ensure your interstate move goes smoothly from start to finish.
+        </p>
+      </div>
+      
+      <div class="relative">
+        <!-- Process timeline line -->
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2 hidden md:block"></div>
+        
+        <div class="space-y-12">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right mb-8 md:mb-0">
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Detailed Consultation</h3>
+                <p class="text-muted-foreground">
+                  We begin with a thorough assessment of your moving needs, inventory, timeline, and any special considerations for your cross-state move.
+                </p>
+              </div>
+              <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">1</div>
+              <div class="md:w-1/2 pl-12 md:pl-12"></div>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right md:order-2 mb-8 md:mb-0">
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Custom Moving Plan</h3>
+                <p class="text-muted-foreground">
+                  We create a tailored plan that accounts for distance, timing, packing needs, and any state-specific requirements for your out-of-state move.
+                </p>
+              </div>
+              <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">2</div>
+              <div class="md:w-1/2 pl-12 md:pl-12 md:order-1"></div>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right mb-8 md:mb-0">
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Premium Packing</h3>
+                <p class="text-muted-foreground">
+                  Our team uses high-quality materials and specialized techniques designed for long distance transport to ensure your belongings arrive intact.
+                </p>
+              </div>
+              <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">3</div>
+              <div class="md:w-1/2 pl-12 md:pl-12"></div>
+            </div>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="relative">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right md:order-2 mb-8 md:mb-0">
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Safe Transport</h3>
+                <p class="text-muted-foreground">
+                  Our experienced drivers and well-maintained trucks ensure your belongings travel safely across state lines with proper securing and handling.
+                </p>
+              </div>
+              <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">4</div>
+              <div class="md:w-1/2 pl-12 md:pl-12 md:order-1"></div>
+            </div>
+          </div>
+          
+          <!-- Step 5 -->
+          <div class="relative">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right">
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Professional Unloading</h3>
+                <p class="text-muted-foreground">
+                  Upon arrival at your new home, we carefully unload and place furniture and boxes according to your preferences, with the same care shown during loading.
+                </p>
+              </div>
+              <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">5</div>
+              <div class="md:w-1/2 pl-12 md:pl-12"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready for Your Interstate Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Get in touch with our long distance moving specialists today for a free, detailed quote on your out-of-state relocation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-secondary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked Questions About Long Distance Moving
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How far in advance should I book a long distance move?</h3>
+            <p class="text-muted-foreground">
+              We recommend booking your long distance move at least 4-6 weeks in advance to ensure availability, especially during peak moving season (May-September). For moves during these busy months, booking 8 weeks ahead is ideal.
+            </p>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How do you charge for out-of-state moves?</h3>
+            <p class="text-muted-foreground">
+              Our interstate moving quotes are based on several factors: distance, volume of belongings, special handling requirements, and seasonal demand. We provide transparent, comprehensive estimates with no hidden fees.
+            </p>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How long will my long distance move take?</h3>
+            <p class="text-muted-foreground">
+              Delivery times vary based on distance and destination. Typically, moves to neighboring states take 1-2 days, moves up to 1,000 miles take 2-3 days, and coast-to-coast moves may take 4-7 days. We'll provide a specific timeline during your consultation.
+            </p>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do you offer storage for long distance moves?</h3>
+            <p class="text-muted-foreground">
+              Yes, we offer both short-term and long-term storage solutions for long distance moves. This is especially helpful if your new home isn't ready yet or you need to stagger your moving timeline.
+            </p>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Are there items you can't transport across state lines?</h3>
+            <p class="text-muted-foreground">
+              Yes, there are restrictions on certain items for interstate transport, including hazardous materials, perishables, plants, and some personal items. We'll provide a complete list during consultation to help you prepare accordingly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Long Distance Moving Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to assist with your out-of-state move. Fill out the form for a detailed quote, or call us directly to speak with our interstate moving specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:9706164481" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  (970) 616-4481
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
