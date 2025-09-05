@@ -1,0 +1,401 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { BoxSelect, MapPin, Lock, Phone, Clock, CheckSquare, Shield } from "lucide-react";
+import { Image } from 'astro:assets';
+import storageImage from '../../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+---
+
+<BaseLayout
+  title="Secure Storage Solutions Denver | Short & Long Term Storage | Legacy Moving"
+  description="Professional storage services in Denver. We offer secure short and long-term storage solutions during your move or renovation with climate control and 24/7 security."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={storageImage} alt="Legacy Moving Denver secure storage solutions" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Secure Storage Solutions
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Need temporary or long-term storage during your move or renovation? Our secure storage facilities in Denver provide safe, accessible solutions for your belongings.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <BoxSelect size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Denver's Trusted Storage Solutions</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              At Legacy Moving Denver, we understand that moving timelines don't always align perfectly. Our secure storage solutions bridge the gap between your move-out and move-in dates, providing peace of mind during transitions.
+            </p>
+            <p class="text-muted-foreground">
+              Whether you need short-term storage during a home renovation, staging, or long-term storage while relocating temporarily, our Lakewood facility provides the flexibility and security you need.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Climate-controlled storage units for temperature-sensitive items</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">24/7 security monitoring and controlled access</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Flexible short and long-term storage options</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Full-service storage with pickup and delivery</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={storageImage} 
+            alt="Legacy Moving Denver storage solutions"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Storage Solutions -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Comprehensive Storage Options</h2>
+        <p class="text-muted-foreground">
+          From temporary storage during a move to long-term solutions, we provide secure options to meet your unique needs.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+        <!-- Service 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h7"></path><path d="M21 16.5c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59-.53 0-1.04-.21-1.41-.59-.38-.37-.59-.88-.59-1.41 0-.53.21-1.04.59-1.41.37-.38.88-.59 1.41-.59.53 0 1.04.21 1.41.59.38.37.59.88.59 1.41Z"></path><path d="M21 16.5v-2.7l-2.42-2.41a.6.6 0 0 0-.66-.12l-2.58 1.03a.6.6 0 0 0-.34.34l-1.03 2.58a.6.6 0 0 0 .12.66l2.41 2.42h2.7"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Short-Term Storage</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Flexible storage options for when your move-out and move-in dates don't align. Perfect for temporary storage during home staging or renovation projects.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Long-Term Storage</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Secure solutions for extended storage needs, whether you're temporarily relocating, downsizing, or need space for seasonal items and heirlooms.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect width="8" height="16" x="2" y="4" rx="1"></rect><rect width="8" height="16" x="14" y="4" rx="1"></rect></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Climate-Controlled Units</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Specialized storage with temperature and humidity controls to protect sensitive items like wooden furniture, electronics, artwork, and family heirlooms.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Shield size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Secure Facilities</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Our storage facilities feature 24/7 security monitoring, controlled access, fire protection systems, and regular pest control to ensure your belongings stay safe.</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 22h16a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.986c0-.907-.604-1.613-1.35-1.613-.293 0-.57.1-.795.271l-.92.81-.92-.81c-.226-.171-.502-.271-.795-.271-.746 0-1.35.706-1.35 1.613V8H9a1 1 0 0 0-1 1v11"></path><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"></path><path d="M10 8V5c0-1.105.894-2 1.997-2h.006C13.106 3 14 3.895 14 5v3"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Full-Service Storage</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We handle the entire process - packing, pickup, storage, and delivery. When you're ready for your items, we'll deliver them to your new location.</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Lock size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Inventory Management</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Detailed inventory tracking system ensures you know exactly what's in storage and where it's located, making retrieval efficient when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Clean & Well-Maintained</h3>
+                <p class="text-muted-foreground">Our storage facilities undergo regular cleaning and maintenance to ensure a dust-free, pest-free environment for your belongings, protecting them from damage or deterioration.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Flexible Access</h3>
+                <p class="text-muted-foreground">Need something from storage? We provide scheduled access to your items, and with our full-service option, we can retrieve and deliver specific items when you need them.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">No Long-Term Commitments</h3>
+                <p class="text-muted-foreground">Our month-to-month storage options provide flexibility without requiring lengthy contracts. Store for as long or as short as you need with simple billing.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><path d="M10 16c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2"></path><path d="M16 22c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2h-4Z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Various Unit Sizes</h3>
+                <p class="text-muted-foreground">From small units for a few boxes to large spaces for entire households, we offer a range of storage unit sizes to accommodate your specific needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Denver Residents Choose Our Storage</h2>
+          <p class="text-muted-foreground mb-8">
+            Since 2018, we've provided reliable storage solutions to complement our moving services. Our Denver customers trust us with their belongings because:
+          </p>
+          <CheckSquare size={24} className="text-primary mb-4" />
+          <blockquote class="text-lg italic text-muted-foreground">
+            "I needed storage between selling my house and closing on my new one. Legacy's climate-controlled storage kept my furniture and electronics safe for three months. Their team handled everything - packing, storage, and delivery to my new home. Completely hassle-free!"
+            <footer class="mt-2 text-sm not-italic">
+              - Jennifer K., Denver Homeowner
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Process -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Simple Storage Process</h2>
+        <p class="text-muted-foreground">
+          Storing your belongings with Legacy Moving Denver is straightforward and stress-free.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">1</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Consultation</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            We assess your storage needs and recommend the appropriate unit size and type based on your items and timeframe.
+          </p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">2</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Inventory</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            We create a detailed inventory of all items to be stored, with optional photos for high-value items for easy tracking.
+          </p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">3</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Storage</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            We carefully transport and place your items in the appropriate storage unit, organizing them for easy access if needed.
+          </p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">4</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Delivery</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            When you're ready, we'll coordinate delivery of your items to your new location, handling all the loading and unloading.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-secondary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Need Secure Storage Solutions?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our storage specialists today for a free consultation and quote on your storage needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-primary border border-white text-white hover:bg-primary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked Questions About Storage
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How much does storage cost?</h3>
+            <p class="text-muted-foreground">
+              Our storage rates depend on the unit size, type (standard or climate-controlled), and duration. Small units start at $XX per month, while larger units range from $XX to $XX monthly. We offer discounts for longer-term storage and bundle savings when combined with our moving services.
+            </p>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What items require climate-controlled storage?</h3>
+            <p class="text-muted-foreground">
+              Items sensitive to temperature and humidity fluctuations benefit from climate-controlled storage, including wooden furniture, leather items, electronics, musical instruments, artwork, photographs, important documents, wine collections, and family heirlooms. These items can warp, crack, or develop mold in standard storage.
+            </p>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How can I access my items in storage?</h3>
+            <p class="text-muted-foreground">
+              With our full-service storage, we provide scheduled access with advance notice. We can also retrieve specific items and deliver them to you as needed. For self-storage options, you'll have your own secure access during facility hours.
+            </p>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Is my property insured while in storage?</h3>
+            <p class="text-muted-foreground">
+              We provide basic insurance coverage for items in our storage facilities. For high-value items, we recommend additional coverage, which we can arrange through our insurance partners. You can also check if your homeowner's or renter's insurance extends to items in storage.
+            </p>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What size storage unit do I need?</h3>
+            <p class="text-muted-foreground">
+              As a general guideline, a 5×5 unit (25 sq ft) is suitable for small apartment items or seasonal belongings. A 10×10 unit (100 sq ft) typically fits the contents of a one-bedroom apartment, while a 10×20 unit (200 sq ft) can accommodate a 2-3 bedroom home. During your consultation, we'll help determine the right size for your specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Storage Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to help with your storage needs. Fill out the form for a detailed quote, or call us directly to speak with our storage specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:9706164481" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  (970) 616-4481
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

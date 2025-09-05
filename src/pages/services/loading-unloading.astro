@@ -1,0 +1,404 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import { Package, MapPin, Phone, Clock, CheckSquare, Dumbbell, Forklift } from "lucide-react";
+import { Image } from 'astro:assets';
+import movingImage from '../../assets/img_4115-legacy-moving-denver_nw_2e617951.jpeg';
+---
+
+<BaseLayout
+  title="Professional Loading & Unloading Services Denver | Labor-Only Movers | Legacy Moving"
+  description="Expert loading and unloading services in Denver. Our professional movers provide labor-only moving help for trucks, pods, and storage units with careful handling and efficiency."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver professional movers loading a moving truck" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Professional Loading & Unloading Services
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Need help with just the heavy lifting? Our Denver loading and unloading specialists provide professional labor-only moving services for trucks, storage units, and pods.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <Forklift size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Denver's Trusted Loading & Unloading Specialists</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              At Legacy Moving Denver, we understand that sometimes you only need help with the heavy lifting. Our professional loading and unloading services provide the muscle and expertise you need without the full-service moving cost.
+            </p>
+            <p class="text-muted-foreground">
+              Whether you've rented your own truck, have a portable storage container, or need help with a storage unit, our experienced team will handle the physical labor with the same care and efficiency we bring to our full-service moves.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Loading and unloading rental trucks (U-Haul, Penske, Budget)</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Portable storage container loading/unloading (PODS, Pack Rat)</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Storage unit organization and item retrieval</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Careful furniture handling and strategic loading</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={movingImage} 
+            alt="Legacy Moving Denver loading and unloading services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Loading & Unloading Services -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Comprehensive Loading & Unloading Solutions</h2>
+        <p class="text-muted-foreground">
+          From furniture assembly to strategic truck packing, our labor-only moving services handle the physical work while saving you money.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+        <!-- Service 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 22h16a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.986c0-.907-.604-1.613-1.35-1.613-.293 0-.57.1-.795.271l-.92.81-.92-.81c-.226-.171-.502-.271-.795-.271-.746 0-1.35.706-1.35 1.613V8H9a1 1 0 0 0-1 1v11"></path><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"></path><path d="M10 8V5c0-1.105.894-2 1.997-2h.006C13.106 3 14 3.895 14 5v3"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Truck Loading</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We expertly load your rental truck, maximizing space and ensuring items are secure for transport. Our strategic loading prevents shifting and damage during transit.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0Z"></path><polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" x2="12" y1="22.76" y2="11"></line></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">PODS & Container Loading</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We specialize in maximizing storage container space, carefully loading your belongings to prevent damage and optimize the available cubic footage.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Furniture Assembly/Disassembly</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">Our team handles the disassembly and reassembly of furniture items that won't fit through doorways or down stairwells intact, ensuring proper handling.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Dumbbell size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Heavy Item Lifting</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We provide the muscle for moving pianos, safes, large appliances, and other heavy items. Our team uses proper techniques and equipment to move these challenging items safely.</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect width="6" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="10" x="14" y="10" rx="2"></rect><path d="M22 18h-4"></path></svg>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Storage Unit Organization</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We help load, unload, and organize storage units to maximize space and accessibility. Our team creates pathways and organizes items based on frequency of use.</p>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Package size={24} className="text-primary" />
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Flexible Scheduling</h3>
+          <p class="text-muted-foreground mb-4 text-sm sm:text-base">We offer same-day and next-day service when available, accommodating tight schedules and last-minute needs. Our labor-only services can be booked in 2-hour increments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h13l4-3.5L18 6Z"></path><path d="M12 13v9"></path><path d="M12 2v4"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Experienced Heavy Lifters</h3>
+                <p class="text-muted-foreground">Our loading and unloading specialists have years of experience handling furniture and heavy items. They know proper lifting techniques to avoid damage and injury.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Cost-Effective Solution</h3>
+                <p class="text-muted-foreground">Labor-only moving services give you professional help with the physical work at a fraction of the cost of full-service moving, perfect when you've handled the packing and transportation.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">No Hourly Minimums</h3>
+                <p class="text-muted-foreground">Unlike many competitors, we don't require lengthy minimum hourly commitments for loading and unloading services. You only pay for the time you actually need.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Proper Equipment</h3>
+                <p class="text-muted-foreground">We bring all necessary equipment including dollies, hand trucks, furniture straps, moving blankets, and other tools to ensure efficient loading and unloading without damage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 md:order-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Denver Residents Choose Our Loading Services</h2>
+          <p class="text-muted-foreground mb-8">
+            Since 2018, we've provided reliable labor-only moving services across Denver. Our loading and unloading specialists bring the same professionalism and care to these services as our full-service moves:
+          </p>
+          <CheckSquare size={24} className="text-primary mb-4" />
+          <blockquote class="text-lg italic text-muted-foreground">
+            "I rented my own truck but needed help loading and unloading. Legacy's team arrived on time, worked incredibly hard, and packed my truck better than I ever could have. They maximized the space and nothing shifted during transit. Worth every penny!"
+            <footer class="mt-2 text-sm not-italic">
+              - James L., Denver Homeowner
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Process -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Simple Loading & Unloading Process</h2>
+        <p class="text-muted-foreground">
+          Getting professional help with your heavy lifting is easy with our streamlined process.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">1</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Request a Quote</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            Fill out our quote form or call us directly. Provide details about what needs to be loaded/unloaded, location, and your preferred date and time.
+          </p>
+          <div class="mt-4">
+            <a href="/get-quote" class="text-primary font-medium inline-flex items-center hover:underline">
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">2</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Confirm Details</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            We'll confirm the number of movers needed, hours estimated, and provide transparent pricing. We'll schedule your service for your preferred date and time.
+          </p>
+          <div class="mt-4">
+            <a href="tel:9706164481" class="text-primary font-medium inline-flex items-center hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+              Call to Schedule
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">3</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Professional Service</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            Our professional team arrives with all necessary equipment, ready to efficiently handle the loading or unloading process with care and expertise.
+          </p>
+          <div class="mt-4">
+            <a href="/services" class="text-primary font-medium inline-flex items-center hover:underline">
+              Learn About All Services
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-secondary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready for Professional Loading Help?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our loading and unloading specialists today for a free, detailed quote on your labor-only moving needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:9706164481" class={buttonVariants({ size: 'lg', className: 'bg-primary border border-white text-white hover:bg-primary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (970) 616-4481
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked Questions About Loading & Unloading
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How much does labor-only loading and unloading cost?</h3>
+            <p class="text-muted-foreground">
+              Our loading and unloading services are typically charged hourly based on the number of movers needed. Rates start at $XX per hour for two movers, with a minimum of X hours. We provide a detailed estimate based on the specifics of your job, including volume of items and any access challenges.
+            </p>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How far in advance should I book loading help?</h3>
+            <p class="text-muted-foreground">
+              We recommend booking 3-7 days in advance to ensure availability, especially during peak moving season (May-September). However, we understand that sometimes you need help on short notice, and we do our best to accommodate same-day and next-day requests when possible.
+            </p>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What equipment do your movers bring?</h3>
+            <p class="text-muted-foreground">
+              Our loading specialists arrive with dollies, hand trucks, moving straps, furniture blankets, and other tools needed for efficient loading. If you have specialty items requiring specific equipment, please let us know in advance so we can ensure we bring everything necessary.
+            </p>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How many movers will I need for my loading job?</h3>
+            <p class="text-muted-foreground">
+              This depends on the volume of items and any time constraints. For a typical one-bedroom apartment, two movers are usually sufficient. Larger homes may require 3-4 movers for efficient loading. We'll help determine the optimal crew size during your quote process based on your specific situation.
+            </p>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do I need to be present during the loading/unloading?</h3>
+            <p class="text-muted-foreground">
+              Yes, we require that you or an authorized representative be present during the service. This ensures that items are loaded according to your preferences and that you can provide guidance on where items should be placed during unloading.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Loading & Unloading Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to help with your heavy lifting needs. Fill out the form for a detailed quote, or call us directly to speak with our loading specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">1510 Glen Ayr Dr, Suite 9, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:9706164481" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+                  (970) 616-4481
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
