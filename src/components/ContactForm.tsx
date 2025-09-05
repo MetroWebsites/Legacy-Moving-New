@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
 export default function ContactForm() {
+  // Load Google Places API
+  useEffect(() => {
+    // Check if Google Places API is already loaded
+    if (!window.google?.maps?.places) {
+      const script = document.createElement("script");
+      script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDQG8IOeUYy3aSPpyo1C8AxMpFAGKbNUhI&libraries=places";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }, []);
   const defaultFormData = {
     name: "", 
     email: "", 
@@ -28,12 +39,16 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
+      // Create FormData object for multipart/form-data submission
+      const form = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        form.append(key, value);
+      });
+      
       const response = await fetch("https://api.new.website/api/submit-form/", {
         method: "POST",
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        body: JSON.stringify(formData),
+        // Don't set Content-Type header - browser will set it with boundary
+        body: form,
       });
 
       if (response.ok) {
@@ -50,7 +65,17 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <div>
+      <div className="mb-4 bg-primary/10 p-4 rounded-md flex items-center gap-3">
+        <div className="rounded-full bg-primary w-10 h-10 flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+        <div>
+          <h4 className="font-semibold text-secondary">Need an instant quote?</h4>
+          <p className="text-sm text-muted-foreground">Call us now at <a href="tel:9706164481" className="text-primary font-medium">(970) 616-4481</a> for an immediate quote and easy tracking.</p>
+        </div>
+      </div>
+      <form onSubmit={handleSubmit} className="space-y-4">
       {/* Personal Information */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
@@ -130,6 +155,7 @@ export default function ContactForm() {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
             placeholder="Current Address"
+            ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
         </div>
 
@@ -145,6 +171,7 @@ export default function ContactForm() {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
             placeholder="New Address"
+            ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
         </div>
       </div>
@@ -190,5 +217,6 @@ export default function ContactForm() {
         By submitting this form, you agree to be contacted regarding your moving needs.
       </p>
     </form>
+    </div>
   );
 }

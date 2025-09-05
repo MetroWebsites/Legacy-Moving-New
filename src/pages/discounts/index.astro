@@ -2,6 +2,8 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { buttonVariants } from "@/components/ui/button";
 import { Medal, Calendar, Package, Phone, DollarSign } from "lucide-react";
+import { Image } from 'astro:assets';
+import movingTruckImage from '../../assets/moving-truck-loading_nw_727420e9.jpg';
 ---
 
 <BaseLayout
@@ -9,8 +11,11 @@ import { Medal, Calendar, Package, Phone, DollarSign } from "lucide-react";
   description="Take advantage of exclusive moving discounts from Legacy Moving Denver. Military discounts, early booking savings, and bundle offers available. Save on your next move!"
 >
   <!-- Hero Section -->
-  <section class="bg-secondary text-white py-16 md:py-24">
-    <div class="container">
+  <section class="relative bg-secondary text-white py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={movingTruckImage} alt="Legacy Moving Denver loading a moving truck" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative">
       <div class="max-w-4xl mx-auto text-center">
         <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
           Moving Discounts & <span class="text-primary/90">Special Offers</span>

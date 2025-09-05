@@ -1,0 +1,92 @@
+[
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.744Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.816Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.836Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.837Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.838Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:49:09.838Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Calling MCP tool: search_icons",
+    "timestamp": "2025-09-05T06:52:16.644Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:52:16.644Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Tool call succeeded: {\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Lollipop\\\",\\n  \\\"categories\\\": [\\n    \\\"Food & beverage\\\"\\n  ]\\n}\"}],\"isError\":false,\"structuredContent\":{\"result\":[{\"name\":\"Lollipop\",\"categories\":[\"Food & beverage\"]}]}}",
+    "timestamp": "2025-09-05T06:52:16.664Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Calling MCP tool: search_icons",
+    "timestamp": "2025-09-05T06:52:19.207Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:52:19.207Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Tool call succeeded: {\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeCent\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeIndianRupee\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeDollarSign\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeEuro\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeSwissFranc\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"}],\"isError\":false,\"structuredContent\":{\"result\":[{\"name\":\"BadgeCent\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"BadgeIndianRupee\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"BadgeDollarSign\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"BadgeEuro\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"BadgeSwissFranc\",\"categories\":[\"Finance\",\"Shopping\"]}]}}",
+    "timestamp": "2025-09-05T06:52:19.230Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Calling MCP tool: search_icons",
+    "timestamp": "2025-09-05T06:52:21.833Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "No token data found",
+    "timestamp": "2025-09-05T06:52:21.833Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  },
+  {
+    "debug": "Tool call succeeded: {\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Shirt\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"ShoppingCart\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"ShoppingBag\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"TicketPercent\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\",\\n    \\\"Transportation\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeDollarSign\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"ShoppingBasket\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Barcode\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeCent\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Tags\\\",\\n  \\\"categories\\\": [\\n    \\\"Accounts & access\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeEuro\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Tag\\\",\\n  \\\"categories\\\": [\\n    \\\"Accounts & access\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgePoundSterling\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"Handbag\\\",\\n  \\\"categories\\\": [\\n    \\\"Shopping\\\",\\n    \\\"Transportation\\\"\\n  ]\\n}\"},{\"type\":\"text\",\"text\":\"{\\n  \\\"name\\\": \\\"BadgeJapaneseYen\\\",\\n  \\\"categories\\\": [\\n    \\\"Finance\\\",\\n    \\\"Shopping\\\"\\n  ]\\n}\"}],\"isError\":false,\"structuredContent\":{\"result\":[{\"name\":\"Shirt\",\"categories\":[\"Shopping\"]},{\"name\":\"ShoppingCart\",\"categories\":[\"Shopping\"]},{\"name\":\"ShoppingBag\",\"categories\":[\"Shopping\"]},{\"name\":\"TicketPercent\",\"categories\":[\"Shopping\",\"Transportation\"]},{\"name\":\"BadgeDollarSign\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"ShoppingBasket\",\"categories\":[\"Shopping\"]},{\"name\":\"Barcode\",\"categories\":[\"Shopping\"]},{\"name\":\"BadgeCent\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"Tags\",\"categories\":[\"Accounts & access\"]},{\"name\":\"BadgeEuro\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"Tag\",\"categories\":[\"Accounts & access\"]},{\"name\":\"BadgePoundSterling\",\"categories\":[\"Finance\",\"Shopping\"]},{\"name\":\"Handbag\",\"categories\":[\"Shopping\",\"Transportation\"]},{\"name\":\"BadgeJapaneseYen\",\"categories\":[\"Finance\",\"Shopping\"]}]}}",
+    "timestamp": "2025-09-05T06:52:21.851Z",
+    "sessionId": "77e3d153-600d-4b9c-a334-3808fb365d66",
+    "cwd": "/mnt/tmp-projects/project-8346"
+  }
+]
