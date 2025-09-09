@@ -2,6 +2,10 @@ import { useState } from 'react';
 
 export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    moveDate: '',
     fromZip: '',
     toZip: '',
     form_name: 'Quick Quote Form'
@@ -9,7 +13,7 @@ export default function QuickQuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -38,6 +42,10 @@ export default function QuickQuoteForm() {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          moveDate: '',
           fromZip: '',
           toZip: '',
           form_name: 'Quick Quote Form'
@@ -62,10 +70,77 @@ export default function QuickQuoteForm() {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <input type="hidden" name="form_name" value={formData.form_name} />
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex-1">
+        
+        {/* Personal Information */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              Full Name*
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="John Smith"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              Email Address*
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="john@example.com"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            Phone Number*
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            placeholder="(555) 123-4567"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="moveDate" className="block text-sm font-medium text-gray-700 mb-1">
+            Preferred Move Date
+          </label>
+          <input
+            type="date"
+            id="moveDate"
+            name="moveDate"
+            value={formData.moveDate}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+          />
+        </div>
+
+        {/* Location Information */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
             <label htmlFor="fromZip" className="block text-sm font-medium text-gray-700 mb-1">
-              Moving From (ZIP)
+              Moving From (ZIP)*
             </label>
             <input 
               type="text"
@@ -80,9 +155,9 @@ export default function QuickQuoteForm() {
             />
           </div>
           
-          <div className="flex-1">
+          <div>
             <label htmlFor="toZip" className="block text-sm font-medium text-gray-700 mb-1">
-              Moving To (ZIP)
+              Moving To (ZIP)*
             </label>
             <input 
               type="text"
