@@ -45,7 +45,7 @@ export default function ContactForm() {
         form.append(key, value);
       });
       
-      const response = await fetch("https://formsubmit.co/legacymovingdenver@gmail.com", {
+      const response = await fetch("https://api.new.website/api/submit-form/", {
         method: "POST",
         // Don't set Content-Type header - browser will set it with boundary
         body: form,
