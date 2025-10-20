@@ -42,7 +42,7 @@ export default function FeedbackForm() {
         formDataObj.append(key, value.toString());
       });
       
-      const response = await fetch("https://formsubmit.co/legacymovingdenver@gmail.com", {
+      const response = await fetch("https://api.new.website/api/submit-form/", {
         method: "POST",
         body: formDataObj,
       });
@@ -78,7 +78,8 @@ export default function FeedbackForm() {
   }
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" data-form-type="utility">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input type="hidden" name="form_name" value={formData.form_name} />
       <div className="mb-6">
         <div className="text-center mb-3">
           <p className="text-sm text-secondary mb-2">How would you rate your experience with Legacy Moving Denver?</p>
