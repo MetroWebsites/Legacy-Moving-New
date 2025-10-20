@@ -42,7 +42,7 @@ export default function FeedbackForm() {
         formDataObj.append(key, value.toString());
       });
       
-      const response = await fetch("https://api.new.website/api/submit-form/", {
+      const response = await fetch("https://formsubmit.co/legacymovingdenver@gmail.com", {
         method: "POST",
         body: formDataObj,
       });
