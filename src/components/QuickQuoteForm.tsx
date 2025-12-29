@@ -65,7 +65,7 @@ export default function QuickQuoteForm() {
       <h3 className="text-xl font-semibold text-secondary mb-4">Get a Quick Quote</h3>
       <p className="text-muted-foreground mb-4">
         Enter your zip codes below for a quick moving estimate, or call us at{' '}
-        <a href="tel:9706164481" className="text-primary font-medium">(970) 616-4481</a>.
+        <a href="tel:7203401849" className="text-primary font-medium">(720) 340-1849</a>.
       </p>
       
       <form onSubmit={handleSubmit} className="space-y-4">

@@ -72,7 +72,7 @@ export default function ContactForm() {
         </div>
         <div>
           <h4 className="font-semibold text-secondary">Need an instant quote?</h4>
-          <p className="text-sm text-muted-foreground">Call us now at <a href="tel:9706164481" className="text-primary font-medium">(970) 616-4481</a> for an immediate quote and easy tracking.</p>
+          <p className="text-sm text-muted-foreground">Call us now at <a href="tel:7203401849" className="text-primary font-medium">(720) 340-1849</a> for an immediate quote and easy tracking.</p>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -209,7 +209,7 @@ export default function ContactForm() {
 
       {submitStatus === "error" && (
         <div className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-md text-sm">
-          There was an error submitting your request. Please try again or call us directly at (970) 616-4481.
+          There was an error submitting your request. Please try again or call us directly at (720) 340-1849.
         </div>
       )}
       
