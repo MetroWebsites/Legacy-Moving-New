@@ -1,0 +1,440 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { Check } from 'lucide-react';
+import teamImage from '../assets/308748956_459885262825080_6269738357866645302_n_nw_0489b96e.jpg';
+---
+
+<BaseLayout
+  title="Careers | Legacy Moving Denver | Join Our Team"
+  description="Join the Legacy Moving Denver team. We're looking for professional, reliable movers and staff. View our current openings and apply today."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={teamImage} 
+        alt="Legacy Moving Denver team" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Join Our Team</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Become part of the Legacy Moving Denver family. We're looking for dedicated, hardworking individuals to help us deliver exceptional moving experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <!-- Why Work With Us -->
+        <div class="mb-16">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-8 text-secondary text-center">Why Work With Us</h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m14.5 9-5 5"></path><path d="m9.5 9 5 5"></path></svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Competitive Pay</h3>
+              <p class="text-muted-foreground">
+                We offer industry-leading compensation with bonus opportunities and tips. Hard work and exceptional service are always rewarded.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Team Atmosphere</h3>
+              <p class="text-muted-foreground">
+                Join a supportive, collaborative team that works together to tackle challenges and celebrate successes as a family.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="18" cy="15" r="3"></circle><circle cx="9" cy="7" r="4"></circle><path d="M10 15H6a4 4 0 0 0-4 4v2"></path><path d="m21.7 16.4-.9-.3"></path><path d="m15.2 13.9-.9-.3"></path><path d="m16.6 18.7.3-.9"></path><path d="m19.1 12.2.3-.9"></path><path d="m19.6 18.7-.4-1"></path><path d="m16.8 12.3-.4-1"></path><path d="m14.3 16.6 1-.4"></path><path d="m20.7 13.8 1-.4"></path></svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Growth Opportunities</h3>
+              <p class="text-muted-foreground">
+                We promote from within and provide training to help you advance your career in the moving industry or business operations.
+              </p>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 9.5V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1.5"></path><circle cx="12" cy="13" r="2"></circle><path d="M11 10h2"></path><path d="M11 16h2"></path><path d="M8 12v2"></path><path d="M16 12v2"></path></svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Flexible Schedules</h3>
+              <p class="text-muted-foreground">
+                We understand the importance of work-life balance and offer scheduling options that can accommodate your personal needs when possible.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+              </div>
+              <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Positive Work Environment</h3>
+              <p class="text-muted-foreground">
+                We foster a culture of respect, appreciation, and continuous improvement. Every team member's input is valued and considered.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Current Openings -->
+        <div class="mb-16">
+          <h2 class="font-display font-bold text-3xl mb-8 text-secondary text-center">Current Openings</h2>
+          
+          <div class="space-y-8">
+            <!-- Job 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                <h3 class="font-display font-bold text-2xl text-secondary">Professional Mover</h3>
+                <div>
+                  <span class="bg-primary/10 text-primary px-4 py-1 rounded-full font-medium">Full-Time</span>
+                </div>
+              </div>
+              <p class="text-muted-foreground mb-6">
+                We're looking for strong, reliable individuals to join our moving team. As a Professional Mover, you'll be responsible for safely loading, transporting, and unloading customers' belongings with care and efficiency.
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 mb-6">
+                <h4 class="text-secondary font-semibold col-span-2">Responsibilities:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Properly pack, load, and unload items</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Disassemble and reassemble furniture</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Drive company vehicles (CDL not required)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Provide excellent customer service</span>
+                </div>
+                
+                <h4 class="text-secondary font-semibold col-span-2 mt-4">Requirements:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Ability to lift up to 100 lbs regularly</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Clean driving record</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Strong work ethic and reliability</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Excellent communication skills</span>
+                </div>
+              </div>
+              
+              <div class="flex justify-center">
+                <a href="#application" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90' })}>
+                  Apply Now
+                </a>
+              </div>
+            </div>
+            
+            <!-- Job 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                <h3 class="font-display font-bold text-2xl text-secondary">Moving Crew Leader</h3>
+                <div>
+                  <span class="bg-primary/10 text-primary px-4 py-1 rounded-full font-medium">Full-Time</span>
+                </div>
+              </div>
+              <p class="text-muted-foreground mb-6">
+                As a Moving Crew Leader, you'll lead a team of movers and ensure jobs are completed professionally, efficiently, and to our high standards. This role is ideal for experienced movers ready to take the next step in their career.
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 mb-6">
+                <h4 class="text-secondary font-semibold col-span-2">Responsibilities:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Lead and coordinate moving crews</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Train and mentor junior team members</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Ensure customer satisfaction throughout the move</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Handle paperwork and move documentation</span>
+                </div>
+                
+                <h4 class="text-secondary font-semibold col-span-2 mt-4">Requirements:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">2+ years professional moving experience</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Excellent leadership and problem-solving skills</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Clean driving record</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Strong customer service orientation</span>
+                </div>
+              </div>
+              
+              <div class="flex justify-center">
+                <a href="#application" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90' })}>
+                  Apply Now
+                </a>
+              </div>
+            </div>
+            
+            <!-- Job 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                <h3 class="font-display font-bold text-2xl text-secondary">Customer Service Representative</h3>
+                <div>
+                  <span class="bg-primary/10 text-primary px-4 py-1 rounded-full font-medium">Part-Time</span>
+                </div>
+              </div>
+              <p class="text-muted-foreground mb-6">
+                We're seeking a friendly, detail-oriented Customer Service Representative to handle incoming calls, schedule estimates, and provide information to customers. This role is crucial for creating positive first impressions of our company.
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 mb-6">
+                <h4 class="text-secondary font-semibold col-span-2">Responsibilities:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Answer phone calls and respond to inquiries</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Schedule moves and coordinate with moving teams</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Provide quotes and information about services</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Handle basic administrative duties</span>
+                </div>
+                
+                <h4 class="text-secondary font-semibold col-span-2 mt-4">Requirements:</h4>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Excellent communication skills</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Ability to multi-task in a fast-paced environment</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Basic computer skills</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <Check size={16} className="text-primary mt-1 flex-shrink-0" />
+                  <span class="text-muted-foreground">Customer service experience preferred</span>
+                </div>
+              </div>
+              
+              <div class="flex justify-center">
+                <a href="#application" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90' })}>
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Application Form -->
+        <div id="application" class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-md">
+          <h2 class="font-display font-bold text-2xl mb-6 text-secondary text-center">Apply Now</h2>
+          
+          <form
+            class="space-y-6"
+            name="career-application-form"
+            method="POST"
+            data-netlify="true"
+            enctype="multipart/form-data"
+            action="/thank-you"
+          >
+            <input type="hidden" name="form_name" value="Career Application" />
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="full_name" class="block text-sm font-medium text-secondary mb-1">Full Name *</label>
+                <input
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-secondary mb-1">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium text-secondary mb-1">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+              
+              <div>
+                <label for="position" class="block text-sm font-medium text-secondary mb-1">Position Applying For *</label>
+                <select
+                  id="position"
+                  name="position"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                >
+                  <option value="">Select a position</option>
+                  <option value="Professional Mover">Professional Mover</option>
+                  <option value="Moving Crew Leader">Moving Crew Leader</option>
+                  <option value="Customer Service Representative">Customer Service Representative</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="start_date" class="block text-sm font-medium text-secondary mb-1">Available Start Date *</label>
+                <input
+                  type="date"
+                  id="start_date"
+                  name="start_date"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+              
+              <div>
+                <label for="experience" class="block text-sm font-medium text-secondary mb-1">Relevant Experience</label>
+                <select
+                  id="experience"
+                  name="experience"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                >
+                  <option value="None">None</option>
+                  <option value="Less than 1 year">Less than 1 year</option>
+                  <option value="1-2 years">1-2 years</option>
+                  <option value="3-5 years">3-5 years</option>
+                  <option value="5+ years">5+ years</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <label for="resume" class="block text-sm font-medium text-secondary mb-1">Resume/CV (PDF format) *</label>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+              />
+            </div>
+            
+            <div>
+              <label for="cover_letter" class="block text-sm font-medium text-secondary mb-1">Why do you want to join Legacy Moving Denver? *</label>
+              <textarea
+                id="cover_letter"
+                name="cover_letter"
+                rows="4"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+              ></textarea>
+            </div>
+            
+            <div>
+              <label for="referral" class="block text-sm font-medium text-secondary mb-1">How did you hear about us?</label>
+              <select
+                id="referral"
+                name="referral"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+              >
+                <option value="Website">Website</option>
+                <option value="Job Board">Job Board</option>
+                <option value="Employee Referral">Employee Referral</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="flex items-start">
+              <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                required
+                class="mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+              />
+              <label for="agreement" class="ml-2 block text-sm text-muted-foreground">
+                I certify that all information provided is true and complete to the best of my knowledge. I understand that false information or omission may disqualify me from further consideration for employment and may result in dismissal if discovered at a later date. *
+              </label>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90 px-8' })}>
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary py-16 mt-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Have Questions About Working With Us?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our team today to learn more about career opportunities at Legacy Moving Denver.
+        </p>
+        <a href="/contact" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-secondary hover:text-white font-semibold transition-colors' })}>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
