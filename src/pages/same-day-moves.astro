@@ -1,0 +1,391 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { Check, Clock, CalendarClock, Truck, ShieldCheck, BadgeCheck } from 'lucide-react';
+import heroImage from '../assets/services/loading.jpg';
+---
+
+<BaseLayout
+  title="Same-Day Moves | Legacy Moving Denver | Last-Minute Moving Service"
+  description="Need to move quickly? Our same-day and last-minute moving services in Denver provide fast, professional relocation with minimal notice. Call us for urgent moving help!"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-primary to-primary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={heroImage} 
+        alt="Legacy Moving Denver same-day moving service" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Same-Day Moving Services</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          Unexpected move? Need to relocate quickly? Our professional team can handle your last-minute moving needs with the same care and efficiency as our planned moves.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary text-white hover:bg-secondary/80 font-semibold' })}>
+            Call Now: (720) 340-1849
+          </a>
+          <a href="/request-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-gray-100 font-semibold' })}>
+            Request Same-Day Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <div class="flex items-center mb-4">
+              <Clock size={28} className="text-primary mr-3" />
+              <h2 class="font-display font-bold text-3xl text-secondary">Fast Response Moving</h2>
+            </div>
+            <p class="text-muted-foreground mb-4">
+              Life doesn't always give us weeks to plan a move. At Legacy Moving Denver, we understand that sometimes you need to relocate quickly due to unexpected circumstances, new job opportunities, or other time-sensitive situations.
+            </p>
+            <p class="text-muted-foreground mb-6">
+              Our same-day moving service is designed specifically for those last-minute moving needs. We maintain flexible scheduling and keep crews available for urgent moves, allowing us to respond quickly when you need help the most.
+            </p>
+            
+            <div class="space-y-4 mt-8">
+              <div class="flex gap-3">
+                <div class="flex-shrink-0 h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Check size={16} className="text-primary" />
+                </div>
+                <p class="text-secondary font-medium">Fast response time</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="flex-shrink-0 h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Check size={16} className="text-primary" />
+                </div>
+                <p class="text-secondary font-medium">Professional service despite short notice</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="flex-shrink-0 h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Check size={16} className="text-primary" />
+                </div>
+                <p class="text-secondary font-medium">Available 7 days a week</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="flex-shrink-0 h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Check size={16} className="text-primary" />
+                </div>
+                <p class="text-secondary font-medium">Same high-quality service as scheduled moves</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="flex-shrink-0 h-6 w-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Check size={16} className="text-primary" />
+                </div>
+                <p class="text-secondary font-medium">Fully insured and reliable crews</p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 shadow-md">
+              <h3 class="font-display font-bold text-xl mb-4 text-secondary">Common Same-Day Moving Scenarios</h3>
+              <ul class="space-y-3">
+                <li class="flex gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <CalendarClock size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secondary">Unexpected Lease Issues</h4>
+                    <p class="text-muted-foreground text-sm">Sudden lease termination or problems with landlords that require quick relocation</p>
+                  </div>
+                </li>
+                
+                <li class="flex gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <BadgeCheck size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secondary">Job Relocations</h4>
+                    <p class="text-muted-foreground text-sm">Immediate job offer requiring fast relocation to start a new position</p>
+                  </div>
+                </li>
+                
+                <li class="flex gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Truck size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secondary">Moving Company Cancellations</h4>
+                    <p class="text-muted-foreground text-sm">Another moving company canceled last minute, leaving you stranded</p>
+                  </div>
+                </li>
+                
+                <li class="flex gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <ShieldCheck size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secondary">Family Emergencies</h4>
+                    <p class="text-muted-foreground text-sm">Unexpected situations requiring immediate relocation for health or safety reasons</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- How It Works -->
+        <div class="mb-16">
+          <div class="text-center mb-10">
+            <h2 class="font-display font-bold text-3xl mb-4 text-secondary">How Our Same-Day Moving Works</h2>
+            <p class="text-muted-foreground max-w-3xl mx-auto">
+              Even with limited notice, we've streamlined our process to get you moved quickly without sacrificing quality or care.
+            </p>
+          </div>
+          
+          <div class="relative max-w-3xl mx-auto">
+            <!-- Timeline Line -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+            
+            <!-- Step 1 -->
+            <div class="relative mb-12">
+              <div class="md:flex items-center">
+                <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right">
+                  <h3 class="font-display font-semibold text-xl mb-2 text-secondary">1. Emergency Contact</h3>
+                  <p class="text-muted-foreground">
+                    Call our dedicated same-day moving line at (720) 340-1849 or submit an urgent request through our website. We prioritize same-day requests and respond within minutes.
+                  </p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-10 h-10 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">1</div>
+                <div class="md:w-1/2 pl-12 md:pl-12 hidden md:block"></div>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="relative mb-12">
+              <div class="md:flex items-center">
+                <div class="md:w-1/2 pr-12 hidden md:block"></div>
+                <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-10 h-10 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">2</div>
+                <div class="md:w-1/2 pl-12 md:pl-12">
+                  <h3 class="font-display font-semibold text-xl mb-2 text-secondary">2. Quick Assessment</h3>
+                  <p class="text-muted-foreground">
+                    Our coordinator will gather essential information about your move: inventory size, current and destination locations, timeline needs, and any special requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="relative mb-12">
+              <div class="md:flex items-center">
+                <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right">
+                  <h3 class="font-display font-semibold text-xl mb-2 text-secondary">3. Immediate Quote</h3>
+                  <p class="text-muted-foreground">
+                    We provide a transparent quote based on your needs. For same-day service, we offer fair pricing with no hidden fees or price gouging despite the urgent timeline.
+                  </p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-10 h-10 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">3</div>
+                <div class="md:w-1/2 pl-12 md:pl-12 hidden md:block"></div>
+              </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="relative mb-12">
+              <div class="md:flex items-center">
+                <div class="md:w-1/2 pr-12 hidden md:block"></div>
+                <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-10 h-10 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">4</div>
+                <div class="md:w-1/2 pl-12 md:pl-12">
+                  <h3 class="font-display font-semibold text-xl mb-2 text-secondary">4. Team Dispatch</h3>
+                  <p class="text-muted-foreground">
+                    We quickly assemble and dispatch our professional moving team with the appropriate truck and equipment for your needs, arriving at your location as soon as possible.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="relative">
+              <div class="md:flex items-center">
+                <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right">
+                  <h3 class="font-display font-semibold text-xl mb-2 text-secondary">5. Efficient Execution</h3>
+                  <p class="text-muted-foreground">
+                    Our experienced team works efficiently to complete your move, carefully packing, loading, transporting, and unloading your belongings with the same care as any scheduled move.
+                  </p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 top-0 -translate-x-1/2 w-10 h-10 bg-primary rounded-full z-10 flex items-center justify-center text-white font-bold">5</div>
+                <div class="md:w-1/2 pl-12 md:pl-12 hidden md:block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Same-Day Service Levels -->
+        <div class="mb-16">
+          <div class="text-center mb-10">
+            <h2 class="font-display font-bold text-3xl mb-4 text-secondary">Same-Day Service Options</h2>
+            <p class="text-muted-foreground max-w-3xl mx-auto">
+              We offer flexible service levels to match your urgent moving needs.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Full-Service -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"></path><rect x="3" y="14" width="7" height="7" rx="1"></rect><circle cx="17.5" cy="17.5" r="3.5"></circle></svg>
+              </div>
+              <h3 class="font-display font-bold text-xl text-center mb-4 text-secondary">Full-Service Emergency Move</h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Complete packing services included</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">All packing materials provided</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Loading and transportation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Unloading and furniture placement</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Basic unpacking services</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <p class="text-primary font-semibold mb-4">Best for complete emergency relocations with minimal preparation time</p>
+                <a href="tel:7203401849" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90 w-full justify-center' })}>
+                  Call Now
+                </a>
+              </div>
+            </div>
+            
+            <!-- Standard -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-2 border-primary hover:shadow-lg transition-all">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+              </div>
+              <h3 class="font-display font-bold text-xl text-center mb-4 text-secondary">Standard Same-Day Move</h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Help with last-minute packing</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Essential packing materials provided</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Furniture disassembly as needed</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Loading, transport, and unloading</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Basic furniture placement</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <p class="text-primary font-semibold mb-4">Most popular for urgent moves with some preparation</p>
+                <a href="tel:7203401849" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90 w-full justify-center' })}>
+                  Call Now
+                </a>
+              </div>
+            </div>
+            
+            <!-- Labor-Only -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 8h20M2 16h20"></path><path d="M2 12h20"></path></svg>
+              </div>
+              <h3 class="font-display font-bold text-xl text-center mb-4 text-secondary">Labor-Only Emergency Help</h3>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Immediate loading assistance</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Help with rental truck loading</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Heavy furniture moving</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Unloading at destination</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span class="text-muted-foreground">Flexible hourly scheduling</span>
+                </li>
+              </ul>
+              <div class="text-center">
+                <p class="text-primary font-semibold mb-4">Ideal for those who just need help with heavy lifting</p>
+                <a href="tel:7203401849" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90 w-full justify-center' })}>
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tips for Same-Day Moves -->
+        <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-md mb-16">
+          <h2 class="font-display font-bold text-2xl mb-6 text-secondary text-center">Tips for Last-Minute Moves</h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold text-lg text-secondary mb-3">Prioritize Essential Items</h3>
+              <p class="text-muted-foreground text-sm mb-4">
+                Focus on packing essential items first: medications, important documents, valuable items, and overnight necessities. Our team can help with the rest.
+              </p>
+              <h3 class="font-semibold text-lg text-secondary mb-3">Prepare an Essentials Bag</h3>
+              <p class="text-muted-foreground text-sm">
+                Pack a separate bag with medications, toiletries, change of clothes, phone chargers, and any items you'll need immediate access to during and after the move.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-lg text-secondary mb-3">Quick Inventory</h3>
+              <p class="text-muted-foreground text-sm mb-4">
+                Make a quick list or take photos of your most important items to ensure everything is accounted for during the rush of a same-day move.
+              </p>
+              <h3 class="font-semibold text-lg text-secondary mb-3">Communicate Clearly</h3>
+              <p class="text-muted-foreground text-sm">
+                Be clear and specific with our team about any time constraints, building access issues, or special handling needs for your belongings.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center">
+          <h2 class="font-display font-bold text-2xl mb-4 text-secondary">Need to Move Today?</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto mb-6">
+            Contact our team immediately for same-day moving assistance. We're ready to help you with your urgent relocation needs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90' })}>
+              Call (720) 340-1849
+            </a>
+            <a href="/request-quote" class={buttonVariants({ size: 'lg', className: 'bg-secondary text-white hover:bg-secondary/90' })}>
+              Request Emergency Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

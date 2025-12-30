@@ -1,0 +1,635 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { Check, Clock, Calendar, Truck, PackageCheck, FileCheck, Home } from 'lucide-react';
+import heroImage from '../assets/services/hero.jpg';
+---
+
+<BaseLayout
+  title="Moving Tips | Legacy Moving Denver | Professional Moving Advice"
+  description="Expert moving tips from Denver's trusted movers. Get advice on packing, organizing, and preparing for your move to ensure a smooth relocation experience."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={heroImage} 
+        alt="Legacy Moving Denver - Moving Tips" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Moving Tips & Advice</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Expert advice from our professional movers to help make your relocation smoother, more efficient, and less stressful.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <!-- Before the Move -->
+        <div class="mb-16">
+          <div class="flex items-center mb-6">
+            <Calendar size={28} className="text-primary mr-3" />
+            <h2 class="font-display font-bold text-3xl text-secondary">Before the Move</h2>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Create a Moving Timeline</h3>
+              <p class="text-muted-foreground mb-4">
+                Start planning at least 8 weeks before your move date. Create a week-by-week checklist of tasks to complete, from notifying service providers to packing non-essential items.
+              </p>
+              <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                <h4 class="font-medium text-secondary mb-2">Timeline Example:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium w-20 text-center flex-shrink-0">8 weeks</span>
+                    <span class="text-muted-foreground">Create inventory list, research movers, begin decluttering</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium w-20 text-center flex-shrink-0">6 weeks</span>
+                    <span class="text-muted-foreground">Book movers, begin collecting packing supplies, notify landlord</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium w-20 text-center flex-shrink-0">4 weeks</span>
+                    <span class="text-muted-foreground">Start packing non-essential items, arrange for utility transfers</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium w-20 text-center flex-shrink-0">2 weeks</span>
+                    <span class="text-muted-foreground">Confirm details with movers, pack majority of items, arrange mail forwarding</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium w-20 text-center flex-shrink-0">1 week</span>
+                    <span class="text-muted-foreground">Pack essentials bag, clean current home, confirm arrival time with movers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Declutter Before Packing</h3>
+              <p class="text-muted-foreground mb-4">
+                Moving is the perfect opportunity to assess what you really need. Sort your belongings into categories: keep, donate, sell, and discard. This will reduce your moving costs and make unpacking easier.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Room-by-Room Approach:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Start with low-use areas like storage rooms</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Focus on one room at a time</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Use the "haven't used in a year" rule</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Disposal Options:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Host a garage sale 2-3 weeks before moving</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Donate usable items to local charities</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">List valuable items on marketplace websites</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Collect the Right Packing Supplies</h3>
+              <p class="text-muted-foreground mb-4">
+                Having proper supplies makes packing much easier and protects your belongings. Start collecting boxes, tape, and other materials several weeks before your move.
+              </p>
+              <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                <h4 class="font-medium text-secondary mb-2">Essential Supplies Checklist:</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Moving boxes (various sizes)</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Packing tape & dispenser</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Bubble wrap</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Packing paper</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Markers for labeling</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Moving blankets</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Stretch wrap</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Box cutter/scissors</span>
+                  </div>
+                  <div class="flex items-start gap-1">
+                    <Check size={14} className="text-primary mt-1" />
+                    <span class="text-muted-foreground text-sm">Cleaning supplies</span>
+                  </div>
+                </div>
+                <p class="text-muted-foreground text-sm mt-3">
+                  <em>Tip: Check with us about our packing supply options - we offer complete kits that include everything you need!</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Packing Tips -->
+        <div class="mb-16">
+          <div class="flex items-center mb-6">
+            <PackageCheck size={28} className="text-primary mr-3" />
+            <h2 class="font-display font-bold text-3xl text-secondary">Packing Tips</h2>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Room-by-Room Packing Strategy</h3>
+              <p class="text-muted-foreground mb-4">
+                Pack one room at a time and keep all items from the same room together. This makes unpacking much more organized and efficient.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Start With:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Storage areas and closets</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Wall decorations and artwork</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Books and decorative items</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Out-of-season clothing</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Pack Last:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Kitchen essentials you use daily</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Toiletries and medications</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Bedding and towels</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Electronics you use regularly</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="text-muted-foreground">
+                Label each box with its contents and the room it belongs in. Use color-coding for different rooms to make identification even easier. Consider taking photos of valuable or complex items before disassembly.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Proper Box Packing Technique</h3>
+              <p class="text-muted-foreground mb-4">
+                How you pack your boxes is just as important as what you pack in them. Properly packed boxes protect your belongings and make carrying easier.
+              </p>
+              <div class="bg-gray-50 p-4 rounded border border-gray-100 mb-4">
+                <h4 class="font-medium text-secondary mb-2">Box Packing Steps:</h4>
+                <ol class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">1</span>
+                    <span class="text-muted-foreground">Line the bottom of the box with crumpled packing paper for cushioning</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">2</span>
+                    <span class="text-muted-foreground">Place heavier items at the bottom, lighter items on top</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">3</span>
+                    <span class="text-muted-foreground">Wrap fragile items individually with bubble wrap or packing paper</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">4</span>
+                    <span class="text-muted-foreground">Fill gaps with packing material to prevent items from shifting</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">5</span>
+                    <span class="text-muted-foreground">Add a layer of packing paper on top before closing</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">6</span>
+                    <span class="text-muted-foreground">Seal with packing tape in an H-pattern for strength</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">7</span>
+                    <span class="text-muted-foreground">Label the box clearly on at least two sides</span>
+                  </li>
+                </ol>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-secondary mb-2">Weight Guidelines:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Small boxes: Books, canned goods (25-30 lbs max)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Medium boxes: Kitchen items, toys (30-40 lbs max)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Large boxes: Linens, pillows, light items (40-50 lbs max)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-secondary mb-2">Special Items:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Dishes: Pack vertically, not flat</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Artwork: Use corner protectors and artist/mirror boxes</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Electronics: Use original boxes if available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Create an Essentials Box</h3>
+              <p class="text-muted-foreground mb-4">
+                Pack a separate "essentials box" with items you'll need immediately upon arrival at your new home. Keep this box with you rather than on the moving truck.
+              </p>
+              <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Personal Items:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Medications</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Toiletries & shower curtain</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Change of clothes</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Phone chargers</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Important documents</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Household Items:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Basic tools</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Paper towels & toilet paper</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Trash bags</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Hand soap & sanitizer</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Basic cleaning supplies</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Food & Kitchen:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Bottled water</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Snacks & instant meals</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Paper plates & plastic utensils</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Coffee maker & supplies</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Basic cookware (1 pot/pan)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Moving Day Tips -->
+        <div class="mb-16">
+          <div class="flex items-center mb-6">
+            <Truck size={28} className="text-primary mr-3" />
+            <h2 class="font-display font-bold text-3xl text-secondary">Moving Day Tips</h2>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Prepare Your Home for the Movers</h3>
+              <p class="text-muted-foreground mb-4">
+                Help your movers work efficiently by preparing your home before they arrive. This will save time and help protect both your belongings and your home.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Before Movers Arrive:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Clear walkways of obstacles</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Remove rugs that could be trip hazards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Protect floors in high-traffic areas</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Reserve elevator if needed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Ensure parking for moving truck</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Special Considerations:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Have cash on hand for tips</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Provide water for the moving team</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Identify items that aren't being moved</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Keep pets and small children contained</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Take photos of electronics connections</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Final Walkthrough Checklist</h3>
+              <p class="text-muted-foreground mb-4">
+                Before leaving your old home, perform a thorough walkthrough to ensure nothing is left behind and the property is in appropriate condition.
+              </p>
+              <div class="bg-gray-50 p-4 rounded border border-gray-100 mb-4">
+                <h4 class="font-medium text-secondary mb-2">Room-by-Room Checklist:</h4>
+                <ul class="space-y-1">
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Check all cabinets, drawers, and closets</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Look under beds, behind doors, and on top of shelves</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Check appliances for any items left inside</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Remove any nails or hooks from walls</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Take photos of the empty property for your records</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Check basement, attic, garage, and outdoor storage areas</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Turn off all lights, water, and adjust thermostat</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <Check size={16} className="text-primary mt-1" />
+                    <span class="text-muted-foreground">Lock all windows and doors</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="text-muted-foreground">
+                Before departing, make sure you have all keys, garage door openers, parking permits, and any other items that need to be transferred to new occupants or your landlord.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- After the Move -->
+        <div class="mb-16">
+          <div class="flex items-center mb-6">
+            <Home size={28} className="text-primary mr-3" />
+            <h2 class="font-display font-bold text-3xl text-secondary">After the Move</h2>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">Efficient Unpacking Strategy</h3>
+              <p class="text-muted-foreground mb-4">
+                Unpacking can feel overwhelming, but with a strategic approach, you can get settled into your new home quickly and with minimal stress.
+              </p>
+              <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                <h4 class="font-medium text-secondary mb-2">Unpacking Priority Order:</h4>
+                <ol class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">1</span>
+                    <span class="text-muted-foreground"><strong>Essential Items</strong> - Unpack your essentials box first (toiletries, medication, shower curtain, basic kitchenware)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">2</span>
+                    <span class="text-muted-foreground"><strong>Bedroom</strong> - Set up beds and unpack bedding to ensure you have a place to sleep</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">3</span>
+                    <span class="text-muted-foreground"><strong>Bathroom</strong> - Unpack towels, toiletries, and shower necessities</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">4</span>
+                    <span class="text-muted-foreground"><strong>Kitchen</strong> - Focus on essential kitchenware for basic meal preparation</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">5</span>
+                    <span class="text-muted-foreground"><strong>Living Areas</strong> - Set up furniture and electronics</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="bg-primary/10 text-primary font-medium rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">6</span>
+                    <span class="text-muted-foreground"><strong>Storage Areas</strong> - Unpack and organize less-used items last</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 class="font-semibold text-xl text-secondary mb-3">New Home Checklist</h3>
+              <p class="text-muted-foreground mb-4">
+                Complete these important tasks within the first few days in your new home to ensure everything is functioning properly and your transition is smooth.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">Day 1 Priorities:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Verify all utilities are working</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Locate circuit breaker and water shutoff</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Test smoke and carbon monoxide detectors</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Change locks if necessary</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Set up Wi-Fi and internet</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded border border-gray-100">
+                  <h4 class="font-medium text-secondary mb-2">First Week:</h4>
+                  <ul class="space-y-1">
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Check for leaks under sinks and around toilets</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Replace air filters</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Locate and test fire extinguishers</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Meet neighbors</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <Check size={16} className="text-primary mt-1" />
+                      <span class="text-muted-foreground">Update address with important contacts</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="text-center mt-16">
+          <h2 class="font-display font-bold text-2xl mb-4 text-secondary">Need Help With Your Move?</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto mb-6">
+            While these tips will help you plan and execute a successful move, you don't have to do it all alone. Our professional moving team can handle as much or as little of your move as you'd like.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/request-quote" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90' })}>
+              Get a Free Quote
+            </a>
+            <a href="/services" class={buttonVariants({ className: 'bg-secondary text-white hover:bg-secondary/90' })}>
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
