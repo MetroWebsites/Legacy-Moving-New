@@ -33,7 +33,7 @@ export default function QuickQuoteForm() {
         form.append(key, value);
       });
       
-      const response = await fetch("https://formspree.io/f/mjgvzbqr", {
+      const response = await fetch("https://api.new.website/api/submit-form/", {
         method: "POST",
         // Don't set Content-Type header - browser will set it with boundary
         body: form,
@@ -42,9 +42,8 @@ export default function QuickQuoteForm() {
         }
       });
 
-      // Formspree returns a 200-299 status code for successful submissions
-      // User confirmed submissions are being received, so we'll assume success
-      if (true) {
+      // API returns a 200-299 status code for successful submissions
+      if (response.ok) {
         setSubmitStatus('success');
         setFormData({
           name: '',

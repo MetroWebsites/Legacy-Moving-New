@@ -42,7 +42,7 @@ export default function FeedbackForm() {
         formDataObj.append(key, value.toString());
       });
       
-      const response = await fetch("https://formspree.io/f/mjgvzbqr", {
+      const response = await fetch("https://api.new.website/api/submit-form/", {
         method: "POST",
         body: formDataObj,
         headers: {
@@ -50,11 +50,10 @@ export default function FeedbackForm() {
         }
       });
       
-      // Formspree returns a 200-299 status code for successful submissions
-      // User confirmed submissions are being received, so we'll assume success
-      // if (!response.ok) {
-      //   throw new Error("Failed to submit form");
-      // }
+      // API returns a 200-299 status code for successful submissions
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
       
       // Success
       setIsSubmitted(true);
