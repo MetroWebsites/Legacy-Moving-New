@@ -1,0 +1,169 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+
+// Import all gallery images
+import image1 from '../assets/gallery/278542172_490892382779142_4124137714151878705_n_nw_25917bcc.jpg';
+import image2 from '../assets/gallery/285687199_524024362799277_32020426083889904_n_nw_330c851b.jpg';
+import image3 from '../assets/gallery/moving-truck-loading_nw_727420e9.jpg';
+import image4 from '../assets/gallery/311838441_485625320251074_3404988117189824979_n_nw_3b5827c6.jpg';
+import image5 from '../assets/gallery/313431631_489578679855738_4591969386304342435_n_nw_5d15d2bc.jpg';
+import image6 from '../assets/gallery/317440742_509602311186708_6270695562302388490_n_nw_60a18e2b.jpg';
+import image7 from '../assets/gallery/286288078_527394089128971_7332854625406645377_n_nw_7ed9f47d.jpg';
+import image8 from '../assets/gallery/317711971_511940424286230_6607024562154459327_n_nw_8548642e.jpg';
+import image9 from '../assets/gallery/316101089_503116645168608_274775893289684396_n_nw_fa94dd6a.jpg';
+import image10 from '../assets/gallery/290197457_539473571254356_3082118749704086809_n_nw_a389c17b.jpg';
+import image11 from '../assets/gallery/working-ad-legacy-moving-denver_nw_c7ceaf8e.jpeg';
+import image12 from '../assets/gallery/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+import image13 from '../assets/gallery/img_4114-legacy-moving-denver_nw_9a9d79b0.jpeg';
+import image14 from '../assets/gallery/img_4115-legacy-moving-denver_nw_2e617951.jpeg';
+
+// Define the gallery images with captions
+const galleryImages = [
+  {
+    src: image1,
+    alt: "Legacy Moving Denver team loading a moving truck",
+    caption: "Our professional moving team loading a client's belongings"
+  },
+  {
+    src: image2,
+    alt: "Legacy Moving Denver truck during a residential move",
+    caption: "Our moving truck during a local Denver move"
+  },
+  {
+    src: image3,
+    alt: "Moving truck being loaded with furniture",
+    caption: "Carefully loading furniture into our moving truck"
+  },
+  {
+    src: image4,
+    alt: "Legacy Moving Denver team wrapping furniture",
+    caption: "Protecting furniture with professional wrapping techniques"
+  },
+  {
+    src: image5,
+    alt: "Moving boxes being loaded into truck",
+    caption: "Efficiently loading packed boxes for transport"
+  },
+  {
+    src: image6,
+    alt: "Legacy Moving Denver movers handling large furniture",
+    caption: "Our team safely moving large furniture items"
+  },
+  {
+    src: image7,
+    alt: "Moving team on site during a residential move",
+    caption: "Our moving crew ready to begin a home relocation"
+  },
+  {
+    src: image8,
+    alt: "Legacy Moving Denver truck in neighborhood",
+    caption: "Servicing neighborhoods throughout Denver"
+  },
+  {
+    src: image9,
+    alt: "Moving team with stacked boxes",
+    caption: "Organized packing and loading for an efficient move"
+  },
+  {
+    src: image10,
+    alt: "Legacy Moving Denver team handling furniture",
+    caption: "Careful handling of valuable furniture pieces"
+  },
+  {
+    src: image11,
+    alt: "Legacy Moving Denver advertisement on vehicle",
+    caption: "Our branded moving trucks are easy to spot"
+  },
+  {
+    src: image12,
+    alt: "Moving truck in client's driveway",
+    caption: "Ready for pickup at a residential move"
+  },
+  {
+    src: image13,
+    alt: "Legacy Moving Denver team in action",
+    caption: "Our team working efficiently during a move"
+  },
+  {
+    src: image14,
+    alt: "Legacy Moving Denver packaging materials",
+    caption: "Quality packing materials for all your belongings"
+  }
+];
+
+// Group images by 3 for layout
+const imageRows = [];
+for (let i = 0; i < galleryImages.length; i += 3) {
+  imageRows.push(galleryImages.slice(i, i + 3));
+}
+---
+
+<BaseLayout
+  title="Photo Gallery | Legacy Moving Denver | Moving Company Photos"
+  description="Browse our photo gallery to see Legacy Moving Denver in action. View our professional movers, trucks, and successful moves across the Denver area."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-primary to-primary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={image3}
+        alt="Legacy Moving Denver in action" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Our Moving Gallery</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          See our professional moving team in action. Browse photos of our trucks, equipment, and successful moves throughout Denver.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {galleryImages.map((image) => (
+          <div class="relative group overflow-hidden rounded-lg shadow-md border border-gray-100 bg-white">
+            <div class="aspect-w-4 aspect-h-3 w-full">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover"
+                width={800}
+                height={600}
+              />
+            </div>
+            <div class="p-3 text-center">
+              <p class="text-secondary text-sm">{image.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-secondary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Experience Our Service?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact us today to schedule your move with our professional team. We're ready to provide the same exceptional service you see in our gallery.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/request-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-primary border border-white text-white hover:bg-primary/80 hover:text-white phone-link transition-colors' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,243 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactForm from '@/components/ContactForm';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Request a Moving Quote | Legacy Moving Denver | Free Estimates"
+  description="Get a free moving quote from Legacy Moving Denver. Our transparent pricing has no hidden fees. Request an estimate for residential, commercial, or storage services."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-primary py-16 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200&auto=format&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Request a Free Quote</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Get a detailed, transparent quote for your move. No hidden fees, just honest pricing from Denver's trusted moving company.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Quote Form -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Get Your Free Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Fill out the form below with details about your move, and our team will provide you with a comprehensive quote. The more information you provide, the more accurate our estimate will be.
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <ContactForm client:load />
+          </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Moving Services We Offer</h2>
+          <p class="text-muted-foreground mb-8">
+            We provide comprehensive moving services to meet all your relocation needs. Get a quote for any of our professional services:
+          </p>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-secondary">Residential Moving</h3>
+              </div>
+              <p class="text-muted-foreground mb-2">
+                Complete home moving services for apartments, condos, and houses of all sizes. Local and long-distance options available.
+              </p>
+              <a href="/residential-moving-services" class="text-primary font-medium inline-flex items-center hover:underline">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-secondary">Commercial Moving</h3>
+              </div>
+              <p class="text-muted-foreground mb-2">
+                Specialized business relocation services with minimal disruption to your operations. Office equipment, technology, and document handling expertise.
+              </p>
+              <a href="/commercial-moving-services" class="text-primary font-medium inline-flex items-center hover:underline">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                </div>
+                <h3 class="font-display font-semibold text-lg text-secondary">Packing Services</h3>
+              </div>
+              <p class="text-muted-foreground mb-2">
+                Professional packing and unpacking services with quality materials. Full-service and partial packing options available.
+              </p>
+              <a href="/packing-services" class="text-primary font-medium inline-flex items-center hover:underline">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-4 bg-secondary/10 rounded-lg border border-secondary/20">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Our Pricing Promise</h3>
+            <p class="text-muted-foreground text-sm">
+              At Legacy Moving Denver, we believe in transparent pricing with no hidden fees or surprise charges. Our quotes include all aspects of your move, from labor and transportation to materials and equipment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Process Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <h2 class="font-display font-bold text-3xl text-center mb-12 text-secondary">Our Quote Process</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">1</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Submit Request</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            Fill out our quote form with details about your move, including locations, size, and any special requirements.
+          </p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">2</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Personalized Quote</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            Our team reviews your information and provides a detailed, transparent quote for your specific moving needs.
+          </p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 relative">
+          <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">3</div>
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary pt-2">Schedule Your Move</h3>
+          <p class="text-muted-foreground text-sm sm:text-base">
+            Once you approve the quote, we'll work with you to schedule your move at a time that's most convenient for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="py-12">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Map -->
+        <div>
+          <h2 class="font-display font-bold text-2xl mb-6 text-secondary">Visit Our Office</h2>
+          <div class="rounded-lg overflow-hidden h-96 shadow-lg border border-gray-200">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.857932404135!2d-105.1331868!3d39.745904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b87c3bb2c29b5%3A0x4bfa1f8a9f79a8e1!2s1510%20Glen%20Ayr%20Dr%20%239%2C%20Lakewood%2C%20CO%2080215!5e0!3m2!1sen!2sus!4v1694473824133!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Contact Details -->
+        <div>
+          <h2 class="font-display font-bold text-2xl mb-6 text-secondary">Contact Information</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <MapPin size={24} className="text-primary" />
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-lg mb-1 text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">
+                  1510 Glen Ayr Dr, Suite 9<br>
+                  Lakewood, CO 80215
+                </p>
+                <a 
+                  href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  class="text-primary font-medium inline-flex items-center hover:underline mt-2"
+                >
+                  Get Directions
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Phone size={24} className="text-primary" />
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-lg mb-1 text-secondary">Phone</h3>
+                <p class="text-muted-foreground mb-2">
+                  Call us directly to discuss your moving needs:
+                </p>
+                <a 
+                  href="tel:7203401849" 
+                  class="text-primary font-medium text-xl hover:underline"
+                >
+                  (720) 340-1849
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Mail size={24} className="text-primary" />
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-lg mb-1 text-secondary">Email</h3>
+                <p class="text-muted-foreground mb-2">
+                  Email us with any questions about your move:
+                </p>
+                <a 
+                  href="mailto:info@legacymovingdenver.com" 
+                  class="text-primary font-medium hover:underline"
+                >
+                  info@legacymovingdenver.com
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Clock size={24} className="text-primary" />
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-lg mb-1 text-secondary">Hours</h3>
+                <p class="text-muted-foreground">
+                  Monday - Sunday<br>
+                  8:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,354 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from 'astro:assets';
+import { MoveRight } from 'lucide-react';
+import residentialImage from '../assets/residential.MObT_xYf_uzv4w.webp';
+import commercialImage from '../assets/commercial.Bz1aHyUe_ZflDS6.webp';
+import packingImage from '../assets/packing.JtfFF6cI_ZH9cu1.webp';
+import loadingImage from '../assets/loading.BFAtuMQk_ZKxUdr.webp';
+import storageImage from '../assets/storage.DfX1S1Xl_Z1iU7ac.webp';
+import longdistanceImage from '../assets/longdistance.BOXbicMI_ZlqISn.webp';
+---
+
+<BaseLayout
+  title="Moving Services | Legacy Moving Denver | Full-Service Movers"
+  description="Explore our professional moving services in Denver. We offer residential and commercial moving, packing services, storage solutions, and more. Get a free quote today!"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={residentialImage} 
+        alt="Legacy Moving Denver movers in action" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Our Moving Services</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          From residential and commercial moves to specialized services, we provide comprehensive moving solutions to make your transition smooth and stress-free.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/request-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90 font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-gray-100 font-semibold' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Services Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Our Complete Moving Solutions</h2>
+        <p class="text-muted-foreground max-w-3xl mx-auto">Legacy Moving Denver provides a full range of moving services to meet all your relocation needs. Our professional team is equipped to handle moves of all sizes and types.</p>
+      </div>
+      
+      <!-- Service Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Residential Moving -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={residentialImage}
+              alt="Residential Moving Services"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Residential Moving</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Complete home moving services for apartments, condos, and houses of all sizes. Our professional movers ensure a smooth transition to your new home.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Local and long-distance moves</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Furniture disassembly and reassembly</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Careful handling of all belongings</span>
+              </li>
+            </ul>
+            <a href="/residential-moving-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- Commercial Moving -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={commercialImage}
+              alt="Commercial Moving Services"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Commercial Moving</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Business relocation services with minimal disruption to your operations. Our team specializes in office moves of all sizes.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Office and equipment relocations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>IT infrastructure moving</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Weekend & after-hours service</span>
+              </li>
+            </ul>
+            <a href="/commercial-moving-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- Packing Services -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={packingImage}
+              alt="Packing Services"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Packing Services</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Professional packing and unpacking services with quality materials. Let our experts carefully pack your belongings to ensure they arrive safely.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full and partial packing options</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Quality packing materials</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Unpacking and setup services</span>
+              </li>
+            </ul>
+            <a href="/packing-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- Loading & Unloading -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={loadingImage}
+              alt="Loading and Unloading Services"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Labor-Only Services</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Need help with just the heavy lifting? Our loading and unloading services provide the muscle you need for your DIY move.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Truck loading and unloading</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Rental truck assistance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Furniture rearrangement</span>
+              </li>
+            </ul>
+            <a href="/labor-only-moving-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- Storage Solutions -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={storageImage}
+              alt="Storage Solutions"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Storage Solutions</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Secure storage options for your belongings during your move or for long-term needs. Our facility offers climate-controlled units and 24/7 security.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Short and long-term storage</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Climate-controlled options</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Secure facility with 24/7 monitoring</span>
+              </li>
+            </ul>
+            <a href="/storage-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- Long Distance Moving -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={longdistanceImage}
+              alt="Long Distance Moving Services"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-60"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <h3 class="text-white font-display font-bold text-2xl">Long Distance Moving</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-muted-foreground mb-4">
+              Relocating across state lines? Our long-distance moving services ensure your belongings arrive safely at your new home, no matter how far.
+            </p>
+            <ul class="text-secondary mb-6 space-y-1">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Interstate moving expertise</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated moving trucks</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Reliable delivery timeframes</span>
+              </li>
+            </ul>
+            <a href="/long-distance-moving-services" class={buttonVariants({ className: 'w-full bg-primary text-white hover:bg-primary/90 flex items-center justify-center' })}>
+              Learn More
+              <MoveRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Specialty Services -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl mb-4 text-secondary">Specialty Services</h2>
+        <p class="text-muted-foreground max-w-3xl mx-auto">We also offer specialized services to meet unique moving needs:</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Specialty 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all">
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Same-Day Moves</h3>
+          <p class="text-muted-foreground mb-4">
+            Need to move quickly? Our same-day moving service provides quick, efficient relocation with minimal notice.
+          </p>
+          <a href="/same-day-moves" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Specialty 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all">
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Short-Term Storage</h3>
+          <p class="text-muted-foreground mb-4">
+            Temporary storage solutions during your move, home staging, or renovation projects.
+          </p>
+          <a href="/short-term-storage" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        
+        <!-- Specialty 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all">
+          <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Service Area</h3>
+          <p class="text-muted-foreground mb-4">
+            We serve the entire Denver metro area and beyond. Check if we service your location.
+          </p>
+          <a href="/service-area" class="text-primary font-medium inline-flex items-center hover:underline">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready to Plan Your Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Contact our team today to discuss your moving needs and get a customized quote for your specific situation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/request-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-secondary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9">
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
