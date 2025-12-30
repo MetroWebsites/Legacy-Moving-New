@@ -127,7 +127,7 @@ export default function QuickQuoteForm() {
             Preferred Move Date
           </label>
           <input
-            type="date"
+            type="text"
             id="moveDate"
             name="moveDate"
             value={formData.moveDate}
@@ -135,11 +135,6 @@ export default function QuickQuoteForm() {
             placeholder="MM/DD/YYYY"
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           />
-          {formData.moveDate && (
-            <div className="text-xs mt-1 text-gray-600">
-              Selected date: {new Date(formData.moveDate).toLocaleDateString()}
-            </div>
-          )}
         </div>
 
         {/* Location Information */}
