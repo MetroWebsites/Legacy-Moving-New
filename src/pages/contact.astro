@@ -95,15 +95,16 @@ import { MapPin, Phone, Clock, Mail, Facebook, Instagram } from "lucide-react";
                   <Mail size={20} className="text-primary" />
                 </div>
                 <div>
-                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Email</h3>
+                  <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Online Forms</h3>
                   <p class="text-muted-foreground mb-2">
-                    Send us an email with your questions or quote request:
+                    Fill out our online forms for quotes or questions:
                   </p>
                   <a 
-                    href="mailto:info@legacymovingdenver.com" 
+                    href="#" 
+                    onclick="document.querySelector('form').scrollIntoView({ behavior: 'smooth' }); return false;"
                     class="text-primary font-medium hover:underline"
                   >
-                    info@legacymovingdenver.com
+                    Use Contact Form Above
                   </a>
                 </div>
               </div>

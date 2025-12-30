@@ -7,8 +7,7 @@ export default function FeedbackForm() {
     email: "",
     rating: 0,
     message: "", 
-    form_name: "Customer Feedback",
-    recipient_email: "legacymovingdenver@gmail.com"
+    form_name: "Customer Feedback"
   };
   
   const [formData, setFormData] = useState(defaultFormData);
@@ -86,7 +85,6 @@ export default function FeedbackForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <input type="hidden" name="form_name" value={formData.form_name} />
-      <input type="hidden" name="recipient_email" value={formData.recipient_email} />
       <div className="mb-6">
         <div className="text-center mb-3">
           <p className="text-sm text-secondary mb-2">How would you rate your experience with Legacy Moving Denver?</p>

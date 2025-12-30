@@ -10,8 +10,7 @@ export default function ContactForm() {
     moveFrom: "",
     moveTo: "",
     message: "", 
-    form_name: "Quote Request",
-    recipient_email: "legacymovingdenver@gmail.com"
+    form_name: "Quote Request"
   };
   
   const [formData, setFormData] = useState(defaultFormData);
@@ -186,7 +185,6 @@ export default function ContactForm() {
       </div>
 
       <input name="form_name" type="hidden" value={formData.form_name} />
-      <input name="recipient_email" type="hidden" value={formData.recipient_email} />
       
       <Button
         type="submit"

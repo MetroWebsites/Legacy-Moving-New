@@ -8,8 +8,7 @@ export default function QuickQuoteForm() {
     moveDate: '',
     fromZip: '',
     toZip: '',
-    form_name: 'Quick Quote Form',
-    recipient_email: 'legacymovingdenver@gmail.com'
+    form_name: 'Quick Quote Form'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
@@ -54,8 +53,7 @@ export default function QuickQuoteForm() {
           moveDate: '',
           fromZip: '',
           toZip: '',
-          form_name: 'Quick Quote Form',
-          recipient_email: 'legacymovingdenver@gmail.com'
+          form_name: 'Quick Quote Form'
         });
       } else {
         setSubmitStatus('error');
@@ -77,7 +75,6 @@ export default function QuickQuoteForm() {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <input type="hidden" name="form_name" value={formData.form_name} />
-        <input type="hidden" name="recipient_email" value={formData.recipient_email} />
         
         {/* Personal Information */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

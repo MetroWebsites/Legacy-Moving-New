@@ -194,17 +194,18 @@ import { CircleCheck, Clock, ShieldCheck, Award } from "lucide-react";
         
         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
           <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 1L5 3l4 2 4-2-4-2z"/></svg>
           </div>
-          <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Email Us</h3>
+          <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Online Forms</h3>
           <p class="text-muted-foreground mb-4">
-            Send us an email anytime
+            Submit forms online for quick responses
           </p>
           <a 
-            href="mailto:legacymovingdenver@gmail.com" 
+            href="#" 
+            onclick="document.querySelector('form').scrollIntoView({ behavior: 'smooth' }); return false;"
             class={buttonVariants({ variant: 'outline', className: 'w-full text-xs sm:text-sm' })}
           >
-            legacymovingdenver@gmail.com
+            Fill Out Form Above
           </a>
         </div>
         
