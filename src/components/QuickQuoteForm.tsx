@@ -84,7 +84,7 @@ export default function QuickQuoteForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
               placeholder="John Smith"
             />
           </div>
@@ -100,7 +100,7 @@ export default function QuickQuoteForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
               placeholder="john@example.com"
             />
           </div>
@@ -152,7 +152,7 @@ export default function QuickQuoteForm() {
               required
               pattern="[0-9]{5}"
               placeholder="Enter ZIP code"
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             />
           </div>
           
@@ -169,7 +169,7 @@ export default function QuickQuoteForm() {
               required
               pattern="[0-9]{5}"
               placeholder="Enter ZIP code"
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             />
           </div>
         </div>

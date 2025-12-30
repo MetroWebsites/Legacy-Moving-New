@@ -89,7 +89,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="John Smith"
           />
         </div>
@@ -105,7 +105,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="john@example.com"
           />
         </div>
@@ -122,7 +122,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
           placeholder="(555) 123-4567"
         />
       </div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
           value={formData.moveDate}
           onChange={handleInputChange}
           placeholder="MM/DD/YYYY"
-          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
         />
       </div>
 
@@ -154,7 +154,7 @@ export default function ContactForm() {
             name="moveFrom"
             value={formData.moveFrom}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="Current Address"
             ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
@@ -170,7 +170,7 @@ export default function ContactForm() {
             name="moveTo"
             value={formData.moveTo}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="New Address"
             ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
@@ -187,7 +187,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           rows={3}
-          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+          className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
           placeholder="Please share any special requirements or questions..."
         />
       </div>

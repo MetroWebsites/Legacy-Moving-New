@@ -112,7 +112,7 @@ export default function FeedbackForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary text-gray-900"
         />
       </div>
       
@@ -125,7 +125,7 @@ export default function FeedbackForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary text-gray-900"
         />
       </div>
       
@@ -137,7 +137,7 @@ export default function FeedbackForm() {
           value={formData.message}
           onChange={handleChange}
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary text-gray-900"
         />
       </div>
       
