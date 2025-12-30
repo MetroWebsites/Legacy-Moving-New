@@ -1,33 +1,33 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Disallow all crawlers from all content
+# Allow all crawlers to access all content
 User-agent: Googlebot
-Disallow: /
+Allow: /
 
 User-agent: Bingbot
-Disallow: /
+Allow: /
 
 User-agent: Slurp
-Disallow: /
+Allow: /
 
 User-agent: DuckDuckBot
-Disallow: /
+Allow: /
 
 User-agent: Baiduspider
-Disallow: /
+Allow: /
 
 User-agent: YandexBot
-Disallow: /
+Allow: /
 
 User-agent: Sogou
-Disallow: /
+Allow: /
 
 User-agent: Exabot
-Disallow: /
+Allow: /
 
 User-agent: facebot
-Disallow: /
+Allow: /
 
 User-agent: ia_archiver
-Disallow: /
+Allow: /
