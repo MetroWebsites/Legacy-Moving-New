@@ -1,18 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 
 export default function ContactForm() {
-  // Load Google Places API
-  useEffect(() => {
-    // Check if Google Places API is already loaded
-    if (!window.google?.maps?.places) {
-      const script = document.createElement("script");
-      script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDQG8IOeUYy3aSPpyo1C8AxMpFAGKbNUhI&libraries=places";
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    }
-  }, []);
   const defaultFormData = {
     name: "", 
     email: "", 
@@ -157,7 +146,6 @@ export default function ContactForm() {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="Current Address"
-            ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
         </div>
 
@@ -173,7 +161,6 @@ export default function ContactForm() {
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
             placeholder="New Address"
-            ref={(input) => input && window.google?.maps?.places && new window.google.maps.places.Autocomplete(input)}
           />
         </div>
       </div>
