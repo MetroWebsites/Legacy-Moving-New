@@ -138,8 +138,14 @@ export default function ContactForm() {
           name="moveDate"
           value={formData.moveDate}
           onChange={handleInputChange}
+          placeholder="MM/DD/YYYY"
           className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
         />
+        {formData.moveDate && (
+          <div className="text-xs mt-1 text-gray-600">
+            Selected date: {new Date(formData.moveDate).toLocaleDateString()}
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
