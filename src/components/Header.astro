@@ -59,10 +59,10 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
       </a>
     </div>
     
-    <!-- Mobile menu button (hidden since we use call button instead) -->
+    <!-- Mobile menu button -->
     <button 
       id="mobile-menu-button" 
-      class="hidden md:hidden flex items-center p-2"
+      class="md:hidden flex items-center p-2"
       aria-label="Toggle menu"
     >
       <Menu size={24} className="menu-icon" />
@@ -125,25 +125,6 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
         </a>
       </div>
     </nav>
-    
-    <!-- Mobile Call Button (replaces default menu button on mobile) -->
-    <div class="md:hidden flex items-center gap-2">
-      <button
-        id="mobile-services-toggle"
-        class="flex items-center bg-gray-100 text-gray-700 py-1.5 px-2 rounded font-medium"
-      >
-        <span>Menu</span>
-        <Menu size={16} className="ml-1.5" />
-      </button>
-      
-      <a 
-        href="tel:7203401849" 
-        class="flex items-center bg-primary text-white py-1.5 px-3 rounded font-medium shadow-sm"
-      >
-        <Phone size={16} className="mr-1.5" />
-        Call (720) 340-1849
-      </a>
-    </div>
   </div>
   
   <!-- Mobile navigation menu (hidden by default) -->
@@ -164,8 +145,14 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
       <a href="/" class="py-2 px-4 hover:bg-muted rounded">Home</a>
       <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
       
-      <!-- Mobile Services Dropdown -->
-      <div class="mobile-dropdown">
+      <!-- Call Button for Mobile -->
+      <a href="tel:7203401849" class="flex items-center py-2 px-4 bg-primary text-white rounded font-medium">
+        <Phone size={16} className="mr-2" />
+        Call (720) 340-1849
+      </a>
+      
+      <!-- Mobile Services Dropdown (moved lower in the menu) -->
+      <div class="mobile-dropdown mt-2">
         <button id="mobile-services-button" class="flex items-center justify-between w-full py-2 px-4 hover:bg-muted rounded text-left">
           <span>Services</span>
           <svg id="mobile-services-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform"><path d="m6 9 6 6 6-6"/></svg>
@@ -191,12 +178,16 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
   // Mobile menu toggle
   document.addEventListener('DOMContentLoaded', () => {
     // Main mobile menu toggle
-    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
     
-    if (mobileServicesToggle && mobileMenu) {
-      mobileServicesToggle.addEventListener('click', () => {
+    if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
       });
     }
     
