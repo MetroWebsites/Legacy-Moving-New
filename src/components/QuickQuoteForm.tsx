@@ -117,7 +117,7 @@ export default function QuickQuoteForm() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             placeholder="(555) 123-4567"
           />
         </div>
@@ -133,7 +133,7 @@ export default function QuickQuoteForm() {
             value={formData.moveDate}
             onChange={handleChange}
             placeholder="MM/DD/YYYY"
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
           />
         </div>
 
