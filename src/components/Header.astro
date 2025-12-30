@@ -144,7 +144,24 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
     <nav class="container flex flex-col py-4">
       <a href="/" class="py-2 px-4 hover:bg-muted rounded">Home</a>
       <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
-      <a href="/services" class="py-2 px-4 hover:bg-muted rounded">Services</a>
+      
+      <!-- Mobile Services Dropdown -->
+      <div class="mobile-dropdown">
+        <button id="mobile-services-button" class="flex items-center justify-between w-full py-2 px-4 hover:bg-muted rounded text-left">
+          <span>Services</span>
+          <svg id="mobile-services-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="mobile-services-dropdown" class="hidden pl-4 mt-1 mb-2 border-l border-gray-200 ml-4 space-y-1">
+          <a href="/services/long-distance-moving" class="block py-2 px-4 hover:bg-muted rounded">Long Distance Moving</a>
+          <a href="/services/residential-moving" class="block py-2 px-4 hover:bg-muted rounded">Residential Moving</a>
+          <a href="/services/commercial-moving" class="block py-2 px-4 hover:bg-muted rounded">Commercial Moving</a>
+          <a href="/services/packing-services" class="block py-2 px-4 hover:bg-muted rounded">Packing Services</a>
+          <a href="/services/loading-unloading" class="block py-2 px-4 hover:bg-muted rounded">Loading & Unloading</a>
+          <a href="/services/storage-solutions" class="block py-2 px-4 hover:bg-muted rounded">Storage Solutions</a>
+          <a href="/services" class="block py-2 px-4 hover:bg-muted rounded font-medium text-primary">View All Services</a>
+        </div>
+      </div>
+      
       <a href="/discounts" class="py-2 px-4 hover:bg-muted rounded">Discounts</a>
       <a href="/contact" class="py-2 px-4 hover:bg-muted rounded">Contact</a>
     </nav>
@@ -154,6 +171,7 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
 <script>
   // Mobile menu toggle
   document.addEventListener('DOMContentLoaded', () => {
+    // Main mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.querySelector('.menu-icon');
@@ -164,6 +182,19 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
         mobileMenu.classList.toggle('hidden');
         menuIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
+      });
+    }
+    
+    // Services dropdown toggle for mobile
+    const mobileServicesButton = document.getElementById('mobile-services-button');
+    const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+    const mobileServicesIcon = document.getElementById('mobile-services-icon');
+    
+    if (mobileServicesButton && mobileServicesDropdown && mobileServicesIcon) {
+      mobileServicesButton.addEventListener('click', () => {
+        mobileServicesDropdown.classList.toggle('hidden');
+        // Rotate the icon when dropdown is open/closed
+        mobileServicesIcon.classList.toggle('rotate-180');
       });
     }
   });
