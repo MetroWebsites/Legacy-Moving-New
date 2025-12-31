@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { buttonVariants } from "@/components/ui/button";
 import ContactForm from '@/components/ContactForm';
+import LocalMoveForm from '@/components/LocalMoveForm';
 import { Home, MapPin, Box, Phone, Clock, Truck, CheckSquare, ShieldCheck } from "lucide-react";
 import { Image } from 'astro:assets';
 import residentialImage from '../../assets/services/residential.jpg';
@@ -12,242 +13,271 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
   title="Local Moving Services Denver | Fast & Reliable Denver Movers | Legacy Moving"
   description="Professional local moving services in Denver. Fast, reliable, and affordable moving for homes and apartments. Get a free quote for your next local move with Denver's top-rated movers."
 >
-  <!-- Hero Section -->
-  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+  <!-- Hero Section with Form -->
+  <section class="relative bg-secondary py-12 md:py-20 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20 mix-blend-overlay">
       <Image src={movingImage} alt="Legacy Moving Denver professional movers handling furniture" class="w-full h-full object-cover" />
     </div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
-          Denver's Premier Local Moving Service
-        </h1>
-        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-          Fast, reliable, and stress-free local moves throughout Denver and the surrounding areas. Our experienced team ensures your belongings arrive safely to your new home.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
-            Get a Free Quote
-          </a>
-          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
-            Call (720) 340-1849
-          </a>
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-4 rounded-full bg-primary/20 text-white text-sm font-medium">Denver's #1 Rated Local Movers</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+            Local Moving Services<br class="hidden sm:block"> <span class="text-primary">In Denver</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto lg:mx-0">
+            Fast, reliable, and stress-free local moves with 1,700+ 5-star reviews. Get your free quote today and experience the Denver difference.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4 mt-8">
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold phone-link' })}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call (720) 340-1849
+            </a>
+          </div>
+          <!-- Mobile only action buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-8 lg:hidden justify-center">
+            <a href="#quote-form" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90 font-semibold' })}>
+              Get a Free Quote
+            </a>
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-white/90 font-semibold phone-link' })}>
+              Call Now
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <section class="py-16 md:py-24">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-            <Home size={32} className="text-primary" />
-          </div>
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Local Moving Made Simple</h2>
-          <div class="space-y-4">
-            <p class="text-muted-foreground">
-              At Legacy Moving Denver, we specialize in stress-free local moves throughout Denver and the surrounding areas. Whether you're moving to a new apartment across town or a house in a neighboring suburb, our experienced team will make your move quick, efficient, and hassle-free.
-            </p>
-            <p class="text-muted-foreground">
-              With our professional local moving services, you can focus on settling into your new home while we handle the heavy lifting.
-            </p>
-            <div class="space-y-2 pt-2">
-              <div class="flex items-start gap-2">
-                <div class="text-primary mt-1">✓</div>
-                <p class="text-muted-foreground">Fast, reliable service with flexible scheduling options</p>
-              </div>
-              <div class="flex items-start gap-2">
-                <div class="text-primary mt-1">✓</div>
-                <p class="text-muted-foreground">Careful handling of all your belongings, from furniture to fragile items</p>
-              </div>
-              <div class="flex items-start gap-2">
-                <div class="text-primary mt-1">✓</div>
-                <p class="text-muted-foreground">Clear, upfront pricing with no hidden fees</p>
-              </div>
-              <div class="flex items-start gap-2">
-                <div class="text-primary mt-1">✓</div>
-                <p class="text-muted-foreground">Local expertise that ensures smooth, efficient moves</p>
-              </div>
-            </div>
-            <div class="pt-4">
-              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
-                Get a Free Quote
-              </a>
-            </div>
+          <div id="quote-form" class="rounded-lg overflow-hidden mt-8 lg:mt-0">
+            <LocalMoveForm client:load />
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-xl">
-          <Image 
-            src={residentialImage} 
-            alt="Legacy Moving Denver local moving services"
-            class="w-full h-auto object-cover"
-          />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+          <span class="font-medium text-secondary">Licensed & Insured</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <span class="font-medium text-secondary">4.8 Stars (1,700+ Reviews)</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          <span class="font-medium text-secondary">Satisfaction Guaranteed</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span class="font-medium text-secondary">Same-Day Service Available</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Local Moving Services -->
-  <section class="py-16 md:py-24 bg-gray-50">
+  <!-- Service Features -->
+  <section class="py-16">
     <div class="container">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Our Local Moving Services</h2>
-        <p class="text-muted-foreground">
-          We offer a complete range of local moving services to make your move as smooth as possible, whether you're moving a small apartment or a large family home.
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Why Choose Legacy Moving <span class="text-primary">for Your Local Move</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          With over 1,700 5-star reviews, we've built our reputation on reliability, care, and exceptional service. See why Denver residents trust us for their local moves.
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <Home size={24} className="text-primary" />
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Residential Moving</h3>
-          <p class="text-muted-foreground mb-4">Complete home moving services for houses, apartments, and condos of all sizes. We handle everything from planning to final placement of furniture.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">No Hidden Fees</h3>
+          <p class="text-gray-600">Transparent pricing with detailed quotes. What we quote is what you pay - no surprises or hidden charges.</p>
         </div>
         
-        <!-- Service 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <Box size={24} className="text-primary" />
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Packing Services</h3>
-          <p class="text-muted-foreground mb-4">Our professional packers use high-quality materials to ensure your belongings are protected during your local move. We can pack your entire home or just specific items.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Expert Local Movers</h3>
+          <p class="text-gray-600">Our professionally trained team has extensive experience with Denver's neighborhoods, buildings, and moving challenges.</p>
         </div>
         
-        <!-- Service 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <Truck size={24} className="text-primary" />
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Loading & Unloading</h3>
-          <p class="text-muted-foreground mb-4">Need help with just the heavy lifting? Our team can efficiently load and unload your rental truck or storage container with care and precision.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Full-Service Options</h3>
+          <p class="text-gray-600">From packing and loading to furniture assembly and junk removal, we handle every aspect of your local move.</p>
         </div>
         
-        <!-- Service 4 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Specialty Item Moving</h3>
-          <p class="text-muted-foreground mb-4">From pianos to antiques and artwork, we have the expertise and equipment to move your valuable specialty items safely within the Denver area.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Responsive Service</h3>
+          <p class="text-gray-600">Quick communication, on-time arrival, and flexible scheduling to accommodate your moving needs.</p>
         </div>
         
-        <!-- Service 5 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V7H2Z"></path></svg>
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Same-Day Services</h3>
-          <p class="text-muted-foreground mb-4">Need to move quickly? We offer same-day and next-day local moving services for those unexpected situations when you need to relocate right away.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Quality Equipment</h3>
+          <p class="text-gray-600">Well-maintained trucks, proper moving equipment, and quality packing materials to protect your belongings.</p>
         </div>
         
-        <!-- Service 6 -->
-        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-            <ShieldCheck size={24} className="text-primary" />
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
           </div>
-          <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Furniture Assembly</h3>
-          <p class="text-muted-foreground mb-4">We disassemble your furniture before moving and reassemble it at your new home, ensuring everything is set up just the way you want it.</p>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Care & Respect</h3>
+          <p class="text-gray-600">We treat your belongings with the utmost care and respect your home, using proper protection for floors and doorways.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Why Choose Us -->
-  <section class="py-16 md:py-24">
+  
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="order-2 md:order-1">
-          <div class="space-y-6">
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Local Denver Expertise</h3>
-                <p class="text-muted-foreground">As Denver locals, we know the area inside and out. We understand the challenges of moving in different neighborhoods and can navigate the city efficiently.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Transparent Pricing</h3>
-                <p class="text-muted-foreground">No hidden fees or surprise charges. We provide clear, detailed estimates upfront so you know exactly what to expect on moving day.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Highly Rated Service</h3>
-                <p class="text-muted-foreground">With over 1,700 five-star reviews, our reputation speaks for itself. Our customers consistently praise our professionalism, efficiency, and care.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <div class="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-semibold text-xl mb-1 text-secondary">Efficient & Reliable</h3>
-                <p class="text-muted-foreground">We respect your time and work efficiently to complete your move as quickly as possible without sacrificing care or quality.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="order-1 md:order-2">
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Why Choose Legacy Moving for Your Local Move</h2>
-          <p class="text-muted-foreground mb-8">
-            When it comes to local moving in Denver, experience matters. Since 2018, we've helped thousands of Denver residents move safely and efficiently across the city and surrounding areas.
-          </p>
-          <CheckSquare size={24} className="text-primary mb-4" />
-          <blockquote class="text-lg italic text-muted-foreground">
-            "Legacy Moving made our local move incredibly easy. The crew was professional, efficient, and took great care with all our belongings. They finished ahead of schedule and the price was exactly as quoted. Highly recommended!"
-            <footer class="mt-2 text-sm not-italic">
-              - Michael T., Denver
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="bg-primary py-16">
-    <div class="container">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">Ready for a Stress-Free Local Move?</h2>
-        <p class="text-white/90 text-lg mb-8">
-          Get a free quote today and experience the Legacy Moving difference for your Denver area move.
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">What Our <span class="text-primary">Customers Say</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Read what Denver residents have to say about their local moving experience with Legacy Moving.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold transition-colors' })}>
-            Get a Free Quote
-          </a>
-          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
-            Call (720) 340-1849
-          </a>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"Legacy Moving made our move across Denver so easy. Their team was professional, efficient, and took great care with all our belongings. They finished ahead of schedule and the price was exactly as quoted."</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">Michael Thompson</h4>
+              <p class="text-sm text-gray-500">Denver, CO</p>
+            </div>
+          </div>
         </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"I needed a last-minute move and Legacy came through! They were able to accommodate my schedule, arrived on time, and worked efficiently. The team was friendly and professional. Highly recommend!"</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">Sarah Johnson</h4>
+              <p class="text-sm text-gray-500">Lakewood, CO</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"This is the second time I've used Legacy Moving for a local move in Denver, and they were fantastic both times. Their team is careful with belongings, efficient, and reasonably priced. Wouldn't use anyone else!"</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">David Rodriguez</h4>
+              <p class="text-sm text-gray-500">Aurora, CO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-medium hover:underline">
+          Read more customer reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="py-16 md:py-24 bg-gray-50">
+  <!-- Areas We Serve Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Areas We <span class="text-primary">Serve</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          We provide professional local moving services throughout the Denver metro area and surrounding communities.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Denver</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Aurora</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Lakewood</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Arvada</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Westminster</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Thornton</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Centennial</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Highlands Ranch</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Littleton</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Englewood</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Golden</h3>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 text-center hover:border-primary hover:shadow-md transition-all">
+          <h3 class="font-medium text-secondary">Boulder</h3>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <p class="text-muted-foreground">Need to move to or from an area not listed? <a href="tel:7203401849" class="text-primary font-medium hover:underline phone-link" data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">Call us</a> to check availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="py-16 bg-gray-50">
     <div class="container">
       <div class="max-w-3xl mx-auto">
         <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
-          Frequently Asked Questions
+          Frequently Asked <span class="text-primary">Questions</span>
         </h2>
         
         <div class="space-y-4">
@@ -317,7 +347,7 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
               class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
               onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
             >
-              <h3 class="font-display font-semibold text-xl text-secondary">Are your movers licensed and insured?</h3>
+              <h3 class="font-display font-semibold text-xl text-secondary">Do you offer same-day moving services?</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
                 <path d="m18 15-6-6-6 6"/>
               </svg>
@@ -325,7 +355,7 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
             <div class="faq-answer hidden">
               <div class="p-6 pt-0 border-t border-gray-100">
                 <p class="text-muted-foreground">
-                  Yes, Legacy Moving Denver is fully licensed and insured. We carry comprehensive commercial liability insurance and workers' compensation for all our employees. Our movers are professionally trained and experienced in handling all types of moves and items with care.
+                  Yes! We understand that sometimes moves need to happen quickly. We offer same-day and next-day moving services based on availability. Contact us as soon as possible, and we'll do our best to accommodate your schedule. Additional fees may apply for last-minute bookings.
                 </p>
               </div>
             </div>
@@ -337,7 +367,7 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
               class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
               onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
             >
-              <h3 class="font-display font-semibold text-xl text-secondary">Do you offer packing services for local moves?</h3>
+              <h3 class="font-display font-semibold text-xl text-secondary">What's included in your local moving service?</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
                 <path d="m18 15-6-6-6 6"/>
               </svg>
@@ -345,7 +375,7 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
             <div class="faq-answer hidden">
               <div class="p-6 pt-0 border-t border-gray-100">
                 <p class="text-muted-foreground">
-                  Absolutely! We offer full-service packing, partial packing, and unpacking services. Our professional packers use high-quality materials and efficient techniques to ensure your belongings are protected during the move. We can pack your entire home or just specific items that require special care.
+                  Our standard local moving service includes loading, transportation, and unloading of your belongings. We also provide basic furniture disassembly and reassembly, protective wrapping for furniture, and moving blankets. Additional services like full packing, unpacking, specialty item moving, and storage solutions are available at an extra cost.
                 </p>
               </div>
             </div>
@@ -355,50 +385,21 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section class="py-16 md:py-24">
+  <!-- Final CTA -->
+  <section class="py-16 bg-primary text-white">
     <div class="container">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Local Moving Quote</h2>
-          <p class="text-muted-foreground mb-8">
-            Ready to plan your local move? Fill out the form for a detailed quote, or call us directly to speak with our local moving specialists.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <MapPin size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Our Location</h3>
-                <p class="text-muted-foreground">8805 W. 14th Ave, Suite 300, Lakewood, CO 80215</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <Phone size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Call Us</h3>
-                <a href="tel:7203401849" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
-                  (720) 340-1849
-                </a>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <Clock size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Hours</h3>
-                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-xl">
-          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
-          <ContactForm client:load />
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready for a Stress-Free Local Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Get your free quote today and experience why Denver residents trust Legacy Moving.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#quote-form" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-white/90 font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
+            Call (720) 340-1849
+          </a>
         </div>
       </div>
     </div>
