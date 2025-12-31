@@ -1,0 +1,497 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import ContactForm from '@/components/ContactForm';
+import LongDistanceMoveForm from '@/components/LongDistanceMoveForm';
+import { Home, MapPin, Box, Phone, Clock, Truck, CheckSquare, ShieldCheck, Map, Globe, Calendar } from "lucide-react";
+import { Image } from 'astro:assets';
+import movingImage from '../../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+---
+
+<BaseLayout
+  title="Out-of-State Moving Services | Long Distance Movers Denver | Legacy Moving"
+  description="Professional interstate and long distance moving services from Denver. Expert packing, reliable transport, and full-service moving to any state. Get your free quote today."
+>
+  <!-- Hero Section with Form -->
+  <section class="relative bg-secondary py-12 md:py-20 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver truck ready for a long-distance move" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-4 rounded-full bg-primary/20 text-white text-sm font-medium">Denver's Premier Interstate Movers</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+            Out-of-State <span class="text-primary">Moving Services</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto lg:mx-0">
+            Expert long-distance moving services with competitive rates, professional crews, and personalized planning for a stress-free interstate relocation.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4 mt-8">
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-primary hover:text-white font-semibold phone-link' })}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call (720) 340-1849
+            </a>
+          </div>
+          <!-- Mobile only action buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-8 lg:hidden justify-center">
+            <a href="#quote-form" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90 font-semibold' })}>
+              Get a Free Quote
+            </a>
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white text-secondary hover:bg-white/90 font-semibold phone-link' })}>
+              Call Now
+            </a>
+          </div>
+        </div>
+        <div>
+          <div id="quote-form" class="rounded-lg overflow-hidden mt-8 lg:mt-0">
+            <LongDistanceMoveForm client:load />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+          <span class="font-medium text-secondary">Licensed & Insured</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <span class="font-medium text-secondary">4.8 Stars (1,700+ Reviews)</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          <span class="font-medium text-secondary">Satisfaction Guaranteed</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+          <span class="font-medium text-secondary">Interstate Moving Specialists</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Features -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Why Choose Legacy Moving <span class="text-primary">for Your Interstate Move</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Our experienced team specializes in long-distance relocations, providing comprehensive services that make moving to another state simple and stress-free.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Globe className="w-7 h-7 text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Nationwide Coverage</h3>
+          <p class="text-gray-600">We provide long-distance moving services to all 50 states, with specialized routes and logistics for efficient interstate relocation.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Calendar className="w-7 h-7 text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Personalized Planning</h3>
+          <p class="text-gray-600">Each interstate move gets a dedicated coordinator who handles all logistics from scheduling to delivery at your new location.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Professional Packing</h3>
+          <p class="text-gray-600">Our team uses industry-leading packing materials and techniques to ensure your belongings arrive safely after a long journey.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Map className="w-7 h-7 text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">GPS Tracking</h3>
+          <p class="text-gray-600">Know exactly where your belongings are throughout the journey with our real-time GPS tracking and regular status updates.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Guaranteed Delivery</h3>
+          <p class="text-gray-600">We provide guaranteed delivery dates, so you can plan your arrival and schedule with confidence and peace of mind.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-2 text-secondary">Full-Service Options</h3>
+          <p class="text-gray-600">From packing and loading to furniture assembly and storage solutions, we handle every aspect of your interstate move.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Our Process Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Our Long Distance <span class="text-primary">Moving Process</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          We've streamlined our interstate moving process to make your transition to a new state seamless and stress-free.
+        </p>
+      </div>
+      
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 h-full">
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 font-bold text-xl">1</div>
+            <h3 class="font-display font-bold text-xl mb-3 text-secondary">Free Consultation</h3>
+            <p class="text-gray-600">We start with a detailed assessment of your moving needs and provide a comprehensive quote with no hidden fees.</p>
+          </div>
+          <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 h-full">
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 font-bold text-xl">2</div>
+            <h3 class="font-display font-bold text-xl mb-3 text-secondary">Custom Planning</h3>
+            <p class="text-gray-600">Your dedicated coordinator creates a tailored moving plan, including timeline, packing strategy, and logistics.</p>
+          </div>
+          <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 h-full">
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 font-bold text-xl">3</div>
+            <h3 class="font-display font-bold text-xl mb-3 text-secondary">Professional Execution</h3>
+            <p class="text-gray-600">Our expert team packs, loads, and transports your belongings with precision and care for the interstate journey.</p>
+          </div>
+          <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 h-full">
+            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 font-bold text-xl">4</div>
+            <h3 class="font-display font-bold text-xl mb-3 text-secondary">Safe Delivery</h3>
+            <p class="text-gray-600">We deliver and unpack according to schedule, ensuring everything arrives in perfect condition at your new home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">What Our <span class="text-primary">Customers Say</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          Read what customers have to say about their long-distance moving experience with Legacy Moving.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"Legacy Moving handled our move from Denver to Seattle flawlessly. Their team was incredibly professional and kept us updated throughout the entire process. Everything arrived on time and in perfect condition."</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">Jennifer Wilson</h4>
+              <p class="text-sm text-gray-500">Denver to Seattle</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"I was nervous about moving from Denver to Austin, but Legacy made it easy. Their pricing was transparent, the crew was friendly and efficient, and my belongings arrived ahead of schedule. I couldn't have asked for more!"</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">Robert Martinez</h4>
+              <p class="text-sm text-gray-500">Denver to Austin</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+          <div class="flex mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FBBC05" stroke="#FBBC05" stroke-width="0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"Moving cross-country from Denver to New York was daunting, but Legacy Moving made it seamless. Their full packing service saved me weeks of stress, and they handled my antiques with exceptional care. Worth every penny!"</p>
+          <div class="flex items-center">
+            <div class="ml-3">
+              <h4 class="font-semibold text-secondary">Sophia Chen</h4>
+              <p class="text-sm text-gray-500">Denver to New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-medium hover:underline">
+          Read more customer reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Routes Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Popular <span class="text-primary">Moving Routes</span></h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">
+          We specialize in these common interstate moving routes from Denver, but we service all 50 states.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to California</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to Los Angeles, San Francisco, San Diego or other California cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to Texas</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to Austin, Dallas, Houston, San Antonio or other Texas cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to Washington</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to Seattle, Tacoma, Spokane or other Washington cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to Florida</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to Miami, Orlando, Tampa or other Florida cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to Arizona</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to Phoenix, Tucson, Scottsdale or other Arizona cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="p-5">
+            <h3 class="font-display font-semibold text-lg mb-2 text-secondary">Denver to New York</h3>
+            <p class="text-gray-600 text-sm mb-3">Moving to NYC, Buffalo, Rochester or other New York cities</p>
+            <div class="flex items-center text-sm text-primary">
+              <span class="font-medium">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <p class="text-muted-foreground mb-4">Moving to another state not listed here? No problem!</p>
+        <a href="#quote-form" class={buttonVariants({ className: 'bg-primary text-white hover:bg-primary/90 font-medium transition-colors' })}>
+          Get a Custom Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">
+          Frequently Asked <span class="text-primary">Questions</span>
+        </h2>
+        
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button 
+              class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
+              onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
+            >
+              <h3 class="font-display font-semibold text-xl text-secondary">How much does an interstate move from Denver cost?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100">
+                <p class="text-muted-foreground">
+                  Interstate moving costs depend on distance, home size, and services required. Most long-distance moves from Denver range from $2,000 to $7,500+. We provide detailed, binding quotes based on your specific needs to ensure there are no surprises.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button 
+              class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
+              onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
+            >
+              <h3 class="font-display font-semibold text-xl text-secondary">How far in advance should I schedule my interstate move?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100">
+                <p class="text-muted-foreground">
+                  For interstate moves, we recommend booking 4-8 weeks in advance, especially during peak moving season (May-September). This ensures you get your preferred moving dates and allows adequate time for planning and coordination. For last-minute moves, contact us as soon as possible, and we'll do our best to accommodate your timeline.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button 
+              class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
+              onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
+            >
+              <h3 class="font-display font-semibold text-xl text-secondary">How long will my interstate move take?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100">
+                <p class="text-muted-foreground">
+                  Transit times for interstate moves depend on distance. Moves to neighboring states typically take 2-3 days, while cross-country moves may take 7-14 days. We provide estimated delivery windows and keep you updated throughout the journey with regular status updates and GPS tracking information.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button 
+              class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
+              onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
+            >
+              <h3 class="font-display font-semibold text-xl text-secondary">Is my long-distance move insured?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100">
+                <p class="text-muted-foreground">
+                  Yes, we provide basic valuation coverage at no additional cost, which provides limited liability coverage based on weight. We also offer full-value protection options for comprehensive coverage. Our team will explain your insurance options during the quote process, so you can choose the protection level that's right for your belongings.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button 
+              class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" 
+              onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');"
+            >
+              <h3 class="font-display font-semibold text-xl text-secondary">Can you move my vehicle to another state?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100">
+                <p class="text-muted-foreground">
+                  Yes, we offer vehicle transportation services for cars, motorcycles, and other vehicles as part of our interstate moving packages. Our vehicle shipping specialists will coordinate the transport to ensure your vehicle arrives safely at your new location. This can be included in your comprehensive moving package or arranged as a standalone service.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready for Your Interstate Adventure?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Let us handle the logistics while you focus on your new beginning. Get your personalized long-distance moving quote today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#quote-form" class={buttonVariants({ size: 'lg', className: 'bg-white text-primary hover:bg-white/90 font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
