@@ -32,9 +32,21 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
           <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
             Get a Free Quote
           </a>
-          <a href="/services/residential-moving" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-primary/20 text-white hover:bg-primary/90 hover:text-white' })}>
-            LOCAL MOVING
+          <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md text-sm font-medium text-white h-11 px-8 py-2 text-lg">
+            Local Moving
           </a>
+          <style>
+            .local-moving-btn {
+              animation: colorChange 5s infinite;
+              border: 1px solid rgba(var(--primary), 0.2);
+              font-weight: 600;
+              transition: background-color 0.3s ease;
+            }
+            @keyframes colorChange {
+              0%, 100% { background-color: #1e293b; } /* secondary color */
+              50% { background-color: #0056b3; } /* blue color */
+            }
+          </style>
         </div>
       </div>
       <div class="lg:flex items-center justify-center">
