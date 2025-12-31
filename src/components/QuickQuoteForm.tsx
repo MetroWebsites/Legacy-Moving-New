@@ -34,7 +34,7 @@ export default function QuickQuoteForm() {
         form.append(key, value);
       });
       
-      const response = await fetch("https://formspree.io/f/mjgvzbqr", {
+      const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
         // Don't set Content-Type header - browser will set it with boundary
         body: form,

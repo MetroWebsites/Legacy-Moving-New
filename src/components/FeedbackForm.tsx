@@ -43,7 +43,7 @@ export default function FeedbackForm() {
         formDataObj.append(key, value.toString());
       });
       
-      const response = await fetch("https://formspree.io/f/mjgvzbqr", {
+      const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
         body: formDataObj,
         headers: {
