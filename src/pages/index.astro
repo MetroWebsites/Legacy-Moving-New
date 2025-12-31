@@ -35,12 +35,18 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
           <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md text-sm font-medium text-white h-11 px-8 py-2 text-lg">
             Local Moving
           </a>
+          <a href="/services/out-of-state-moving" class="long-distance-btn inline-flex items-center justify-center rounded-md text-sm font-medium text-white h-11 px-8 py-2 text-lg">
+            Long Distance Moving
+          </a>
           <style>
-            .local-moving-btn {
+            .local-moving-btn, .long-distance-btn {
               animation: colorChange 5s infinite;
               border: 1px solid rgba(var(--primary), 0.2);
               font-weight: 600;
               transition: background-color 0.3s ease;
+            }
+            .long-distance-btn {
+              animation-delay: 2.5s;
             }
             @keyframes colorChange {
               0%, 100% { background-color: #1e293b; } /* secondary color */

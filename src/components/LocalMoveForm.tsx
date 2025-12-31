@@ -224,7 +224,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="packing">Packing Services</label>
+              <label htmlFor="packing" className="text-secondary">Packing Services</label>
             </div>
             <div className="flex items-center">
               <input
@@ -234,7 +234,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="unpacking">Unpacking Services</label>
+              <label htmlFor="unpacking" className="text-secondary">Unpacking Services</label>
             </div>
             <div className="flex items-center">
               <input
@@ -244,7 +244,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="furniture_assembly">Furniture Assembly</label>
+              <label htmlFor="furniture_assembly" className="text-secondary">Furniture Assembly</label>
             </div>
             <div className="flex items-center">
               <input
@@ -254,7 +254,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="storage">Storage Solutions</label>
+              <label htmlFor="storage" className="text-secondary">Storage Solutions</label>
             </div>
             <div className="flex items-center">
               <input
@@ -264,7 +264,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="specialty_items">Specialty Item Moving</label>
+              <label htmlFor="specialty_items" className="text-secondary">Specialty Item Moving</label>
             </div>
             <div className="flex items-center">
               <input
@@ -274,7 +274,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="supplies">Moving Supplies</label>
+              <label htmlFor="supplies" className="text-secondary">Moving Supplies</label>
             </div>
           </div>
         </div>

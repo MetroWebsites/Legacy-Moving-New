@@ -224,7 +224,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="full_packing">Full Packing Services</label>
+              <label htmlFor="full_packing" className="text-secondary">Full Packing Services</label>
             </div>
             <div className="flex items-center">
               <input
@@ -234,7 +234,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="partial_packing">Partial Packing</label>
+              <label htmlFor="partial_packing" className="text-secondary">Partial Packing</label>
             </div>
             <div className="flex items-center">
               <input
@@ -244,7 +244,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="unpacking">Unpacking Services</label>
+              <label htmlFor="unpacking" className="text-secondary">Unpacking Services</label>
             </div>
             <div className="flex items-center">
               <input
@@ -254,7 +254,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="storage">Storage Solutions</label>
+              <label htmlFor="storage" className="text-secondary">Storage Solutions</label>
             </div>
             <div className="flex items-center">
               <input
@@ -264,7 +264,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="vehicle_transport">Vehicle Transport</label>
+              <label htmlFor="vehicle_transport" className="text-secondary">Vehicle Transport</label>
             </div>
             <div className="flex items-center">
               <input
@@ -274,7 +274,7 @@ export default function LongDistanceMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="specialty_items">Specialty Item Moving</label>
+              <label htmlFor="specialty_items" className="text-secondary">Specialty Item Moving</label>
             </div>
           </div>
         </div>
