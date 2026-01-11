@@ -18,16 +18,22 @@ const { title, description, ogImage } = Astro.props;
 ---
 
 <meta charset="utf-8" />
-<meta name="robots" content="noindex, nofollow" />
-<meta name="googlebot" content="noindex, nofollow" />
+
+<!-- ✅ Allow indexing -->
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="MetroWebsites.com" />
+
 <link rel="canonical" href={canonicalURL} />
+
 <link
   rel="icon"
   type="image/png"
   href="/favicon.png"
 />
+
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
@@ -61,3 +67,4 @@ const { title, description, ogImage } = Astro.props;
     }
   })();
 </script>
+
