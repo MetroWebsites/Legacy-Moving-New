@@ -1,3 +1,16 @@
 {
-    "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "legacymovingdenver.com"
+        }
+      ],
+      "destination": "https://www.legacymovingdenver.com/$1",
+      "permanent": true
+    }
+  ]
 }
