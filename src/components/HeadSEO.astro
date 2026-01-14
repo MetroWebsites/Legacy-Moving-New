@@ -8,10 +8,12 @@ interface Props {
   ogImage?: URL | undefined;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// SEO-critical: ensure canonical never falls back to localhost if Astro.site isn't set
+const SITE = Astro.site ?? new URL("https://www.legacymovingdenver.com");
+const canonicalURL = new URL(Astro.url.pathname, SITE);
 
 if (Astro.props.ogImage === undefined) {
-  Astro.props.ogImage = new URL("/social-preview.jpg", Astro.site);
+  Astro.props.ogImage = new URL("/social-preview.jpg", SITE);
 }
 
 const { title, description, ogImage } = Astro.props;
@@ -67,4 +69,3 @@ const { title, description, ogImage } = Astro.props;
     }
   })();
 </script>
-
