@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "./ui/button";
+import { ReCAPTCHAComponent } from "./ReCAPTCHA";
+import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function LocalMoveForm() {
   const defaultFormData = {
@@ -19,6 +21,8 @@ export default function LocalMoveForm() {
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -42,6 +46,12 @@ export default function LocalMoveForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaToken) {
+      setSubmitStatus("error");
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -58,6 +68,9 @@ export default function LocalMoveForm() {
       // Add additionalServices as a comma-separated string
       form.append('additionalServices', formData.additionalServices.join(', '));
       
+      // Add reCAPTCHA token
+      form.append('g-recaptcha-response', recaptchaToken);
+      
       const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
         body: form,
@@ -70,11 +83,15 @@ export default function LocalMoveForm() {
       if (response.ok) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus("error");
+        recaptchaRef.current?.reset();
       }
     } catch (error) {
       setSubmitStatus("error");
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -297,9 +314,17 @@ export default function LocalMoveForm() {
         <input name="form_name" type="hidden" value={formData.form_name} />
         <input name="recipient_email" type="hidden" value={formData.recipient_email} />
         
+        {/* Google reCAPTCHA */}
+        <ReCAPTCHAComponent
+          recaptchaRef={recaptchaRef}
+          onChange={(token) => setRecaptchaToken(token)}
+          onExpired={() => setRecaptchaToken(null)}
+          onErrored={() => setRecaptchaToken(null)}
+        />
+        
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !recaptchaToken}
           className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
         >
           {isSubmitting ? "Submitting..." : "Get My Free Quote"}

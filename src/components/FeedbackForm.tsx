@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MessageSquare, Star } from 'lucide-react';
+import { ReCAPTCHAComponent } from './ReCAPTCHA';
+import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function FeedbackForm() {
   const defaultFormData = {
@@ -15,6 +17,8 @@ export default function FeedbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -33,6 +37,11 @@ export default function FeedbackForm() {
       return;
     }
     
+    if (!recaptchaToken) {
+      setError("Please complete the reCAPTCHA verification.");
+      return;
+    }
+    
     setIsSubmitting(true);
     setError("");
     
@@ -42,6 +51,9 @@ export default function FeedbackForm() {
       Object.entries(formData).forEach(([key, value]) => {
         formDataObj.append(key, value.toString());
       });
+      
+      // Add reCAPTCHA token
+      formDataObj.append('g-recaptcha-response', recaptchaToken);
       
       const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
@@ -60,9 +72,11 @@ export default function FeedbackForm() {
       // Success
       setIsSubmitted(true);
       setFormData(defaultFormData);
+      setRecaptchaToken(null);
     } catch (err) {
       setError("There was a problem submitting your feedback. Please try again.");
       console.error("Form submission error:", err);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -150,10 +164,18 @@ export default function FeedbackForm() {
       
       {error && <p className="text-destructive text-sm">{error}</p>}
       
+      {/* Google reCAPTCHA */}
+      <ReCAPTCHAComponent
+        recaptchaRef={recaptchaRef}
+        onChange={(token) => setRecaptchaToken(token)}
+        onExpired={() => setRecaptchaToken(null)}
+        onErrored={() => setRecaptchaToken(null)}
+      />
+      
       <button
         type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-primary text-white py-3 px-4 rounded-md font-medium hover:bg-primary/90 transition-colors flex justify-center items-center"
+        disabled={isSubmitting || !recaptchaToken}
+        className="w-full bg-primary text-white py-3 px-4 rounded-md font-medium hover:bg-primary/90 transition-colors flex justify-center items-center disabled:opacity-50"
       >
         {isSubmitting ? (
           <span className="animate-pulse">Submitting...</span>

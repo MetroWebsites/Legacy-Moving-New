@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "./ui/button";
+import { ReCAPTCHAComponent } from "./ReCAPTCHA";
+import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactForm() {
   const defaultFormData = {
@@ -17,6 +19,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -25,6 +29,13 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if reCAPTCHA token exists
+    if (!recaptchaToken) {
+      setSubmitStatus("error");
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -34,6 +45,9 @@ export default function ContactForm() {
       Object.entries(formData).forEach(([key, value]) => {
         form.append(key, value);
       });
+      
+      // Add reCAPTCHA token
+      form.append('g-recaptcha-response', recaptchaToken);
       
       const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
@@ -49,11 +63,15 @@ export default function ContactForm() {
       if (true) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus("error");
+        recaptchaRef.current?.reset();
       }
     } catch (error) {
       setSubmitStatus("error");
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -188,9 +206,17 @@ export default function ContactForm() {
       <input name="form_name" type="hidden" value={formData.form_name} />
       <input name="recipient_email" type="hidden" value={formData.recipient_email} />
       
+      {/* Google reCAPTCHA */}
+      <ReCAPTCHAComponent
+        recaptchaRef={recaptchaRef}
+        onChange={(token) => setRecaptchaToken(token)}
+        onExpired={() => setRecaptchaToken(null)}
+        onErrored={() => setRecaptchaToken(null)}
+      />
+      
       <Button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !recaptchaToken}
         className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
       >
         {isSubmitting ? "Submitting..." : "Request Free Quote"}

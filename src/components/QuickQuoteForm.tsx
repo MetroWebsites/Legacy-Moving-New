@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { ReCAPTCHAComponent } from './ReCAPTCHA';
+import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({
@@ -13,6 +15,8 @@ export default function QuickQuoteForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,6 +28,12 @@ export default function QuickQuoteForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaToken) {
+      setSubmitStatus('error');
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -33,6 +43,9 @@ export default function QuickQuoteForm() {
       Object.entries(formData).forEach(([key, value]) => {
         form.append(key, value);
       });
+      
+      // Add reCAPTCHA token
+      form.append('g-recaptcha-response', recaptchaToken);
       
       const response = await fetch("https://formspree.io/f/mzdbndbo", {
         method: "POST",
@@ -57,11 +70,15 @@ export default function QuickQuoteForm() {
           form_name: 'Quick Quote Form',
           recipient_email: 'legacymovingdenver@gmail.com'
         });
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus('error');
+        recaptchaRef.current?.reset();
       }
     } catch (error) {
       setSubmitStatus('error');
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -182,9 +199,17 @@ export default function QuickQuoteForm() {
           </div>
         </div>
 
+        {/* Google reCAPTCHA */}
+        <ReCAPTCHAComponent
+          recaptchaRef={recaptchaRef}
+          onChange={(token) => setRecaptchaToken(token)}
+          onExpired={() => setRecaptchaToken(null)}
+          onErrored={() => setRecaptchaToken(null)}
+        />
+
         <button 
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !recaptchaToken}
           className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-colors disabled:opacity-70"
         >
           {isSubmitting ? 'Submitting...' : 'Get Quote'}
