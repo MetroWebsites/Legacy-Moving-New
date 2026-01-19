@@ -204,20 +204,35 @@ export const POST: APIRoute = async ({ request }) => {
     const senderName = formData.get('name') as string;
 
     try {
+      // Use Resend's onboarding domain (works immediately, no verification needed)
+      // Note: This sends to the recipient, not from a custom domain
       const { data, error } = await resend.emails.send({
-        from: 'Legacy Moving Denver <onboarding@resend.dev>', // Resend default sender
+        from: 'onboarding@resend.dev',
         to: [RECIPIENT_EMAIL],
-        subject: `New ${formName} from ${senderName || 'Website'}`,
+        subject: `New ${formName} - Legacy Moving Denver`,
         html: formatEmailHtml(formData),
         replyTo: senderEmail || undefined,
+        text: `New form submission from ${senderName || 'Website'}\n\nPlease view the HTML version for full details.`,
       });
 
       if (error) {
-        console.error('Resend email error:', error);
+        console.error('Resend email error:', JSON.stringify(error, null, 2));
+        
+        // Provide more specific error messages
+        let errorMessage = 'Failed to send email. Please try again or contact us directly at (720) 340-1849.';
+        
+        if (error.message) {
+          console.error('Error details:', error.message);
+          // Don't expose internal errors to users, but log them
+          if (error.message.includes('API key')) {
+            errorMessage = 'Email service configuration error. Please contact support.';
+          }
+        }
+        
         return new Response(
           JSON.stringify({
             success: false,
-            error: 'Failed to send email. Please try again or contact us directly at (720) 340-1849.',
+            error: errorMessage,
           }),
           {
             status: 500,
@@ -228,7 +243,7 @@ export const POST: APIRoute = async ({ request }) => {
         );
       }
 
-      console.log('Email sent successfully:', data);
+      console.log('Email sent successfully:', JSON.stringify(data, null, 2));
 
       // Success!
       return new Response(
@@ -245,6 +260,14 @@ export const POST: APIRoute = async ({ request }) => {
       );
     } catch (error) {
       console.error('Email service error:', error);
+      
+      // Log the full error for debugging
+      if (error instanceof Error) {
+        console.error('Error name:', error.name);
+        console.error('Error message:', error.message);
+        console.error('Error stack:', error.stack);
+      }
+      
       return new Response(
         JSON.stringify({
           success: false,
