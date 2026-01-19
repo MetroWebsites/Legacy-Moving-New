@@ -26,3 +26,4 @@ Feel free to explore the various components and enhance your application with Sh
 ## License
 
 Licensed under the [MIT License](LICENSE).
+
