@@ -1,8 +1,10 @@
 import type { APIRoute } from 'astro';
+import { Resend } from 'resend';
 
 const RECAPTCHA_SECRET_KEY = import.meta.env.RECAPTCHA_SECRET_KEY;
 const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdbndbo';
+const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+const RECIPIENT_EMAIL = 'legacymovingdenver@gmail.com';
 
 interface RecaptchaVerifyResponse {
   success: boolean;
@@ -34,12 +36,72 @@ async function verifyRecaptchaToken(token: string): Promise<RecaptchaVerifyRespo
 }
 
 /**
+ * Format form data into HTML email
+ */
+function formatEmailHtml(formData: FormData): string {
+  const formName = formData.get('form_name') || 'Form Submission';
+  const entries = Array.from(formData.entries()).filter(
+    ([key]) => !['g-recaptcha-response', 'form_name', 'recipient_email'].includes(key)
+  );
+
+  let html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #0066cc; color: white; padding: 20px; border-radius: 5px 5px 0 0; }
+        .content { background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 0 0 5px 5px; }
+        .field { margin-bottom: 15px; }
+        .label { font-weight: bold; color: #0066cc; }
+        .value { margin-top: 5px; }
+        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h2>New ${formName}</h2>
+        </div>
+        <div class="content">
+  `;
+
+  entries.forEach(([key, value]) => {
+    const label = key
+      .split('_')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    html += `
+      <div class="field">
+        <div class="label">${label}:</div>
+        <div class="value">${String(value).replace(/\n/g, '<br>')}</div>
+      </div>
+    `;
+  });
+
+  html += `
+        </div>
+        <div class="footer">
+          <p>This form was submitted through Legacy Moving Denver website.</p>
+          <p>Submission verified with Google reCAPTCHA.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  return html;
+}
+
+/**
  * POST /api/forms/submit
  * 
  * Handles form submissions with reCAPTCHA verification
  * 
  * 1. Validates reCAPTCHA token
- * 2. Forwards to email service (Formspree)
+ * 2. Sends email via Resend
  * 3. Returns success/error response
  */
 export const POST: APIRoute = async ({ request }) => {
@@ -118,25 +180,44 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // reCAPTCHA verified successfully - now forward to email service
-    // Remove the reCAPTCHA token before forwarding
-    formData.delete('g-recaptcha-response');
+    // Check if Resend API key is configured
+    if (!RESEND_API_KEY) {
+      console.error('RESEND_API_KEY environment variable is not set');
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: 'Email service not configured. Please contact support.',
+        }),
+        {
+          status: 500,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+    }
+
+    // reCAPTCHA verified successfully - now send email via Resend
+    const resend = new Resend(RESEND_API_KEY);
+    const formName = formData.get('form_name') || 'Form Submission';
+    const senderEmail = formData.get('email') as string;
+    const senderName = formData.get('name') as string;
 
     try {
-      const emailResponse = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json',
-        },
+      const { data, error } = await resend.emails.send({
+        from: 'Legacy Moving Denver <onboarding@resend.dev>', // Resend default sender
+        to: [RECIPIENT_EMAIL],
+        subject: `New ${formName} from ${senderName || 'Website'}`,
+        html: formatEmailHtml(formData),
+        replyTo: senderEmail || undefined,
       });
 
-      if (!emailResponse.ok) {
-        console.error('Formspree submission failed:', emailResponse.statusText);
+      if (error) {
+        console.error('Resend email error:', error);
         return new Response(
           JSON.stringify({
             success: false,
-            error: 'Failed to send form submission. Please try again or contact us directly.',
+            error: 'Failed to send email. Please try again or contact us directly at (720) 340-1849.',
           }),
           {
             status: 500,
@@ -146,6 +227,8 @@ export const POST: APIRoute = async ({ request }) => {
           }
         );
       }
+
+      console.log('Email sent successfully:', data);
 
       // Success!
       return new Response(
@@ -165,7 +248,7 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(
         JSON.stringify({
           success: false,
-          error: 'Failed to send form submission. Please try again or contact us directly.',
+          error: 'Failed to send email. Please try again or contact us directly at (720) 340-1849.',
         }),
         {
           status: 500,
