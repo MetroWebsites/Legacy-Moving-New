@@ -12,3 +12,8 @@ screenshots/
 media/
 copytext/
 .vercel
+
+# Environment variables (contains secrets)
+.env
+.env.local
+.env.production

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import type ReCAPTCHA from 'react-google-recaptcha';
-import { RECAPTCHA_CONFIG } from '../config/recaptcha';
+import { RECAPTCHA_SITE_KEY } from '../config/recaptcha';
 
 export interface ReCAPTCHAComponentRef {
   executeAsync: () => Promise<string | null>;
@@ -49,7 +49,7 @@ export function ReCAPTCHAComponent({
     <div className="flex justify-center my-4">
       <ReCAPTCHALib
         ref={ref}
-        sitekey={RECAPTCHA_CONFIG.siteKey}
+        sitekey={RECAPTCHA_SITE_KEY}
         onChange={onChange}
         onExpired={onExpired}
         onErrored={onErrored}

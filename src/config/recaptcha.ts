@@ -1,7 +1,3 @@
 // Google reCAPTCHA Configuration
-export const RECAPTCHA_CONFIG = {
-  siteKey: '6Ld-_k8sAAAAAIwGO-NtUvcsfXJUy-AUdw2UIO6b',
-  secretKey: '6Ld-k8sAAAAAMb6-SXQjLGPQCvHRQfboIUV1Se',
-} as const;
-
-export const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
+// Only the site key is exposed to the client
+export const RECAPTCHA_SITE_KEY = '6Ld-_k8sAAAAAIwGO-NtUvcsfXJUy-AUdw2UIO6b';

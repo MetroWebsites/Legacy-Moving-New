@@ -15,6 +15,7 @@ export default function QuickQuoteForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
@@ -31,11 +32,13 @@ export default function QuickQuoteForm() {
     
     if (!recaptchaToken) {
       setSubmitStatus('error');
+      setErrorMessage("Please complete the reCAPTCHA verification.");
       return;
     }
     
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setErrorMessage("");
 
     try {
       // Create FormData object for multipart/form-data submission
@@ -47,18 +50,14 @@ export default function QuickQuoteForm() {
       // Add reCAPTCHA token
       form.append('g-recaptcha-response', recaptchaToken);
       
-      const response = await fetch("https://formspree.io/f/mzdbndbo", {
+      const response = await fetch("/api/forms/submit", {
         method: "POST",
-        // Don't set Content-Type header - browser will set it with boundary
         body: form,
-        headers: {
-          'Accept': 'application/json'
-        }
       });
 
-      // Formspree returns a 200-299 status code for successful submissions
-      // User confirmed submissions are being received, so we'll assume success
-      if (true) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -74,11 +73,16 @@ export default function QuickQuoteForm() {
         recaptchaRef.current?.reset();
       } else {
         setSubmitStatus('error');
+        setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
         recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus('error');
+      setErrorMessage("There was an error submitting your request. Please try again or call us directly.");
       recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -223,7 +227,7 @@ export default function QuickQuoteForm() {
         
         {submitStatus === 'error' && (
           <p className="text-red-600 text-center">
-            There was an error submitting your request. Please try again or call us directly.
+            {errorMessage || "There was an error submitting your request. Please try again or call us directly."}
           </p>
         )}
         

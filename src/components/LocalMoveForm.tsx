@@ -21,6 +21,7 @@ export default function LocalMoveForm() {
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
@@ -49,11 +50,13 @@ export default function LocalMoveForm() {
     
     if (!recaptchaToken) {
       setSubmitStatus("error");
+      setErrorMessage("Please complete the reCAPTCHA verification.");
       return;
     }
     
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setErrorMessage("");
 
     try {
       // Create FormData object for multipart/form-data submission
@@ -71,27 +74,30 @@ export default function LocalMoveForm() {
       // Add reCAPTCHA token
       form.append('g-recaptcha-response', recaptchaToken);
       
-      const response = await fetch("https://formspree.io/f/mzdbndbo", {
+      const response = await fetch("/api/forms/submit", {
         method: "POST",
         body: form,
-        headers: {
-          'Accept': 'application/json'
-        }
       });
 
-      // API returns a 200-299 status code for successful submissions
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
         setRecaptchaToken(null);
         recaptchaRef.current?.reset();
       } else {
         setSubmitStatus("error");
+        setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
         recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
+      setErrorMessage("There was an error submitting your request. Please try again or call us directly at (720) 340-1849.");
       recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -338,7 +344,7 @@ export default function LocalMoveForm() {
 
         {submitStatus === "error" && (
           <div className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-md text-sm">
-            There was an error submitting your request. Please try again or call us directly at (720) 340-1849.
+            {errorMessage || "There was an error submitting your request. Please try again or call us directly at (720) 340-1849."}
           </div>
         )}
         

@@ -46,7 +46,7 @@ export default function FeedbackForm() {
     setError("");
     
     try {
-      // Submit to your API
+      // Submit to our secure API endpoint
       const formDataObj = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
         formDataObj.append(key, value.toString());
@@ -55,28 +55,28 @@ export default function FeedbackForm() {
       // Add reCAPTCHA token
       formDataObj.append('g-recaptcha-response', recaptchaToken);
       
-      const response = await fetch("https://formspree.io/f/mzdbndbo", {
+      const response = await fetch("/api/forms/submit", {
         method: "POST",
         body: formDataObj,
-        headers: {
-          'Accept': 'application/json'
-        }
       });
       
-      // Formspree returns a 200-299 status code for successful submissions
-      // User confirmed submissions are being received, so we'll assume success
-      // if (!response.ok) {
-      //   throw new Error("Failed to submit form");
-      // }
+      const result = await response.json();
       
-      // Success
-      setIsSubmitted(true);
-      setFormData(defaultFormData);
-      setRecaptchaToken(null);
+      if (response.ok && result.success) {
+        // Success
+        setIsSubmitted(true);
+        setFormData(defaultFormData);
+        setRecaptchaToken(null);
+      } else {
+        setError(result.error || "There was a problem submitting your feedback. Please try again.");
+        recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
+      }
     } catch (err) {
       setError("There was a problem submitting your feedback. Please try again.");
       console.error("Form submission error:", err);
       recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
