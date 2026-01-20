@@ -1,6 +1,4 @@
-import { useState, useRef } from 'react';
-import { ReCAPTCHAComponent } from './ReCAPTCHA';
-import type ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react';
 
 export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({

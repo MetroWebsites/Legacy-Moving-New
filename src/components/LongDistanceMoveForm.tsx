@@ -1,7 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { ReCAPTCHAComponent } from "./ReCAPTCHA";
-import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function LongDistanceMoveForm() {
   const defaultFormData = {
