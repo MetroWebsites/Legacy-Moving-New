@@ -216,16 +216,15 @@ export default function QuickQuoteForm() {
         />
 
         {/* hCaptcha */}
-        <div className="flex justify-center my-4 w-full overflow-x-auto">
-          <div className="scale-[0.77] sm:scale-100 origin-center">
-            <HCaptcha
-              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              onVerify={(token) => setCaptchaToken(token)}
-              onExpire={() => setCaptchaToken(null)}
-              onError={() => setCaptchaToken(null)}
-              ref={captchaRef}
-            />
-          </div>
+        <div className="flex justify-center my-4 w-full">
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            size="compact"
+            onVerify={(token) => setCaptchaToken(token)}
+            onExpire={() => setCaptchaToken(null)}
+            onError={() => setCaptchaToken(null)}
+            ref={captchaRef}
+          />
         </div>
 
         <button 
