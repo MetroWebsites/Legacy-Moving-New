@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "./ui/button";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function LocalMoveForm() {
   const defaultFormData = {
@@ -23,6 +24,8 @@ export default function LocalMoveForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -47,6 +50,12 @@ export default function LocalMoveForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!captchaToken) {
+      setSubmitStatus("error");
+      setErrorMessage("Please complete the captcha verification.");
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorMessage("");
@@ -56,7 +65,8 @@ export default function LocalMoveForm() {
       const submitData = {
         ...formData,
         additionalServices: formData.additionalServices.join(", "),
-        botcheck: formData.botcheck || false
+        botcheck: formData.botcheck || false,
+        "h-captcha-response": captchaToken
       };
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -70,12 +80,16 @@ export default function LocalMoveForm() {
 
       const result = await response.json();
 
-      if (result.success) {
+      if (result.success === true) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       } else {
         setSubmitStatus("error");
         setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       }
     } catch (error) {
       console.error("Form submission error:", error);
@@ -286,9 +300,20 @@ export default function LocalMoveForm() {
           onChange={handleInputChange}
         />
 
+        {/* hCaptcha for spam protection */}
+        <div className="flex justify-center">
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            onVerify={(token) => setCaptchaToken(token)}
+            onExpire={() => setCaptchaToken(null)}
+            onError={() => setCaptchaToken(null)}
+            ref={captchaRef}
+          />
+        </div>
+
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !captchaToken}
           className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
         >
           {isSubmitting ? "Submitting..." : "Request Free Quote"}

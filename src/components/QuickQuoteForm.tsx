@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function QuickQuoteForm() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ export default function QuickQuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,6 +30,11 @@ export default function QuickQuoteForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!captchaToken) {
+      setErrorMessage('Please complete the captcha verification.');
+      return;
+    }
     
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -41,13 +49,14 @@ export default function QuickQuoteForm() {
         },
         body: JSON.stringify({
           ...formData,
+          'h-captcha-response': captchaToken,
           botcheck: formData.botcheck || false
         })
       });
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
+      if (result.success === true) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -56,23 +65,25 @@ export default function QuickQuoteForm() {
           moveDate: '',
           fromZip: '',
           toZip: '',
-          form_name: 'Quick Quote Form',
-          recipient_email: 'legacymovingdenver@gmail.com'
+          access_key: 'f4f80b3a-7125-41ae-b44e-3c23cbbfe6de',
+          subject: 'New Quick Quote Request - Legacy Moving Denver',
+          from_name: 'Legacy Moving Denver Website',
+          botcheck: ''
         });
-        setRecaptchaToken(null);
-
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       } else {
         setSubmitStatus('error');
-        setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
-
-        setRecaptchaToken(null);
+        setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus('error');
       setErrorMessage("There was an error submitting your request. Please try again or call us directly.");
-      recaptchaRef.current?.reset();
-      setRecaptchaToken(null);
+      setCaptchaToken(null);
+      captchaRef.current?.resetCaptcha();
     } finally {
       setIsSubmitting(false);
     }
@@ -204,9 +215,20 @@ export default function QuickQuoteForm() {
           style={{ display: 'none' }}
         />
 
+        {/* hCaptcha */}
+        <div className="flex justify-center my-4">
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            onVerify={(token) => setCaptchaToken(token)}
+            onExpire={() => setCaptchaToken(null)}
+            onError={() => setCaptchaToken(null)}
+            ref={captchaRef}
+          />
+        </div>
+
         <button 
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !captchaToken}
           className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-colors disabled:opacity-70"
         >
           {isSubmitting ? 'Submitting...' : 'Get Quote'}

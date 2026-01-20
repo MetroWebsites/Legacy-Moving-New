@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MessageSquare, Star } from 'lucide-react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function FeedbackForm() {
   const defaultFormData = {
@@ -18,6 +19,8 @@ export default function FeedbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -36,26 +39,40 @@ export default function FeedbackForm() {
       return;
     }
     
+    if (!captchaToken) {
+      setError("Please complete the captcha verification.");
+      return;
+    }
+    
     setIsSubmitting(true);
     setError("");
     
     try {
+      const submitData = {
+        ...formData,
+        "h-captcha-response": captchaToken
+      };
+      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(submitData)
       });
       
       const result = await response.json();
       
-      if (result.success) {
+      if (result.success === true) {
         setIsSubmitted(true);
         setFormData(defaultFormData);
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       } else {
         setError(result.message || "There was a problem submitting your feedback. Please try again.");
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
       }
     } catch (err) {
       setError("There was a problem submitting your feedback. Please try again.");
@@ -145,11 +162,22 @@ export default function FeedbackForm() {
         />
       </div>
       
+      {/* hCaptcha for spam protection */}
+      <div className="flex justify-center">
+        <HCaptcha
+          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+          onVerify={(token) => setCaptchaToken(token)}
+          onExpire={() => setCaptchaToken(null)}
+          onError={() => setCaptchaToken(null)}
+          ref={captchaRef}
+        />
+      </div>
+      
       {error && <p className="text-destructive text-sm">{error}</p>}
       
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !captchaToken}
         className="w-full bg-primary text-white py-3 px-4 rounded-md font-medium hover:bg-primary/90 transition-colors flex justify-center items-center disabled:opacity-50"
       >
         {isSubmitting ? (
