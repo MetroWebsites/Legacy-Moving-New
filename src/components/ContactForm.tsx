@@ -62,8 +62,11 @@ export default function ContactForm() {
 
       const result = await response.json();
 
-      // Web3Forms returns success: true/false, or sometimes just checks response.ok
-      if (response.ok || result.success) {
+      // Debug logging
+      console.log("Web3Forms response:", { status: response.status, ok: response.ok, result });
+
+      // Web3Forms returns success: true on successful submission
+      if (result.success === true) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
         setCaptchaToken(null);
@@ -71,7 +74,7 @@ export default function ContactForm() {
       } else {
         setSubmitStatus("error");
         setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
-        console.error("Web3Forms error:", result);
+        console.error("Web3Forms error:", { status: response.status, result });
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
       }
