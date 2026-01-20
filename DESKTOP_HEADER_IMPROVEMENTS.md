@@ -2,17 +2,32 @@
 
 **Date:** 2026-01-20  
 **Status:** ✅ Deployed  
-**Commit:** 4d2ceee
+**Latest Commit:** df2d979
 
 ## Overview
 
-Improved the desktop header layout to reduce white space and create a more balanced, professional appearance by increasing logo size, text size, and spacing between navigation elements.
+Improved the desktop header layout to reduce white space and create a more balanced, professional appearance by increasing logo size, text size, spacing between navigation elements, and vertical header height for a more substantial presence.
 
 ---
 
 ## Changes Made
 
-### 1. Logo Enhancements
+### 1. Vertical Header Height (NEW - Phase 2)
+
+**Before:**
+- Height: h-16 (64px) on all screens
+
+**After:**
+- Mobile: h-20 (80px) - **+25% increase**
+- Desktop: h-24 (96px) - **+50% increase**
+
+**Result:** 
+- More substantial, professional appearance
+- Logo and navigation have more breathing room
+- White section is "thicker" vertically with more space
+- Better visual balance and presence
+
+### 2. Logo Enhancements
 
 **Before:**
 - Width: 220px
@@ -26,7 +41,7 @@ Improved the desktop header layout to reduce white space and create a more balan
 
 **Result:** Logo is more prominent and has better positioning with increased breathing room from the left edge.
 
-### 2. Navigation Text Sizing
+### 3. Navigation Text Sizing
 
 **Before:**
 ```tsx
@@ -44,7 +59,7 @@ text-base lg:text-lg font-medium
 
 **Result:** Navigation text is more readable and prominent on large desktop screens.
 
-### 3. Navigation Item Spacing
+### 4. Navigation Item Spacing
 
 **Before:**
 ```tsx
@@ -70,20 +85,21 @@ space-x-4 lg:space-x-6
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│                                                                │
-│   [Larger Logo]    Home    About    Services▾   Discounts    │
-│   (56px tall)      (18px)   (18px)   (18px)     (18px)       │
-│   (ml-12)          ◄─24px─► ◄─24px─► ◄─24px─►  ◄─24px─►      │
+│                      ↕ 96px tall (h-24)                        │
+│   [Larger Logo]    Home    About    Services▾   Discounts      │
+│   (56px tall)      (18px)   (18px)   (18px)     (18px)        │
+│   (ml-12)          ◄─24px─► ◄─24px─► ◄─24px─►  ◄─24px─►       │
 │                                                                │
 └────────────────────────────────────────────────────────────────┘
 ```
 
 **Key Improvements:**
-1. **Logo is 17% taller** - More prominent and professional
-2. **Logo has 50% more left margin** - Better positioning and balance
-3. **Nav text is 12.5% larger** - Easier to read on large screens
-4. **Nav spacing is 50% wider** - Less cramped, more elegant
-5. **Overall effect:** Reduced white space, more balanced header
+1. **Header is 50% taller** - More substantial and professional presence
+2. **Logo is 17% taller** - More prominent and professional
+3. **Logo has 50% more left margin** - Better positioning and balance
+4. **Nav text is 12.5% larger** - Easier to read on large screens
+5. **Nav spacing is 50% wider** - Less cramped, more elegant
+6. **Overall effect:** More breathing room, less cramped, better vertical balance
 
 ---
 
@@ -91,17 +107,20 @@ space-x-4 lg:space-x-6
 
 ### Mobile (< 768px)
 - Logo: h-10 (40px) - unchanged
+- Header height: **h-20 (80px)** - enhanced +25%
 - Mobile menu button shown
 - Desktop nav hidden
 
 ### Tablet (768px - 1023px)
 - Logo: h-14 (56px) - enhanced
+- Header height: **h-20 (80px)** - enhanced +25%
 - Desktop nav visible
 - Text: 16px (text-base)
 - Spacing: 16px (space-x-4)
 
 ### Desktop (≥ 1024px)
 - Logo: h-14 (56px) - enhanced
+- Header height: **h-24 (96px)** - enhanced +50%
 - Desktop nav visible
 - Text: **18px (text-lg)** - larger
 - Spacing: **24px (space-x-6)** - wider
@@ -111,15 +130,30 @@ space-x-4 lg:space-x-6
 ## Files Modified
 
 ### `src/components/Header.astro`
-- **Lines changed:** 13 insertions, 13 deletions
+- **Lines changed:** 14 insertions, 14 deletions
 - **Sections updated:**
-  1. Logo container and image sizing
-  2. Navigation container spacing
-  3. All navigation link classes (Home, About, Services, Discounts, Contact)
+  1. Main navigation container height (h-16 → h-20 md:h-24)
+  2. Logo container and image sizing
+  3. Navigation container spacing
+  4. All navigation link classes (Home, About, Services, Discounts, Contact)
 
 ---
 
 ## Technical Details
+
+### Header Height Changes
+```astro
+<!-- Before -->
+<div class="container flex h-16 items-center justify-between">
+
+<!-- After -->
+<div class="container flex h-20 md:h-24 items-center justify-between">
+```
+
+**Breakdown:**
+- Mobile/Tablet (< 1024px): 80px (h-20)
+- Desktop (≥ 1024px): 96px (h-24)
+- **Increase:** +25% mobile, +50% desktop
 
 ### Logo Changes
 ```astro
@@ -158,23 +192,26 @@ space-x-4 lg:space-x-6
 ## Testing
 
 ### Desktop Testing (≥ 1024px)
-1. ✅ Logo is larger and more prominent
-2. ✅ Logo has more space from left edge
-3. ✅ Navigation text is 18px (larger and more readable)
-4. ✅ Navigation items have 24px spacing (less cramped)
-5. ✅ Overall header feels more balanced
-6. ✅ Less white space between elements
-7. ✅ Phone number CTA still visible and prominent
+1. ✅ Header is 96px tall (thicker, more substantial)
+2. ✅ Logo is larger and more prominent
+3. ✅ Logo has more space from left edge
+4. ✅ Navigation text is 18px (larger and more readable)
+5. ✅ Navigation items have 24px spacing (less cramped)
+6. ✅ Overall header feels more balanced with vertical breathing room
+7. ✅ Less white space between elements
+8. ✅ Phone number CTA still visible and prominent
 
 ### Tablet Testing (768px - 1023px)
-1. ✅ Logo is larger (h-14)
-2. ✅ Navigation visible with 16px spacing
-3. ✅ Text remains 16px (appropriate for medium screens)
+1. ✅ Header is 80px tall (enhanced presence)
+2. ✅ Logo is larger (h-14)
+3. ✅ Navigation visible with 16px spacing
+4. ✅ Text remains 16px (appropriate for medium screens)
 
 ### Mobile Testing (< 768px)
-1. ✅ Logo unchanged (h-10, appropriate size)
-2. ✅ Mobile menu button works
-3. ✅ No layout issues
+1. ✅ Header is 80px tall (enhanced presence)
+2. ✅ Logo unchanged (h-10, appropriate size)
+3. ✅ Mobile menu button works
+4. ✅ No layout issues
 
 ---
 
@@ -219,29 +256,32 @@ All modern browsers support:
 
 ### Quick Test Checklist
 1. Open site on desktop (≥ 1024px screen)
-2. Verify logo is larger and positioned well
-3. Verify navigation text is 18px (larger)
-4. Verify spacing between nav items is wider
-5. Verify overall header looks more balanced
-6. Verify phone number CTA is still prominent
-7. Test on tablet (768-1023px) - verify h-14 logo, 16px spacing
-8. Test on mobile (< 768px) - verify mobile menu works
+2. Verify header white section is taller (96px)
+3. Verify logo is larger and positioned well
+4. Verify navigation text is 18px (larger)
+5. Verify spacing between nav items is wider
+6. Verify overall header looks more balanced with more vertical space
+7. Verify phone number CTA is still prominent
+8. Test on tablet (768-1023px) - verify 80px header, h-14 logo, 16px spacing
+9. Test on mobile (< 768px) - verify 80px header, mobile menu works
 
 ---
 
 ## Before & After Comparison
 
-### Before (Previous State)
+### Before (Original State)
+- Header height: h-16 (64px all screens)
 - Logo: 220×50, h-12 (48px), ml-8
 - Nav spacing: space-x-3 lg:space-x-4 (12px/16px)
 - Nav text: text-base (16px)
-- **Issue:** Too much white space, elements felt small and cramped
+- **Issues:** Too much white space, elements felt small and cramped, header felt thin
 
 ### After (Current State)
+- Header height: **h-20 md:h-24 (80px mobile/tablet, 96px desktop)**
 - Logo: 240×55, h-14 (56px), ml-12
 - Nav spacing: space-x-4 lg:space-x-6 (16px/24px)
 - Nav text: text-base lg:text-lg (16px/18px)
-- **Result:** Better balance, less white space, more professional appearance
+- **Result:** Better balance, less horizontal white space, more vertical presence, thicker header, more professional appearance
 
 ---
 
@@ -262,10 +302,11 @@ All modern browsers support:
 
 ## Summary
 
+✅ **Header Height:** +25% mobile (80px), +50% desktop (96px) - thicker, more substantial  
 ✅ **Logo:** 17% larger (h-14), better positioned (ml-12)  
 ✅ **Text:** 12.5% larger on desktop (lg:text-lg)  
 ✅ **Spacing:** 50% wider on desktop (space-x-6)  
-✅ **Result:** More balanced, less white space, more professional  
+✅ **Result:** More balanced, less horizontal white space, more vertical presence, more professional  
 ✅ **Status:** Deployed and live  
 
 **Test now:** https://www.legacymovingdenver.com
