@@ -138,18 +138,4 @@
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
   }
-
-  /* Ensure buttons with white backgrounds always have visible dark text */
-  a.bg-white,
-  button.bg-white,
-  .bg-white > a,
-  .bg-white > button {
-    color: hsl(var(--secondary)) !important;
-  }
-
-  /* Ensure text on hover is also visible */
-  a.bg-white:hover,
-  button.bg-white:hover {
-    color: hsl(var(--primary)) !important;
-  }
 }
