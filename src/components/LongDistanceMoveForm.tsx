@@ -15,7 +15,7 @@ export default function LongDistanceMoveForm() {
     additionalServices: [],
     message: "",
     form_name: "Long Distance Move Quote Request",
-    recipient_email: "legacymovingdenver@gmail.com"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
   };
 
   const [formData, setFormData] = useState(defaultFormData);
@@ -74,7 +74,7 @@ export default function LongDistanceMoveForm() {
       // Add reCAPTCHA token
       form.append('g-recaptcha-response', recaptchaToken);
       
-      const response = await fetch("/api/forms/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: form,
       });

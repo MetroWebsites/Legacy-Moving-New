@@ -1,7 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { MessageSquare, Star } from 'lucide-react';
-import { ReCAPTCHAComponent } from './ReCAPTCHA';
-import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function FeedbackForm() {
   const defaultFormData = {
@@ -10,15 +8,13 @@ export default function FeedbackForm() {
     rating: 0,
     message: "", 
     form_name: "Customer Feedback",
-    recipient_email: "legacymovingdenver@gmail.com"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
   };
   
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -37,46 +33,30 @@ export default function FeedbackForm() {
       return;
     }
     
-    if (!recaptchaToken) {
-      setError("Please complete the reCAPTCHA verification.");
-      return;
-    }
-    
     setIsSubmitting(true);
     setError("");
     
     try {
-      // Submit to our secure API endpoint
-      const formDataObj = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataObj.append(key, value.toString());
-      });
-      
-      // Add reCAPTCHA token
-      formDataObj.append('g-recaptcha-response', recaptchaToken);
-      
-      const response = await fetch("/api/forms/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formDataObj,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
       });
       
       const result = await response.json();
       
-      if (response.ok && result.success) {
-        // Success
+      if (result.success) {
         setIsSubmitted(true);
         setFormData(defaultFormData);
-        setRecaptchaToken(null);
       } else {
-        setError(result.error || "There was a problem submitting your feedback. Please try again.");
-        recaptchaRef.current?.reset();
-        setRecaptchaToken(null);
+        setError(result.message || "There was a problem submitting your feedback. Please try again.");
       }
     } catch (err) {
       setError("There was a problem submitting your feedback. Please try again.");
       console.error("Form submission error:", err);
-      recaptchaRef.current?.reset();
-      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -100,7 +80,7 @@ export default function FeedbackForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <input type="hidden" name="form_name" value={formData.form_name} />
-      <input type="hidden" name="recipient_email" value={formData.recipient_email} />
+      <input type="hidden" name="access_key" value={formData.access_key} />
       <div className="mb-6">
         <div className="text-center mb-3">
           <p className="text-sm text-secondary mb-2">How would you rate your experience with Legacy Moving Denver?</p>
@@ -164,17 +144,9 @@ export default function FeedbackForm() {
       
       {error && <p className="text-destructive text-sm">{error}</p>}
       
-      {/* Google reCAPTCHA */}
-      <ReCAPTCHAComponent
-        recaptchaRef={recaptchaRef}
-        onChange={(token) => setRecaptchaToken(token)}
-        onExpired={() => setRecaptchaToken(null)}
-        onErrored={() => setRecaptchaToken(null)}
-      />
-      
       <button
         type="submit"
-        disabled={isSubmitting || !recaptchaToken}
+        disabled={isSubmitting}
         className="w-full bg-primary text-white py-3 px-4 rounded-md font-medium hover:bg-primary/90 transition-colors flex justify-center items-center disabled:opacity-50"
       >
         {isSubmitting ? (

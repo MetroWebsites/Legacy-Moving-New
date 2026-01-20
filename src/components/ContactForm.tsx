@@ -1,7 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { ReCAPTCHAComponent } from "./ReCAPTCHA";
-import type ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactForm() {
   const defaultFormData = {
@@ -12,16 +10,13 @@ export default function ContactForm() {
     moveFrom: "",
     moveTo: "",
     message: "", 
-    form_name: "Quote Request",
-    recipient_email: "legacymovingdenver@gmail.com"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
   };
   
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -31,52 +26,33 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Check if reCAPTCHA token exists
-    if (!recaptchaToken) {
-      setSubmitStatus("error");
-      setErrorMessage("Please complete the reCAPTCHA verification.");
-      return;
-    }
-    
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorMessage("");
 
     try {
-      // Create FormData object for multipart/form-data submission
-      const form = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        form.append(key, value);
-      });
-      
-      // Add reCAPTCHA token
-      form.append('g-recaptcha-response', recaptchaToken);
-      
-      // Submit to our secure API endpoint
-      const response = await fetch("/api/forms/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: form,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
       });
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
+      if (result.success) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
-        setRecaptchaToken(null);
-        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus("error");
-        setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
-        recaptchaRef.current?.reset();
-        setRecaptchaToken(null);
+        setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
       setErrorMessage("There was an error submitting your request. Please try again or call us directly at (720) 340-1849.");
-      recaptchaRef.current?.reset();
-      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -208,20 +184,12 @@ export default function ContactForm() {
         />
       </div>
 
-      <input name="form_name" type="hidden" value={formData.form_name} />
-      <input name="recipient_email" type="hidden" value={formData.recipient_email} />
-      
-      {/* Google reCAPTCHA */}
-      <ReCAPTCHAComponent
-        recaptchaRef={recaptchaRef}
-        onChange={(token) => setRecaptchaToken(token)}
-        onExpired={() => setRecaptchaToken(null)}
-        onErrored={() => setRecaptchaToken(null)}
-      />
+      <input name="form_name" type="hidden" value="Quote Request" />
+      <input name="access_key" type="hidden" value={formData.access_key} />
       
       <Button
         type="submit"
-        disabled={isSubmitting || !recaptchaToken}
+        disabled={isSubmitting}
         className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
       >
         {isSubmitting ? "Submitting..." : "Request Free Quote"}

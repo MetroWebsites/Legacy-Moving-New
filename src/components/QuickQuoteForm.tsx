@@ -50,7 +50,7 @@ export default function QuickQuoteForm() {
       // Add reCAPTCHA token
       form.append('g-recaptcha-response', recaptchaToken);
       
-      const response = await fetch("/api/forms/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: form,
       });
