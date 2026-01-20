@@ -144,9 +144,17 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Verify reCAPTCHA token with Google
+    console.log('Verifying reCAPTCHA:', {
+      tokenLength: recaptchaToken.length,
+      tokenPreview: recaptchaToken.substring(0, 50) + '...',
+      secretKeyConfigured: !!RECAPTCHA_SECRET_KEY,
+      secretKeyPreview: RECAPTCHA_SECRET_KEY?.substring(0, 20) + '...',
+    });
+    
     let verificationResult: RecaptchaVerifyResponse;
     try {
       verificationResult = await verifyRecaptchaToken(recaptchaToken);
+      console.log('Verification result:', verificationResult);
     } catch (error) {
       console.error('reCAPTCHA verification error:', error);
       return new Response(
