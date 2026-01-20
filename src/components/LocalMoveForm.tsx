@@ -245,7 +245,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <span className="text-sm">Packing Services</span>
+              <span className="text-sm text-gray-900">Packing Services</span>
             </label>
             <label className="flex items-center">
               <input
@@ -255,7 +255,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <span className="text-sm">Storage Solutions</span>
+              <span className="text-sm text-gray-900">Storage Solutions</span>
             </label>
             <label className="flex items-center">
               <input
@@ -265,7 +265,7 @@ export default function LocalMoveForm() {
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <span className="text-sm">Moving Supplies</span>
+              <span className="text-sm text-gray-900">Moving Supplies</span>
             </label>
           </div>
         </div>
