@@ -10,18 +10,19 @@ export default function LongDistanceMoveForm() {
     moveFrom: "",
     moveTo: "",
     moveSize: "",
-    additionalServices: [],
+    additionalServices: [] as string[],
     message: "",
     form_name: "Long Distance Move Quote Request",
-    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de",
+    subject: "New Long Distance Move Quote Request - Legacy Moving Denver",
+    from_name: "Legacy Moving Denver Website",
+    botcheck: ""
   };
 
   const [formData, setFormData] = useState(defaultFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -46,87 +47,76 @@ export default function LongDistanceMoveForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!recaptchaToken) {
-      setSubmitStatus("error");
-      setErrorMessage("Please complete the reCAPTCHA verification.");
-      return;
-    }
-    
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorMessage("");
 
     try {
-      // Create FormData object for multipart/form-data submission
-      const form = new FormData();
-      // Add all form fields except additionalServices array
-      Object.entries(formData).forEach(([key, value]) => {
-        if (key !== 'additionalServices') {
-          form.append(key, value as string);
-        }
-      });
-      
-      // Add additionalServices as a comma-separated string
-      form.append('additionalServices', formData.additionalServices.join(', '));
-      
-      // Add reCAPTCHA token
-      form.append('g-recaptcha-response', recaptchaToken);
-      
+      // Prepare form data for Web3Forms
+      const submitData = {
+        ...formData,
+        additionalServices: formData.additionalServices.join(", "),
+        botcheck: formData.botcheck || false
+      };
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: form,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(submitData)
       });
 
       const result = await response.json();
 
-      if (response.ok && result.success) {
+      if (result.success) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
-        setRecaptchaToken(null);
-        recaptchaRef.current?.reset();
       } else {
         setSubmitStatus("error");
-        setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
-        recaptchaRef.current?.reset();
-        setRecaptchaToken(null);
+        setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
       setErrorMessage("There was an error submitting your request. Please try again or call us directly at (720) 340-1849.");
-      recaptchaRef.current?.reset();
-      setRecaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-xl">
-      <div className="bg-primary/5 border-l-4 border-primary p-4 mb-6">
-        <h3 className="font-display font-bold text-2xl mb-2 text-secondary">Get Your Long Distance Moving Quote</h3>
-        <p className="text-gray-600 text-sm">Fill out this form for a personalized quote for your out-of-state move. We'll help you plan every step of the journey.</p>
-      </div>
-      
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Contact Information */}
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-secondary mb-1">
-            Full Name*
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-            placeholder="John Smith"
-          />
+    <div>
+      <div className="mb-4 bg-primary/10 p-4 rounded-md flex items-center gap-3">
+        <div className="rounded-full bg-primary w-10 h-10 flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </div>
+        <div>
+          <h4 className="font-semibold text-secondary">Need an instant quote?</h4>
+          <p className="text-sm text-muted-foreground">Call us now at <a href="tel:7203401849" className="text-primary font-medium">(720) 340-1849</a> for an immediate quote.</p>
+        </div>
+      </div>
 
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Personal Information */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-secondary mb-1">
+              Full Name*
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
+              placeholder="John Smith"
+            />
+          </div>
+
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-secondary mb-1">
               Email Address*
@@ -142,161 +132,127 @@ export default function LongDistanceMoveForm() {
               placeholder="john@example.com"
             />
           </div>
+        </div>
 
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-secondary mb-1">
-              Phone Number*
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              required
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-              placeholder="(555) 123-4567"
-            />
-          </div>
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-secondary mb-1">
+            Phone Number*
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
+            placeholder="(555) 123-4567"
+          />
         </div>
 
         {/* Move Details */}
+        <div>
+          <label htmlFor="moveDate" className="block text-sm font-medium text-secondary mb-1">
+            Preferred Move Date
+          </label>
+          <input
+            type="text"
+            id="moveDate"
+            name="moveDate"
+            value={formData.moveDate}
+            onChange={handleInputChange}
+            placeholder="MM/DD/YYYY"
+            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
+          />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="moveDate" className="block text-sm font-medium text-secondary mb-1">
-              Preferred Move Date
+            <label htmlFor="moveFrom" className="block text-sm font-medium text-secondary mb-1">
+              Moving From
             </label>
             <input
-              type="date"
-              id="moveDate"
-              name="moveDate"
-              value={formData.moveDate}
+              type="text"
+              id="moveFrom"
+              name="moveFrom"
+              value={formData.moveFrom}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
+              placeholder="Current Address"
             />
           </div>
-          
+
           <div>
-            <label htmlFor="moveSize" className="block text-sm font-medium text-secondary mb-1">
-              Home Size
+            <label htmlFor="moveTo" className="block text-sm font-medium text-secondary mb-1">
+              Moving To
             </label>
-            <select
-              id="moveSize"
-              name="moveSize"
-              value={formData.moveSize}
+            <input
+              type="text"
+              id="moveTo"
+              name="moveTo"
+              value={formData.moveTo}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-            >
-              <option value="">Select home size</option>
-              <option value="Studio">Studio</option>
-              <option value="1 Bedroom">1 Bedroom</option>
-              <option value="2 Bedrooms">2 Bedrooms</option>
-              <option value="3 Bedrooms">3 Bedrooms</option>
-              <option value="4+ Bedrooms">4+ Bedrooms</option>
-              <option value="Office">Office</option>
-              <option value="Storage Unit">Storage Unit</option>
-            </select>
+              placeholder="New Address"
+            />
           </div>
         </div>
 
         <div>
-          <label htmlFor="moveFrom" className="block text-sm font-medium text-secondary mb-1">
-            Moving From (State/City)*
+          <label htmlFor="moveSize" className="block text-sm font-medium text-secondary mb-1">
+            Size of Move
           </label>
-          <input
-            type="text"
-            id="moveFrom"
-            name="moveFrom"
-            value={formData.moveFrom}
+          <select
+            id="moveSize"
+            name="moveSize"
+            value={formData.moveSize}
             onChange={handleInputChange}
-            required
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-            placeholder="Denver, CO"
-          />
+          >
+            <option value="">Select size</option>
+            <option value="Studio/1BR">Studio/1 Bedroom</option>
+            <option value="2BR">2 Bedrooms</option>
+            <option value="3BR">3 Bedrooms</option>
+            <option value="4BR+">4+ Bedrooms</option>
+            <option value="Office">Office</option>
+          </select>
         </div>
 
-        <div>
-          <label htmlFor="moveTo" className="block text-sm font-medium text-secondary mb-1">
-            Moving To (State/City)*
-          </label>
-          <input
-            type="text"
-            id="moveTo"
-            name="moveTo"
-            value={formData.moveTo}
-            onChange={handleInputChange}
-            required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-            placeholder="Seattle, WA"
-          />
-        </div>
-
-        {/* Additional Services */}
         <div>
           <label className="block text-sm font-medium text-secondary mb-2">
-            Additional Services (optional)
+            Additional Services
           </label>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-            <div className="flex items-center">
+          <div className="space-y-2">
+            <label className="flex items-center">
               <input
                 type="checkbox"
-                id="full_packing"
-                name="full_packing"
+                name="Packing"
+                checked={formData.additionalServices.includes("Packing")}
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="full_packing" className="text-secondary">Full Packing Services</label>
-            </div>
-            <div className="flex items-center">
+              <span className="text-sm">Packing Services</span>
+            </label>
+            <label className="flex items-center">
               <input
                 type="checkbox"
-                id="partial_packing"
-                name="partial_packing"
+                name="Storage"
+                checked={formData.additionalServices.includes("Storage")}
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="partial_packing" className="text-secondary">Partial Packing</label>
-            </div>
-            <div className="flex items-center">
+              <span className="text-sm">Storage Solutions</span>
+            </label>
+            <label className="flex items-center">
               <input
                 type="checkbox"
-                id="unpacking"
-                name="unpacking"
+                name="Supplies"
+                checked={formData.additionalServices.includes("Supplies")}
                 onChange={handleCheckboxChange}
                 className="mr-2"
               />
-              <label htmlFor="unpacking" className="text-secondary">Unpacking Services</label>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="storage"
-                name="storage"
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              <label htmlFor="storage" className="text-secondary">Storage Solutions</label>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="vehicle_transport"
-                name="vehicle_transport"
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              <label htmlFor="vehicle_transport" className="text-secondary">Vehicle Transport</label>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="specialty_items"
-                name="specialty_items"
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              <label htmlFor="specialty_items" className="text-secondary">Specialty Item Moving</label>
-            </div>
+              <span className="text-sm">Moving Supplies</span>
+            </label>
           </div>
         </div>
 
@@ -309,34 +265,38 @@ export default function LongDistanceMoveForm() {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            rows={2}
+            rows={3}
             className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900"
-            placeholder="Any special requirements, questions, or information about your move..."
+            placeholder="Please share any special requirements..."
           />
         </div>
 
+        {/* Hidden fields for Web3Forms */}
+        <input name="access_key" type="hidden" value={formData.access_key} />
+        <input name="subject" type="hidden" value={formData.subject} />
+        <input name="from_name" type="hidden" value={formData.from_name} />
         <input name="form_name" type="hidden" value={formData.form_name} />
-        <input name="recipient_email" type="hidden" value={formData.recipient_email} />
         
-        {/* Google reCAPTCHA */}
-        <ReCAPTCHAComponent
-          recaptchaRef={recaptchaRef}
-          onChange={(token) => setRecaptchaToken(token)}
-          onExpired={() => setRecaptchaToken(null)}
-          onErrored={() => setRecaptchaToken(null)}
+        {/* Honeypot field for bot protection */}
+        <input 
+          type="checkbox" 
+          name="botcheck" 
+          className="hidden" 
+          style={{ display: 'none' }}
+          onChange={handleInputChange}
         />
-        
+
         <Button
           type="submit"
-          disabled={isSubmitting || !recaptchaToken}
-          className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
+          disabled={isSubmitting}
+          className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
         >
-          {isSubmitting ? "Submitting..." : "Get My Free Long-Distance Quote"}
+          {isSubmitting ? "Submitting..." : "Request Free Quote"}
         </Button>
 
         {submitStatus === "success" && (
           <div className="p-3 bg-green-50 border border-green-200 text-green-700 rounded-md text-sm">
-            Thank you! Your long-distance quote request has been submitted successfully. We'll be in touch shortly to discuss your interstate move.
+            Thank you! Your long distance move quote request has been submitted successfully. We'll be in touch shortly.
           </div>
         )}
 
@@ -345,7 +305,7 @@ export default function LongDistanceMoveForm() {
             {errorMessage || "There was an error submitting your request. Please try again or call us directly at (720) 340-1849."}
           </div>
         )}
-        
+
         <p className="text-xs text-gray-500 text-center">
           By submitting this form, you agree to be contacted regarding your moving needs.
         </p>

@@ -8,14 +8,14 @@ export default function QuickQuoteForm() {
     moveDate: '',
     fromZip: '',
     toZip: '',
-    form_name: 'Quick Quote Form',
-    recipient_email: 'legacymovingdenver@gmail.com'
+    access_key: 'f4f80b3a-7125-41ae-b44e-3c23cbbfe6de',
+    subject: 'New Quick Quote Request - Legacy Moving Denver',
+    from_name: 'Legacy Moving Denver Website',
+    botcheck: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -28,29 +28,21 @@ export default function QuickQuoteForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!recaptchaToken) {
-      setSubmitStatus('error');
-      setErrorMessage("Please complete the reCAPTCHA verification.");
-      return;
-    }
-    
     setIsSubmitting(true);
     setSubmitStatus(null);
     setErrorMessage("");
 
     try {
-      // Create FormData object for multipart/form-data submission
-      const form = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        form.append(key, value);
-      });
-      
-      // Add reCAPTCHA token
-      form.append('g-recaptcha-response', recaptchaToken);
-      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: form,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...formData,
+          botcheck: formData.botcheck || false
+        })
       });
 
       const result = await response.json();
@@ -68,11 +60,11 @@ export default function QuickQuoteForm() {
           recipient_email: 'legacymovingdenver@gmail.com'
         });
         setRecaptchaToken(null);
-        recaptchaRef.current?.reset();
+
       } else {
         setSubmitStatus('error');
         setErrorMessage(result.error || "There was an error submitting your request. Please try again.");
-        recaptchaRef.current?.reset();
+
         setRecaptchaToken(null);
       }
     } catch (error) {
@@ -201,17 +193,20 @@ export default function QuickQuoteForm() {
           </div>
         </div>
 
-        {/* Google reCAPTCHA */}
-        <ReCAPTCHAComponent
-          recaptchaRef={recaptchaRef}
-          onChange={(token) => setRecaptchaToken(token)}
-          onExpired={() => setRecaptchaToken(null)}
-          onErrored={() => setRecaptchaToken(null)}
+        {/* Hidden fields for Web3Forms */}
+        <input name="access_key" type="hidden" value={formData.access_key} />
+        <input name="subject" type="hidden" value={formData.subject} />
+        <input name="from_name" type="hidden" value={formData.from_name} />
+        <input 
+          type="checkbox" 
+          name="botcheck" 
+          className="hidden" 
+          style={{ display: 'none' }}
         />
 
         <button 
           type="submit"
-          disabled={isSubmitting || !recaptchaToken}
+          disabled={isSubmitting}
           className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-colors disabled:opacity-70"
         >
           {isSubmitting ? 'Submitting...' : 'Get Quote'}
