@@ -22,15 +22,16 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     </div>
     <div class="container relative grid lg:grid-cols-2 gap-8 py-12 md:py-16">
       <div class="flex flex-col justify-center">
-        <div class="flex flex-col sm:flex-row gap-4 mb-8">
-          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold text-center' })}>
             Get a Free Quote
           </a>
-          <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md text-sm font-medium text-white h-11 px-8 py-2 text-lg">
+          <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base whitespace-nowrap">
             Local Moving
           </a>
-          <a href="/services/out-of-state-moving" class="long-distance-btn inline-flex items-center justify-center rounded-md text-sm font-medium text-white h-11 px-8 py-2 text-lg">
-            Long Distance Moving
+          <a href="/services/out-of-state-moving" class="long-distance-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base">
+            <span class="hidden sm:inline">Long Distance Moving</span>
+            <span class="sm:hidden">Long Distance</span>
           </a>
           <style>
             .local-moving-btn, .long-distance-btn {
