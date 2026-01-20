@@ -4,7 +4,9 @@ import { Resend } from 'resend';
 const RECAPTCHA_SECRET_KEY = import.meta.env.RECAPTCHA_SECRET_KEY;
 const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
-const RECIPIENT_EMAIL = 'legacymovingdenver@gmail.com';
+// Temporarily using Resend account email for testing
+// TODO: After verifying domain, change to 'legacymovingdenver@gmail.com'
+const RECIPIENT_EMAIL = 'metropolitanwebsites@gmail.com';
 
 interface RecaptchaVerifyResponse {
   success: boolean;
