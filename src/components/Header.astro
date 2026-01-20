@@ -47,14 +47,14 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
   <div
     class="container flex h-16 items-center justify-between"
   >
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 md:ml-12">
       <a href="/" class="flex items-center">
         <img 
           src="/assets/legacy-logo_nw_1c856f89.png" 
           alt="Legacy Moving Denver Logo" 
-          width="180" 
-          height="40"
-          class="h-10 w-auto"
+          width="240" 
+          height="55"
+          class="h-10 w-auto md:h-14"
         />
       </a>
     </div>
@@ -70,22 +70,22 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
     </button>
     
     <!-- Desktop navigation -->
-    <nav class="hidden md:flex items-center space-x-1">
+    <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
       <a
         href="/"
-        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
       >
         Home
       </a>
       <a
         href="/about-us"
-        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
       >
         About Us
       </a>
       <div class="relative group">
         <button 
-          class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+          class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
           aria-haspopup="true"
         >
           Services
@@ -105,22 +105,22 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
       </div>
       <a
         href="/discounts"
-        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
       >
         Discounts
       </a>
       <a
         href="/contact"
-        class={buttonVariants({ variant: 'ghost', size: 'sm' })}
+        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
       >
         Contact
       </a>
-      <div class="ml-1 pl-1 border-l">
+      <div class="ml-3 pl-3 border-l">
         <a
           href="tel:7203401849"
-          class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium bg-primary text-white hover:bg-primary/90 shadow-sm phone-link"
+          class="inline-flex items-center justify-center px-5 py-2.5 rounded-md text-base font-semibold bg-primary text-white hover:bg-primary/90 shadow-sm phone-link"
         >
-          <Phone size={16} className="mr-2" />
+          <Phone size={18} className="mr-2" />
           (720) 340-1849
         </a>
       </div>
