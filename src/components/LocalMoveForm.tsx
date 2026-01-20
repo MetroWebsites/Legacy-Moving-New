@@ -301,14 +301,16 @@ export default function LocalMoveForm() {
         />
 
         {/* hCaptcha for spam protection */}
-        <div className="flex justify-center">
-          <HCaptcha
-            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-            onVerify={(token) => setCaptchaToken(token)}
-            onExpire={() => setCaptchaToken(null)}
-            onError={() => setCaptchaToken(null)}
-            ref={captchaRef}
-          />
+        <div className="flex justify-center w-full overflow-x-auto">
+          <div className="scale-[0.77] sm:scale-100 origin-center">
+            <HCaptcha
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              onVerify={(token) => setCaptchaToken(token)}
+              onExpire={() => setCaptchaToken(null)}
+              onError={() => setCaptchaToken(null)}
+              ref={captchaRef}
+            />
+          </div>
         </div>
 
         <Button
