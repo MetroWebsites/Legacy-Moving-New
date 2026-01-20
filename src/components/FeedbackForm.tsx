@@ -8,7 +8,10 @@ export default function FeedbackForm() {
     rating: 0,
     message: "", 
     form_name: "Customer Feedback",
-    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de",
+    subject: "New Customer Feedback - Legacy Moving Denver",
+    from_name: "Legacy Moving Denver Website",
+    botcheck: ""
   };
   
   const [formData, setFormData] = useState(defaultFormData);

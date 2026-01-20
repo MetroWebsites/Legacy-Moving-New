@@ -10,7 +10,10 @@ export default function ContactForm() {
     moveFrom: "",
     moveTo: "",
     message: "", 
-    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de"
+    access_key: "f4f80b3a-7125-41ae-b44e-3c23cbbfe6de",
+    subject: "New Quote Request from Legacy Moving Denver",
+    from_name: "Legacy Moving Denver Website",
+    botcheck: ""
   };
   
   const [formData, setFormData] = useState(defaultFormData);
@@ -31,13 +34,19 @@ export default function ContactForm() {
     setErrorMessage("");
 
     try {
+      // Add honeypot field for bot protection
+      const formDataWithProtection = {
+        ...formData,
+        botcheck: formData.botcheck || false
+      };
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formDataWithProtection)
       });
 
       const result = await response.json();
@@ -184,8 +193,20 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Hidden fields for Web3Forms */}
       <input name="form_name" type="hidden" value="Quote Request" />
       <input name="access_key" type="hidden" value={formData.access_key} />
+      <input name="subject" type="hidden" value={formData.subject} />
+      <input name="from_name" type="hidden" value={formData.from_name} />
+      
+      {/* Honeypot field for bot protection - hidden from users */}
+      <input 
+        type="checkbox" 
+        name="botcheck" 
+        className="hidden" 
+        style={{ display: 'none' }}
+        onChange={handleInputChange}
+      />
       
       <Button
         type="submit"
