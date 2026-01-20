@@ -21,7 +21,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       <!-- Local Moving Button - Gray -->
       <a 
         href="/services/local-moving" 
-        class="flex-1 flex items-center justify-center py-4 px-2 bg-gray-600 text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 border-r border-white whitespace-nowrap"
+        class="service-btn service-btn-1 flex-1 flex items-center justify-center py-4 px-2 bg-gray-600 text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 border-r border-white whitespace-nowrap"
       >
         Local Moving
       </a>
@@ -29,7 +29,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       <!-- Long Distance Button - Blue -->
       <a 
         href="/services/long-distance-moving" 
-        class="flex-1 flex items-center justify-center py-4 px-2 bg-primary text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 border-r border-white whitespace-nowrap"
+        class="service-btn service-btn-2 flex-1 flex items-center justify-center py-4 px-2 bg-primary text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 border-r border-white whitespace-nowrap"
       >
         Long Distance
       </a>
@@ -37,11 +37,46 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       <!-- Labor Only Button - Gray -->
       <a 
         href="/services/loading-unloading" 
-        class="flex-1 flex items-center justify-center py-4 px-2 bg-gray-600 text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 whitespace-nowrap"
+        class="service-btn service-btn-3 flex-1 flex items-center justify-center py-4 px-2 bg-gray-600 text-white font-semibold text-sm sm:text-base hover:bg-black hover:text-white transition-colors duration-300 whitespace-nowrap"
       >
         Labor Only
       </a>
     </div>
+    
+    <style>
+      /* Cycling attention animation for service buttons */
+      @keyframes attentionPulse {
+        0%, 100% {
+          filter: brightness(1);
+        }
+        50% {
+          filter: brightness(0.7);
+        }
+      }
+      
+      /* Apply animation to each button with staggered delays */
+      @media (prefers-reduced-motion: no-preference) {
+        .service-btn-1 {
+          animation: attentionPulse 1.5s ease-in-out infinite;
+          animation-delay: 0s;
+        }
+        
+        .service-btn-2 {
+          animation: attentionPulse 1.5s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+        
+        .service-btn-3 {
+          animation: attentionPulse 1.5s ease-in-out infinite;
+          animation-delay: 4s;
+        }
+        
+        /* Pause animation on hover so it doesn't fight hover state */
+        .service-btn:hover {
+          animation-play-state: paused;
+        }
+      }
+    </style>
   </section>
 
   <!-- Hero Section -->
