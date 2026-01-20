@@ -165,11 +165,17 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Check if reCAPTCHA verification was successful
     if (!verificationResult.success) {
-      console.warn('reCAPTCHA verification failed:', verificationResult['error-codes']);
+      const errorCodes = verificationResult['error-codes'] || [];
+      console.error('reCAPTCHA verification failed:', {
+        errorCodes,
+        token: token.substring(0, 20) + '...',
+        secretKeyPrefix: RECAPTCHA_SECRET_KEY?.substring(0, 15) + '...',
+        fullResponse: verificationResult
+      });
       return new Response(
         JSON.stringify({
           success: false,
-          error: 'reCAPTCHA verification failed. Please try again.',
+          error: `reCAPTCHA verification failed. Error: ${errorCodes.join(', ')}`,
         }),
         {
           status: 403,
