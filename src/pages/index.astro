@@ -51,33 +51,6 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     </div>
     <div class="container relative grid lg:grid-cols-2 gap-8 py-12 md:py-16">
       <div class="flex flex-col justify-center">
-        <div class="flex flex-col sm:flex-row gap-3 mb-8">
-          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold text-center' })}>
-            Get a Free Quote
-          </a>
-          <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base whitespace-nowrap">
-            Local Moving
-          </a>
-          <a href="/services/out-of-state-moving" class="long-distance-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base">
-            <span class="hidden sm:inline">Long Distance Moving</span>
-            <span class="sm:hidden">Long Distance</span>
-          </a>
-          <style>
-            .local-moving-btn, .long-distance-btn {
-              animation: colorChange 5s infinite;
-              border: 1px solid rgba(var(--primary), 0.2);
-              font-weight: 600;
-              transition: background-color 0.3s ease;
-            }
-            .long-distance-btn {
-              animation-delay: 2.5s;
-            }
-            @keyframes colorChange {
-              0%, 100% { background-color: #1e293b; } /* secondary color */
-              50% { background-color: #0056b3; } /* blue color */
-            }
-          </style>
-        </div>
         <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
           Denver's Premier <span class="text-white">Residential and Long Distance Movers</span>
         </h1>
@@ -327,7 +300,37 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     <div class="container">
       <div class="text-center mb-8">
         <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Our Moving Services</h2>
-        <p class="text-muted-foreground max-w-2xl mx-auto">From single-item deliveries to full home packing and moving, we make your Denver move easy, affordable, and stress-free. Our team of professionals is ready to assist with all your moving needs.</p>
+        <p class="text-muted-foreground max-w-2xl mx-auto mb-6">From single-item deliveries to full home packing and moving, we make your Denver move easy, affordable, and stress-free. Our team of professionals is ready to assist with all your moving needs.</p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mt-6">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold text-center' })}>
+            Get a Free Quote
+          </a>
+          <a href="/services/local-moving" class="local-moving-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base whitespace-nowrap">
+            Local Moving
+          </a>
+          <a href="/services/out-of-state-moving" class="long-distance-btn inline-flex items-center justify-center rounded-md font-medium text-white h-11 px-4 sm:px-6 py-2 text-sm sm:text-base">
+            <span class="hidden sm:inline">Long Distance Moving</span>
+            <span class="sm:hidden">Long Distance</span>
+          </a>
+        </div>
+        
+        <style>
+          .local-moving-btn, .long-distance-btn {
+            animation: colorChange 5s infinite;
+            border: 1px solid rgba(var(--primary), 0.2);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+          }
+          .long-distance-btn {
+            animation-delay: 2.5s;
+          }
+          @keyframes colorChange {
+            0%, 100% { background-color: #1e293b; } /* secondary color */
+            50% { background-color: #0056b3; } /* blue color */
+          }
+        </style>
       </div>
       
       <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
