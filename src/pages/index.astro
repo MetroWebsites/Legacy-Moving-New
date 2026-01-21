@@ -44,75 +44,6 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     </div>
   </section>
 
-  <!-- Trust Badges Section with Rotating Reviews -->
-  <section class="bg-primary py-6">
-    <div class="container">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <!-- Left: Heading -->
-        <div class="text-white">
-          <h2 class="font-display font-bold text-2xl md:text-3xl">Locally Trusted &</h2>
-          <h2 class="font-display font-bold text-2xl md:text-3xl">Recommended</h2>
-        </div>
-        
-        <!-- Right: Rotating Review Badges -->
-        <div class="flex items-center gap-4 md:gap-6 flex-wrap justify-center">
-          <!-- Google Reviews -->
-          <div class="trust-badge flex flex-col items-center bg-white px-4 py-3 rounded-lg min-w-[120px]">
-            <div class="font-bold text-primary mb-1">Google</div>
-            <div class="flex text-yellow-400">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <div class="text-sm text-gray-600 mt-1">4.9/5</div>
-          </div>
-          
-          <!-- Yelp -->
-          <div class="trust-badge flex flex-col items-center bg-white px-4 py-3 rounded-lg min-w-[120px]">
-            <div class="font-bold text-primary mb-1">Yelp</div>
-            <div class="flex text-yellow-400">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <div class="text-sm text-gray-600 mt-1">4.8/5</div>
-          </div>
-          
-          <!-- Facebook -->
-          <div class="trust-badge flex flex-col items-center bg-white px-4 py-3 rounded-lg min-w-[120px]">
-            <div class="font-bold text-primary mb-1">Facebook</div>
-            <div class="flex text-yellow-400">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <div class="text-sm text-gray-600 mt-1">4.9/5</div>
-          </div>
-          
-          <!-- BBB -->
-          <div class="trust-badge flex flex-col items-center bg-white px-4 py-3 rounded-lg min-w-[120px]">
-            <div class="font-bold text-primary mb-1">BBB</div>
-            <div class="flex text-yellow-400">
-              <span>⭐⭐⭐⭐⭐</span>
-            </div>
-            <div class="text-sm text-gray-600 mt-1">A+ Rating</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @keyframes fadeInOut {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(0.95); }
-    }
-    
-    .trust-badge {
-      animation: fadeInOut 3s ease-in-out infinite;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .trust-badge:nth-child(1) { animation-delay: 0s; }
-    .trust-badge:nth-child(2) { animation-delay: 0.75s; }
-    .trust-badge:nth-child(3) { animation-delay: 1.5s; }
-    .trust-badge:nth-child(4) { animation-delay: 2.25s; }
-  </style>
-
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white">
     <div class="absolute inset-0 opacity-20 mix-blend-overlay">
@@ -163,6 +94,130 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       </div>
     </div>
   </section>
+
+  <!-- Scrolling Trust Badges Section -->
+  <section class="bg-gradient-to-r from-primary to-primary/90 py-8 overflow-hidden">
+    <div class="relative">
+      <div class="scroll-container">
+        <div class="scroll-content">
+          <!-- First set -->
+          <div class="trust-item">
+            <div class="platform-name">Google</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.9/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">Yelp</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.8/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">Facebook</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.9/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">BBB</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">A+</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">MapQuest</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">5.0/5</div>
+          </div>
+          <!-- Duplicate set for seamless loop -->
+          <div class="trust-item">
+            <div class="platform-name">Google</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.9/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">Yelp</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.8/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">Facebook</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">4.9/5</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">BBB</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">A+</div>
+          </div>
+          <div class="trust-item">
+            <div class="platform-name">MapQuest</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating">5.0/5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .scroll-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .scroll-content {
+      display: flex;
+      animation: scroll-left 30s linear infinite;
+      will-change: transform;
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+    .trust-item {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem 2.5rem;
+      margin-right: 2rem;
+      min-width: 180px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .platform-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #0056b3;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stars {
+      font-size: 1.25rem;
+      color: #FFA500;
+      margin-bottom: 0.25rem;
+      letter-spacing: 2px;
+    }
+    
+    .rating {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #4B5563;
+    }
+    
+    /* Pause on hover */
+    .scroll-content:hover {
+      animation-play-state: paused;
+    }
+  </style>
 
   <!-- Promotions Banner -->
   <section class="py-8 bg-primary/10">
