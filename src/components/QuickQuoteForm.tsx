@@ -90,21 +90,21 @@ export default function QuickQuoteForm() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h3 className="text-xl font-semibold text-secondary mb-4">Get a Quick Quote</h3>
-      <p className="text-muted-foreground mb-4">
+    <div className="bg-white rounded-lg shadow-md p-4">
+      <h3 className="text-lg font-semibold text-secondary mb-2">Get a Quick Quote</h3>
+      <p className="text-sm text-muted-foreground mb-3">
         Enter your zip codes below for a quick moving estimate, or call us at{' '}
         <a href="tel:7203401849" className="text-primary font-medium">(720) 340-1849</a>.
       </p>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <input type="hidden" name="form_name" value={formData.form_name} />
         <input type="hidden" name="recipient_email" value={formData.recipient_email} />
         
         {/* Personal Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-0.5">
               Full Name*
             </label>
             <input
@@ -114,13 +114,13 @@ export default function QuickQuoteForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
               placeholder="John Smith"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-0.5">
               Email Address*
             </label>
             <input
@@ -130,14 +130,14 @@ export default function QuickQuoteForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
               placeholder="john@example.com"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="phone" className="block text-xs font-medium text-gray-700 mb-0.5">
             Phone Number*
           </label>
           <input
@@ -147,13 +147,13 @@ export default function QuickQuoteForm() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+            className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             placeholder="(555) 123-4567"
           />
         </div>
 
         <div>
-          <label htmlFor="moveDate" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="moveDate" className="block text-xs font-medium text-gray-700 mb-0.5">
             Preferred Move Date
           </label>
           <input
@@ -163,14 +163,14 @@ export default function QuickQuoteForm() {
             value={formData.moveDate}
             onChange={handleChange}
             placeholder="MM/DD/YYYY"
-            className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+            className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
           />
         </div>
 
         {/* Location Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label htmlFor="fromZip" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="fromZip" className="block text-xs font-medium text-gray-700 mb-0.5">
               Moving From (ZIP)*
             </label>
             <input 
@@ -182,12 +182,12 @@ export default function QuickQuoteForm() {
               required
               pattern="[0-9]{5}"
               placeholder="Enter ZIP code"
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             />
           </div>
           
           <div>
-            <label htmlFor="toZip" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="toZip" className="block text-xs font-medium text-gray-700 mb-0.5">
               Moving To (ZIP)*
             </label>
             <input 
@@ -199,7 +199,7 @@ export default function QuickQuoteForm() {
               required
               pattern="[0-9]{5}"
               placeholder="Enter ZIP code"
-              className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
+              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
             />
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function QuickQuoteForm() {
         />
 
         {/* hCaptcha */}
-        <div className="flex justify-center my-4 w-full">
+        <div className="flex justify-center my-2 w-full">
           <HCaptcha
             sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
             size="compact"
@@ -230,24 +230,24 @@ export default function QuickQuoteForm() {
         <button 
           type="submit"
           disabled={isSubmitting || !captchaToken}
-          className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-colors disabled:opacity-70"
+          className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-2 text-sm rounded-md transition-colors disabled:opacity-70"
         >
           {isSubmitting ? 'Submitting...' : 'Get Quote'}
         </button>
         
         {submitStatus === 'success' && (
-          <p className="text-green-600 text-center">
+          <p className="text-green-600 text-center text-sm">
             Quote request received! We'll call you shortly.
           </p>
         )}
         
         {submitStatus === 'error' && (
-          <p className="text-red-600 text-center">
+          <p className="text-red-600 text-center text-sm">
             {errorMessage || "There was an error submitting your request. Please try again or call us directly."}
           </p>
         )}
         
-        <p className="text-center text-sm text-muted-foreground">
+        <p className="text-center text-xs text-muted-foreground">
           We'll call you with a quote based on these zip codes.
         </p>
       </form>
