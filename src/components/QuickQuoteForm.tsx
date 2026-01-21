@@ -7,8 +7,6 @@ export default function QuickQuoteForm() {
     email: '',
     phone: '',
     moveDate: '',
-    fromZip: '',
-    toZip: '',
     access_key: 'f4f80b3a-7125-41ae-b44e-3c23cbbfe6de',
     subject: 'New Quick Quote Request - Legacy Moving Denver',
     from_name: 'Legacy Moving Denver Website',
@@ -63,8 +61,6 @@ export default function QuickQuoteForm() {
           email: '',
           phone: '',
           moveDate: '',
-          fromZip: '',
-          toZip: '',
           access_key: 'f4f80b3a-7125-41ae-b44e-3c23cbbfe6de',
           subject: 'New Quick Quote Request - Legacy Moving Denver',
           from_name: 'Legacy Moving Denver Website',
@@ -93,7 +89,7 @@ export default function QuickQuoteForm() {
     <div className="bg-white rounded-lg shadow-md p-4">
       <h3 className="text-lg font-semibold text-secondary mb-2">Get a Quick Quote</h3>
       <p className="text-sm text-muted-foreground mb-3">
-        Enter your zip codes below for a quick moving estimate, or call us at{' '}
+        Fill out the form below and we'll contact you with a quote, or call us at{' '}
         <a href="tel:7203401849" className="text-primary font-medium">(720) 340-1849</a>.
       </p>
       
@@ -167,42 +163,7 @@ export default function QuickQuoteForm() {
           />
         </div>
 
-        {/* Location Information */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label htmlFor="fromZip" className="block text-xs font-medium text-gray-700 mb-0.5">
-              Moving From (ZIP)*
-            </label>
-            <input 
-              type="text"
-              id="fromZip"
-              name="fromZip"
-              value={formData.fromZip}
-              onChange={handleChange}
-              required
-              pattern="[0-9]{5}"
-              placeholder="Enter ZIP code"
-              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="toZip" className="block text-xs font-medium text-gray-700 mb-0.5">
-              Moving To (ZIP)*
-            </label>
-            <input 
-              type="text"
-              id="toZip"
-              name="toZip"
-              value={formData.toZip}
-              onChange={handleChange}
-              required
-              pattern="[0-9]{5}"
-              placeholder="Enter ZIP code"
-              className="w-full px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900"
-            />
-          </div>
-        </div>
+
 
         {/* Hidden fields for Web3Forms */}
         <input name="access_key" type="hidden" value={formData.access_key} />
@@ -248,7 +209,7 @@ export default function QuickQuoteForm() {
         )}
         
         <p className="text-center text-xs text-muted-foreground">
-          We'll call you with a quote based on these zip codes.
+          We'll contact you shortly with a personalized moving quote.
         </p>
       </form>
     </div>
