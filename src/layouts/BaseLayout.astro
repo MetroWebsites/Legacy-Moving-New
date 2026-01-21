@@ -25,6 +25,36 @@ const { title, description, ogImage } = Astro.props;
       <Footer />
     </div>
     
+    <!-- Floating CTA Button -->
+    <a 
+      href="/get-quote" 
+      class="floating-cta-button fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
+      aria-label="Get a free quote"
+    >
+      <span class="md:hidden px-6 py-3">Text Us</span>
+      <span class="hidden md:inline px-6 py-3">Free Quote</span>
+    </a>
+    
+    <style>
+      .floating-cta-button {
+        animation: pulse-subtle 2s ease-in-out infinite;
+      }
+      
+      @keyframes pulse-subtle {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      
+      .floating-cta-button:hover {
+        animation: none;
+        transform: scale(1.1);
+      }
+    </style>
+    
     <script>
       // Handle phone links differently on desktop vs mobile
       document.addEventListener('DOMContentLoaded', () => {
