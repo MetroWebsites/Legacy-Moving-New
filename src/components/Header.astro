@@ -6,12 +6,12 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
 <header
   class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur shadow-sm"
 >
-  <!-- Top bar with contact info - Split design with rounded corner and left whitespace -->
+  <!-- Top bar with contact info - Split design with rounded corner and left whitespace for logo -->
   <div class="hidden md:block relative">
     <div class="flex justify-end">
       <!-- Left section (gray) with rounded bottom-left corner -->
       <div class="bg-gray-400 text-white py-3 px-6 flex items-center" style="border-bottom-left-radius: 40px;">
-        <span class="text-sm font-medium">We're always here to help! Feel free to give us a call at</span>
+        <span class="text-sm font-medium">Professional movers. Honest pricing. No surprises.</span>
       </div>
       
       <!-- Right section (blue) with email only -->
@@ -40,9 +40,9 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
   
   <!-- Main navigation -->
   <div
-    class="container flex h-20 md:h-24 items-center justify-between"
+    class="container flex h-20 md:h-24 items-center justify-between md:relative"
   >
-    <div class="flex items-center gap-2 md:ml-12">
+    <div class="flex items-center gap-2 md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:ml-12">
       <a href="/" class="flex items-center">
         <img 
           src="/assets/legacy-logo_nw_1c856f89.png" 
