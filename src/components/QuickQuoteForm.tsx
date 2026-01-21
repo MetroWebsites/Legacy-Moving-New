@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 export default function QuickQuoteForm() {
@@ -17,6 +17,7 @@ export default function QuickQuoteForm() {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+  const formStartTime = useRef<number>(Date.now());
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -29,8 +30,23 @@ export default function QuickQuoteForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Check captcha
     if (!captchaToken) {
       setErrorMessage('Please complete the captcha verification.');
+      return;
+    }
+    
+    // Time-based validation - must take at least 3 seconds to fill form
+    const timeTaken = Date.now() - formStartTime.current;
+    if (timeTaken < 3000) {
+      setErrorMessage('Please take your time to fill out the form.');
+      return;
+    }
+    
+    // Check honeypot field
+    if (formData.botcheck) {
+      // Bot detected, fail silently
+      setSubmitStatus('success');
       return;
     }
     
@@ -48,7 +64,7 @@ export default function QuickQuoteForm() {
         body: JSON.stringify({
           ...formData,
           'h-captcha-response': captchaToken,
-          botcheck: formData.botcheck || false
+          botcheck: false
         })
       });
 
@@ -68,6 +84,7 @@ export default function QuickQuoteForm() {
         });
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
+        formStartTime.current = Date.now();
       } else {
         setSubmitStatus('error');
         setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
@@ -169,11 +186,23 @@ export default function QuickQuoteForm() {
         <input name="access_key" type="hidden" value={formData.access_key} />
         <input name="subject" type="hidden" value={formData.subject} />
         <input name="from_name" type="hidden" value={formData.from_name} />
+        
+        {/* Honeypot field - hidden from users, bots will fill it */}
         <input 
-          type="checkbox" 
-          name="botcheck" 
-          className="hidden" 
-          style={{ display: 'none' }}
+          type="text"
+          name="botcheck"
+          value={formData.botcheck}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+          style={{
+            position: 'absolute',
+            left: '-9999px',
+            width: '1px',
+            height: '1px',
+            overflow: 'hidden'
+          }}
+          aria-hidden="true"
         />
 
         {/* hCaptcha */}
