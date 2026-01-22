@@ -1,0 +1,136 @@
+  <!-- Scrolling Trust Badges Section -->
+  <section class="bg-white py-6 overflow-hidden border-y border-gray-200">
+    <div class="container">
+      <div class="flex items-center">
+        <!-- Left side: Trusted Nationwide (25% width) -->
+        <div class="w-1/4 pr-6 border-r border-gray-300">
+          <h3 class="text-gray-900 font-bold text-xl md:text-2xl lg:text-3xl text-center leading-tight">
+            Trusted<br/>Nationwide
+          </h3>
+        </div>
+        
+        <!-- Right side: Scrolling Logos (75% width) -->
+        <div class="w-3/4 pl-6 relative overflow-hidden">
+          <div class="scroll-container-fast">
+            <div class="scroll-content-fast">
+              <!-- First set of badges -->
+              <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/google-logo.svg" alt="Google" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.9</div>
+              </a>
+              
+              <a href="https://www.yelp.com/biz/legacy-moving-denver-denver-2" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/yelp.png" alt="Yelp" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.8</div>
+              </a>
+              
+              <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/facebook.png" alt="Facebook" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.8</div>
+              </a>
+              
+              <a href="https://www.bbb.org/us/co/lakewood/profile/moving-companies/legacy-moving-llc-1296-1000116791" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/bbb.png" alt="BBB" class="badge-logo" />
+                <div class="badge-rating">A+ Rating</div>
+              </a>
+              
+              <a href="https://mapq.st/45jRwvi" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/mapquest.png" alt="MapQuest" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.9</div>
+              </a>
+              
+              <!-- Duplicate set for seamless loop -->
+              <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/google-logo.svg" alt="Google" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.9</div>
+              </a>
+              
+              <a href="https://www.yelp.com/biz/legacy-moving-denver-denver-2" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/yelp.png" alt="Yelp" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.8</div>
+              </a>
+              
+              <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/facebook.png" alt="Facebook" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.8</div>
+              </a>
+              
+              <a href="https://www.bbb.org/us/co/lakewood/profile/moving-companies/legacy-moving-llc-1296-1000116791" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/bbb.png" alt="BBB" class="badge-logo" />
+                <div class="badge-rating">A+ Rating</div>
+              </a>
+              
+              <a href="https://mapq.st/45jRwvi" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/mapquest.png" alt="MapQuest" class="badge-logo" />
+                <div class="badge-rating"><span class="stars">★★★★★</span> 4.9</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<style>
+  .scroll-container-fast {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scroll-content-fast {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-fast 15s linear infinite;
+  }
+  
+  @keyframes scroll-fast {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .scroll-container-fast:hover .scroll-content-fast {
+    animation-play-state: paused;
+  }
+  
+  .trust-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    min-width: 140px;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .trust-badge-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .badge-logo {
+    height: 50px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+  }
+  
+  .badge-rating {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+  }
+  
+  .badge-rating .stars {
+    color: #FFA500;
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+</style>
