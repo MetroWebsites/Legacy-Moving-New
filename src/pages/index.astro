@@ -91,23 +91,23 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   </section>
 
   <!-- Scrolling Trust Badges Section -->
-  <section class="bg-white py-6 overflow-hidden border-y border-gray-200">
-    <div class="container">
-      <div class="flex items-center">
-        <!-- Left side: Trusted Nationwide (25% width) -->
-        <div class="w-1/4 pr-6 border-r border-gray-300">
-          <h3 class="text-gray-900 font-bold text-xl md:text-2xl lg:text-3xl text-center leading-tight">
+  <section class="bg-white py-4 md:py-6 overflow-hidden border-y border-gray-200">
+    <div class="container px-2 md:px-4">
+      <div class="flex items-center gap-3 md:gap-0">
+        <!-- Left side: Trusted Nationwide (25% width on desktop, smaller on mobile) -->
+        <div class="w-1/3 md:w-1/4 pr-3 md:pr-6 border-r border-gray-300">
+          <h3 class="text-gray-900 font-bold text-sm md:text-xl lg:text-2xl xl:text-3xl text-center leading-tight">
             Trusted<br/>Nationwide
           </h3>
         </div>
         
-        <!-- Right side: Scrolling Logos (75% width) -->
-        <div class="w-3/4 pl-6 relative overflow-hidden">
+        <!-- Right side: Scrolling Logos (75% width on desktop, larger on mobile) -->
+        <div class="w-2/3 md:w-3/4 pl-3 md:pl-6 relative overflow-hidden">
           <div class="scroll-container-fast">
             <div class="scroll-content-fast">
               <!-- First set of badges -->
               <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noopener" class="trust-badge-item">
-                <img src="/images/trust-badges/google-black.png" alt="Google" class="badge-logo" />
+                <img src="/images/trust-badges/google-transparent.png" alt="Google" class="badge-logo" />
                 <div class="badge-rating"><span class="stars">★★★★★</span></div>
               </a>
               
@@ -117,7 +117,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
               </a>
               
               <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="trust-badge-item">
-                <img src="/images/trust-badges/facebook.png" alt="Facebook" class="badge-logo" />
+                <img src="/images/trust-badges/facebook-transparent.png" alt="Facebook" class="badge-logo" />
                 <div class="badge-rating"><span class="stars stars-4-8">★★★★★</span></div>
               </a>
               
@@ -133,7 +133,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
               
               <!-- Duplicate set for seamless loop -->
               <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noopener" class="trust-badge-item">
-                <img src="/images/trust-badges/google-black.png" alt="Google" class="badge-logo" />
+                <img src="/images/trust-badges/google-transparent.png" alt="Google" class="badge-logo" />
                 <div class="badge-rating"><span class="stars">★★★★★</span></div>
               </a>
               
@@ -143,7 +143,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
               </a>
               
               <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="trust-badge-item">
-                <img src="/images/trust-badges/facebook.png" alt="Facebook" class="badge-logo" />
+                <img src="/images/trust-badges/facebook-transparent.png" alt="Facebook" class="badge-logo" />
                 <div class="badge-rating"><span class="stars stars-4-8">★★★★★</span></div>
               </a>
               
@@ -171,8 +171,14 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   
   .scroll-content-fast {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     animation: scroll-fast 15s linear infinite;
+  }
+  
+  @media (min-width: 768px) {
+    .scroll-content-fast {
+      gap: 2rem;
+    }
   }
   
   @keyframes scroll-fast {
@@ -192,14 +198,22 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 0.35rem;
+    padding: 0.75rem;
     background: white;
     border-radius: 8px;
-    min-width: 140px;
+    min-width: 100px;
     flex-shrink: 0;
     text-decoration: none;
     transition: transform 0.2s ease;
+  }
+  
+  @media (min-width: 768px) {
+    .trust-badge-item {
+      gap: 0.5rem;
+      padding: 1rem;
+      min-width: 140px;
+    }
   }
   
   .trust-badge-item:hover {
@@ -207,30 +221,49 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   }
   
   .badge-logo {
-    height: 50px;
+    height: 35px;
     width: auto;
-    max-width: 100px;
+    max-width: 80px;
     object-fit: contain;
   }
   
+  @media (min-width: 768px) {
+    .badge-logo {
+      height: 50px;
+      max-width: 100px;
+    }
+  }
+  
   .badge-rating {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #1f2937;
     text-align: center;
   }
   
+  @media (min-width: 768px) {
+    .badge-rating {
+      font-size: 0.875rem;
+    }
+  }
+  
   .badge-rating .stars {
     color: #FFA500;
-    font-size: 1rem;
+    font-size: 0.875rem;
     margin-right: 0.25rem;
     display: inline-block;
     position: relative;
   }
   
+  @media (min-width: 768px) {
+    .badge-rating .stars {
+      font-size: 1rem;
+    }
+  }
+  
   /* Partial star ratings using gradient overlay */
   .stars-4-2 {
-    background: linear-gradient(to right, #FFA500 0%, #FFA500 84%, #D3D3D3 84%, #D3D3D3 100%);
+    background: linear-gradient(to right, #FFA500 0%, #FFA500 87%, #D3D3D3 87%, #D3D3D3 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
