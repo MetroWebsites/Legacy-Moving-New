@@ -167,12 +167,15 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   .scroll-container-fast {
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
   
   .scroll-content-fast {
     display: flex;
     gap: 0.5rem;
     animation: scroll-fast 6s linear infinite;
+    width: max-content;
+    will-change: transform;
   }
   
   @media (min-width: 768px) {
@@ -207,6 +210,8 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     flex-shrink: 0;
     text-decoration: none;
     transition: transform 0.2s ease;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   
   @media (min-width: 768px) {
@@ -226,6 +231,10 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     width: auto;
     max-width: 80px;
     object-fit: contain;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   @media (min-width: 768px) {
@@ -240,6 +249,10 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     font-weight: 600;
     color: #1f2937;
     text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   @media (min-width: 768px) {
