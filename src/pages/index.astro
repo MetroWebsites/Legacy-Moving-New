@@ -53,14 +53,14 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
         muted 
         loop 
         playsinline
-        class="w-full h-full object-cover opacity-70"
+        class="w-full h-full object-cover opacity-80 md:opacity-70"
         poster="/images/hero.jpg"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <!-- Overlay gradient for better text readability -->
-      <div class="absolute inset-0 bg-gradient-to-r from-secondary/40 to-secondary/20"></div>
+      <!-- Overlay gradient for better text readability - lighter on mobile -->
+      <div class="absolute inset-0 bg-gradient-to-b from-secondary/30 via-secondary/20 to-secondary/30 md:bg-gradient-to-r md:from-secondary/40 md:to-secondary/20"></div>
     </div>
     <div class="container relative grid lg:grid-cols-2 gap-4 md:gap-8 py-6 md:py-12 lg:py-16">
       <div class="flex flex-col justify-center">
