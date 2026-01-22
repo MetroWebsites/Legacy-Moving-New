@@ -6,6 +6,7 @@
     <loc>https://www.legacymovingdenver.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Primary CTAs -->
@@ -13,11 +14,87 @@
     <loc>https://www.legacymovingdenver.com/get-quote</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/contact</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+
+  <!-- City Pages (High Priority - NEW) -->
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/denver</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/aurora</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/lakewood</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/arvada</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/westminster</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/thornton</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/centennial</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/highlands-ranch</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/littleton</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/englewood</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/golden</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.legacymovingdenver.com/cities/boulder</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Main Service Pages (High Priority) -->
@@ -25,26 +102,31 @@
     <loc>https://www.legacymovingdenver.com/services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/local-moving-services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/long-distance-moving-services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/residential-moving-services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/commercial-moving-services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Services Subdirectory -->
@@ -52,41 +134,49 @@
     <loc>https://www.legacymovingdenver.com/services/local-moving</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/out-of-state-moving</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/long-distance-moving</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/residential-moving</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/commercial-moving</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/packing-services</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/loading-unloading</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/services/storage-solutions</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Additional Service Pages -->
@@ -94,26 +184,31 @@
     <loc>https://www.legacymovingdenver.com/moving-services</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/packing-services</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/storage-services</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/short-term-storage</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/same-day-moves</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- About & Info Pages -->
@@ -121,16 +216,19 @@
     <loc>https://www.legacymovingdenver.com/about-us</loc>
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/service-area</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/careers</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Social Proof & Support -->
@@ -138,21 +236,25 @@
     <loc>https://www.legacymovingdenver.com/reviews</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/gallery</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/faqs</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/feedback</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Pricing & Tips -->
@@ -160,11 +262,13 @@
     <loc>https://www.legacymovingdenver.com/packing-prices</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/moving-tips</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
   <!-- Discounts -->
@@ -172,21 +276,25 @@
     <loc>https://www.legacymovingdenver.com/discounts</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/discounts/military</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/discounts/early-bird</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
   <url>
     <loc>https://www.legacymovingdenver.com/discounts/bundle</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+    <lastmod>2026-01-22</lastmod>
   </url>
 
 </urlset>
