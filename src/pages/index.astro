@@ -49,10 +49,14 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
     <!-- Background Video -->
     <div class="absolute inset-0">
       <video 
+        id="hero-video"
         autoplay 
         muted 
         loop 
         playsinline
+        webkit-playsinline
+        preload="auto"
+        disablePictureInPicture
         class="w-full h-full object-cover opacity-80 md:opacity-70"
         poster="/images/hero.jpg"
       >
@@ -615,5 +619,35 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   </section>
 
 <!-- Removed mobile contact form as it's now shown on desktop and mobile -->
+
+<script>
+  // Force video playback on mobile devices
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('hero-video');
+    if (video) {
+      // Set video properties
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // Video started playing successfully
+          console.log('Hero video playing');
+        }).catch(error => {
+          // Auto-play was prevented, try again on user interaction
+          console.log('Video autoplay prevented:', error);
+          document.addEventListener('touchstart', function() {
+            video.play();
+          }, { once: true });
+        });
+      }
+    }
+  });
+</script>
   
 </BaseLayout>
