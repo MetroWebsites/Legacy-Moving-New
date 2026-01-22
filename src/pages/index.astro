@@ -131,6 +131,11 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
                 <div class="badge-rating"><span class="stars">★★★★★</span></div>
               </a>
               
+              <a href="https://www.trustindex.io/reviews/legacymovingdenver.com-1" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/trustindex.png" alt="Trustindex" class="badge-logo" />
+                <div class="badge-rating"><span class="stars stars-4-7">★★★★★</span></div>
+              </a>
+              
               <!-- Duplicate set for seamless loop -->
               <a href="https://maps.app.goo.gl/guTYTjBgBgSYpH5L9" target="_blank" rel="noopener" class="trust-badge-item">
                 <img src="/images/trust-badges/google-transparent.png" alt="Google" class="badge-logo" />
@@ -156,6 +161,11 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
                 <img src="/images/trust-badges/mapquest.png" alt="MapQuest" class="badge-logo" />
                 <div class="badge-rating"><span class="stars">★★★★★</span></div>
               </a>
+              
+              <a href="https://www.trustindex.io/reviews/legacymovingdenver.com-1" target="_blank" rel="noopener" class="trust-badge-item">
+                <img src="/images/trust-badges/trustindex.png" alt="Trustindex" class="badge-logo" />
+                <div class="badge-rating"><span class="stars stars-4-7">★★★★★</span></div>
+              </a>
             </div>
           </div>
         </div>
@@ -173,7 +183,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   .scroll-content-fast {
     display: flex;
     gap: 0.5rem;
-    animation: scroll-fast 6s linear infinite;
+    animation: scroll-fast 10s linear infinite;
     width: max-content;
     will-change: transform;
   }
@@ -278,6 +288,13 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   /* Partial star ratings using gradient overlay */
   .stars-4-2 {
     background: linear-gradient(to right, #FFA500 0%, #FFA500 87%, #D3D3D3 87%, #D3D3D3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .stars-4-7 {
+    background: linear-gradient(to right, #FFA500 0%, #FFA500 94%, #D3D3D3 94%, #D3D3D3 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
