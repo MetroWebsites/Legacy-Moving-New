@@ -44,15 +44,27 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
       </a>
     </div>
     
-    <!-- Mobile menu button -->
-    <button 
-      id="mobile-menu-button" 
-      class="md:hidden flex items-center p-2"
-      aria-label="Toggle menu"
-    >
-      <Menu size={24} className="menu-icon" />
-      <X size={24} className="close-icon hidden" />
-    </button>
+    <!-- Mobile phone and menu buttons -->
+    <div class="md:hidden flex items-center gap-3">
+      <!-- Phone call button (mobile only) -->
+      <a 
+        href="tel:7203401849" 
+        class="flex items-center justify-center p-2 phone-link"
+        aria-label="Call us"
+      >
+        <Phone size={24} className="text-gray-900" />
+      </a>
+      
+      <!-- Mobile menu button -->
+      <button 
+        id="mobile-menu-button" 
+        class="flex items-center p-2"
+        aria-label="Toggle menu"
+      >
+        <Menu size={24} className="menu-icon" />
+        <X size={24} className="close-icon hidden" />
+      </button>
+    </div>
     
     <!-- Desktop navigation -->
     <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
