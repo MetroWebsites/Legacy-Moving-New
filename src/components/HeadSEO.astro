@@ -52,8 +52,8 @@ const { title, description, ogImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImage} />
 
-<!-- hCaptcha API Script -->
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<!-- hCaptcha API Script - Load before React hydration -->
+<script is:inline src="https://js.hcaptcha.com/1/api.js"></script>
 
 <!-- DO NOT REMOVE - Plausible Analytics must always be enabled -->
 <script is:inline>

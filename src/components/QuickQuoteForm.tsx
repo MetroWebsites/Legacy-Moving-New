@@ -16,8 +16,23 @@ export default function QuickQuoteForm() {
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [hCaptchaLoaded, setHCaptchaLoaded] = useState(false);
   const captchaRef = useRef<HCaptcha>(null);
   const formStartTime = useRef<number>(Date.now());
+
+  // Check if hCaptcha API is loaded
+  useEffect(() => {
+    const checkHCaptcha = () => {
+      if (typeof window !== 'undefined' && (window as any).hcaptcha) {
+        console.log('hCaptcha API loaded successfully');
+        setHCaptchaLoaded(true);
+      } else {
+        console.log('Waiting for hCaptcha API...');
+        setTimeout(checkHCaptcha, 100);
+      }
+    };
+    checkHCaptcha();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -207,14 +222,27 @@ export default function QuickQuoteForm() {
 
         {/* hCaptcha */}
         <div className="flex justify-center my-2 w-full">
-          <HCaptcha
-            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-            size="compact"
-            onVerify={(token) => setCaptchaToken(token)}
-            onExpire={() => setCaptchaToken(null)}
-            onError={() => setCaptchaToken(null)}
-            ref={captchaRef}
-          />
+          {hCaptchaLoaded ? (
+            <HCaptcha
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              size="compact"
+              onVerify={(token) => {
+                console.log('hCaptcha verified');
+                setCaptchaToken(token);
+              }}
+              onExpire={() => {
+                console.log('hCaptcha expired');
+                setCaptchaToken(null);
+              }}
+              onError={(err) => {
+                console.error('hCaptcha error:', err);
+                setCaptchaToken(null);
+              }}
+              ref={captchaRef}
+            />
+          ) : (
+            <div className="text-xs text-gray-500">Loading captcha...</div>
+          )}
         </div>
 
         <button 

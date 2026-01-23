@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "./ui/button";
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
@@ -22,7 +22,22 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [hCaptchaLoaded, setHCaptchaLoaded] = useState(false);
   const captchaRef = useRef<HCaptcha>(null);
+
+  // Check if hCaptcha API is loaded
+  useEffect(() => {
+    const checkHCaptcha = () => {
+      if (typeof window !== 'undefined' && (window as any).hcaptcha) {
+        console.log('hCaptcha API loaded successfully');
+        setHCaptchaLoaded(true);
+      } else {
+        console.log('Waiting for hCaptcha API...');
+        setTimeout(checkHCaptcha, 100);
+      }
+    };
+    checkHCaptcha();
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -230,14 +245,27 @@ export default function ContactForm() {
       
       {/* hCaptcha for spam protection */}
       <div className="flex justify-center w-full">
-        <HCaptcha
-          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-          size="compact"
-          onVerify={(token) => setCaptchaToken(token)}
-          onExpire={() => setCaptchaToken(null)}
-          onError={() => setCaptchaToken(null)}
-          ref={captchaRef}
-        />
+        {hCaptchaLoaded ? (
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            size="compact"
+            onVerify={(token) => {
+              console.log('hCaptcha verified');
+              setCaptchaToken(token);
+            }}
+            onExpire={() => {
+              console.log('hCaptcha expired');
+              setCaptchaToken(null);
+            }}
+            onError={(err) => {
+              console.error('hCaptcha error:', err);
+              setCaptchaToken(null);
+            }}
+            ref={captchaRef}
+          />
+        ) : (
+          <div className="text-sm text-gray-500">Loading security check...</div>
+        )}
       </div>
       
       <Button
