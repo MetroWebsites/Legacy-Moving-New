@@ -74,7 +74,7 @@
         </ul>
       </div>
       
-      <!-- Contact info and Licenses: side-by-side on mobile, stacked on desktop -->
+      <!-- Contact info: full width on mobile, single column on desktop -->
       <div class="col-span-2 md:col-span-1">
         <!-- Mobile: 2-column grid, Desktop: single column -->
         <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-0">
@@ -111,15 +111,15 @@
             </div>
           </div>
         </div>
-        
-        <!-- Licenses below Contact on desktop only -->
-        <div class="hidden md:block mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-700">
-          <p class="text-xs text-gray-300 font-semibold mb-1.5 md:mb-2">Fully Licensed & Insured</p>
-          <div class="flex flex-wrap gap-1.5 md:gap-2">
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">DOT #3462023</span>
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">MC #1189363</span>
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">PUC #HHG-00682</span>
-          </div>
+      </div>
+      
+      <!-- Licenses - separate column on desktop only -->
+      <div class="hidden md:block">
+        <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Fully Licensed & Insured</h3>
+        <div class="flex flex-col gap-1.5 md:gap-2">
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">DOT #3462023</span>
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">MC #1189363</span>
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">PUC #HHG-00682</span>
         </div>
       </div>
     </div>
