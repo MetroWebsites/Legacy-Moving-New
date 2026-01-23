@@ -74,35 +74,38 @@
         </ul>
       </div>
       
-      <!-- Contact info -->
-      <div>
-        <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Contact Us</h3>
-        <ul class="space-y-1.5 md:space-y-2 text-xs text-gray-300">
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors leading-relaxed">
-              8805 W. 14th Ave, Suite 300<br>Lakewood, CO 80215
-            </a>
-          </li>
-          <li class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:7203401849" class="hover:text-accent transition-colors phone-link">
-              (720) 340-1849
-            </a>
-          </li>
-          <li class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M12 2h.01"/><path d="M17 16h.01"/><path d="M14 20h.01"/><path d="M12 11h.01"/><path d="M7 16h.01"/><path d="M3 12h.01"/><circle cx="12" cy="12" r="10"/></svg>
-            <span>Mon-Sun: 8:00am - 6:00pm</span>
-          </li>
-        </ul>
+      <!-- Contact info and Licenses side-by-side on mobile -->
+      <div class="col-span-2 md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-0">
+        <!-- Contact Us -->
+        <div>
+          <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Contact Us</h3>
+          <ul class="space-y-1.5 md:space-y-2 text-xs text-gray-300">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors leading-relaxed">
+                8805 W. 14th Ave, Suite 300<br>Lakewood, CO 80215
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:7203401849" class="hover:text-accent transition-colors phone-link">
+                (720) 340-1849
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M12 2h.01"/><path d="M17 16h.01"/><path d="M14 20h.01"/><path d="M12 11h.01"/><path d="M7 16h.01"/><path d="M3 12h.01"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>Mon-Sun: 8:00am - 6:00pm</span>
+            </li>
+          </ul>
+        </div>
         
-        <!-- Licenses & Certifications -->
-        <div class="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-700">
+        <!-- Licenses - side by side with Contact on mobile -->
+        <div class="md:mt-3 md:pt-3 md:border-t md:border-gray-700">
           <p class="text-xs text-gray-300 font-semibold mb-1.5 md:mb-2">Fully Licensed & Insured</p>
-          <div class="flex flex-wrap gap-1.5 md:gap-2">
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">DOT #3462023</span>
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">MC #1189363</span>
-            <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md">PUC #HHG-00682</span>
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] md:text-xs bg-gray-700/50 text-gray-300 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">DOT #3462023</span>
+            <span class="text-[10px] md:text-xs bg-gray-700/50 text-gray-300 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">MC #1189363</span>
+            <span class="text-[10px] md:text-xs bg-gray-700/50 text-gray-300 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">PUC #HHG-00682</span>
           </div>
         </div>
       </div>
