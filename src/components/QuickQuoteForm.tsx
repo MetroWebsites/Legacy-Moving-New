@@ -126,9 +126,6 @@ export default function QuickQuoteForm() {
       </p>
       
       <form onSubmit={handleSubmit} className="space-y-3">
-        <input type="hidden" name="form_name" value={formData.form_name} />
-        <input type="hidden" name="recipient_email" value={formData.recipient_email} />
-        
         {/* Personal Information */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
