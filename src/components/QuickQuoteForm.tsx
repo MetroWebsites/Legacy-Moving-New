@@ -217,31 +217,29 @@ export default function QuickQuoteForm() {
           aria-hidden="true"
         />
 
-        {/* hCaptcha - fixed height container to prevent layout shift */}
+        {/* hCaptcha */}
         <div className="flex justify-center my-2 w-full">
-          <div style={{ minHeight: '78px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {hCaptchaLoaded ? (
-              <HCaptcha
-                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                size="normal"
-                onVerify={(token) => {
-                  console.log('hCaptcha verified');
-                  setCaptchaToken(token);
-                }}
-                onExpire={() => {
-                  console.log('hCaptcha expired');
-                  setCaptchaToken(null);
-                }}
-                onError={(err) => {
-                  console.error('hCaptcha error:', err);
-                  setCaptchaToken(null);
+          {hCaptchaLoaded ? (
+            <HCaptcha
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              size="compact"
+              onVerify={(token) => {
+                console.log('hCaptcha verified');
+                setCaptchaToken(token);
               }}
-              ref={captchaRef}
-            />
-          ) : (
-            <div className="text-xs text-gray-500">Loading captcha...</div>
-          )}
-          </div>
+              onExpire={() => {
+                console.log('hCaptcha expired');
+                setCaptchaToken(null);
+              }}
+              onError={(err) => {
+                console.error('hCaptcha error:', err);
+                setCaptchaToken(null);
+            }}
+            ref={captchaRef}
+          />
+        ) : (
+          <div className="text-xs text-gray-500">Loading captcha...</div>
+        )}
         </div>
 
         <button 

@@ -243,31 +243,29 @@ export default function ContactForm() {
         onChange={handleInputChange}
       />
       
-      {/* hCaptcha for spam protection - fixed height container to prevent layout shift */}
+      {/* hCaptcha for spam protection */}
       <div className="flex justify-center w-full">
-        <div style={{ minHeight: '78px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {hCaptchaLoaded ? (
-            <HCaptcha
-              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              size="normal"
-              onVerify={(token) => {
-                console.log('hCaptcha verified');
-                setCaptchaToken(token);
-              }}
-              onExpire={() => {
-                console.log('hCaptcha expired');
-                setCaptchaToken(null);
-              }}
-              onError={(err) => {
-                console.error('hCaptcha error:', err);
-                setCaptchaToken(null);
-              }}
-              ref={captchaRef}
-            />
-          ) : (
-            <div className="text-sm text-gray-500">Loading security check...</div>
-          )}
-        </div>
+        {hCaptchaLoaded ? (
+          <HCaptcha
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            size="compact"
+            onVerify={(token) => {
+              console.log('hCaptcha verified');
+              setCaptchaToken(token);
+            }}
+            onExpire={() => {
+              console.log('hCaptcha expired');
+              setCaptchaToken(null);
+            }}
+            onError={(err) => {
+              console.error('hCaptcha error:', err);
+              setCaptchaToken(null);
+            }}
+            ref={captchaRef}
+          />
+        ) : (
+          <div className="text-sm text-gray-500">Loading security check...</div>
+        )}
       </div>
       
       <Button
