@@ -42,61 +42,67 @@ const cityState = "CO";
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="py-16 bg-gray-50">
+  <!-- Same-Day Moving in Arvada -->
+  <section class="py-14 bg-gradient-to-br from-green-50 to-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
-            Complete Moving Services in {cityName}
-          </h2>
-          <p class="text-muted-foreground text-lg">
-            From residential moves to commercial relocations, we handle every aspect of your {cityName} move with care and professionalism.
-          </p>
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary text-center">
+          Need to Move Today? We Can Make It Happen.
+        </h2>
+        <p class="text-center text-muted-foreground mb-10">
+          Arvada residents call us when they need a last-minute move. Here's how we handle same-day requests:
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-3">1</div>
+            <h3 class="font-bold text-lg mb-2 text-secondary">Call Before Noon</h3>
+            <p class="text-muted-foreground text-sm">
+              If you call us before 12pm, we can usually get a crew to you the same day (subject to availability).
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-3">2</div>
+            <h3 class="font-bold text-lg mb-2 text-secondary">Quick Assessment</h3>
+            <p class="text-muted-foreground text-sm">
+              Tell us what needs to move. We'll give you an honest estimate over the phone—no surprises later.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-3">3</div>
+            <h3 class="font-bold text-lg mb-2 text-secondary">Crew Arrives Fast</h3>
+            <p class="text-muted-foreground text-sm">
+              We dispatch the nearest available crew. Most Arvada same-day moves start within 2-4 hours of your call.
+            </p>
+          </div>
         </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Local Moving</h3>
-            <p class="text-muted-foreground">
-              Efficient local moves within {cityName} and to surrounding Denver metro communities. Same-day and next-day service available.
-            </p>
+        <div class="bg-secondary/5 p-6 rounded-lg">
+          <h3 class="font-semibold text-lg text-secondary mb-3 text-center">Common Same-Day Scenarios We Handle:</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-2">
+              <span class="text-primary font-bold">✓</span>
+              <span class="text-muted-foreground text-sm"><strong>Apartment lease expires today</strong> and you need out fast</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-primary font-bold">✓</span>
+              <span class="text-muted-foreground text-sm"><strong>Original movers didn't show up</strong> and you need backup immediately</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-primary font-bold">✓</span>
+              <span class="text-muted-foreground text-sm"><strong>Single item delivery</strong> (couch, mattress, appliance) needs to happen now</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-primary font-bold">✓</span>
+              <span class="text-muted-foreground text-sm"><strong>Emergency relocation</strong> due to unexpected circumstances</span>
+            </div>
           </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Long Distance</h3>
-            <p class="text-muted-foreground">
-              Interstate moving from {cityName} to anywhere in the US. Professional packing, loading, and safe delivery guaranteed.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Packing Services</h3>
-            <p class="text-muted-foreground">
-              Full-service packing with quality materials. We'll carefully pack your entire {cityName} home or just fragile items.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Loading & Unloading</h3>
-            <p class="text-muted-foreground">
-              Labor-only services for {cityName} residents. We'll load or unload your rental truck or storage unit safely.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Commercial Moving</h3>
-            <p class="text-muted-foreground">
-              Office and business relocation in {cityName}. Minimize downtime with our efficient commercial moving services.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 class="font-bold text-xl mb-3 text-secondary">Storage Solutions</h3>
-            <p class="text-muted-foreground">
-              Secure storage options for {cityName} residents. Short-term and long-term storage available at our Lakewood facility.
-            </p>
-          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-muted-foreground mb-4">
+            <strong>Pro tip:</strong> Same-day availability varies by season. Summer weekends book up fast—call early!
+          </p>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary text-white hover:bg-primary' })}>
+            Call Now for Same-Day Service
+          </a>
         </div>
       </div>
     </div>
