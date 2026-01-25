@@ -48,7 +48,9 @@ export default function ContactForm() {
       const formDataWithProtection = {
         ...formData,
         botcheck: formData.botcheck || false,
-        "h-captcha-response": captchaToken
+        "h-captcha-response": captchaToken,
+        // Also send as hCaptchaToken in case Web3Forms expects it differently
+        hCaptchaToken: captchaToken
       };
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -64,6 +66,7 @@ export default function ContactForm() {
 
       // Debug logging
       console.log("Web3Forms response:", { status: response.status, ok: response.ok, result });
+      console.log("Form data sent:", formDataWithProtection);
 
       // Web3Forms returns success: true on successful submission
       if (result.success === true) {
@@ -73,7 +76,9 @@ export default function ContactForm() {
         captchaRef.current?.resetCaptcha();
       } else {
         setSubmitStatus("error");
-        setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
+        // Show the actual error message from Web3Forms
+        const errorMsg = result.message || "There was an error submitting your request. Please try again.";
+        setErrorMessage(`Error: ${errorMsg}. Please call us at (720) 340-1849 if this persists.`);
         console.error("Web3Forms error:", { status: response.status, result });
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
