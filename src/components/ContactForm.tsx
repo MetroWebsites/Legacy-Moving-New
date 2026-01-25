@@ -53,33 +53,43 @@ export default function ContactForm() {
         hCaptchaToken: captchaToken
       };
 
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formspree.io/f/xanydboy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify(formDataWithProtection)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          moveDate: formData.moveDate,
+          moveFrom: formData.moveFrom,
+          moveTo: formData.moveTo,
+          message: formData.message,
+          _subject: "New Quote Request from Legacy Moving Denver",
+          _replyto: formData.email
+        })
       });
 
       const result = await response.json();
 
       // Debug logging
-      console.log("Web3Forms response:", { status: response.status, ok: response.ok, result });
-      console.log("Form data sent:", formDataWithProtection);
+      console.log("Formspree response:", { status: response.status, ok: response.ok, result });
+      console.log("Form data sent:", formData);
 
-      // Web3Forms returns success: true on successful submission
-      if (result.success === true) {
+      // Formspree returns ok: true on successful submission
+      if (response.ok) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
       } else {
         setSubmitStatus("error");
-        // Show the actual error message from Web3Forms
-        const errorMsg = result.message || "There was an error submitting your request. Please try again.";
+        // Show the actual error message from Formspree
+        const errorMsg = result.error || result.message || "There was an error submitting your request. Please try again.";
         setErrorMessage(`Error: ${errorMsg}. Please call us at (720) 340-1849 if this persists.`);
-        console.error("Web3Forms error:", { status: response.status, result });
+        console.error("Formspree error:", { status: response.status, result });
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
       }
