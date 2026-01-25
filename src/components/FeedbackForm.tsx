@@ -53,7 +53,7 @@ export default function FeedbackForm() {
         "h-captcha-response": captchaToken
       };
       
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formspree.io/f/xanydboy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export default function FeedbackForm() {
       
       const result = await response.json();
       
-      if (result.success === true) {
+      if (response.ok) {
         setIsSubmitted(true);
         setFormData(defaultFormData);
         setCaptchaToken(null);
