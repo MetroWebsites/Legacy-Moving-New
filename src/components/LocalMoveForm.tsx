@@ -69,7 +69,7 @@ export default function LocalMoveForm() {
         "h-captcha-response": captchaToken
       };
 
-      const response = await fetch("https://formspree.io/f/xanydboy", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export default function LocalMoveForm() {
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (result.success === true) {
         setSubmitStatus("success");
         setFormData(defaultFormData);
         setCaptchaToken(null);

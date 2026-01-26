@@ -55,25 +55,22 @@ export default function QuickQuoteForm() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("https://formspree.io/f/xanydboy", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          moveDate: formData.moveDate,
-          _subject: 'New Quick Quote Request - Legacy Moving Denver',
-          _replyto: formData.email
+          ...formData,
+          'h-captcha-response': captchaToken,
+          botcheck: false
         })
       });
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (result.success === true) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -90,7 +87,7 @@ export default function QuickQuoteForm() {
         formStartTime.current = Date.now();
       } else {
         setSubmitStatus('error');
-        setErrorMessage(result.error || result.message || "There was an error submitting your request. Please try again.");
+        setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
       }
