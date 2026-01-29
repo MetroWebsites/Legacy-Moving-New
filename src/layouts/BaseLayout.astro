@@ -35,7 +35,7 @@ const { title, description, ogImage } = Astro.props;
       Text Us
     </a>
     
-    <!-- Desktop: Open modal -->
+    <!-- Desktop: Chat Box Toggle Button -->
     <button 
       id="text-us-btn"
       class="floating-cta-button hidden md:flex fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 items-center justify-center px-6 py-3"
@@ -44,42 +44,52 @@ const { title, description, ogImage } = Astro.props;
       Text Us
     </button>
     
-    <!-- Text Us Modal (Desktop Only) -->
-    <div id="text-us-modal" class="hidden fixed inset-0 bg-black/50 z-[60] items-center justify-center">
-      <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md mx-4 relative animate-fade-in">
-        <!-- Close button -->
-        <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    <!-- Chat Message Box (Desktop Only) -->
+    <div id="chat-box" class="hidden fixed bottom-24 right-6 w-96 bg-white rounded-lg shadow-2xl z-[60] animate-slide-up">
+      <!-- Chat Header -->
+      <div class="bg-primary text-white px-4 py-3 rounded-t-lg flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+          <span class="font-semibold">Legacy Moving Denver</span>
+        </div>
+        <button id="close-chat" class="text-white/80 hover:text-white transition-colors" aria-label="Close chat">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
-        
-        <!-- Icon -->
-        <div class="flex justify-center mb-4">
-          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      
+      <!-- Chat Messages Area -->
+      <div id="chat-messages" class="p-4 space-y-3 max-h-96 overflow-y-auto bg-gray-50">
+        <!-- Initial bot message -->
+        <div class="flex gap-2">
+          <div class="flex-shrink-0">
+            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+              LM
+            </div>
+          </div>
+          <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
+            <p class="text-sm text-gray-700">Hi! 👋 Send us a message and we'll get back to you right away!</p>
           </div>
         </div>
-        
-        <!-- Content -->
-        <h3 class="text-2xl font-bold text-center mb-4 text-secondary">Text Us!</h3>
-        <p class="text-center text-muted-foreground mb-6">
-          Text us on your computer or use your phone to text our number:
-        </p>
-        
-        <!-- Phone number (large and prominent) -->
-        <div class="bg-primary/5 rounded-lg p-4 mb-6">
-          <a href="tel:7203401849" class="block text-center text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
-            (720) 340-1849
-          </a>
-        </div>
-        
-        <!-- Call option -->
-        <p class="text-center text-muted-foreground mb-4">or</p>
-        <a 
-          href="tel:7203401849" 
-          class="block w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
-        >
-          Just Call Us
-        </a>
+      </div>
+      
+      <!-- Chat Input Area -->
+      <div class="p-4 border-t bg-white rounded-b-lg">
+        <form id="chat-form" class="flex gap-2">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Type your message..."
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            required
+          />
+          <button 
+            type="submit"
+            class="bg-primary hover:bg-primary/90 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors flex-shrink-0"
+            aria-label="Send message"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </button>
+        </form>
       </div>
     </div>
     
@@ -102,55 +112,152 @@ const { title, description, ogImage } = Astro.props;
         transform: scale(1.1);
       }
       
-      @keyframes fade-in {
+      @keyframes slide-up {
         from {
           opacity: 0;
-          transform: scale(0.95);
+          transform: translateY(20px);
         }
         to {
           opacity: 1;
-          transform: scale(1);
+          transform: translateY(0);
         }
       }
       
-      .animate-fade-in {
-        animation: fade-in 0.2s ease-out;
+      .animate-slide-up {
+        animation: slide-up 0.3s ease-out;
+      }
+      
+      /* Chat message animations */
+      @keyframes message-appear {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .message-appear {
+        animation: message-appear 0.3s ease-out;
       }
     </style>
     
     <script>
-      // Text Us Modal functionality
+      // Chat Box functionality
       document.addEventListener('DOMContentLoaded', () => {
         const textUsBtn = document.getElementById('text-us-btn');
-        const modal = document.getElementById('text-us-modal');
-        const closeModal = document.getElementById('close-modal');
+        const chatBox = document.getElementById('chat-box');
+        const closeChat = document.getElementById('close-chat');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
         
-        if (textUsBtn && modal && closeModal) {
-          // Open modal
+        if (textUsBtn && chatBox && closeChat && chatForm && chatInput && chatMessages) {
+          // Toggle chat box
           textUsBtn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-          });
-          
-          // Close modal on close button
-          closeModal.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-          });
-          
-          // Close modal on backdrop click
-          modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-              modal.classList.add('hidden');
-              modal.classList.remove('flex');
+            const isHidden = chatBox.classList.contains('hidden');
+            if (isHidden) {
+              chatBox.classList.remove('hidden');
+              chatInput.focus();
+            } else {
+              chatBox.classList.add('hidden');
             }
           });
           
-          // Close modal on Escape key
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-              modal.classList.add('hidden');
-              modal.classList.remove('flex');
+          // Close chat
+          closeChat.addEventListener('click', () => {
+            chatBox.classList.add('hidden');
+          });
+          
+          // Handle form submission
+          chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            // Add user message to chat
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'flex gap-2 justify-end message-appear';
+            userMsgDiv.innerHTML = `
+              <div class="bg-primary text-white rounded-lg rounded-tr-none px-4 py-2 shadow-sm max-w-[80%]">
+                <p class="text-sm">${message}</p>
+              </div>
+            `;
+            chatMessages.appendChild(userMsgDiv);
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Send to Formspree
+            try {
+              const response = await fetch('https://formspree.io/f/xanydboy', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  message: message,
+                  type: 'Text Request',
+                  phone: '(720) 340-1849',
+                }),
+              });
+              
+              if (response.ok) {
+                // Show success message with SMS fallback
+                setTimeout(() => {
+                  const botMsgDiv = document.createElement('div');
+                  botMsgDiv.className = 'flex gap-2 message-appear';
+                  botMsgDiv.innerHTML = `
+                    <div class="flex-shrink-0">
+                      <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                        LM
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
+                      <p class="text-sm text-gray-700 mb-2">Message sent! 🎉</p>
+                      <p class="text-sm text-gray-700 mb-3">If that didn't work, just give us a call or text:</p>
+                      <a href="tel:7203401849" class="inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors mb-2">
+                        📞 Call (720) 340-1849
+                      </a>
+                      <a href="sms:7203401849?&body=${encodeURIComponent(message)}" class="inline-block bg-secondary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/90 transition-colors ml-2">
+                        💬 Text Us
+                      </a>
+                    </div>
+                  `;
+                  chatMessages.appendChild(botMsgDiv);
+                  chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 500);
+              }
+            } catch (error) {
+              // Show error with SMS fallback
+              setTimeout(() => {
+                const botMsgDiv = document.createElement('div');
+                botMsgDiv.className = 'flex gap-2 message-appear';
+                botMsgDiv.innerHTML = `
+                  <div class="flex-shrink-0">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                      LM
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
+                    <p class="text-sm text-gray-700 mb-3">Let's try another way! Give us a call or text:</p>
+                    <a href="tel:7203401849" class="inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors mb-2">
+                      📞 Call (720) 340-1849
+                    </a>
+                    <a href="sms:7203401849?&body=${encodeURIComponent(message)}" class="inline-block bg-secondary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/90 transition-colors ml-2">
+                      💬 Text Us
+                    </a>
+                  </div>
+                `;
+                chatMessages.appendChild(botMsgDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }, 500);
             }
           });
         }
