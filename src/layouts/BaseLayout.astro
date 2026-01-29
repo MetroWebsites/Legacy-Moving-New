@@ -74,21 +74,30 @@ const { title, description, ogImage } = Astro.props;
       
       <!-- Chat Input Area -->
       <div class="p-4 border-t bg-white rounded-b-lg">
-        <form id="chat-form" class="flex gap-2">
+        <form id="chat-form" class="space-y-2">
           <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Type your message..."
-            class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            type="tel" 
+            id="chat-phone" 
+            placeholder="Your phone number..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
             required
           />
-          <button 
-            type="submit"
-            class="bg-primary hover:bg-primary/90 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors flex-shrink-0"
-            aria-label="Send message"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-          </button>
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              id="chat-input" 
+              placeholder="Type your message..."
+              class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+              required
+            />
+            <button 
+              type="submit"
+              class="bg-primary hover:bg-primary/90 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors flex-shrink-0"
+              aria-label="Send message"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -152,15 +161,16 @@ const { title, description, ogImage } = Astro.props;
         const closeChat = document.getElementById('close-chat');
         const chatForm = document.getElementById('chat-form');
         const chatInput = document.getElementById('chat-input');
+        const chatPhone = document.getElementById('chat-phone');
         const chatMessages = document.getElementById('chat-messages');
         
-        if (textUsBtn && chatBox && closeChat && chatForm && chatInput && chatMessages) {
+        if (textUsBtn && chatBox && closeChat && chatForm && chatInput && chatPhone && chatMessages) {
           // Toggle chat box
           textUsBtn.addEventListener('click', () => {
             const isHidden = chatBox.classList.contains('hidden');
             if (isHidden) {
               chatBox.classList.remove('hidden');
-              chatInput.focus();
+              chatPhone.focus();
             } else {
               chatBox.classList.add('hidden');
             }
@@ -176,7 +186,8 @@ const { title, description, ogImage } = Astro.props;
             e.preventDefault();
             
             const message = chatInput.value.trim();
-            if (!message) return;
+            const phone = chatPhone.value.trim();
+            if (!message || !phone) return;
             
             // Add user message to chat
             const userMsgDiv = document.createElement('div');
@@ -188,77 +199,56 @@ const { title, description, ogImage } = Astro.props;
             `;
             chatMessages.appendChild(userMsgDiv);
             
-            // Clear input
+            // Clear inputs
             chatInput.value = '';
+            chatPhone.value = '';
             
             // Scroll to bottom
             chatMessages.scrollTop = chatMessages.scrollHeight;
             
-            // Send to Formspree
+            // Send email to legacymovingdenver@gmail.com via Formspree
             try {
-              const response = await fetch('https://formspree.io/f/xanydboy', {
+              await fetch('https://formspree.io/f/xanydboy', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
+                  email: 'legacymovingdenver@gmail.com',
                   message: message,
-                  type: 'Text Request',
-                  phone: '(720) 340-1849',
+                  phone: phone,
+                  type: 'Text Request from Website Chat',
                 }),
               });
-              
-              if (response.ok) {
-                // Show success message with SMS fallback
-                setTimeout(() => {
-                  const botMsgDiv = document.createElement('div');
-                  botMsgDiv.className = 'flex gap-2 message-appear';
-                  botMsgDiv.innerHTML = `
-                    <div class="flex-shrink-0">
-                      <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        LM
-                      </div>
-                    </div>
-                    <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
-                      <p class="text-sm text-gray-700 mb-2">Message sent! 🎉</p>
-                      <p class="text-sm text-gray-700 mb-3">If that didn't work, just give us a call or text:</p>
-                      <a href="tel:7203401849" class="inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors mb-2">
-                        📞 Call (720) 340-1849
-                      </a>
-                      <a href="sms:7203401849?&body=${encodeURIComponent(message)}" class="inline-block bg-secondary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/90 transition-colors ml-2">
-                        💬 Text Us
-                      </a>
-                    </div>
-                  `;
-                  chatMessages.appendChild(botMsgDiv);
-                  chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 500);
-              }
             } catch (error) {
-              // Show error with SMS fallback
-              setTimeout(() => {
-                const botMsgDiv = document.createElement('div');
-                botMsgDiv.className = 'flex gap-2 message-appear';
-                botMsgDiv.innerHTML = `
-                  <div class="flex-shrink-0">
-                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-                      LM
-                    </div>
-                  </div>
-                  <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
-                    <p class="text-sm text-gray-700 mb-3">Let's try another way! Give us a call or text:</p>
-                    <a href="tel:7203401849" class="inline-block bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors mb-2">
-                      📞 Call (720) 340-1849
-                    </a>
-                    <a href="sms:7203401849?&body=${encodeURIComponent(message)}" class="inline-block bg-secondary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/90 transition-colors ml-2">
-                      💬 Text Us
-                    </a>
-                  </div>
-                `;
-                chatMessages.appendChild(botMsgDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-              }, 500);
+              console.log('Email send failed, but continuing with SMS');
             }
+            
+            // Open SMS with the message (this will work on desktop with messaging apps)
+            window.location.href = `sms:7203401849?&body=${encodeURIComponent(message)}`;
+            
+            // Show confirmation message
+            setTimeout(() => {
+              const botMsgDiv = document.createElement('div');
+              botMsgDiv.className = 'flex gap-2 message-appear';
+              botMsgDiv.innerHTML = `
+                <div class="flex-shrink-0">
+                  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    LM
+                  </div>
+                </div>
+                <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
+                  <p class="text-sm text-gray-700 mb-2">Opening your messaging app... 📱</p>
+                  <p class="text-sm text-gray-600 mb-3 text-xs">We've also sent ourselves an email with your message!</p>
+                  <p class="text-sm text-gray-700 mb-2">If that didn't work, give us a call or text:</p>
+                  <a href="tel:7203401849" class="inline-block bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors">
+                    📞 (720) 340-1849
+                  </a>
+                </div>
+              `;
+              chatMessages.appendChild(botMsgDiv);
+              chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 300);
           });
         }
       });
