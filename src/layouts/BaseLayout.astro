@@ -26,6 +26,7 @@ const { title, description, ogImage } = Astro.props;
     </div>
     
     <!-- Floating CTA Button -->
+    <!-- Mobile: Direct SMS link -->
     <a 
       href="sms:7203401849?&body=Hello%2C%20I%27m%20interested%20in%20getting%20a%20moving%20quote.%20Can%20you%20help%20me%3F" 
       class="floating-cta-button md:hidden fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center px-6 py-3"
@@ -34,13 +35,53 @@ const { title, description, ogImage } = Astro.props;
       Text Us
     </a>
     
-    <a 
-      href="sms:7203401849?&body=Hello%2C%20I%27m%20interested%20in%20getting%20a%20moving%20quote.%20Can%20you%20help%20me%3F" 
+    <!-- Desktop: Open modal -->
+    <button 
+      id="text-us-btn"
       class="floating-cta-button hidden md:flex fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 items-center justify-center px-6 py-3"
       aria-label="Text us"
     >
       Text Us
-    </a>
+    </button>
+    
+    <!-- Text Us Modal (Desktop Only) -->
+    <div id="text-us-modal" class="hidden fixed inset-0 bg-black/50 z-[60] items-center justify-center">
+      <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md mx-4 relative animate-fade-in">
+        <!-- Close button -->
+        <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        
+        <!-- Icon -->
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+        </div>
+        
+        <!-- Content -->
+        <h3 class="text-2xl font-bold text-center mb-4 text-secondary">Text Us!</h3>
+        <p class="text-center text-muted-foreground mb-6">
+          Text us on your computer or use your phone to text our number:
+        </p>
+        
+        <!-- Phone number (large and prominent) -->
+        <div class="bg-primary/5 rounded-lg p-4 mb-6">
+          <a href="tel:7203401849" class="block text-center text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+            (720) 340-1849
+          </a>
+        </div>
+        
+        <!-- Call option -->
+        <p class="text-center text-muted-foreground mb-4">or</p>
+        <a 
+          href="tel:7203401849" 
+          class="block w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
+        >
+          Just Call Us
+        </a>
+      </div>
+    </div>
     
     <style>
       .floating-cta-button {
@@ -60,9 +101,61 @@ const { title, description, ogImage } = Astro.props;
         animation: none;
         transform: scale(1.1);
       }
+      
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      .animate-fade-in {
+        animation: fade-in 0.2s ease-out;
+      }
     </style>
     
     <script>
+      // Text Us Modal functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const textUsBtn = document.getElementById('text-us-btn');
+        const modal = document.getElementById('text-us-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        if (textUsBtn && modal && closeModal) {
+          // Open modal
+          textUsBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+          });
+          
+          // Close modal on close button
+          closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          });
+          
+          // Close modal on backdrop click
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              modal.classList.add('hidden');
+              modal.classList.remove('flex');
+            }
+          });
+          
+          // Close modal on Escape key
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+              modal.classList.add('hidden');
+              modal.classList.remove('flex');
+            }
+          });
+        }
+      });
+      
       // Handle phone links differently on desktop vs mobile
       document.addEventListener('DOMContentLoaded', () => {
         const phoneLinks = document.querySelectorAll('.phone-link');
