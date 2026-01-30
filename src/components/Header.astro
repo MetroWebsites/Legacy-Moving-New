@@ -85,13 +85,14 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
         About Us
       </a>
       <div class="relative group">
-        <button 
-          class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
+        <a 
+          href="/services"
+          class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium flex items-center' })}
           aria-haspopup="true"
         >
           Services
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
+        </a>
         <div class="absolute left-0 top-full pt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
           <div class="py-1">
             <a href="/services/local-moving" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Local Moving</a>
