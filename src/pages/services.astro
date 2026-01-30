@@ -409,15 +409,92 @@ import storageImage from '../assets/services/storage.jpg';
   </section>
 
   <!-- Get a Quote Section -->
-  <section class="py-10 md:py-14">
+  <section class="py-10 md:py-14 bg-gray-50">
     <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Get a Free Quote</h2>
-        <p class="text-muted-foreground max-w-2xl mx-auto mb-8">
-          Fill out the form below to request a free, no-obligation quote for your upcoming move. Our team will get back to you promptly with a detailed estimate.
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Get Your Free Moving Quote</h2>
+        <p class="text-muted-foreground max-w-3xl mx-auto">
+          Ready to experience Denver's top-rated moving service? Fill out the form to get a free, accurate quote for your move. Our team responds within 24 hours with a detailed estimate.
         </p>
-        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Contact Form -->
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-xl border border-gray-100">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-4 text-secondary">Request Your Quote</h3>
           <ContactForm client:load />
+        </div>
+        
+        <!-- Why Choose Us & Quick Links -->
+        <div class="space-y-6">
+          <!-- Why Choose Legacy Moving -->
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-100">
+            <h3 class="font-display font-bold text-xl md:text-2xl mb-4 text-secondary">Why Choose Legacy Moving?</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 mt-1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <div>
+                  <strong class="text-secondary">1,700+ 5-Star Reviews</strong>
+                  <p class="text-sm text-muted-foreground">Denver's most trusted moving company with proven customer satisfaction</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 mt-1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <div>
+                  <strong class="text-secondary">No Hidden Fees</strong>
+                  <p class="text-sm text-muted-foreground">Transparent pricing with no travel time charges, free supplies, and no fuel surcharges</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 mt-1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <div>
+                  <strong class="text-secondary">Fully Licensed & Insured</strong>
+                  <p class="text-sm text-muted-foreground">DOT #3462023, MC #1189363, PUC #HHG-00682 - Your belongings are protected</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0 mt-1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <div>
+                  <strong class="text-secondary">Same-Day Availability</strong>
+                  <p class="text-sm text-muted-foreground">Need to move today? We offer flexible scheduling including same-day service</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Service Links -->
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-100">
+            <h3 class="font-display font-bold text-xl mb-4 text-secondary">Popular Services</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="/services/local-moving" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Local Moving
+              </a>
+              <a href="/services/long-distance-moving" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Long Distance
+              </a>
+              <a href="/services/residential-moving" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Residential
+              </a>
+              <a href="/services/commercial-moving" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Commercial
+              </a>
+              <a href="/services/packing-services" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Packing
+              </a>
+              <a href="/services/storage-solutions" class="text-sm bg-gray-50 hover:bg-primary hover:text-white transition-all p-3 rounded-lg text-center font-semibold border border-gray-200 hover:border-primary">
+                Storage
+              </a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <p class="text-sm text-muted-foreground mb-3">
+                <strong class="text-secondary">Need help right now?</strong><br>
+                Call us at <a href="tel:7203401849" class="text-primary hover:underline font-semibold">(720) 340-1849</a> for immediate assistance.
+              </p>
+              <p class="text-xs text-muted-foreground">
+                📍 Serving Denver, Aurora, Lakewood, Arvada, Westminster, Thornton, and surrounding areas
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
