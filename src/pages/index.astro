@@ -212,7 +212,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   .scroll-content-fast {
     display: flex;
     gap: 0.5rem;
-    animation: scroll-fast 10s linear infinite;
+    animation: scroll-fast 20s linear infinite;
     width: max-content;
     will-change: transform;
     transform: translateZ(0);
@@ -226,7 +226,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
   @media (min-width: 768px) {
     .scroll-content-fast {
       gap: 1.5rem;
-      animation: scroll-fast 15s linear infinite;
+      animation: scroll-fast 25s linear infinite;
     }
   }
   
@@ -235,7 +235,18 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translate3d(-50%, 0, 0);
+      transform: translate3d(calc(-50% - 0.25rem), 0, 0);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    @keyframes scroll-fast {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(calc(-50% - 0.75rem), 0, 0);
+      }
     }
   }
   
