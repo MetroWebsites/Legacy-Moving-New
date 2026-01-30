@@ -355,6 +355,55 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
     </div>
   </section>
 
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Residential Moving Quote</h2>
+          <p class="text-muted-foreground mb-8">
+            Our team is ready to help with your home move. Fill out the form for a detailed quote, or call us directly to speak with our residential moving specialists.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <MapPin size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Our Location</h3>
+                <p class="text-muted-foreground">8805 W. 14th Ave, Suite 300, Lakewood, CO 80215</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Phone size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Call Us</h3>
+                <a href="tel:7203401849" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
+                  (720) 340-1849
+                </a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-secondary">Hours</h3>
+                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Value Proposition Banner -->
   <section class="py-8 md:py-10 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">
     <!-- Decorative background pattern -->
@@ -421,55 +470,6 @@ import movingImage from '../../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.
             <p class="font-bold text-gray-900 text-base md:text-lg mb-1">Accurate</p>
             <p class="text-xs md:text-sm text-muted-foreground">Quotes</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="py-16 md:py-24">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Get Your Free Residential Moving Quote</h2>
-          <p class="text-muted-foreground mb-8">
-            Our team is ready to help with your home move. Fill out the form for a detailed quote, or call us directly to speak with our residential moving specialists.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <MapPin size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Our Location</h3>
-                <p class="text-muted-foreground">8805 W. 14th Ave, Suite 300, Lakewood, CO 80215</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <Phone size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Call Us</h3>
-                <a href="tel:7203401849" class="text-primary hover:underline phone-link" data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
-                  (720) 340-1849
-                </a>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-                <Clock size={20} />
-              </div>
-              <div>
-                <h3 class="font-semibold text-secondary">Hours</h3>
-                <p class="text-muted-foreground">Mon-Sun: 8:00am - 6:00pm</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-xl">
-          <h3 class="text-secondary font-display font-bold text-2xl mb-4">Request a Quote</h3>
-          <ContactForm client:load />
         </div>
       </div>
     </div>
