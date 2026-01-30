@@ -163,7 +163,16 @@ import storageImage from '../assets/services/storage.jpg';
   <section id="residential" class="py-10 md:py-12">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
+        <div class="order-2 md:order-1">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <Image 
+              src={residentialImage} 
+              alt="Residential moving services"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <Package size={28} className="text-primary" />
           </div>
@@ -198,13 +207,6 @@ import storageImage from '../assets/services/storage.jpg';
             </a>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <Image 
-            src={residentialImage} 
-            alt="Residential moving services"
-            class="w-full h-64 object-cover"
-          />
-        </div>
       </div>
     </div>
   </section>
@@ -213,6 +215,15 @@ import storageImage from '../assets/services/storage.jpg';
   <section id="commercial" class="py-10 md:py-12">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <Image 
+              src={commercialImage} 
+              alt="Commercial moving services"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
         <div>
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <Building size={28} className="text-primary" />
@@ -247,13 +258,6 @@ import storageImage from '../assets/services/storage.jpg';
               Get Quote
             </a>
           </div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <Image 
-            src={commercialImage} 
-            alt="Commercial moving services"
-            class="w-full h-64 object-cover"
-          />
         </div>
       </div>
     </div>

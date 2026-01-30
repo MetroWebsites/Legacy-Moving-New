@@ -12,26 +12,41 @@ import movingImage from '../../assets/316550678_506021318211474_2283162297737975
   title="Commercial Moving Services Denver | Office Movers | Legacy Moving"
   description="Professional commercial moving services in Denver. Our office movers provide efficient business relocations, minimizing downtime with expert equipment handling and strategic planning."
 >
-  <!-- Hero Section -->
-  <section class="relative bg-secondary py-20 text-white overflow-hidden">
+  <!-- Hero Section with Form -->
+  <section class="relative bg-secondary py-12 md:py-20 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-20 mix-blend-overlay">
       <Image src={movingImage} alt="Legacy Moving Denver professional commercial movers handling office equipment" class="w-full h-full object-cover" />
     </div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
-          Professional Commercial Moving Services
-        </h1>
-        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-          Minimize downtime and keep your business running with our efficient office and commercial moving solutions. Denver's trusted business movers.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/80 hover:text-white font-semibold' })}>
-            Get a Free Quote
-          </a>
-          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary/80 border border-white/20 text-white hover:bg-secondary hover:text-white phone-link' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
-            Call (720) 340-1849
-          </a>
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-4 rounded-full bg-primary/20 text-white text-sm font-medium">Denver's Trusted Commercial Movers</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+            Professional Commercial<br class="hidden sm:block"> <span class="text-primary">Moving Services</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto lg:mx-0">
+            Minimize downtime and keep your business running with our efficient office and commercial moving solutions.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4 mt-8">
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-primary hover:text-white font-semibold phone-link' })}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call (720) 340-1849
+            </a>
+          </div>
+          <!-- Mobile only action buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-8 lg:hidden justify-center">
+            <a href="#quote-form" class={buttonVariants({ size: 'lg', className: 'bg-primary text-white hover:bg-primary/90 font-semibold' })}>
+              Get a Free Quote
+            </a>
+            <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-white/90 font-semibold phone-link' })}>
+              Call Now
+            </a>
+          </div>
+        </div>
+        <div>
+          <div id="quote-form" class="bg-white p-6 rounded-lg shadow-xl mt-8 lg:mt-0">
+            <ContactForm client:load />
+          </div>
         </div>
       </div>
     </div>
