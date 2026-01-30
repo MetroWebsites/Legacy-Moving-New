@@ -32,6 +32,61 @@ import storageImage from '../assets/services/storage.jpg';
     </div>
   </section>
 
+  <!-- Local Moving -->
+  <section id="local" class="py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <TruckIcon size={32} className="text-primary" />
+          </div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">Local Moving</h2>
+          <div class="space-y-4">
+            <p class="text-muted-foreground">
+              Professional local moves within Denver and surrounding areas. Whether you're moving across town or to a nearby neighborhood, our experienced team makes your local move quick, efficient, and stress-free.
+            </p>
+            <p class="text-muted-foreground">
+              We specialize in local relocations throughout the Denver metro area, providing same-day availability and flexible scheduling to meet your needs. Our local movers know the area inside and out, ensuring efficient routes and timely delivery.
+            </p>
+            <div class="space-y-2 pt-2">
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Same-day moving services</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Denver metro area specialists</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Flexible scheduling options</p>
+              </div>
+              <div class="flex items-start gap-2">
+                <div class="text-primary mt-1">✓</div>
+                <p class="text-muted-foreground">Quick & efficient service</p>
+              </div>
+            </div>
+            <div class="pt-4 flex flex-col sm:flex-row gap-3">
+              <a href="/get-quote" class={buttonVariants({ className: 'mt-2' })}>
+                Get a Free Quote
+              </a>
+              <a href="/services/local-moving" class={buttonVariants({ variant: 'outline', className: 'mt-2' })}>
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-xl">
+          <Image 
+            src={residentialImage} 
+            alt="Legacy Moving Denver local moving services"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Residential Moving -->
   <section id="residential" class="py-12 md:py-16">
     <div class="container">
