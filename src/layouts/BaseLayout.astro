@@ -27,6 +27,7 @@ const { title, description, ogImage } = Astro.props;
     
     <!-- Floating CTA Button -->
     <!-- Mobile: Direct SMS link -->
+    <!-- Mobile: Text Us (SMS) -->
     <a 
       href="sms:7203401849?&body=Hello%2C%20I%27m%20interested%20in%20getting%20a%20moving%20quote.%20Can%20you%20help%20me%3F" 
       class="floating-cta-button md:hidden fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center px-6 py-3"
@@ -35,63 +36,14 @@ const { title, description, ogImage } = Astro.props;
       Text Us
     </a>
     
-    <!-- Desktop: Chat Box Toggle Button -->
-    <button 
-      id="text-us-btn"
+    <!-- Desktop: Free Quote -->
+    <a 
+      href="/get-quote"
       class="floating-cta-button hidden md:flex fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 items-center justify-center px-6 py-3"
-      aria-label="Text us"
+      aria-label="Get a free quote"
     >
-      Text Us
-    </button>
-    
-    <!-- Chat Message Box (Desktop Only) -->
-    <div id="chat-box" class="hidden fixed bottom-24 right-6 w-96 bg-white rounded-lg shadow-2xl z-[60] animate-slide-up">
-      <!-- Chat Header -->
-      <div class="bg-primary text-white px-4 py-3 rounded-t-lg flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-          <span class="font-semibold">Legacy Moving Denver</span>
-        </div>
-        <button id="close-chat" class="text-white/80 hover:text-white transition-colors" aria-label="Close chat">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-      
-      <!-- Chat Messages Area -->
-      <div id="chat-messages" class="p-4 space-y-3 max-h-96 overflow-y-auto bg-gray-50">
-        <!-- Initial bot message -->
-        <div class="flex gap-2">
-          <div class="flex-shrink-0">
-            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-              LM
-            </div>
-          </div>
-          <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
-            <p class="text-sm text-gray-700">Hi there! 👋 Need help with your move? Send us a message and we'll respond right away!</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Chat Input Area -->
-      <div class="p-4 border-t bg-white rounded-b-lg">
-        <form id="chat-form" class="flex gap-2">
-          <input 
-            type="text" 
-            id="chat-input" 
-            placeholder="Type your message..."
-            class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-            required
-          />
-          <button 
-            type="submit"
-            class="bg-primary hover:bg-primary/90 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors flex-shrink-0"
-            aria-label="Send message"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-          </button>
-        </form>
-      </div>
-    </div>
+      Free Quote
+    </a>
     
     <style>
       .floating-cta-button {
@@ -111,161 +63,9 @@ const { title, description, ogImage } = Astro.props;
         animation: none;
         transform: scale(1.1);
       }
-      
-      @keyframes slide-up {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .animate-slide-up {
-        animation: slide-up 0.3s ease-out;
-      }
-      
-      /* Chat message animations */
-      @keyframes message-appear {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .message-appear {
-        animation: message-appear 0.3s ease-out;
-      }
     </style>
     
     <script>
-      // Chat Box functionality
-      document.addEventListener('DOMContentLoaded', () => {
-        const textUsBtn = document.getElementById('text-us-btn');
-        const chatBox = document.getElementById('chat-box');
-        const closeChat = document.getElementById('close-chat');
-        const chatForm = document.getElementById('chat-form');
-        const chatInput = document.getElementById('chat-input');
-        const chatMessages = document.getElementById('chat-messages');
-        
-        if (textUsBtn && chatBox && closeChat && chatForm && chatInput && chatMessages) {
-          // Toggle chat box
-          textUsBtn.addEventListener('click', () => {
-            const isHidden = chatBox.classList.contains('hidden');
-            if (isHidden) {
-              chatBox.classList.remove('hidden');
-              chatInput.focus();
-            } else {
-              chatBox.classList.add('hidden');
-            }
-          });
-          
-          // Close chat
-          closeChat.addEventListener('click', () => {
-            chatBox.classList.add('hidden');
-          });
-          
-          // Handle form submission
-          chatForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const message = chatInput.value.trim();
-            if (!message) return;
-            
-            // Add user message to chat
-            const userMsgDiv = document.createElement('div');
-            userMsgDiv.className = 'flex gap-2 justify-end message-appear';
-            userMsgDiv.innerHTML = `
-              <div class="bg-primary text-white rounded-lg rounded-tr-none px-4 py-2 shadow-sm max-w-[80%]">
-                <p class="text-sm">${message}</p>
-              </div>
-            `;
-            chatMessages.appendChild(userMsgDiv);
-            
-            // Clear input
-            chatInput.value = '';
-            
-            // Scroll to bottom
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            
-            // Send email to legacymovingdenver@gmail.com via Formspree
-            try {
-              await fetch('https://formspree.io/f/xanydboy', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  email: 'legacymovingdenver@gmail.com',
-                  message: message,
-                  type: 'Text Request from Website Chat',
-                }),
-              });
-            } catch (error) {
-              console.log('Email send failed, but continuing with SMS');
-            }
-            
-            // Open SMS with the message (this will work on desktop with messaging apps)
-            window.location.href = `sms:7203401849?&body=${encodeURIComponent(message)}`;
-            
-            // Show confirmation message
-            setTimeout(() => {
-              const botMsgDiv = document.createElement('div');
-              botMsgDiv.className = 'flex gap-2 message-appear';
-              botMsgDiv.innerHTML = `
-                <div class="flex-shrink-0">
-                  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-                    LM
-                  </div>
-                </div>
-                <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
-                  <p class="text-sm text-gray-700 mb-2">Opening your messaging app... 📱</p>
-                  <p class="text-sm text-gray-700 mb-2">If you don't have texting set up on your device, just give us a call/text from your cell phone at:</p>
-                  <a href="tel:7203401849" class="inline-block bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors">
-                    📞 (720) 340-1849
-                  </a>
-                </div>
-              `;
-              chatMessages.appendChild(botMsgDiv);
-              chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 300);
-            
-            // Disable form after first message
-            chatForm.onsubmit = (e) => {
-              e.preventDefault();
-              
-              // Show "please call" message for any additional attempts
-              const botMsgDiv = document.createElement('div');
-              botMsgDiv.className = 'flex gap-2 message-appear';
-              botMsgDiv.innerHTML = `
-                <div class="flex-shrink-0">
-                  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-                    LM
-                  </div>
-                </div>
-                <div class="bg-white rounded-lg rounded-tl-none px-4 py-2 shadow-sm max-w-[80%]">
-                  <p class="text-sm text-gray-700">Sorry, you'll have to call or text us for more information at this time!</p>
-                  <a href="tel:7203401849" class="inline-block bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors mt-2">
-                    📞 (720) 340-1849
-                  </a>
-                </div>
-              `;
-              chatMessages.appendChild(botMsgDiv);
-              chatMessages.scrollTop = chatMessages.scrollHeight;
-              
-              // Clear input
-              chatInput.value = '';
-            };
-          });
-        }
-      });
-      
       // Handle phone links differently on desktop vs mobile
       document.addEventListener('DOMContentLoaded', () => {
         const phoneLinks = document.querySelectorAll('.phone-link');
