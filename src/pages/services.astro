@@ -163,16 +163,7 @@ import storageImage from '../assets/services/storage.jpg';
   <section id="residential" class="py-10 md:py-12">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="order-2 md:order-1">
-          <div class="rounded-lg overflow-hidden shadow-lg">
-            <Image 
-              src={residentialImage} 
-              alt="Residential moving services"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-        </div>
-        <div class="order-1 md:order-2">
+        <div>
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <Package size={28} className="text-primary" />
           </div>
@@ -207,15 +198,22 @@ import storageImage from '../assets/services/storage.jpg';
             </a>
           </div>
         </div>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <Image 
+            src={residentialImage} 
+            alt="Residential moving services"
+            class="w-full h-64 object-cover"
+          />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Commercial Moving -->
-  <section id="commercial" class="py-10 md:py-12">
+  <section id="commercial" class="py-10 md:py-12 bg-gray-50">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
+        <div class="order-2 md:order-1">
           <div class="rounded-lg overflow-hidden shadow-lg">
             <Image 
               src={commercialImage} 
@@ -224,7 +222,7 @@ import storageImage from '../assets/services/storage.jpg';
             />
           </div>
         </div>
-        <div>
+        <div class="order-1 md:order-2">
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <Building size={28} className="text-primary" />
           </div>
@@ -264,19 +262,10 @@ import storageImage from '../assets/services/storage.jpg';
   </section>
 
   <!-- Packing Services -->
-  <section id="packing" class="py-10 md:py-12 bg-gray-50">
+  <section id="packing" class="py-10 md:py-12">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="order-2 md:order-1">
-          <div class="rounded-lg overflow-hidden shadow-lg">
-            <Image 
-              src={packingImage} 
-              alt="Professional packing services"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-        </div>
-        <div class="order-1 md:order-2">
+        <div>
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <PackageCheck size={28} className="text-primary" />
           </div>
@@ -311,15 +300,31 @@ import storageImage from '../assets/services/storage.jpg';
             </a>
           </div>
         </div>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <Image 
+            src={packingImage} 
+            alt="Professional packing services"
+            class="w-full h-64 object-cover"
+          />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Loading & Unloading -->
-  <section id="loading" class="py-10 md:py-12">
+  <section id="loading" class="py-10 md:py-12 bg-gray-50">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
+        <div class="order-2 md:order-1">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <Image 
+              src={loadingImage} 
+              alt="Loading and unloading services"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <TruckIcon size={28} className="text-primary" />
           </div>
@@ -354,31 +359,15 @@ import storageImage from '../assets/services/storage.jpg';
             </a>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <Image 
-            src={loadingImage} 
-            alt="Loading and unloading services"
-            class="w-full h-64 object-cover"
-          />
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Storage Solutions -->
-  <section id="storage" class="py-10 md:py-12 bg-gray-50">
+  <section id="storage" class="py-10 md:py-12">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="order-2 md:order-1">
-          <div class="rounded-lg overflow-hidden shadow-lg">
-            <Image 
-              src={storageImage} 
-              alt="Secure storage solutions"
-              class="w-full h-64 object-cover"
-            />
-          </div>
-        </div>
-        <div class="order-1 md:order-2">
+        <div>
           <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
             <Warehouse size={28} className="text-primary" />
           </div>
@@ -412,6 +401,13 @@ import storageImage from '../assets/services/storage.jpg';
               Get Quote
             </a>
           </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <Image 
+            src={storageImage} 
+            alt="Secure storage solutions"
+            class="w-full h-64 object-cover"
+          />
         </div>
       </div>
     </div>
