@@ -25,6 +25,17 @@ const { title, description, ogImage } = Astro.props;
       <Footer />
     </div>
     
+    <!-- Sliding Logo Animation -->
+    <div class="fixed bottom-20 right-0 z-40 pointer-events-none overflow-hidden w-full">
+      <div class="sliding-logo">
+        <img 
+          src="/lm-logo.png" 
+          alt="Legacy Moving truck driving" 
+          class="h-16 md:h-20 w-auto"
+        />
+      </div>
+    </div>
+    
     <!-- Floating CTA Button -->
     <!-- Mobile: Direct SMS link -->
     <!-- Mobile: Text Us (SMS) -->
@@ -46,6 +57,21 @@ const { title, description, ogImage } = Astro.props;
     </a>
     
     <style>
+      .sliding-logo {
+        animation: slide-across 15s linear infinite;
+        position: absolute;
+        right: -200px;
+      }
+      
+      @keyframes slide-across {
+        0% {
+          transform: translateX(100vw);
+        }
+        100% {
+          transform: translateX(-200vw);
+        }
+      }
+      
       .floating-cta-button {
         animation: pulse-subtle 2s ease-in-out infinite;
       }
