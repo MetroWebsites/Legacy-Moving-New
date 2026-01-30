@@ -45,12 +45,12 @@ export default {
       },
       keyframes: {
         'pulse-slow': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.7' },
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.5', transform: 'scale(1.05)' },
         },
       },
       animation: {
-        'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 2s ease-in-out infinite',
       },
     },
   },
