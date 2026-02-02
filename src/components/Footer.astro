@@ -1,4 +1,4 @@
-<footer class="bg-secondary text-white pt-6 md:pt-8 pb-3 md:pb-4">
+<footer class="bg-secondary text-white pt-4 md:pt-5 pb-3 md:pb-3">
   <div class="container">
     <!-- Logo and social icons only on mobile -->
     <div class="mb-4 md:hidden flex items-center gap-4">
@@ -32,11 +32,11 @@
       </div>
     </div>
 
-    <!-- 5-column grid on desktop, 2-column on mobile -->
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-4 lg:gap-6">
-      <!-- About/Mission - 1st column on desktop only -->
-      <div class="hidden md:block">
-        <div class="flex items-center gap-4 mb-3">
+    <!-- 6-column grid on desktop, 2-column on mobile -->
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-4 lg:gap-5">
+      <!-- About/Mission - Spans 2 columns on desktop -->
+      <div class="hidden md:block md:col-span-2">
+        <div class="flex items-center gap-4 mb-1.5">
           <img 
             src="/lm-logo.png" 
             alt="Legacy Moving Denver Logo" 
@@ -64,15 +64,48 @@
             </a>
           </div>
         </div>
-        <p class="text-sm text-gray-300 leading-relaxed mb-3 font-bold">
+        <p class="text-sm text-gray-300 leading-relaxed font-bold">
           Legacy Moving was established and built to set a higher standard in the moving industry, one defined by accredited professionalism, nationwide authorization, and unwavering customer trust. We bring peace of mind to every doorstep and confidence with every journey.
         </p>
       </div>
       
-      <!-- Services -->
+      <!-- Contact info on desktop (moved to middle) -->
+      <div class="hidden md:block">
+        <h3 class="text-sm font-semibold mb-1.5">Contact Us</h3>
+        <ul class="space-y-1.5 text-xs text-gray-300">
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors leading-relaxed">
+              8805 W. 14th Ave, Suite 300<br>Lakewood, CO 80215
+            </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:7203401849" class="hover:text-accent transition-colors phone-link">
+              (720) 340-1849
+            </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><path d="M12 2h.01"/><path d="M17 16h.01"/><path d="M14 20h.01"/><path d="M12 11h.01"/><path d="M7 16h.01"/><path d="M3 12h.01"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>Mon-Sun: 8:00am - 6:00pm</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Licenses on desktop (moved to middle) -->
+      <div class="hidden md:block">
+        <h3 class="text-sm font-semibold mb-1.5">Fully Licensed & Insured</h3>
+        <div class="flex flex-col gap-1.5">
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">DOT #3462023</span>
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">MC #1189363</span>
+          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">PUC #HHG-00682</span>
+        </div>
+      </div>
+      
+      <!-- Services (moved to right side) -->
       <div>
-        <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Our Services</h3>
-        <ul class="space-y-1 md:space-y-1.5 text-xs text-gray-300">
+        <h3 class="text-sm font-semibold mb-1.5">Our Services</h3>
+        <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/services/local-moving" class="hover:text-white transition-colors">Local Moving</a></li>
           <li><a href="/services/long-distance-moving" class="hover:text-white transition-colors">Long Distance Moving</a></li>
           <li><a href="/services#residential" class="hover:text-white transition-colors">Residential Moving</a></li>
@@ -83,10 +116,10 @@
         </ul>
       </div>
       
-      <!-- Quick links -->
+      <!-- Quick links (moved to right side) -->
       <div>
-        <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Quick Links</h3>
-        <ul class="space-y-1 md:space-y-1.5 text-xs text-gray-300">
+        <h3 class="text-sm font-semibold mb-1.5">Quick Links</h3>
+        <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/about-us" class="hover:text-white transition-colors">About Us</a></li>
           <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
           <li><a href="/testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
@@ -94,14 +127,12 @@
         </ul>
       </div>
       
-      <!-- Contact info: full width on mobile, single column on desktop -->
-      <div class="col-span-2 md:col-span-1">
-        <!-- Mobile: 2-column grid, Desktop: single column -->
-        <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-0">
-          <!-- Contact Us -->
+      <!-- Mobile: Contact info (full width) -->
+      <div class="col-span-2 md:hidden">
+        <div class="grid grid-cols-2 gap-4">
           <div>
-            <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Contact Us</h3>
-            <ul class="space-y-1.5 md:space-y-2 text-xs text-gray-300">
+            <h3 class="text-sm font-semibold mb-2">Contact Us</h3>
+            <ul class="space-y-1.5 text-xs text-gray-300">
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors leading-relaxed">
@@ -121,8 +152,7 @@
             </ul>
           </div>
           
-          <!-- Licenses - side by side with Contact on mobile only -->
-          <div class="md:hidden">
+          <div>
             <p class="text-xs text-gray-300 font-semibold mb-1.5">Fully Licensed & Insured</p>
             <div class="flex flex-col gap-1">
               <span class="text-[10px] bg-gray-700/50 text-gray-300 px-1.5 py-0.5 rounded-md whitespace-nowrap">DOT #3462023</span>
@@ -132,21 +162,11 @@
           </div>
         </div>
       </div>
-      
-      <!-- Licenses - separate column on desktop only -->
-      <div class="hidden md:block">
-        <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Fully Licensed & Insured</h3>
-        <div class="flex flex-col gap-1.5 md:gap-2">
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">DOT #3462023</span>
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">MC #1189363</span>
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 md:py-1 rounded-md whitespace-nowrap">PUC #HHG-00682</span>
-        </div>
-      </div>
     </div>
     
     <!-- Bottom bar -->
-    <div class="border-t border-gray-700 mt-4 md:mt-6 pt-2 md:pt-3">
-      <div class="flex justify-center gap-2 md:gap-3 mb-1 md:mb-2 flex-wrap">
+    <div class="border-t border-gray-700 mt-3 md:mt-4 pt-2">
+      <div class="flex justify-center gap-2 md:gap-3 mb-1 flex-wrap">
         <a href="/terms" class="text-xs text-gray-400 hover:text-white transition-colors">Terms</a>
         <span class="text-gray-600">|</span>
         <a href="/privacy" class="text-xs text-gray-400 hover:text-white transition-colors">Privacy</a>
