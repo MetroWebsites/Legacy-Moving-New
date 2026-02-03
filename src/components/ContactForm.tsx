@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "./ui/button";
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
@@ -23,6 +23,35 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const captchaRef = useRef<HCaptcha>(null);
+
+  // Reset zoom on mobile when form loses focus or after submission
+  useEffect(() => {
+    const handleBlur = () => {
+      // Reset viewport zoom on mobile devices
+      if (window.innerWidth < 768) {
+        const viewport = document.querySelector('meta[name=viewport]');
+        if (viewport) {
+          viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+          // Force a slight delay to ensure zoom reset
+          setTimeout(() => {
+            window.scrollTo(0, window.scrollY);
+          }, 100);
+        }
+      }
+    };
+
+    // Add blur listeners to all form inputs
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', handleBlur);
+    });
+
+    return () => {
+      inputs.forEach(input => {
+        input.removeEventListener('blur', handleBlur);
+      });
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -74,6 +103,17 @@ export default function ContactForm() {
         setFormData(defaultFormData);
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
+        
+        // Reset zoom on mobile after successful submission
+        if (window.innerWidth < 768) {
+          setTimeout(() => {
+            const viewport = document.querySelector('meta[name=viewport]');
+            if (viewport) {
+              viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+              window.scrollTo(0, window.scrollY);
+            }
+          }, 100);
+        }
       } else {
         setSubmitStatus("error");
         // Show the actual error message from Web3Forms

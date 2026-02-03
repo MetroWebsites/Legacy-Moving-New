@@ -1,0 +1,283 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import movingTruck from '../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+---
+
+<BaseLayout
+  title="Moving from California to Colorado: Your Complete Guide | Legacy Moving Denver"
+  description="Planning your move from California to Colorado? Discover everything you need to know about the weather changes, lifestyle differences, and adventure opportunities awaiting you in the Centennial State."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-primary to-primary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={movingTruck} 
+        alt="Moving from California to Colorado with Legacy Moving Denver" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Moving from California to Colorado: What to Expect
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Trading sunshine and beaches for mountain peaks and powder? Here's your complete guide to making the transition from the Golden State to the Centennial State.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <article class="py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <p class="lead text-xl text-gray-700 mb-8">
+          Every year, thousands of Californians make the move to Colorado, drawn by the promise of four distinct seasons, outdoor adventure, and a lower cost of living. If you're considering joining them, this guide will help you understand what to expect and how to prepare for one of life's biggest adventures.
+        </p>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">The Weather: Prepare for a Dramatic Change</h2>
+        
+        <p class="text-gray-700 mb-6">
+          Perhaps the most significant adjustment you'll make is adapting to Colorado's weather. If you're coming from Southern California's consistently mild climate, you're in for a real surprise.
+        </p>
+
+        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 my-8">
+          <h3 class="font-semibold text-lg mb-3 text-secondary">Weather Differences You'll Notice:</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span><strong>Four Real Seasons:</strong> Colorado experiences distinct spring, summer, fall, and winter—each with its own unique beauty and challenges.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span><strong>Snow—Lots of It:</strong> Denver averages 60+ inches of snow annually. You'll need winter tires, a good snow shovel, and warm clothing.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span><strong>Lower Humidity:</strong> Colorado's dry air means you'll need extra moisturizer, lip balm, and lots of water. Your hair and skin will thank you for investing in a humidifier.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span><strong>300+ Days of Sunshine:</strong> Despite the snow, Colorado boasts more sunny days than California, with incredibly blue skies year-round.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span><strong>Temperature Swings:</strong> It can be 70°F one day and snowing the next. Layering is your new best friend.</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-gray-700 mb-6">
+          Pro tip: Don't pack away your winter wardrobe too early. In Colorado, it's not unusual to see snow in May or even June in the mountains!
+        </p>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Altitude Adjustment: The Mile High Experience</h2>
+
+        <p class="text-gray-700 mb-6">
+          Denver sits at exactly one mile above sea level (5,280 feet), and the altitude can affect you in surprising ways during your first few weeks. Coming from sea-level California, you'll need to give your body time to adjust.
+        </p>
+
+        <div class="bg-amber-50 p-6 rounded-lg border border-amber-200 my-8">
+          <h3 class="font-semibold text-lg mb-3 text-secondary">Altitude Adjustment Tips:</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Drink LOTS of water—at least 50% more than you're used to</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Limit alcohol consumption for the first few days (it hits harder here)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Take it easy with exercise until your body acclimates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Use high-SPF sunscreen—the sun is 25% stronger at altitude</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Get plenty of rest—your body is working harder than usual</span>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Adventure Awaits: Colorado's Outdoor Paradise</h2>
+
+        <p class="text-gray-700 mb-6">
+          While California certainly has its share of outdoor recreation, Colorado takes it to another level. You'll be living in one of the most adventure-friendly states in the country.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>World-Class Skiing:</strong> Forget driving hours to Tahoe. In Colorado, you'll have access to legendary ski resorts like Vail, Aspen, Breckenridge, and Keystone—most just 1-2 hours from Denver. Weekend ski trips become a regular thing, not a special occasion.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Hiking Paradise:</strong> Colorado boasts 58 "fourteeners" (peaks over 14,000 feet) and thousands of miles of trails. From easy walks to technical climbs, there's something for every skill level. Rocky Mountain National Park is less than 2 hours from Denver.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Year-Round Activities:</strong> Mountain biking, rock climbing, whitewater rafting, camping, fishing, trail running—whatever your outdoor passion, Colorado delivers. Many residents joke that they moved here "for the career" but stayed "for the weekends."
+        </p>
+
+        <div class="bg-green-50 p-6 rounded-lg border border-green-200 my-8">
+          <h3 class="font-semibold text-lg mb-3 text-secondary">Popular Colorado Adventures:</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Skiing & Snowboarding</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hiking & Backpacking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mountain Biking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Rock Climbing</span>
+              </li>
+            </ul>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Whitewater Rafting</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Fly Fishing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Trail Running</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Camping & Stargazing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Cost of Living: Your Dollar Goes Further</h2>
+
+        <p class="text-gray-700 mb-6">
+          One of the biggest draws for California transplants is the lower cost of living—particularly housing. While Denver isn't cheap by national standards, it's significantly more affordable than major California metros.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Housing:</strong> The median home price in Denver is roughly 40-60% less than in Los Angeles or the Bay Area. You'll likely be able to afford more space, whether you're buying or renting.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>No State Income Tax on Social Security:</strong> Colorado doesn't tax Social Security benefits and offers several tax breaks for residents—a nice change from California's tax structure.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Overall Expenses:</strong> Gas, groceries, and dining out are generally more affordable, though you will need to budget for heating costs in winter and a good winter wardrobe.
+        </p>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Culture and Lifestyle Differences</h2>
+
+        <p class="text-gray-700 mb-6">
+          Colorado has its own unique culture that blends outdoor enthusiasm with a laid-back, friendly vibe. Here's what to expect:
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>The Outdoor Lifestyle:</strong> In Colorado, it's perfectly normal to wear hiking boots to brunch or have ski racks on your car year-round. The outdoor lifestyle isn't just a hobby—it's woven into the fabric of daily life.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Craft Beer Culture:</strong> Colorado takes its craft beer seriously, with more breweries per capita than any other state. There's a strong culture around local beer and meeting friends at breweries.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Friendly Neighbors:</strong> Coloradans are generally known for being friendly and outdoorsy. You'll find it easy to make friends, especially if you enjoy outdoor activities.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Less Traffic:</strong> While Denver has traffic, it's nothing compared to LA or the Bay Area. Your commute will likely be shorter and less stressful.
+        </p>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Planning Your Move from California to Colorado</h2>
+
+        <p class="text-gray-700 mb-6">
+          Moving from California to Colorado is a significant undertaking, but with professional help, it doesn't have to be stressful. Here's what you need to know:
+        </p>
+
+        <div class="bg-primary/5 p-6 rounded-lg border border-primary/20 my-8">
+          <h3 class="font-semibold text-lg mb-3 text-secondary">Moving Checklist:</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Book your moving company 4-6 weeks in advance (longer during peak summer season)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Update your driver's license and vehicle registration within 30 days of arrival</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Purchase winter essentials before your first snowfall (snow tires, shovel, scraper, warm coat)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Consider a climate-controlled moving truck to protect furniture from temperature changes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Plan for 2-3 days transit time for your belongings (1,000+ miles)</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-gray-700 mb-6">
+          <strong>Choosing a Moving Company:</strong> For a long-distance move like California to Colorado, you'll want to hire experienced interstate movers. Look for companies that are licensed and insured, with specific experience in cross-country moves. Legacy Moving Denver specializes in long-distance relocations and understands the unique challenges of moving from California to Colorado.
+        </p>
+
+        <h2 class="font-display font-bold text-3xl mt-12 mb-6 text-secondary">Final Thoughts: Embrace the Adventure</h2>
+
+        <p class="text-gray-700 mb-6">
+          Moving from California to Colorado is more than just a change of address—it's a lifestyle transformation. You'll trade the Pacific Ocean for the Rocky Mountains, year-round warmth for four distinct seasons, and beach days for powder days.
+        </p>
+
+        <p class="text-gray-700 mb-6">
+          Yes, you'll need to adjust to the weather, the altitude, and a different pace of life. But most California transplants find that Colorado offers something special: incredible natural beauty, endless outdoor recreation, a lower cost of living, and a welcoming community of like-minded adventurers.
+        </p>
+
+        <p class="text-gray-700 mb-8">
+          So pack your warmest jacket, invest in some good hiking boots, and get ready for the adventure of a lifetime. Welcome to Colorado—the mountains are calling!
+        </p>
+
+        <!-- CTA Section -->
+        <div class="bg-secondary text-white p-8 rounded-lg my-12">
+          <h3 class="font-display font-bold text-2xl mb-4">Ready to Make the Move from California to Colorado?</h3>
+          <p class="text-white/90 mb-6">
+            Legacy Moving Denver specializes in long-distance moves from California to Colorado. Our experienced team handles everything from packing to transport, making your cross-country move stress-free. Get your free quote today!
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/get-quote" class={buttonVariants({ variant: "default", className: "bg-accent hover:bg-accent/90" })}>
+              Get Your Free Quote
+            </a>
+            <a href="tel:7203401849" class={buttonVariants({ variant: "outline", className: "border-white text-white hover:bg-white hover:text-secondary" })}>
+              Call (720) 340-1849
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-8 mt-12">
+          <p class="text-sm text-gray-600">
+            <strong>About the Author:</strong> This guide was created by the moving experts at Legacy Moving Denver, who have helped hundreds of families successfully relocate from California to Colorado. We understand the unique challenges of this move and are here to help make your transition smooth and stress-free.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
