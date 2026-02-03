@@ -34,8 +34,8 @@
 
     <!-- 5-column grid on desktop, 2-column on mobile -->
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-      <!-- About/Mission - First column on desktop -->
-      <div class="hidden md:block">
+      <!-- About/Mission - Spans 2 columns on desktop for wider text -->
+      <div class="hidden md:block md:col-span-2">
         <div class="flex items-center gap-4 mb-1.5">
           <img 
             src="/lm-logo.png" 
@@ -69,8 +69,8 @@
         </p>
       </div>
       
-      <!-- Our Services - Second column -->
-      <div>
+      <!-- Our Services - Add left padding on desktop to scoot right -->
+      <div class="md:pl-8">
         <h3 class="text-sm font-semibold mb-1.5">Our Services</h3>
         <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/services/local-moving" class="hover:text-white transition-colors">Local Moving</a></li>
@@ -83,8 +83,8 @@
         </ul>
       </div>
       
-      <!-- Quick Links - Third column -->
-      <div>
+      <!-- Quick Links - Add left padding on desktop to scoot right -->
+      <div class="md:pl-8">
         <h3 class="text-sm font-semibold mb-1.5">Quick Links</h3>
         <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/about-us" class="hover:text-white transition-colors">About Us</a></li>
