@@ -32,45 +32,47 @@
       </div>
     </div>
 
-    <!-- Desktop: 6-column grid for better spacing, Mobile: 2-column -->
-    <div class="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-8">
-      <!-- About/Mission - Spans 3 columns on desktop for much wider text -->
-      <div class="hidden md:block md:col-span-3">
-        <div class="flex items-center gap-4 mb-1.5">
+    <!-- Desktop: 5 sections in ONE row, Mobile: 2-column -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+      <!-- About/Mission - Single column, narrower text -->
+      <div class="hidden md:block">
+        <div class="flex items-center gap-2 mb-1">
           <img 
             src="/lm-logo.png" 
             alt="Legacy Moving Denver Logo" 
-            width="64" 
-            height="64"
-            class="h-16 w-16" 
+            width="48" 
+            height="48"
+            class="h-12 w-12" 
             onerror="this.onerror=null; this.src='/favicon.svg';"
           />
-          <div class="flex flex-wrap gap-3">
-            <a href="https://facebook.com/LegacyMovingDenver" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
-              <span class="sr-only">Facebook</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/legacymoving_denver" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
-              <span class="sr-only">Instagram</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-            </a>
-            <a href="https://twitter.com/Legacymoving_" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
-              <span class="sr-only">Twitter</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-            </a>
-            <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
-              <span class="sr-only">Google Maps</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-            </a>
+          <div class="flex flex-col gap-1">
+            <div class="flex gap-2">
+              <a href="https://facebook.com/LegacyMovingDenver" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <span class="sr-only">Facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/legacymoving_denver" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <span class="sr-only">Instagram</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              </a>
+              <a href="https://twitter.com/Legacymoving_" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+              </a>
+              <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <span class="sr-only">Google Maps</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+              </a>
+            </div>
           </div>
         </div>
-        <p class="text-sm text-gray-300 leading-relaxed font-bold pr-8">
-          Legacy Moving was established and built to set a higher standard in the moving industry, one defined by accredited professionalism, nationwide authorization, and unwavering customer trust. We bring peace of mind to every doorstep and confidence with every journey.
+        <p class="text-xs text-gray-300 leading-snug font-bold">
+          Legacy Moving sets higher standards through accredited professionalism and unwavering customer trust.
         </p>
       </div>
       
-      <!-- Our Services - More left padding to scoot further right -->
-      <div class="md:pl-12">
+      <!-- Our Services - Left padding to scoot right -->
+      <div class="md:pl-6">
         <h3 class="text-sm font-semibold mb-1.5">Our Services</h3>
         <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/services/local-moving" class="hover:text-white transition-colors">Local Moving</a></li>
@@ -83,8 +85,8 @@
         </ul>
       </div>
       
-      <!-- Quick Links - More left padding to scoot further right -->
-      <div class="md:pl-12">
+      <!-- Quick Links - Left padding to scoot right -->
+      <div class="md:pl-6">
         <h3 class="text-sm font-semibold mb-1.5">Quick Links</h3>
         <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/about-us" class="hover:text-white transition-colors">About Us</a></li>
@@ -117,13 +119,13 @@
         </ul>
       </div>
       
-      <!-- Fully Licensed & Insured - Fifth column -->
+      <!-- Fully Licensed & Insured - Horizontal inline badges -->
       <div class="hidden md:block">
-        <h3 class="text-sm font-semibold mb-1.5">Fully Licensed & Insured</h3>
-        <div class="flex flex-col gap-1.5">
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">DOT #3462023</span>
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">MC #1189363</span>
-          <span class="text-xs bg-gray-700/50 text-gray-300 px-2 py-0.5 rounded-md whitespace-nowrap">PUC #HHG-00682</span>
+        <h3 class="text-xs font-semibold mb-1 text-gray-300">Fully Licensed & Insured</h3>
+        <div class="flex flex-wrap gap-1">
+          <span class="text-[10px] bg-gray-700/50 text-gray-300 px-1.5 py-0.5 rounded whitespace-nowrap">DOT #3462023</span>
+          <span class="text-[10px] bg-gray-700/50 text-gray-300 px-1.5 py-0.5 rounded whitespace-nowrap">MC #1189363</span>
+          <span class="text-[10px] bg-gray-700/50 text-gray-300 px-1.5 py-0.5 rounded whitespace-nowrap">PUC #HHG-00682</span>
         </div>
       </div>
       
