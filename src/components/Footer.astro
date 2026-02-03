@@ -32,10 +32,10 @@
       </div>
     </div>
 
-    <!-- 5-column grid on desktop, 2-column on mobile -->
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
-      <!-- About/Mission - First column on desktop -->
-      <div class="hidden md:block">
+    <!-- Desktop: 6-column grid for better control, Mobile: 2-column -->
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-4">
+      <!-- About/Mission - Spans 2 columns on desktop for wider text -->
+      <div class="hidden md:block md:col-span-2">
         <div class="flex items-center gap-4 mb-2">
           <img 
             src="/lm-logo.png" 
@@ -64,13 +64,13 @@
             </a>
           </div>
         </div>
-        <p class="text-sm text-gray-300 leading-relaxed font-bold">
+        <p class="text-sm text-gray-300 leading-relaxed font-bold pr-4">
           Legacy Moving was established and built to set a higher standard in the moving industry, one defined by accredited professionalism, nationwide authorization, and unwavering customer trust. We bring peace of mind to every doorstep and confidence with every journey.
         </p>
       </div>
       
-      <!-- Our Services - Second column with slight left padding -->
-      <div class="md:pl-4">
+      <!-- Our Services - Single column, closer to Quick Links -->
+      <div>
         <h3 class="text-sm font-semibold mb-1.5">Our Services</h3>
         <ul class="space-y-0.5 text-xs text-gray-300">
           <li><a href="/services/local-moving" class="hover:text-white transition-colors">Local Moving</a></li>
@@ -83,8 +83,8 @@
         </ul>
       </div>
       
-      <!-- Quick Links - Third column with slight left padding -->
-      <div class="md:pl-4">
+      <!-- Quick Links - Single column, close to Services -->
+      <div>
         <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Quick Links</h3>
         <ul class="space-y-1 md:space-y-1.5 text-xs text-gray-300">
           <li><a href="/about-us" class="hover:text-white transition-colors">About Us</a></li>
@@ -94,7 +94,7 @@
         </ul>
       </div>
       
-      <!-- Contact Us - Fourth column -->
+      <!-- Contact Us - Single column, close to Quick Links -->
       <div class="hidden md:block">
         <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Contact Us</h3>
         <ul class="space-y-1.5 md:space-y-2 text-xs text-gray-300">
@@ -117,7 +117,7 @@
         </ul>
       </div>
       
-      <!-- Fully Licensed & Insured - Fifth column -->
+      <!-- Fully Licensed & Insured - Single column -->
       <div class="hidden md:block">
         <h3 class="text-sm md:text-base font-semibold mb-2 md:mb-3">Fully Licensed & Insured</h3>
         <div class="flex flex-col gap-1.5 md:gap-2">
