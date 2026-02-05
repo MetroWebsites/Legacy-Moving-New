@@ -4,6 +4,11 @@ import { Image } from 'astro:assets';
 import { buttonVariants } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import heroImage from '../assets/services/hero.jpg';
+import longDistanceImage from '../assets/services/longdistance.jpg';
+import residentialImage from '../assets/services/residential.jpg';
+import packingImage from '../assets/services/packing.jpg';
+import commercialImage from '../assets/services/commercial.jpg';
+import storageImage from '../assets/services/storage.jpg';
 ---
 
 <BaseLayout
@@ -37,7 +42,14 @@ import heroImage from '../assets/services/hero.jpg';
           
           <!-- Blog Post 1: Moving from California to Colorado -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-primary to-secondary"></div>
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={longDistanceImage} 
+                alt="Moving from California to Colorado" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
+            </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div class="flex items-center gap-1">
@@ -64,7 +76,14 @@ import heroImage from '../assets/services/hero.jpg';
 
           <!-- Blog Post 2: Moving from Texas to Colorado -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-secondary to-primary"></div>
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={residentialImage} 
+                alt="Moving from Texas to Colorado" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-secondary/80 to-primary/80"></div>
+            </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div class="flex items-center gap-1">
@@ -91,7 +110,14 @@ import heroImage from '../assets/services/hero.jpg';
 
           <!-- Blog Post 3: How Professional Movers Make Your Move Easier -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-accent to-primary"></div>
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={packingImage} 
+                alt="Professional Movers" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-accent/80 to-primary/80"></div>
+            </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div class="flex items-center gap-1">
@@ -118,7 +144,14 @@ import heroImage from '../assets/services/hero.jpg';
 
           <!-- Blog Post 4: Moving Tips -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-secondary/80 to-accent"></div>
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={commercialImage} 
+                alt="Moving Tips" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-secondary/70 to-accent/70"></div>
+            </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div class="flex items-center gap-1">
@@ -145,7 +178,14 @@ import heroImage from '../assets/services/hero.jpg';
 
           <!-- Blog Post 5: Packing Prices -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={storageImage} 
+                alt="Packing Services" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-primary/70 to-secondary/70"></div>
+            </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div class="flex items-center gap-1">
