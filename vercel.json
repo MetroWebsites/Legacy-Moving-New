@@ -11,6 +11,71 @@
       ],
       "destination": "https://www.legacymovingdenver.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/arvada-co",
+      "destination": "/cities/arvada",
+      "permanent": true
+    },
+    {
+      "source": "/aurora-co",
+      "destination": "/cities/aurora",
+      "permanent": true
+    },
+    {
+      "source": "/boulder-co",
+      "destination": "/cities/boulder",
+      "permanent": true
+    },
+    {
+      "source": "/centennial-co",
+      "destination": "/cities/centennial",
+      "permanent": true
+    },
+    {
+      "source": "/denver-co",
+      "destination": "/cities/denver",
+      "permanent": true
+    },
+    {
+      "source": "/englewood-co",
+      "destination": "/cities/englewood",
+      "permanent": true
+    },
+    {
+      "source": "/golden-co",
+      "destination": "/cities/golden",
+      "permanent": true
+    },
+    {
+      "source": "/highlands-ranch-co",
+      "destination": "/cities/highlands-ranch",
+      "permanent": true
+    },
+    {
+      "source": "/lakewood-co",
+      "destination": "/cities/lakewood",
+      "permanent": true
+    },
+    {
+      "source": "/littleton-co",
+      "destination": "/cities/littleton",
+      "permanent": true
+    },
+    {
+      "source": "/thornton-co",
+      "destination": "/cities/thornton",
+      "permanent": true
+    },
+    {
+      "source": "/westminster-co",
+      "destination": "/cities/westminster",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about-us",
+      "permanent": true
     }
   ],
   "headers": [

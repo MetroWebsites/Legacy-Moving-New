@@ -1,0 +1,197 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import heroImage from '../assets/services/hero.jpg';
+---
+
+<BaseLayout
+  title="Moving Blog | Tips, Advice & Guides | Legacy Moving Denver"
+  description="Expert moving advice, tips, and guides from Legacy Moving Denver. Learn about moving to Colorado, packing tips, and professional moving services."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16 md:py-20">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={heroImage} 
+        alt="Legacy Moving Denver Blog" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Moving Blog</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          Expert moving advice, tips, and guides from Denver's trusted moving professionals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Blog Post 1: Moving from California to Colorado -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-primary to-secondary"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Feb 3, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>8 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                Moving from California to Colorado: Your Complete Guide
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Making the move from California to Colorado? Discover everything you need to know about the weather differences, lifestyle changes, outdoor adventures, and what to expect during your relocation.
+              </p>
+              <a href="/moving-from-california-to-colorado" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 2: Moving from Texas to Colorado -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-secondary to-primary"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Feb 3, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>10 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                Moving from Texas to Colorado: Complete Relocation Guide
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Planning your move from Texas to Colorado? Learn about climate differences, altitude adjustment, cost of living comparisons, and essential tips for a smooth transition.
+              </p>
+              <a href="/moving-from-texas-to-colorado" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 3: How Professional Movers Make Your Move Easier -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-accent to-primary"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Jan 28, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>6 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                How Professional Movers Make Your Move Easier
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Discover how hiring professional movers can save you time, reduce stress, and ensure your belongings are handled with care during your relocation.
+              </p>
+              <a href="/3-ways-a-professional-moving-company-eases-the-process" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 4: Moving Tips -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-secondary/80 to-accent"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Featured</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>12 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                Essential Moving Tips & Advice
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Expert moving tips from our professional movers to help make your relocation smoother, more efficient, and less stressful.
+              </p>
+              <a href="/moving-tips" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 5: Packing Prices -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-primary/80 to-secondary/80"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Jan 28, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>7 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                Professional Packing Services: Costs & Benefits
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Learn about professional packing service costs, what's included, and how it can save you time and protect your belongings during your move.
+              </p>
+              <a href="/packing-prices" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Start Your Move?</h2>
+        <p class="text-white/90 text-lg mb-8">
+          Get a free quote from Denver's trusted moving professionals today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-primary hover:text-white font-semibold transition-colors' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 hover:text-white phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8">
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
