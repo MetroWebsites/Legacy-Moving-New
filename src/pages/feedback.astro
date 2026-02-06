@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { Star } from "lucide-react";
-import FeedbackForm from '@/components/FeedbackForm';
+import { Star, Phone, MessageSquare, Mail } from "lucide-react";
 ---
 
 <BaseLayout
@@ -21,15 +20,70 @@ import FeedbackForm from '@/components/FeedbackForm';
     </div>
   </section>
 
-  <!-- Feedback Form Section -->
+  <!-- Feedback Contact Section -->
   <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="max-w-2xl mx-auto">
-        <div class="bg-white rounded-lg shadow-md p-8 border border-gray-100">
-          <h2 class="text-2xl font-display font-bold text-secondary text-center mb-6">
-            How Was Your Moving Experience?
-          </h2>
-          <FeedbackForm client:load />
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-2xl shadow-2xl p-8 md:p-12">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+              We'd Love to Hear From You!
+            </h2>
+            <p class="text-white/90 text-lg max-w-2xl mx-auto">
+              Your feedback is incredibly valuable to us. Let us know how we did on your move or share your experience with our team.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <!-- Call Us -->
+            <a href="tel:7203401849" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl p-6 text-center transition-all hover:scale-105">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone size={32} className="text-white" />
+              </div>
+              <h3 class="font-display font-bold text-xl mb-2">Call Us</h3>
+              <p class="text-white/80 text-sm mb-3">Speak with our team directly</p>
+              <div class="text-2xl font-bold">(720) 340-1849</div>
+              <p class="text-white/60 text-xs mt-2">Mon-Sun: 8am-6pm</p>
+            </a>
+
+            <!-- Text Us -->
+            <a href="sms:7203401849?body=Hi, I wanted to share feedback about my recent move with Legacy Moving." class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl p-6 text-center transition-all hover:scale-105">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare size={32} className="text-white" />
+              </div>
+              <h3 class="font-display font-bold text-xl mb-2">Text Us</h3>
+              <p class="text-white/80 text-sm mb-3">Send us a quick message</p>
+              <div class="text-2xl font-bold">(720) 340-1849</div>
+              <p class="text-white/60 text-xs mt-2">Quick response guaranteed</p>
+            </a>
+
+            <!-- Email Us -->
+            <a href="mailto:info@legacymovingdenver.com?subject=Customer Feedback" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl p-6 text-center transition-all hover:scale-105">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail size={32} className="text-white" />
+              </div>
+              <h3 class="font-display font-bold text-xl mb-2">Email Us</h3>
+              <p class="text-white/80 text-sm mb-3">Send detailed feedback</p>
+              <div class="text-lg font-bold break-all">info@legacymovingdenver.com</div>
+              <p class="text-white/60 text-xs mt-2">We respond within 24 hours</p>
+            </a>
+          </div>
+
+          <div class="border-t border-white/20 pt-6 text-center">
+            <p class="text-white/80 mb-4">
+              <strong class="text-white">Love our service?</strong> Leave us a review on Google or Facebook!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="https://maps.app.goo.gl/E3SEsp435kWzLBeQ8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-secondary hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                Review on Google
+              </a>
+              <a href="https://facebook.com/LegacyMovingDenver" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Review on Facebook
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
