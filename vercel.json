@@ -81,6 +81,41 @@
       "source": "/special-offers",
       "destination": "/discounts",
       "permanent": true
+    },
+    {
+      "source": "/residential-moving-services",
+      "destination": "/services/residential-moving",
+      "permanent": true
+    },
+    {
+      "source": "/storage-services",
+      "destination": "/services/storage-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-moving-services",
+      "destination": "/services/commercial-moving",
+      "permanent": true
+    },
+    {
+      "source": "/long-distance-moving-services",
+      "destination": "/services/long-distance-moving",
+      "permanent": true
+    },
+    {
+      "source": "/local-moving-services",
+      "destination": "/services/local-moving",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/work-for-us",
+      "permanent": true
+    },
+    {
+      "source": "/labor-only-moving-services",
+      "destination": "/services/loading-unloading",
+      "permanent": true
     }
   ],
   "headers": [
