@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { buttonVariants } from "@/components/ui/button";
-import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse } from "lucide-react";
+import { Package, Building, Truck, TruckIcon, PackageCheck, Warehouse, Wrench, GraduationCap, Palette, Music, Heart, Building2, Package as PackageIcon } from "lucide-react";
 import { Image } from 'astro:assets';
 import heroImage from '../assets/services/hero.jpg';
 import localMovingImage from '../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
@@ -402,6 +402,118 @@ import storageImage from '../assets/services/storage.jpg';
               Get Quote
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Moving Services -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Specialty Moving Services</h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          We offer specialized moving services for unique situations and special items
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Furniture Assembly -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Wrench size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Furniture Assembly</h3>
+          <p class="text-muted-foreground mb-4">
+            We disassemble furniture at your current location and reassemble it at your new home or office as part of your move.
+          </p>
+          <a href="/services/furniture-assembly" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- College Student Moving -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <GraduationCap size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">College Student Moving</h3>
+          <p class="text-muted-foreground mb-4">
+            Affordable moving services for students at CU Boulder, DU, Metro State, and all Denver-area colleges. Dorm and apartment moves.
+          </p>
+          <a href="/services/college-student-moving" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Art & Antique Moving -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Palette size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Art & Antique Moving</h3>
+          <p class="text-muted-foreground mb-4">
+            White-glove service for fine art, antiques, and valuables. Climate-controlled transport and custom crating available.
+          </p>
+          <a href="/services/art-antique-moving" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Piano Moving -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Music size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Piano Moving</h3>
+          <p class="text-muted-foreground mb-4">
+            Expert piano movers with specialized equipment for grand pianos, uprights, and baby grands. Fully insured service.
+          </p>
+          <a href="/services/piano-moving" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Senior Assisted Moving -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Heart size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Senior Assisted Moving</h3>
+          <p class="text-muted-foreground mb-4">
+            Compassionate moving services for seniors relocating to assisted living, retirement communities, or downsizing.
+          </p>
+          <a href="/services/senior-assisted-moving" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Apartment Moving -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <Building2 size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Apartment Moving</h3>
+          <p class="text-muted-foreground mb-4">
+            Fast, affordable apartment moves. Experienced with stairs, elevators, and high-rises throughout Denver metro area.
+          </p>
+          <a href="/services/apartment-moving" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Small Moves -->
+        <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <PackageIcon size={24} class="text-primary" />
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3 text-secondary">Small Moves</h3>
+          <p class="text-muted-foreground mb-4">
+            No job too small! Single furniture items, studio apartments, furniture delivery. Affordable rates with no minimum.
+          </p>
+          <a href="/services/small-moves" class={buttonVariants({ size: 'sm', variant: 'outline' })}>
+            Learn More
+          </a>
         </div>
       </div>
     </div>
