@@ -1,0 +1,275 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import { Music, Shield, Truck, Users, Award, Package } from "lucide-react";
+import movingImage from "../../assets/services/packing.jpg";
+
+const pageTitle = "Piano Moving Services Denver | Expert Piano Movers Colorado";
+const pageDescription = "Professional piano moving services in Denver, Aurora, Lakewood, Boulder, and surrounding areas. Expert movers for grand pianos, upright pianos, baby grands. Fully insured with specialized equipment.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative min-h-[500px] flex items-center justify-center overflow-hidden">
+    <Image
+      src={movingImage}
+      alt="Professional piano moving services in Denver"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+      width={1920}
+      height={800}
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75"></div>
+    
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <!-- Left Column - Content -->
+        <div class="text-white space-y-6">
+          <div class="inline-block">
+            <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+              Denver's Piano Moving Experts
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Professional <span class="text-accent">Piano Moving</span> Services
+          </h1>
+          
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl">
+            Expert piano movers serving Denver, Boulder, Aurora, and all surrounding areas. Grand pianos, uprights, baby grands - we move them all safely.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a
+              href="tel:7203401849"
+              class={`${buttonVariants({ size: "lg" })} bg-accent hover:bg-accent/90 text-white text-lg px-8 shadow-xl`}
+            >
+              <span class="mr-2">📞</span> Call (720) 340-1849
+            </a>
+          </div>
+
+          <!-- Mobile CTA Buttons -->
+          <div class="flex gap-3 pt-2 lg:hidden">
+            <a
+              href="#quote-form"
+              class={buttonVariants({ variant: "secondary", size: "lg" })}
+            >
+              Get Free Quote
+            </a>
+            <a
+              href="tel:7203401849"
+              class={buttonVariants({ variant: "outline", size: "lg" })}
+            >
+              Call Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column - Quote Form (Desktop) -->
+        <div class="hidden lg:block">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md md:max-w-xl">
+            <h2 class="text-2xl font-bold text-primary mb-4">Request Piano Moving Quote</h2>
+            <div data-version="10" id="J8QDKR-piano"></div>
+            <script is:inline>
+              (function(r,k) {
+                var s = document.createElement('script');
+                s.async = true;
+                s.defer = true;
+                s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+                s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+                document.getElementById(r).appendChild(s);
+              })('J8QDKR-piano','JGCB6TGFN7N3NTTDOGMQUK1S9L3A4N73LYF2ZX4H248K97JD');
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Why Choose Legacy Moving for Piano Moving?
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Specialized piano moving expertise throughout Denver and Colorado's Front Range
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Music class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Piano Specialists</h3>
+          <p class="text-gray-600">
+            Trained professionals specializing in piano moves. We understand the unique requirements of moving these valuable instruments.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Package class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Specialized Equipment</h3>
+          <p class="text-gray-600">
+            Piano boards, heavy-duty dollies, protective padding, and all specialized tools for safe piano transport.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Shield class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Fully Insured</h3>
+          <p class="text-gray-600">
+            Comprehensive insurance coverage protects your piano throughout the entire moving process.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Users class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Expert Team</h3>
+          <p class="text-gray-600">
+            Experienced movers trained in proper piano handling, lifting techniques, and safe navigation of stairs and tight spaces.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Truck class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Climate-Controlled Transport</h3>
+          <p class="text-gray-600">
+            Temperature-controlled vehicles protect your piano from Colorado's temperature fluctuations during transport.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Award class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Local Expertise</h3>
+          <p class="text-gray-600">
+            We know Denver-area homes, buildings, and venues. Expert navigation of Colorado's unique moving challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Piano Types -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+          Piano Types We Move
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Grand Pianos</h3>
+            <p class="text-gray-600">Full concert grands, semi-concert grands, parlor grands, and baby grands</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Upright Pianos</h3>
+            <p class="text-gray-600">Studio uprights, console pianos, spinets, and full-size uprights</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Digital Pianos</h3>
+            <p class="text-gray-600">Electronic keyboards, digital pianos, and stage pianos</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Antique Pianos</h3>
+            <p class="text-gray-600">Vintage and antique pianos requiring special care and handling</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Player Pianos</h3>
+            <p class="text-gray-600">Self-playing pianos and reproducing pianos with delicate mechanisms</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Organs</h3>
+            <p class="text-gray-600">Pipe organs, electronic organs, and Hammond organs</p>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-accent/10 border-l-4 border-accent rounded-lg p-6">
+          <h3 class="text-xl font-bold text-primary mb-2">🎹 Services Include:</h3>
+          <p class="text-gray-700">
+            Local piano moves, long-distance piano transport, upstairs/downstairs moves, disassembly and reassembly, 
+            climate-controlled storage, piano crating for long-distance moves, and delivery to concert halls, 
+            schools, churches, and studios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+          Piano Moving Throughout Denver Metro
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Expert piano moving services across the entire Denver metropolitan area and Colorado Front Range
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-700">
+          <div>Denver</div>
+          <div>Aurora</div>
+          <div>Lakewood</div>
+          <div>Boulder</div>
+          <div>Littleton</div>
+          <div>Highlands Ranch</div>
+          <div>Centennial</div>
+          <div>Arvada</div>
+          <div>Westminster</div>
+          <div>Thornton</div>
+          <div>Golden</div>
+          <div>Castle Rock</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary to-primary-dark text-white">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ready to Move Your Piano Safely?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+        Contact Denver's piano moving experts today for a free, no-obligation quote!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:7203401849"
+          class={`${buttonVariants({ size: "lg" })} bg-accent hover:bg-accent/90 text-white text-lg px-8`}
+        >
+          📞 Call (720) 340-1849
+        </a>
+        <a
+          href="sms:7203401849"
+          class={`${buttonVariants({ size: "lg", variant: "secondary" })} text-lg px-8`}
+        >
+          💬 Text Us
+        </a>
+      </div>
+      <p class="mt-6 text-white/80">
+        📍 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215<br />
+        🕒 Monday - Sunday: 8:00am - 6:00pm
+      </p>
+    </div>
+  </section>
+</BaseLayout>

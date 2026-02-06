@@ -1,0 +1,275 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import { Heart, Users, Shield, Clock, ThumbsUp, Home } from "lucide-react";
+import movingImage from "../../assets/services/residential.jpg";
+
+const pageTitle = "Senior Assisted Moving Services Denver | Elderly Moving Help Colorado";
+const pageDescription = "Compassionate senior assisted moving services in Denver, Aurora, Lakewood, and surrounding areas. Downsizing help, assisted living moves, retirement community relocation. Patient, caring service for elderly residents.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative min-h-[500px] flex items-center justify-center overflow-hidden">
+    <Image
+      src={movingImage}
+      alt="Senior assisted moving services in Denver"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+      width={1920}
+      height={800}
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75"></div>
+    
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <!-- Left Column - Content -->
+        <div class="text-white space-y-6">
+          <div class="inline-block">
+            <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+              Compassionate Senior Moving Services
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Senior Assisted <span class="text-accent">Moving Services</span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl">
+            Patient, caring moving services for seniors in Denver, Aurora, Lakewood, and surrounding areas. Downsizing, assisted living, and retirement moves.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a
+              href="tel:7203401849"
+              class={`${buttonVariants({ size: "lg" })} bg-accent hover:bg-accent/90 text-white text-lg px-8 shadow-xl`}
+            >
+              <span class="mr-2">📞</span> Call (720) 340-1849
+            </a>
+          </div>
+
+          <!-- Mobile CTA Buttons -->
+          <div class="flex gap-3 pt-2 lg:hidden">
+            <a
+              href="#quote-form"
+              class={buttonVariants({ variant: "secondary", size: "lg" })}
+            >
+              Get Free Consultation
+            </a>
+            <a
+              href="tel:7203401849"
+              class={buttonVariants({ variant: "outline", size: "lg" })}
+            >
+              Call Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column - Quote Form (Desktop) -->
+        <div class="hidden lg:block">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md md:max-w-xl">
+            <h2 class="text-2xl font-bold text-primary mb-4">Request Senior Moving Service</h2>
+            <div data-version="10" id="J8QDKR-senior"></div>
+            <script is:inline>
+              (function(r,k) {
+                var s = document.createElement('script');
+                s.async = true;
+                s.defer = true;
+                s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+                s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+                document.getElementById(r).appendChild(s);
+              })('J8QDKR-senior','JGCB6TGFN7N3NTTDOGMQUK1S9L3A4N73LYF2ZX4H248K97JD');
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Why Families Choose Legacy Moving for Senior Moves
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Compassionate, patient service for seniors relocating in Denver and throughout Colorado
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Heart class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Compassionate Care</h3>
+          <p class="text-gray-600">
+            Patient, understanding team trained to work sensitively with seniors during life transitions.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Users class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Family Support</h3>
+          <p class="text-gray-600">
+            We work closely with families to ensure a smooth, stress-free moving experience for your loved ones.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Clock class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Flexible Pacing</h3>
+          <p class="text-gray-600">
+            We move at a comfortable pace, allowing time for decisions and adjustments throughout the process.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Home class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Downsizing Expertise</h3>
+          <p class="text-gray-600">
+            Experienced in helping seniors downsize from large homes to apartments or assisted living facilities.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <Shield class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Safety First</h3>
+          <p class="text-gray-600">
+            Extra care taken to ensure the safety of both your loved ones and their belongings throughout the move.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <ThumbsUp class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">Full-Service Options</h3>
+          <p class="text-gray-600">
+            Complete packing, unpacking, organizing, and setup services available to ease the transition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+          Senior Moving Services We Provide
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Assisted Living Moves</h3>
+            <p class="text-gray-600">Relocations to assisted living facilities and retirement communities</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Downsizing Services</h3>
+            <p class="text-gray-600">Help moving from larger homes to smaller apartments or condos</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Memory Care Moves</h3>
+            <p class="text-gray-600">Specialized service for seniors moving to memory care facilities</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Senior Community Relocations</h3>
+            <p class="text-gray-600">Moves to independent living and 55+ communities</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Estate Cleanouts</h3>
+            <p class="text-gray-600">Assistance with estate transitions and property clearance</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-primary mb-3">✓ Full Packing & Unpacking</h3>
+            <p class="text-gray-600">Complete packing services and organized unpacking at new residence</p>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-accent/10 border-l-4 border-accent rounded-lg p-6">
+          <h3 class="text-xl font-bold text-primary mb-2">🏘️ Senior Communities We Serve:</h3>
+          <p class="text-gray-700">
+            We regularly serve Brookdale communities, Balfour Senior Living, Vi Living, Sunrise Senior Living, 
+            Atria Senior Living, The Clare at Water Tower, Belleview Heights, Cherry Creek Retirement Village, 
+            and all assisted living and retirement communities throughout Denver metro area.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">
+          Serving Denver's Senior Communities
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Compassionate senior moving services throughout the Denver metropolitan area
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-700">
+          <div>Denver</div>
+          <div>Aurora</div>
+          <div>Lakewood</div>
+          <div>Littleton</div>
+          <div>Highlands Ranch</div>
+          <div>Centennial</div>
+          <div>Greenwood Village</div>
+          <div>Englewood</div>
+          <div>Arvada</div>
+          <div>Westminster</div>
+          <div>Boulder</div>
+          <div>Golden</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary to-primary-dark text-white">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Let Us Help With Your Senior Move
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+        Contact us today for a compassionate consultation about your senior moving needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:7203401849"
+          class={`${buttonVariants({ size: "lg" })} bg-accent hover:bg-accent/90 text-white text-lg px-8`}
+        >
+          📞 Call (720) 340-1849
+        </a>
+        <a
+          href="sms:7203401849"
+          class={`${buttonVariants({ size: "lg", variant: "secondary" })} text-lg px-8`}
+        >
+          💬 Text Us
+        </a>
+      </div>
+      <p class="mt-6 text-white/80">
+        📍 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215<br />
+        🕒 Monday - Sunday: 8:00am - 6:00pm
+      </p>
+    </div>
+  </section>
+</BaseLayout>
