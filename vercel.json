@@ -116,6 +116,11 @@
       "source": "/labor-only-moving-services",
       "destination": "/services/loading-unloading",
       "permanent": true
+    },
+    {
+      "source": "/request-quote-form",
+      "destination": "/get-quote",
+      "permanent": true
     }
   ],
   "headers": [
