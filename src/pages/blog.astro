@@ -9,6 +9,8 @@ import residentialImage from '../assets/services/residential.jpg';
 import packingImage from '../assets/services/packing.jpg';
 import commercialImage from '../assets/services/commercial.jpg';
 import storageImage from '../assets/services/storage.jpg';
+import downtownDenverImage from '../assets/services/residential.jpg';
+import prepareMoverImage from '../assets/services/packing.jpg';
 ---
 
 <BaseLayout
@@ -176,7 +178,75 @@ import storageImage from '../assets/services/storage.jpg';
             </div>
           </article>
 
-          <!-- Blog Post 5: Packing Prices -->
+          <!-- Blog Post 5: Moving to Downtown Denver Apartments -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={downtownDenverImage} 
+                alt="Moving to Downtown Denver Apartments" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-secondary/50 to-accent/50"></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Mar 24, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>11 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                What to Know Before Moving to Downtown Denver: Elevators, Parking & HOA Rules
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                The honest guide to navigating downtown Denver high-rise and mid-rise moves—elevator reservations, parking permits, COI requirements, and HOA rules explained.
+              </p>
+              <a href="/blog/moving-to-downtown-denver-apartments-elevators-parking-hoa" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 6: How to Prepare Home for Professional Movers -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 relative overflow-hidden">
+              <Image 
+                src={prepareMoverImage} 
+                alt="Prepare Home for Professional Movers Denver" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-primary/50 to-secondary/50"></div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div class="flex items-center gap-1">
+                  <Calendar size={16} />
+                  <span>Mar 24, 2025</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <Clock size={16} />
+                  <span>12 min read</span>
+                </div>
+              </div>
+              <h2 class="font-display font-bold text-xl text-secondary mb-3 line-clamp-2">
+                How to Prepare Your Home for Professional Movers in Denver Before Moving Day
+              </h2>
+              <p class="text-muted-foreground mb-4 line-clamp-3">
+                Everything you need to do before the moving truck pulls up—room-by-room prep, packing tips, what to communicate to your crew, and how to make moving day go smoothly.
+              </p>
+              <a href="/blog/how-to-prepare-home-for-professional-movers-denver" class={buttonVariants({ variant: 'default', className: 'w-full' })}>
+                Read More
+                <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 7: Packing Prices -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <div class="h-48 relative overflow-hidden">
               <Image 
