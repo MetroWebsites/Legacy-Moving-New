@@ -1,0 +1,98 @@
+---
+// MoverbaseRedirect.astro
+// Drop this component anywhere on a page that has a Moverbase widget.
+// It watches ALL Moverbase containers (J8QDKR-* and HMHICM) + any postMessage
+// from Moverbase iframes and redirects to /thank-you on successful submission.
+---
+<script is:inline>
+(function () {
+  var redirected = false;
+
+  function goToThankYou() {
+    if (redirected) return;
+    redirected = true;
+    window.location.href = '/thank-you';
+  }
+
+  function looksLikeSuccess(str) {
+    if (!str) return false;
+    var s = String(str).toLowerCase();
+    return (
+      s.indexOf('thank') !== -1 ||
+      s.indexOf('submitted') !== -1 ||
+      s.indexOf('received') !== -1 ||
+      s.indexOf('confirmation') !== -1 ||
+      s.indexOf('success') !== -1 ||
+      s.indexOf('lead_submitted') !== -1 ||
+      s.indexOf('form_submitted') !== -1 ||
+      s.indexOf('complete') !== -1
+    );
+  }
+
+  // Method 1: postMessage from any Moverbase iframe on the page
+  window.addEventListener('message', function (e) {
+    var data =
+      typeof e.data === 'string' ? e.data : JSON.stringify(e.data || '');
+    if (looksLikeSuccess(data)) goToThankYou();
+  });
+
+  function setupObserversAndPolling() {
+    // Find every Moverbase container on the page (J8QDKR-* and HMHICM)
+    var containers = document.querySelectorAll('[id^="J8QDKR"], [id="HMHICM"]');
+
+    containers.forEach(function (target) {
+      // Method 2: MutationObserver per container
+      var obs = new MutationObserver(function () {
+        if (looksLikeSuccess(target.innerText || target.textContent || '')) {
+          obs.disconnect();
+          setTimeout(goToThankYou, 600);
+          return;
+        }
+        // Check iframe src attributes for success keywords
+        var iframes = target.querySelectorAll('iframe');
+        for (var i = 0; i < iframes.length; i++) {
+          try {
+            if (looksLikeSuccess(iframes[i].src || '')) {
+              obs.disconnect();
+              setTimeout(goToThankYou, 600);
+              return;
+            }
+          } catch (err) {}
+        }
+      });
+      obs.observe(target, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+        attributes: true,
+      });
+    });
+
+    // Method 3: Interval polling across all containers (fallback)
+    var poll = setInterval(function () {
+      if (redirected) {
+        clearInterval(poll);
+        return;
+      }
+      var targets = document.querySelectorAll('[id^="J8QDKR"], [id="HMHICM"]');
+      targets.forEach(function (target) {
+        if (looksLikeSuccess(target.innerText || target.textContent || '')) {
+          clearInterval(poll);
+          goToThankYou();
+        }
+      });
+    }, 500);
+
+    // Stop polling after 30 minutes to avoid forever loops
+    setTimeout(function () {
+      clearInterval(poll);
+    }, 1800000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupObserversAndPolling);
+  } else {
+    setupObserversAndPolling();
+  }
+})();
+</script>

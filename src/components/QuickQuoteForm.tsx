@@ -85,6 +85,7 @@ export default function QuickQuoteForm() {
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
         formStartTime.current = Date.now();
+        window.location.href = '/thank-you';
       } else {
         setSubmitStatus('error');
         setErrorMessage(result.message || "There was an error submitting your request. Please try again.");
