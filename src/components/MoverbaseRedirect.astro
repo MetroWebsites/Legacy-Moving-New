@@ -1,8 +1,9 @@
 ---
 // MoverbaseRedirect.astro
 // Drop this component anywhere on a page that has a Moverbase widget.
-// It watches ALL Moverbase containers (J8QDKR-* and HMHICM) + any postMessage
-// from Moverbase iframes and redirects to /thank-you on successful submission.
+// It watches ALL Moverbase containers (selected by [data-version] attribute
+// which every Moverbase widget div shares) + any postMessage from Moverbase
+// iframes and redirects to /thank-you on successful submission.
 ---
 <script is:inline>
 (function () {
@@ -37,8 +38,8 @@
   });
 
   function setupObserversAndPolling() {
-    // Find every Moverbase container on the page (J8QDKR-* and HMHICM)
-    var containers = document.querySelectorAll('[id^="J8QDKR"], [id="HMHICM"]');
+    // Find every Moverbase container on the page via the shared data-version attribute
+    var containers = document.querySelectorAll('[data-version]');
 
     containers.forEach(function (target) {
       // Method 2: MutationObserver per container
@@ -74,7 +75,7 @@
         clearInterval(poll);
         return;
       }
-      var targets = document.querySelectorAll('[id^="J8QDKR"], [id="HMHICM"]');
+      var targets = document.querySelectorAll('[data-version]');
       targets.forEach(function (target) {
         if (looksLikeSuccess(target.innerText || target.textContent || '')) {
           clearInterval(poll);
