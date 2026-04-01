@@ -1,9 +1,8 @@
 ---
 // MoverbaseRedirect.astro
-// Drop this component anywhere on a page that has a Moverbase widget.
-// It watches ALL Moverbase containers (selected by [data-version] attribute
-// which every Moverbase widget div shares) + any postMessage from Moverbase
-// iframes and redirects to /thank-you on successful submission.
+// Intercepts the official Moverbase postMessage event 'MoverbaseWidget:Redirect'
+// that fires after every successful form submission, and redirects to /thank-you.
+// This is the authoritative event — sourced directly from Moverbase's own widget JS.
 ---
 <script is:inline>
 (function () {
@@ -15,6 +14,25 @@
     window.location.href = '/thank-you';
   }
 
+  // PRIMARY: Moverbase fires postMessage with key 'MoverbaseWidget:Redirect' on submit
+  window.addEventListener('message', function (e) {
+    try {
+      var data = e.data;
+      // It arrives as an object: { 'MoverbaseWidget:Redirect': '/url', 'MoverbaseWidget:To': 'widgetId' }
+      if (data && typeof data === 'object' && data.hasOwnProperty('MoverbaseWidget:Redirect')) {
+        goToThankYou();
+        return;
+      }
+      // Also handle if it arrives as a JSON string
+      if (typeof data === 'string' && data.indexOf('MoverbaseWidget:Redirect') !== -1) {
+        goToThankYou();
+        return;
+      }
+    } catch (err) {}
+  });
+
+  // FALLBACK: Watch widget containers for a success/confirmation page appearing
+  // (covers edge cases where postMessage doesn't fire)
   function looksLikeSuccess(str) {
     if (!str) return false;
     var s = String(str).toLowerCase();
@@ -23,77 +41,30 @@
       s.indexOf('submitted') !== -1 ||
       s.indexOf('received') !== -1 ||
       s.indexOf('confirmation') !== -1 ||
-      s.indexOf('success') !== -1 ||
       s.indexOf('lead_submitted') !== -1 ||
-      s.indexOf('form_submitted') !== -1 ||
-      s.indexOf('complete') !== -1
+      s.indexOf('form_submitted') !== -1
     );
   }
 
-  // Method 1: postMessage from any Moverbase iframe on the page
-  window.addEventListener('message', function (e) {
-    var data =
-      typeof e.data === 'string' ? e.data : JSON.stringify(e.data || '');
-    if (looksLikeSuccess(data)) goToThankYou();
-  });
-
-  function setupObserversAndPolling() {
-    // Find every Moverbase container on the page via the shared data-version attribute
-    var containers = document.querySelectorAll('[data-version]');
-
-    containers.forEach(function (target) {
-      // Method 2: MutationObserver per container
-      var obs = new MutationObserver(function () {
-        if (looksLikeSuccess(target.innerText || target.textContent || '')) {
-          obs.disconnect();
-          setTimeout(goToThankYou, 600);
-          return;
-        }
-        // Check iframe src attributes for success keywords
-        var iframes = target.querySelectorAll('iframe');
-        for (var i = 0; i < iframes.length; i++) {
-          try {
-            if (looksLikeSuccess(iframes[i].src || '')) {
-              obs.disconnect();
-              setTimeout(goToThankYou, 600);
-              return;
-            }
-          } catch (err) {}
-        }
-      });
-      obs.observe(target, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-        attributes: true,
-      });
-    });
-
-    // Method 3: Interval polling across all containers (fallback)
+  function setupFallback() {
     var poll = setInterval(function () {
-      if (redirected) {
-        clearInterval(poll);
-        return;
-      }
-      var targets = document.querySelectorAll('[data-version]');
-      targets.forEach(function (target) {
+      if (redirected) { clearInterval(poll); return; }
+      var containers = document.querySelectorAll('[data-version]');
+      containers.forEach(function (target) {
         if (looksLikeSuccess(target.innerText || target.textContent || '')) {
           clearInterval(poll);
           goToThankYou();
         }
       });
     }, 500);
-
-    // Stop polling after 30 minutes to avoid forever loops
-    setTimeout(function () {
-      clearInterval(poll);
-    }, 1800000);
+    // Stop after 30 minutes
+    setTimeout(function () { clearInterval(poll); }, 1800000);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupObserversAndPolling);
+    document.addEventListener('DOMContentLoaded', setupFallback);
   } else {
-    setupObserversAndPolling();
+    setupFallback();
   }
 })();
 </script>
