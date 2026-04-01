@@ -43,46 +43,58 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
               document.getElementById(r).appendChild(s);
             })('J8QDKR-request','JGCB6TGFN7N3NTTDOGMQUK1S9L3A4N73LYF2ZX4H248K97JD');
             </script>
-            <!-- Redirect to thank-you page after Moverbase widget submits -->
+            <!-- Redirect to /thank-you after Moverbase widget submits -->
             <script is:inline>
             (function() {
               var redirected = false;
+              var containerId = 'J8QDKR-request';
+
               function goToThankYou() {
-                if (!redirected) {
-                  redirected = true;
-                  window.location.href = '/thank-you';
-                }
+                if (!redirected) { redirected = true; window.location.href = '/thank-you'; }
               }
+
+              function looksLikeSuccess(str) {
+                if (!str) return false;
+                var s = str.toLowerCase();
+                return s.indexOf('thank') !== -1 || s.indexOf('submitted') !== -1 ||
+                       s.indexOf('received') !== -1 || s.indexOf('confirmation') !== -1 ||
+                       s.indexOf('success') !== -1 || s.indexOf('lead_submitted') !== -1 ||
+                       s.indexOf('form_submitted') !== -1 || s.indexOf('complete') !== -1;
+              }
+
               window.addEventListener('message', function(e) {
-                if (!e.data) return;
-                var data = (typeof e.data === 'string') ? e.data : JSON.stringify(e.data);
-                if (
-                  data.indexOf('lead_submitted') !== -1 ||
-                  data.indexOf('form_submitted') !== -1 ||
-                  data.indexOf('success') !== -1 ||
-                  data.indexOf('thank') !== -1 ||
-                  data.indexOf('submitted') !== -1
-                ) {
-                  goToThankYou();
-                }
+                var data = (typeof e.data === 'string') ? e.data : JSON.stringify(e.data || '');
+                if (looksLikeSuccess(data)) goToThankYou();
               });
-              var target = document.getElementById('J8QDKR-request');
-              if (target) {
-                var observer = new MutationObserver(function(mutations) {
-                  var text = target.innerText || target.textContent || '';
-                  if (
-                    text.toLowerCase().indexOf('thank') !== -1 ||
-                    text.toLowerCase().indexOf('submitted') !== -1 ||
-                    text.toLowerCase().indexOf('received') !== -1 ||
-                    text.toLowerCase().indexOf('confirmation') !== -1 ||
-                    text.toLowerCase().indexOf('success') !== -1
-                  ) {
-                    observer.disconnect();
-                    setTimeout(goToThankYou, 800);
+
+              function attachObserver() {
+                var target = document.getElementById(containerId);
+                if (!target) return;
+                var obs = new MutationObserver(function() {
+                  if (looksLikeSuccess(target.innerText || target.textContent || '')) {
+                    obs.disconnect(); setTimeout(goToThankYou, 600); return;
+                  }
+                  var iframes = target.querySelectorAll('iframe');
+                  for (var i = 0; i < iframes.length; i++) {
+                    try { if (looksLikeSuccess(iframes[i].src || '')) { obs.disconnect(); setTimeout(goToThankYou, 600); return; } } catch(e) {}
                   }
                 });
-                observer.observe(target, { childList: true, subtree: true, characterData: true });
+                obs.observe(target, { childList: true, subtree: true, characterData: true, attributes: true });
               }
+
+              function startPolling() {
+                var target = document.getElementById(containerId);
+                if (!target) return;
+                var poll = setInterval(function() {
+                  if (redirected) { clearInterval(poll); return; }
+                  if (looksLikeSuccess(target.innerText || target.textContent || '')) { clearInterval(poll); goToThankYou(); }
+                }, 500);
+                setTimeout(function() { clearInterval(poll); }, 1800000);
+              }
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() { attachObserver(); startPolling(); });
+              } else { attachObserver(); startPolling(); }
             })();
             </script>
           </div>

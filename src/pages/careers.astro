@@ -278,10 +278,15 @@ import teamImage from '../assets/308748956_459885262825080_6269738357866645302_n
             class="space-y-6"
             name="career-application-form"
             method="POST"
-            enctype="multipart/form-data"
-            action="https://formspree.io/f/mzdbndbo"
+            action="https://api.web3forms.com/submit"
           >
-            <input type="hidden" name="_next" value="/thank-you" />
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="f4f80b3a-7125-41ae-b44e-3c23cbbfe6de" />
+            <input type="hidden" name="subject" value="New Career Application – Legacy Moving Denver" />
+            <input type="hidden" name="from_name" value="Legacy Moving Denver Website" />
+            <input type="hidden" name="redirect" value="/thank-you" />
+            <!-- Honeypot spam trap -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
             <input type="hidden" name="form_name" value="Career Application" />
             
             <div class="grid md:grid-cols-2 gap-6">
@@ -362,15 +367,15 @@ import teamImage from '../assets/308748956_459885262825080_6269738357866645302_n
             </div>
             
             <div>
-              <label for="resume" class="block text-sm font-medium text-secondary mb-1">Resume/CV (PDF format) *</label>
+              <label for="resume" class="block text-sm font-medium text-secondary mb-1">Resume / LinkedIn / Portfolio Link</label>
               <input
-                type="file"
+                type="url"
                 id="resume"
-                name="resume"
-                accept=".pdf"
-                required
+                name="resume_link"
+                placeholder="https://linkedin.com/in/yourname or a link to your resume"
                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
               />
+              <p class="text-xs text-muted-foreground mt-1">You can also email your resume directly to <a href="mailto:info@legacymovingdenver.com" class="text-primary hover:underline">info@legacymovingdenver.com</a></p>
             </div>
             
             <div>
