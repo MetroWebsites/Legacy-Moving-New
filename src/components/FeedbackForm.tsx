@@ -69,6 +69,7 @@ export default function FeedbackForm() {
         setFormData(defaultFormData);
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
+        window.location.href = '/thank-you';
       } else {
         setError(result.message || "There was a problem submitting your feedback. Please try again.");
         setCaptchaToken(null);

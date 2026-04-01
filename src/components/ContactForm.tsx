@@ -103,6 +103,7 @@ export default function ContactForm() {
         setFormData(defaultFormData);
         setCaptchaToken(null);
         captchaRef.current?.resetCaptcha();
+        window.location.href = '/thank-you';
         
         // Reset zoom on mobile after successful submission
         if (window.innerWidth < 768) {
