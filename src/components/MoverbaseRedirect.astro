@@ -1,8 +1,13 @@
 ---
 // MoverbaseRedirect.astro
-// Intercepts the official Moverbase postMessage event 'MoverbaseWidget:Redirect'
-// that fires after every successful form submission, and redirects to /thank-you.
-// This is the authoritative event — sourced directly from Moverbase's own widget JS.
+// Intercepts Moverbase postMessage events fired after successful form submission
+// and redirects to /thank-you.
+//
+// How Moverbase works (sourced from lead.moverbase.net/js/widget.js):
+//   On success: postMessage('MoverbaseWidget:RequestSent', '*')   <- always fires
+//   If redirect URL set in dashboard: postMessage({ 'MoverbaseWidget:Redirect': path }, '*')
+//
+// We catch 'MoverbaseWidget:RequestSent' (the guaranteed one) and redirect ourselves.
 ---
 <script is:inline>
 (function () {
@@ -14,57 +19,29 @@
     window.location.href = '/thank-you';
   }
 
-  // PRIMARY: Moverbase fires postMessage with key 'MoverbaseWidget:Redirect' on submit
   window.addEventListener('message', function (e) {
     try {
       var data = e.data;
-      // It arrives as an object: { 'MoverbaseWidget:Redirect': '/url', 'MoverbaseWidget:To': 'widgetId' }
+
+      // PRIMARY: plain string fired on every successful Moverbase submission
+      if (data === 'MoverbaseWidget:RequestSent') {
+        goToThankYou();
+        return;
+      }
+
+      // SECONDARY: object fired when a redirect URL is configured in Moverbase dashboard
       if (data && typeof data === 'object' && data.hasOwnProperty('MoverbaseWidget:Redirect')) {
         goToThankYou();
         return;
       }
-      // Also handle if it arrives as a JSON string
-      if (typeof data === 'string' && data.indexOf('MoverbaseWidget:Redirect') !== -1) {
+
+      // SAFETY NET: catch either as a JSON string
+      if (typeof data === 'string' && data.indexOf('MoverbaseWidget:RequestSent') !== -1) {
         goToThankYou();
         return;
       }
     } catch (err) {}
   });
 
-  // FALLBACK: Watch widget containers for a success/confirmation page appearing
-  // (covers edge cases where postMessage doesn't fire)
-  function looksLikeSuccess(str) {
-    if (!str) return false;
-    var s = String(str).toLowerCase();
-    return (
-      s.indexOf('thank') !== -1 ||
-      s.indexOf('submitted') !== -1 ||
-      s.indexOf('received') !== -1 ||
-      s.indexOf('confirmation') !== -1 ||
-      s.indexOf('lead_submitted') !== -1 ||
-      s.indexOf('form_submitted') !== -1
-    );
-  }
-
-  function setupFallback() {
-    var poll = setInterval(function () {
-      if (redirected) { clearInterval(poll); return; }
-      var containers = document.querySelectorAll('[data-version]');
-      containers.forEach(function (target) {
-        if (looksLikeSuccess(target.innerText || target.textContent || '')) {
-          clearInterval(poll);
-          goToThankYou();
-        }
-      });
-    }, 500);
-    // Stop after 30 minutes
-    setTimeout(function () { clearInterval(poll); }, 1800000);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupFallback);
-  } else {
-    setupFallback();
-  }
 })();
 </script>
