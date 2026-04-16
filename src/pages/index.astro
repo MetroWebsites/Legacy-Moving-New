@@ -50,8 +50,8 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
       <Image src={truckImage} alt="Legacy Moving Denver truck" class="w-full h-full object-cover" />
     </div>
     
-    <!-- Background Video (Desktop) -->
-    <div class="absolute inset-0 hidden md:block">
+    <!-- Background Video (Desktop only - not loaded on mobile for performance) -->
+    <div class="absolute inset-0 hidden md:block" id="hero-video-container">
       <video 
         id="hero-video"
         autoplay 
@@ -59,11 +59,10 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
         loop 
         playsinline
         webkit-playsinline
-        preload="auto"
+        preload="none"
         disablePictureInPicture
         class="w-full h-full object-cover opacity-70"
       >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <!-- Overlay gradient for better text readability -->
@@ -974,31 +973,32 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
 <!-- Removed mobile contact form as it's now shown on desktop and mobile -->
 
 <script>
-  // Force video playback on mobile devices
+  // Only load and play hero video on desktop — skip entirely on mobile for performance
   document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('hero-video');
-    if (video) {
-      // Set video properties
-      video.muted = true;
-      video.playsInline = true;
-      video.setAttribute('playsinline', '');
-      video.setAttribute('webkit-playsinline', '');
-      
-      // Try to play the video
-      const playPromise = video.play();
-      
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          // Video started playing successfully
-          console.log('Hero video playing');
-        }).catch(error => {
-          // Auto-play was prevented, try again on user interaction
-          console.log('Video autoplay prevented:', error);
-          document.addEventListener('touchstart', function() {
-            video.play();
-          }, { once: true });
-        });
-      }
+    // Check if we're on desktop (md breakpoint = 768px)
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+    if (!isDesktop) return;
+
+    const video = document.getElementById('hero-video') as HTMLVideoElement | null;
+    if (!video) return;
+
+    // Inject the source now that we know we're on desktop
+    const source = document.createElement('source');
+    source.src = '/videos/hero-video.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.load();
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // autoplay blocked — silently ignore
+      });
     }
   });
 </script>
