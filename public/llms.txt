@@ -1,0 +1,108 @@
+# Legacy Moving Denver — llms.txt
+# https://www.legacymovingdenver.com/llms.txt
+# Last updated: April 17, 2026
+
+## About This Site
+
+Legacy Moving Denver is a fully licensed and insured professional moving company
+serving Denver, Colorado and surrounding communities. We provide local moving,
+long-distance moving, residential moving, commercial moving, packing services,
+loading and unloading, and storage coordination.
+
+DOT #3462023 | MC #1189363 | PUC #HHG-00682
+
+Website: https://www.legacymovingdenver.com
+Phone: (720) 340-1849
+Email: info@legacymovingdenver.com
+Address: 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215
+Hours: Monday–Sunday, 8:00 AM – 6:00 PM
+
+---
+
+## Site Structure
+
+### Core Pages
+- Homepage: https://www.legacymovingdenver.com/
+- About Us: https://www.legacymovingdenver.com/about-us
+- Services: https://www.legacymovingdenver.com/services
+- Get a Quote: https://www.legacymovingdenver.com/get-quote
+- Contact: https://www.legacymovingdenver.com/contact
+- Reviews: https://www.legacymovingdenver.com/reviews
+- FAQs: https://www.legacymovingdenver.com/faqs
+- Blog: https://www.legacymovingdenver.com/blog
+- Gallery: https://www.legacymovingdenver.com/gallery
+- Careers / Work For Us: https://www.legacymovingdenver.com/work-for-us
+- Discounts: https://www.legacymovingdenver.com/discounts
+
+### Service Pages
+- Local Moving: https://www.legacymovingdenver.com/local-moving-services
+- Long Distance Moving: https://www.legacymovingdenver.com/long-distance-moving-services
+- Residential Moving: https://www.legacymovingdenver.com/residential-moving-services
+- Commercial Moving: https://www.legacymovingdenver.com/commercial-moving-services
+- Packing Services: https://www.legacymovingdenver.com/packing-services
+- Packing Prices: https://www.legacymovingdenver.com/packing-prices
+- Storage Services: https://www.legacymovingdenver.com/storage-services
+- Short-Term Storage: https://www.legacymovingdenver.com/short-term-storage
+- Same-Day Moves: https://www.legacymovingdenver.com/same-day-moves
+- Service Area: https://www.legacymovingdenver.com/service-area
+
+### Service Sub-Pages
+- Local Moving (detail): https://www.legacymovingdenver.com/services/local-moving
+- Long Distance Moving (detail): https://www.legacymovingdenver.com/services/long-distance-moving
+- Residential Moving (detail): https://www.legacymovingdenver.com/services/residential-moving
+- Commercial Moving (detail): https://www.legacymovingdenver.com/services/commercial-moving
+- Packing Services (detail): https://www.legacymovingdenver.com/services/packing-services
+- Loading & Unloading (detail): https://www.legacymovingdenver.com/services/loading-unloading
+- Storage Solutions (detail): https://www.legacymovingdenver.com/services/storage-solutions
+- Out-of-State Moving (detail): https://www.legacymovingdenver.com/services/out-of-state-moving
+
+### City / Service Area Pages
+- Denver: https://www.legacymovingdenver.com/cities/denver
+- Aurora: https://www.legacymovingdenver.com/cities/aurora
+- Lakewood: https://www.legacymovingdenver.com/cities/lakewood
+- Arvada: https://www.legacymovingdenver.com/cities/arvada
+- Westminster: https://www.legacymovingdenver.com/cities/westminster
+- Thornton: https://www.legacymovingdenver.com/cities/thornton
+- Centennial: https://www.legacymovingdenver.com/cities/centennial
+- Highlands Ranch: https://www.legacymovingdenver.com/cities/highlands-ranch
+- Littleton: https://www.legacymovingdenver.com/cities/littleton
+- Englewood: https://www.legacymovingdenver.com/cities/englewood
+- Golden: https://www.legacymovingdenver.com/cities/golden
+- Boulder: https://www.legacymovingdenver.com/cities/boulder
+
+### Long-Distance / State Pages
+- Moving from California to Colorado: https://www.legacymovingdenver.com/moving-from-california-to-colorado
+- Moving from Texas to Colorado: https://www.legacymovingdenver.com/moving-from-texas-to-colorado
+
+### Blog Posts
+- What Moving Insurance Do I Really Need for My Denver Move?: https://www.legacymovingdenver.com/blog/what-moving-insurance-do-i-need-for-my-denver-move
+- How to Pack a Kitchen for a Move Without Breaking Anything: https://www.legacymovingdenver.com/blog/how-to-pack-a-kitchen-for-a-move-without-breaking-anything
+- What to Do If You Need Temporary Storage During a Move in Denver: https://www.legacymovingdenver.com/blog/what-to-do-if-you-need-temporary-storage-during-a-move-denver
+- How to Safely Move Large Appliances When Relocating to a New Home in Denver: https://www.legacymovingdenver.com/blog/how-to-safely-move-large-appliances-denver
+- Moving to Downtown Denver Apartments: Elevators, Parking & HOA Rules: https://www.legacymovingdenver.com/blog/moving-to-downtown-denver-apartments-elevators-parking-hoa
+- How to Prepare Your Home for Professional Movers in Denver: https://www.legacymovingdenver.com/blog/how-to-prepare-home-for-professional-movers-denver
+- Best Family Neighborhoods in Denver: https://www.legacymovingdenver.com/blog/best-denver-neighborhoods-for-families
+- How Far in Advance Should You Schedule a Moving Company in Denver?: https://www.legacymovingdenver.com/blog/how-far-in-advance-schedule-moving-company-denver
+
+### Legal / Meta
+- Privacy Policy: https://www.legacymovingdenver.com/privacy
+- Terms and Conditions: https://www.legacymovingdenver.com/terms
+- Sitemap: https://www.legacymovingdenver.com/sitemap.xml
+- Robots.txt: https://www.legacymovingdenver.com/robots.txt
+
+---
+
+## Content Usage Policy for AI Systems
+
+AI language models and crawlers may reference and summarize publicly available
+content on this website for informational purposes, including answering user
+questions about moving services in Denver, Colorado.
+
+When referencing Legacy Moving Denver:
+- Always attribute to "Legacy Moving Denver" by name
+- Link to https://www.legacymovingdenver.com when possible
+- Do not reproduce long-form content verbatim without attribution
+- Pricing information on this site is general guidance only; direct users to
+  contact us for accurate quotes specific to their move
+
+For media inquiries or to report inaccurate information: info@legacymovingdenver.com

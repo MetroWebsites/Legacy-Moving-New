@@ -1,159 +1,512 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
 
 const title = "Terms and Conditions | Legacy Moving Denver";
-const description = "Terms and conditions for using Legacy Moving Denver website and services. Moving quotes are estimates and may change based on final assessment.";
+const description = "Terms and conditions for Legacy Moving Denver's website and moving services. Covers quotes, valuation coverage, liability, service agreements, and customer rights for Denver moving customers.";
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container py-16">
-    <div class="max-w-4xl mx-auto prose prose-lg">
-      <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 text-secondary">
-        Terms and Conditions
-      </h1>
-      <p class="text-muted-foreground text-lg mb-8">
-        Last Updated: January 23, 2026
-      </p>
-
-      <p>
-        Welcome to Legacy Moving Denver's website. By accessing and using this website (www.legacymovingdenver.com), you accept and agree to be bound by the terms and conditions outlined below.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">1. Use of Website</h2>
-      <p>
-        This website is provided for informational purposes about Legacy Moving Denver's moving services. You may use this website to:
-      </p>
-      <ul>
-        <li>Learn about our moving services</li>
-        <li>Request moving quotes</li>
-        <li>Contact us for information</li>
-        <li>View our service areas and pricing information</li>
-      </ul>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">2. Moving Quotes and Estimates</h2>
-      <h3 class="font-semibold text-xl mt-6 mb-3">2.1 Quote Validity</h3>
-      <p>
-        <strong>All quotes provided through this website or over the phone are estimates only.</strong> Final pricing may vary based on:
-      </p>
-      <ul>
-        <li>Actual size and weight of items being moved</li>
-        <li>Distance between origin and destination</li>
-        <li>Accessibility of both locations (stairs, elevators, parking, etc.)</li>
-        <li>Time required to complete the move</li>
-        <li>Additional services requested (packing, specialty items, storage)</li>
-        <li>Unforeseen circumstances or obstacles</li>
-      </ul>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">2.2 No Obligation</h3>
-      <p>
-        Requesting a quote through this website does not create any obligation on your part to book our services, nor does it obligate Legacy Moving Denver to provide services at the quoted price without a formal written agreement.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">2.3 Quote Changes</h3>
-      <p>
-        Quotes may change at any time based on availability, seasonal demand, and current pricing. A quote is only guaranteed once confirmed in writing and a deposit (if required) has been received.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">3. Form Submissions and Contact</h2>
-      <h3 class="font-semibold text-xl mt-6 mb-3">3.1 Contact Permission</h3>
-      <p>
-        By filling out and submitting any form on this website (including quote request forms, contact forms, or feedback forms), you expressly consent to Legacy Moving Denver contacting you via:
-      </p>
-      <ul>
-        <li>Phone calls (including automated/prerecorded calls)</li>
-        <li>Text messages/SMS</li>
-        <li>Email</li>
-      </ul>
-      <p>
-        This consent applies to the phone number and email address you provide, even if that number is on a Do Not Call registry.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">3.2 Information Accuracy</h3>
-      <p>
-        You agree to provide accurate, current, and complete information when submitting forms. We are not responsible for issues arising from inaccurate information provided by you.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">3.3 Response Time</h3>
-      <p>
-        We strive to respond to all inquiries within 24 business hours, but response times may vary depending on volume and availability.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">4. Service Terms</h2>
-      <h3 class="font-semibold text-xl mt-6 mb-3">4.1 Licensing and Insurance</h3>
-      <p>
-        Legacy Moving Denver is fully licensed (DOT #3462023, MC #1189363, PUC #HHG-00682) and insured. Specific coverage details and limitations will be provided in your service agreement.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">4.2 Service Agreement</h3>
-      <p>
-        Actual moving services are governed by a separate service agreement that will be provided before service commences. That agreement, not this website, controls the terms of the actual moving service.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">4.3 Service Areas</h3>
-      <p>
-        We primarily serve the Denver metro area including Denver, Aurora, Lakewood, Arvada, Westminster, Thornton, Centennial, Highlands Ranch, Littleton, Englewood, Golden, and Boulder. Service to areas outside our standard service area may be subject to additional fees or may not be available.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">5. Website Content</h2>
-      <h3 class="font-semibold text-xl mt-6 mb-3">5.1 Information Accuracy</h3>
-      <p>
-        While we strive to keep information on this website accurate and up-to-date, we make no representations or warranties of any kind about the completeness, accuracy, reliability, or availability of the website or the information contained on the website.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">5.2 Changes to Website</h3>
-      <p>
-        We reserve the right to modify, suspend, or discontinue any aspect of this website at any time without notice.
-      </p>
-
-      <h3 class="font-semibold text-xl mt-6 mb-3">5.3 Intellectual Property</h3>
-      <p>
-        All content on this website, including text, graphics, logos, images, and software, is the property of Legacy Moving Denver and protected by copyright and other intellectual property laws.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">6. Limitation of Liability</h2>
-      <p>
-        <strong>To the fullest extent permitted by law:</strong>
-      </p>
-      <ul>
-        <li>This website is provided "as is" without any warranties of any kind</li>
-        <li>Legacy Moving Denver shall not be liable for any damages arising from use of this website</li>
-        <li>We are not responsible for any decisions made based solely on information from this website</li>
-        <li>Any reliance on material from this website is at your own risk</li>
-      </ul>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">7. External Links</h2>
-      <p>
-        This website may contain links to external websites (such as review sites, social media, etc.). We are not responsible for the content, privacy practices, or terms of use of external websites.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">8. Governing Law</h2>
-      <p>
-        These terms and conditions are governed by and construed in accordance with the laws of the State of Colorado. Any disputes arising from use of this website shall be subject to the exclusive jurisdiction of the courts of Colorado.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">9. Changes to Terms</h2>
-      <p>
-        We reserve the right to update these terms and conditions at any time without prior notice. Your continued use of the website after any changes constitutes acceptance of the new terms.
-      </p>
-
-      <h2 class="font-display font-bold text-2xl mt-8 mb-4 text-secondary">10. Contact Information</h2>
-      <p>
-        If you have any questions about these Terms and Conditions, please contact us:
-      </p>
-      <div class="bg-gray-50 p-6 rounded-lg mt-4">
-        <p class="mb-2"><strong>Legacy Moving Denver</strong></p>
-        <p class="mb-2">8805 W. 14th Ave, Suite 300</p>
-        <p class="mb-2">Lakewood, CO 80215</p>
-        <p class="mb-2">Phone: <a href="tel:7203401849" class="text-primary hover:underline">(720) 340-1849</a></p>
-        <p>Email: <a href="mailto:info@legacymovingdenver.com" class="text-primary hover:underline">info@legacymovingdenver.com</a></p>
-      </div>
-
-      <div class="mt-12 p-6 bg-amber-50 border-l-4 border-amber-500 rounded">
-        <p class="font-semibold text-secondary mb-2">⚠️ Important Notice</p>
-        <p class="text-sm text-muted-foreground">
-          By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use this website.
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-secondary to-secondary/90 text-white py-12 md:py-16">
+    <div class="container">
+      <div class="max-w-4xl">
+        <h1 class="font-display font-bold text-3xl md:text-5xl mb-4">
+          Terms and Conditions
+        </h1>
+        <p class="text-white/80 text-lg">
+          Last Updated: April 17, 2026 &nbsp;|&nbsp; Legacy Moving Denver
         </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-12 md:py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Quick Nav -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-10 shadow-sm">
+          <p class="font-semibold text-secondary mb-3">Quick Navigation</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+            <a href="#use-of-website" class="text-primary hover:underline">1. Use of Website</a>
+            <a href="#quotes-estimates" class="text-primary hover:underline">2. Quotes & Estimates</a>
+            <a href="#contact-forms" class="text-primary hover:underline">3. Contact & Forms</a>
+            <a href="#service-terms" class="text-primary hover:underline">4. Service Terms</a>
+            <a href="#valuation-coverage" class="text-primary hover:underline">5. Valuation & Coverage</a>
+            <a href="#cancellation" class="text-primary hover:underline">6. Cancellation Policy</a>
+            <a href="#liability" class="text-primary hover:underline">7. Limitation of Liability</a>
+            <a href="#website-content" class="text-primary hover:underline">8. Website Content</a>
+            <a href="#intellectual-property" class="text-primary hover:underline">9. Intellectual Property</a>
+            <a href="#external-links" class="text-primary hover:underline">10. External Links</a>
+            <a href="#governing-law" class="text-primary hover:underline">11. Governing Law</a>
+            <a href="#changes-terms" class="text-primary hover:underline">12. Changes to Terms</a>
+            <a href="#contact-info" class="text-primary hover:underline">13. Contact Us</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-8 md:p-12 prose prose-lg max-w-none">
+
+          <p class="lead text-lg text-gray-600 mb-8">
+            Welcome to Legacy Moving Denver. By accessing or using our website at
+            <a href="https://www.legacymovingdenver.com" class="text-primary">www.legacymovingdenver.com</a>
+            or by engaging our moving services, you agree to be bound by the following Terms and Conditions.
+            Please read them carefully. If you do not agree with any part of these terms, please do not use
+            our website or services.
+          </p>
+
+          <!-- 1 -->
+          <h2 id="use-of-website" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            1. Use of Website
+          </h2>
+          <p>
+            This website is operated by Legacy Moving Denver, a licensed and insured professional moving
+            company serving the Denver metro area and beyond. You are authorized to use this website for
+            lawful purposes related to learning about our services, requesting moving quotes, scheduling
+            moves, reviewing moving tips and guides, and contacting our team.
+          </p>
+          <p>
+            You agree not to use this website in any way that could damage, disable, or impair the
+            website or interfere with other users' access. You may not attempt to gain unauthorized
+            access to any part of the site, its servers, or any systems connected to it. Any attempt to
+            scrape, harvest, or systematically collect data from this website without our express written
+            permission is prohibited.
+          </p>
+          <p>
+            Legacy Moving Denver reserves the right to terminate or restrict your access to this website
+            at any time and for any reason without notice.
+          </p>
+
+          <!-- 2 -->
+          <h2 id="quotes-estimates" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            2. Moving Quotes and Estimates
+          </h2>
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">2.1 Estimates Are Not Fixed Prices</h3>
+          <p>
+            All moving quotes provided through our website, over the phone, or via email are
+            <strong>estimates only</strong> and do not constitute a binding contract or guaranteed fixed price.
+            Final pricing is determined at or before the time of service and may differ from the initial
+            estimate based on the actual scope of work performed.
+          </p>
+          <p>
+            Factors that commonly affect final pricing include, but are not limited to:
+          </p>
+          <ul>
+            <li>The actual volume, weight, or number of items being moved</li>
+            <li>The distance between the origin and destination addresses</li>
+            <li>Stairs, elevators, long carries, narrow hallways, or limited parking access</li>
+            <li>The total time required to complete the move</li>
+            <li>Additional services requested on move day (packing, additional stops, specialty items)</li>
+            <li>Changes to the original move inventory communicated after the estimate was given</li>
+            <li>Seasonal demand, fuel costs, and other operational factors</li>
+          </ul>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">2.2 Binding Estimates</h3>
+          <p>
+            A quote becomes binding only when confirmed in a written service agreement signed by both
+            parties and, where applicable, a deposit has been received. Verbal representations by
+            phone or email do not constitute binding agreements unless followed by written confirmation.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">2.3 No Obligation Quotes</h3>
+          <p>
+            Requesting a quote through our website or by phone creates no obligation on your part to
+            book services, nor does it create an obligation for Legacy Moving Denver to perform services
+            at the quoted price without a formal written agreement. You are free to compare quotes from
+            multiple providers before making a decision.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">2.4 Quote Expiration</h3>
+          <p>
+            Quotes are valid for a limited period and are subject to change based on availability,
+            current pricing, and seasonal demand. Quotes for peak moving season (typically May through
+            September) may be subject to higher rates. Please confirm pricing when booking, particularly
+            if time has passed since your initial quote was provided.
+          </p>
+
+          <!-- 3 -->
+          <h2 id="contact-forms" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            3. Form Submissions and Communication Consent
+          </h2>
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">3.1 Consent to Contact</h3>
+          <p>
+            By submitting any form on this website—including quote request forms, contact forms, callback
+            forms, or feedback forms—you expressly consent to Legacy Moving Denver contacting you via:
+          </p>
+          <ul>
+            <li>Phone calls (including automated or prerecorded calls)</li>
+            <li>Text messages (SMS/MMS)</li>
+            <li>Email</li>
+          </ul>
+          <p>
+            This consent applies to the phone number and email address you provide, even if that number
+            is registered on a federal or state Do Not Call list. You may opt out of marketing
+            communications at any time by replying STOP to any text message, clicking unsubscribe in
+            any email, or calling us directly.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">3.2 Accuracy of Information</h3>
+          <p>
+            You agree to provide accurate, complete, and current information when submitting forms on
+            this website. Inaccurate information—including incorrect addresses, phone numbers, inventory
+            descriptions, or access information—may result in pricing adjustments, delays, or an
+            inability to perform services as expected. Legacy Moving Denver is not liable for complications
+            arising from inaccurate information you provide.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">3.3 Response Times</h3>
+          <p>
+            We make every effort to respond to all inquiries within one business day. Response times
+            may vary during peak seasons or periods of high demand. Submitting a form does not guarantee
+            immediate availability on your requested move date.
+          </p>
+
+          <!-- 4 -->
+          <h2 id="service-terms" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            4. Service Terms
+          </h2>
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">4.1 Licensing and Insurance</h3>
+          <p>
+            Legacy Moving Denver is fully licensed and insured to perform residential and commercial
+            moving services both within Colorado and across state lines:
+          </p>
+          <ul>
+            <li><strong>USDOT #3462023</strong> — Federal motor carrier operating authority</li>
+            <li><strong>MC #1189363</strong> — Interstate commerce authorization</li>
+            <li><strong>PUC #HHG-00682</strong> — Colorado Public Utilities Commission household goods authority</li>
+          </ul>
+          <p>
+            Our licensing covers local moves within Colorado, long-distance interstate moves, and all
+            associated moving services. Specific insurance details and coverage terms are provided in
+            your service agreement prior to your move.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">4.2 Service Agreement</h3>
+          <p>
+            Prior to the commencement of any moving service, a separate service agreement (also called
+            a Bill of Lading for interstate moves) will be provided for your review and signature.
+            <strong>That service agreement governs the actual terms of your move</strong>, including valuation
+            coverage, payment terms, and any special instructions. These website Terms and Conditions
+            govern use of this website and general customer communications; they do not replace the
+            service agreement.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">4.3 Service Area</h3>
+          <p>
+            Legacy Moving Denver primarily serves the greater Denver metro area, including Denver,
+            Aurora, Lakewood, Arvada, Westminster, Thornton, Centennial, Highlands Ranch, Littleton,
+            Englewood, Golden, Boulder, and surrounding Front Range communities. We also perform
+            long-distance moves throughout Colorado and across the United States. Service availability
+            and pricing for areas outside our standard service area may vary. Contact us to confirm
+            whether your move origin or destination falls within our current service footprint.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">4.4 Items We Cannot Move</h3>
+          <p>
+            Certain items cannot be transported in a moving truck and are excluded from our services,
+            including: hazardous materials (flammable, explosive, or toxic substances), live plants,
+            pets, perishable food items, firearms (without proper documentation), and items of
+            significant monetary value such as currency, deeds, jewelry, or securities. Please
+            transport these items personally or make separate arrangements.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">4.5 Customer Responsibilities</h3>
+          <p>
+            Customers are responsible for: disclosing all items to be moved at the time of quoting
+            (including heavy or specialty items that require special equipment); ensuring safe, legal
+            parking access for the moving truck at both origin and destination addresses; reserving
+            elevators and obtaining required move permits from building management when required;
+            being present or having an authorized representative present during the move; and ensuring
+            that items are accessible and ready to be loaded at the scheduled start time.
+          </p>
+
+          <!-- 5 -->
+          <h2 id="valuation-coverage" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            5. Valuation Coverage and Liability for Goods
+          </h2>
+          <p>
+            The protection of your belongings during a move is governed by federal and state regulations
+            regarding mover liability. Understanding your coverage options before your move is important.
+            For a plain-English explanation of these options, see our blog post on
+            <a href="/blog/what-moving-insurance-do-i-need-for-my-denver-move" class="text-primary hover:underline">moving insurance and valuation coverage</a>.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">5.1 Released Value Protection (Default)</h3>
+          <p>
+            Unless you elect otherwise in your service agreement, your move will default to
+            <strong>Released Value Protection</strong>, which limits our liability to
+            <strong>$0.60 (sixty cents) per pound per article</strong>. This is the minimum coverage
+            required by federal law and is provided at no additional charge. It does not reflect the
+            replacement value of your belongings and may not provide adequate coverage for high-value
+            or heavy items. You should seriously evaluate whether this default coverage is sufficient
+            for your move.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">5.2 Full Value Protection</h3>
+          <p>
+            <strong>Full Value Protection</strong> is a more comprehensive valuation option available for
+            an additional charge. Under Full Value Protection, Legacy Moving Denver is responsible for
+            the replacement value of any item that is lost, damaged, or destroyed while in our care.
+            We will, at our option, repair the item, replace it with a like item, or provide a cash
+            settlement at the current market replacement value.
+          </p>
+          <p>
+            The cost of Full Value Protection is based on the declared value of your shipment and any
+            deductible you select. Details and pricing are disclosed in your service agreement prior
+            to your move date. We strongly encourage customers with significant household goods to
+            consider this option.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">5.3 Items Packed by Owner</h3>
+          <p>
+            Items packed by the customer (PBO boxes) are subject to a higher burden of proof in the
+            event of a damage claim. If a PBO box shows no external signs of damage and contents are
+            found to be damaged, we may not be liable under Full Value Protection. Customers who want
+            full coverage for packed items are encouraged to use our professional packing services.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">5.4 High-Value Items</h3>
+          <p>
+            Items of extraordinary value (including fine art, antiques, jewelry, currency, collectibles,
+            heirlooms, and electronics exceeding $500 in value per item) must be declared in your
+            service agreement. Our liability for such items may be limited regardless of the valuation
+            option selected. Customers with high-value items are encouraged to seek supplemental
+            third-party insurance coverage.
+          </p>
+
+          <h3 class="font-semibold text-xl mt-6 mb-3 text-secondary">5.5 Damage Claims Process</h3>
+          <p>
+            Any claim for loss or damage must be submitted in writing within nine (9) months of
+            delivery for local moves, or as specified by federal regulations for interstate moves.
+            Claims should be documented with photographs and a description of the damage. We will
+            acknowledge your claim and respond within the timeframes required by applicable law.
+          </p>
+
+          <!-- 6 -->
+          <h2 id="cancellation" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            6. Cancellation and Rescheduling
+          </h2>
+          <p>
+            We understand that move plans change. Our cancellation and rescheduling policies are
+            communicated in your service agreement and may vary based on the timing of your
+            cancellation relative to your scheduled move date, the time of year, and any deposits
+            paid.
+          </p>
+          <p>
+            Generally speaking, cancellations made well in advance of a scheduled move date allow for
+            greater flexibility. Cancellations made within 48 hours of a scheduled move, or on move
+            day itself, may result in a cancellation fee or forfeiture of deposit. Please contact us
+            as early as possible if your plans change so we can work with you to reschedule or adjust.
+          </p>
+          <p>
+            Legacy Moving Denver reserves the right to cancel or reschedule a move in circumstances
+            beyond our control, including but not limited to severe weather, vehicle mechanical failure,
+            crew emergencies, or unsafe move conditions. We will make every effort to notify you
+            promptly and work with you to find an alternative date.
+          </p>
+
+          <!-- 7 -->
+          <h2 id="liability" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            7. Limitation of Website Liability
+          </h2>
+          <p>
+            To the fullest extent permitted by applicable law:
+          </p>
+          <ul>
+            <li>
+              This website and all information on it is provided <strong>"as is"</strong> without warranties
+              of any kind, express or implied, including but not limited to warranties of merchantability,
+              fitness for a particular purpose, or non-infringement.
+            </li>
+            <li>
+              Legacy Moving Denver shall not be liable for any direct, indirect, incidental, consequential,
+              or punitive damages arising from your use of—or inability to use—this website.
+            </li>
+            <li>
+              We are not responsible for any business decisions made based solely on information
+              contained on this website. Always confirm service details directly with our team before
+              making commitments.
+            </li>
+            <li>
+              Any reliance you place on information found on this website is strictly at your own risk.
+            </li>
+          </ul>
+          <p>
+            <em>Note: This limitation applies to website use specifically. Liability for the actual
+            moving services we perform is governed by your signed service agreement and applicable
+            federal and state law.</em>
+          </p>
+
+          <!-- 8 -->
+          <h2 id="website-content" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            8. Website Content Accuracy
+          </h2>
+          <p>
+            We make every reasonable effort to keep the information on this website accurate, complete,
+            and up to date. However, moving services, pricing, service areas, and policies change over
+            time, and we cannot guarantee that all website content reflects current conditions at every
+            moment.
+          </p>
+          <p>
+            Service availability, pricing ranges, and operational details should always be confirmed
+            directly with our team before booking. Blog posts and moving guides are provided for
+            informational purposes and represent general best practices; they do not constitute
+            professional legal, financial, or contractual advice.
+          </p>
+          <p>
+            We reserve the right to modify, update, remove, or suspend any part of this website at
+            any time without prior notice.
+          </p>
+
+          <!-- 9 -->
+          <h2 id="intellectual-property" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            9. Intellectual Property
+          </h2>
+          <p>
+            All content published on this website—including but not limited to text, blog posts,
+            moving guides, photographs, graphics, logos, service descriptions, and the overall
+            design and layout of the site—is the property of Legacy Moving Denver or its licensed
+            content partners and is protected by United States copyright law and applicable
+            intellectual property statutes.
+          </p>
+          <p>
+            You may link to pages on this website and share content in a non-commercial, attributive
+            manner. You may not reproduce, republish, distribute, or use any content from this site
+            for commercial purposes without our express written permission. Requests for content
+            licensing or republication should be directed to
+            <a href="mailto:info@legacymovingdenver.com" class="text-primary hover:underline">info@legacymovingdenver.com</a>.
+          </p>
+          <p>
+            The "Legacy Moving Denver" name, logo, and associated marks are trademarks of Legacy
+            Moving Denver. Use of these marks without written authorization is prohibited.
+          </p>
+
+          <!-- 10 -->
+          <h2 id="external-links" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            10. Third-Party Links and External Websites
+          </h2>
+          <p>
+            This website may contain links to third-party websites, review platforms (such as Google,
+            Yelp, BBB), social media platforms, or other external resources. These links are provided
+            for your convenience. Legacy Moving Denver does not endorse, control, or take responsibility
+            for the content, accuracy, privacy practices, or terms of use of any external website.
+          </p>
+          <p>
+            Accessing any third-party website through a link on our site is done at your own risk and
+            is subject to that website's own terms and policies.
+          </p>
+
+          <!-- 11 -->
+          <h2 id="governing-law" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            11. Governing Law and Dispute Resolution
+          </h2>
+          <p>
+            These Terms and Conditions are governed by and construed in accordance with the laws of
+            the <strong>State of Colorado</strong>, without regard to its conflict of law provisions.
+            For matters involving interstate moving services, applicable federal regulations
+            (including those of the Federal Motor Carrier Safety Administration) shall also apply.
+          </p>
+          <p>
+            Any disputes arising from use of this website or our services shall be subject to the
+            exclusive jurisdiction of the courts of the State of Colorado. You consent to personal
+            jurisdiction in Colorado for any such dispute.
+          </p>
+          <p>
+            Before initiating any formal legal action, we ask that you contact us directly to allow
+            an opportunity to resolve any dispute or complaint. Most concerns can be resolved quickly
+            through direct communication.
+          </p>
+
+          <!-- 12 -->
+          <h2 id="changes-terms" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            12. Changes to These Terms
+          </h2>
+          <p>
+            Legacy Moving Denver reserves the right to update or modify these Terms and Conditions at
+            any time. When we make material changes, we will update the "Last Updated" date at the top
+            of this page. Your continued use of this website following any changes constitutes your
+            acceptance of the revised terms.
+          </p>
+          <p>
+            We encourage you to review this page periodically to stay informed of any updates.
+            If you have any questions about what has changed, please contact us.
+          </p>
+
+          <!-- 13 -->
+          <h2 id="contact-info" class="font-display font-bold text-2xl mt-10 mb-4 text-secondary border-b border-gray-100 pb-2">
+            13. Contact Information
+          </h2>
+          <p>
+            If you have questions, concerns, or requests related to these Terms and Conditions,
+            please reach out to us directly:
+          </p>
+          <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg mt-4 not-prose">
+            <p class="font-semibold text-secondary text-lg mb-3">Legacy Moving Denver</p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+              <div>
+                <p class="mb-1"><strong>Address:</strong></p>
+                <p>8805 W. 14th Ave, Suite 300</p>
+                <p>Lakewood, CO 80215</p>
+              </div>
+              <div>
+                <p class="mb-1"><strong>Phone:</strong></p>
+                <p><a href="tel:7203401849" class="text-primary hover:underline">(720) 340-1849</a></p>
+                <p class="mt-2"><strong>Email:</strong></p>
+                <p><a href="mailto:info@legacymovingdenver.com" class="text-primary hover:underline">info@legacymovingdenver.com</a></p>
+              </div>
+              <div>
+                <p class="mb-1"><strong>Hours:</strong></p>
+                <p>Monday – Sunday</p>
+                <p>8:00 AM – 6:00 PM</p>
+              </div>
+              <div>
+                <p class="mb-1"><strong>Licensing:</strong></p>
+                <p>DOT #3462023</p>
+                <p>MC #1189363</p>
+                <p>PUC #HHG-00682</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acceptance notice -->
+          <div class="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500 rounded not-prose">
+            <p class="font-semibold text-secondary mb-2">Notice of Acceptance</p>
+            <p class="text-sm text-gray-600">
+              By using this website or engaging Legacy Moving Denver's services, you acknowledge that
+              you have read, understood, and agree to be bound by these Terms and Conditions. If you
+              do not agree to these terms, please do not use this website or our services.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Related Links -->
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <a href="/privacy" class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <p class="font-semibold text-secondary mb-1">Privacy Policy</p>
+            <p class="text-sm text-muted-foreground">How we handle your personal information</p>
+          </a>
+          <a href="/get-quote" class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <p class="font-semibold text-secondary mb-1">Request a Quote</p>
+            <p class="text-sm text-muted-foreground">Get a free estimate for your Denver move</p>
+          </a>
+          <a href="/contact" class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <p class="font-semibold text-secondary mb-1">Contact Us</p>
+            <p class="text-sm text-muted-foreground">Questions? Our team is happy to help</p>
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .prose h2 { color: #1e293b; }
+  .prose h3 { color: #1e293b; }
+  .prose a { color: #0056b3; }
+  .prose a:hover { color: #1e293b; }
+  .prose ul { padding-left: 1.5rem; }
+  .prose li { margin-bottom: 0.4rem; }
+  .prose .lead { font-size: 1.1rem; line-height: 1.75; }
+</style>
