@@ -1,0 +1,319 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import heroImage from '../../assets/services/hero.jpg';
+---
+
+<BaseLayout
+  title="Moving to Denver: The Ultimate New Resident's Guide to the Mile High City | Legacy Moving Denver"
+  description="Everything you need to know about moving to Denver—neighborhoods, cost of living, climate, altitude adjustment, where to register your car, and how to actually get settled in Colorado."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-12 md:py-16">
+    <div class="absolute inset-0 opacity-20">
+      <Image src={heroImage} alt="Moving to Denver Colorado new resident guide" class="w-full h-full object-cover" />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-4xl">
+        <p class="text-white/80 mb-3">February 3, 2026 • 14 min read</p>
+        <h1 class="font-display font-bold text-3xl md:text-5xl mb-4">
+          Moving to Denver: The Ultimate New Resident's Guide to the Mile High City
+        </h1>
+        <p class="text-lg text-white/90">
+          Denver gets under people's skin. Here's everything you actually need to know to make the transition—before, during, and after the move.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-12 md:py-16">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <p class="lead">
+          Denver has been one of the fastest-growing cities in the country for over a decade, and for good reason. Access to the mountains, a strong job market, 300 days of sunshine, and a culture that actually values being outside. But it comes with its own set of adjustments—altitude, dry air, cost of living, and a city that's changing fast. This guide covers what you actually need to know.
+        </p>
+
+        <h2>Why People Move to Denver</h2>
+
+        <p>
+          The most common reasons people cite for moving to Denver:
+        </p>
+
+        <ul>
+          <li><strong>Outdoor access:</strong> From Denver, you're within 90 minutes of world-class skiing, hiking, rock climbing, mountain biking, and fishing. The Front Range is genuinely extraordinary.</li>
+          <li><strong>Job market:</strong> Denver has strong tech, aerospace, energy, healthcare, and finance sectors. Companies like Lockheed Martin, Centura Health, United Airlines, and dozens of tech companies have significant Denver presences.</li>
+          <li><strong>Weather:</strong> 300 days of sunshine is a marketing number but close to accurate. Colorado winters are cold but usually sunny. Snow comes and goes quickly. Spring and fall are spectacular.</li>
+          <li><strong>Culture and lifestyle:</strong> Denver has excellent restaurants, a strong craft brewery scene, professional sports teams across every major league, and a cultural attitude that's genuinely welcoming.</li>
+          <li><strong>Geography:</strong> The mountains to the west, plains to the east, and the city itself in between give Denver a visual quality that's hard to explain until you experience it.</li>
+        </ul>
+
+        <h2>Understanding the Denver Neighborhoods</h2>
+
+        <p>
+          Denver is made up of dozens of distinct neighborhoods, each with a different character. Here's a quick orientation:
+        </p>
+
+        <h3>Central Denver</h3>
+
+        <ul>
+          <li><strong>Capitol Hill / Cheesman Park:</strong> Historic, dense, walkable. Mix of Victorian homes and apartments. Good for young professionals who want walkability and access to everything.</li>
+          <li><strong>Congress Park / Hilltop:</strong> Quieter residential, beautiful older homes, very livable. Popular with families who want to be close to the city without being in it.</li>
+          <li><strong>Cherry Creek:</strong> Upscale shopping, restaurants, trail access. Higher cost of living but extremely desirable. Great for walkability and bike commuting.</li>
+        </ul>
+
+        <h3>Northwest Denver</h3>
+
+        <ul>
+          <li><strong>Highland (LoHi):</strong> One of Denver's trendiest neighborhoods. Great restaurants, walkable, mix of new construction and Victorian homes. The pedestrian bridge over the highway to Lower Downtown is iconic.</li>
+          <li><strong>Berkeley / Tennyson Street:</strong> Hip independent shops and restaurants, more affordable than LoHi, strong community feel.</li>
+          <li><strong>Sloan's Lake:</strong> Centered around a large lake with a recreational path. Great for outdoor enthusiasts who want to be in the city.</li>
+        </ul>
+
+        <h3>East Denver</h3>
+
+        <ul>
+          <li><strong>Park Hill:</strong> One of Denver's most diverse neighborhoods. Beautiful older homes, tree-lined streets, strong community identity.</li>
+          <li><strong>Stapleton / Central Park:</strong> Planned community with excellent parks and trails. Popular with families. Growing fast with new construction.</li>
+          <li><strong>Montbello / Green Valley Ranch:</strong> More affordable east Denver neighborhoods with strong community ties.</li>
+        </ul>
+
+        <h3>South Denver</h3>
+
+        <ul>
+          <li><strong>Washington Park (Wash Park):</strong> One of the most popular neighborhoods in the city, centered around a beautiful park with a lake and running paths. Dog-friendly and extremely livable.</li>
+          <li><strong>Platte Park / Harvard Gulch:</strong> Quiet and walkable with good restaurants. Great for families.</li>
+          <li><strong>Glendale / Virginia Village:</strong> More affordable, good access to Cherry Creek Trail.</li>
+        </ul>
+
+        <h3>Denver Suburbs Worth Knowing</h3>
+
+        <ul>
+          <li><strong>Lakewood:</strong> Just west of Denver, good for families, more space for the price</li>
+          <li><strong>Aurora:</strong> Large, diverse suburb east of Denver, most affordable major suburb</li>
+          <li><strong>Littleton:</strong> South Denver suburb, excellent schools, historic downtown</li>
+          <li><strong>Arvada:</strong> Northwest suburb, growing rapidly, good Olde Town district</li>
+          <li><strong>Westminster:</strong> North suburb, good access to Boulder via US-36</li>
+          <li><strong>Thornton:</strong> North Denver suburb, larger homes for less</li>
+          <li><strong>Highlands Ranch:</strong> Planned community, excellent schools, south of Denver</li>
+        </ul>
+
+        <p>
+          For more detail on Denver neighborhoods for families specifically, see our <a href="/blog/best-denver-neighborhoods-for-families">Denver neighborhoods guide</a>.
+        </p>
+
+        <h2>The Altitude: What to Actually Expect</h2>
+
+        <p>
+          Denver is at 5,280 feet above sea level—exactly one mile high. If you're moving from a lower altitude, altitude adjustment is real and worth preparing for.
+        </p>
+
+        <p>
+          What you'll notice:
+        </p>
+
+        <ul>
+          <li><strong>Breathlessness:</strong> Activities that felt easy—climbing stairs, going for a run, hiking—will feel harder for the first few weeks. This is normal and temporary.</li>
+          <li><strong>Dehydration:</strong> The air is significantly drier than almost anywhere else in the country. Drink more water than you think you need. Your skin will feel it too.</li>
+          <li><strong>Sunburn risk:</strong> Higher altitude means less atmosphere between you and the sun. UV exposure is significantly higher than at sea level—use SPF even on cloudy days, especially when skiing or hiking.</li>
+          <li><strong>Alcohol effects:</strong> Alcohol hits harder at altitude, at least initially. Be aware of this when going out in the first few weeks.</li>
+          <li><strong>Cooking adjustments:</strong> Boiling points are lower. Baking recipes may need adjustment. Not a crisis, but worth knowing.</li>
+        </ul>
+
+        <p>
+          Most people feel fully acclimated within 1–3 weeks. Drink water constantly, take it easy on exercise for the first week, and sleep as much as you need.
+        </p>
+
+        <h2>Colorado Climate: Beyond "300 Days of Sunshine"</h2>
+
+        <p>
+          Colorado weather is famously unpredictable. Some specifics:
+        </p>
+
+        <ul>
+          <li><strong>Snow:</strong> Denver gets more snow than Chicago or New York, but it usually melts quickly. A March snowstorm can be 12 inches followed by 60-degree temperatures two days later. True Denver winters are mild compared to truly cold cities.</li>
+          <li><strong>Wind:</strong> Denver and the Front Range can be genuinely windy. Chinook winds off the mountains can be dramatic.</li>
+          <li><strong>Spring:</strong> The most unpredictable time of year. Snow, sun, rain, and warm weather can all happen in the same week.</li>
+          <li><strong>Summer:</strong> Warm and sunny during the day with frequent afternoon thunderstorms (especially in the mountains). Air quality can be an issue in summer due to wildfire smoke from the West.</li>
+          <li><strong>Fall:</strong> Often spectacular. Cool mornings, warm afternoons, changing aspen colors in the mountains. Many longtime residents consider it the best season.</li>
+        </ul>
+
+        <h2>Cost of Living: The Honest Picture</h2>
+
+        <p>
+          Denver is significantly more expensive than it was a decade ago. The rapid growth has pushed housing costs up substantially. Current realities:
+        </p>
+
+        <ul>
+          <li><strong>Housing:</strong> Median home prices in Denver proper are in the $500,000–$600,000 range. Suburbs and outer metro areas are generally lower. Renting is also expensive—one-bedroom apartments in desirable neighborhoods often run $1,800–$2,500/month.</li>
+          <li><strong>Taxes:</strong> Colorado has a flat income tax rate (4.4%). No state tax on Social Security. Denver has a city occupational privilege tax. Property taxes are relatively low compared to many states.</li>
+          <li><strong>Groceries and dining:</strong> Comparable to other major cities. Slightly higher than the national average.</li>
+          <li><strong>Transportation:</strong> Denver traffic has worsened significantly. Most people drive; the RTD (Regional Transportation District) light rail system helps but doesn't cover the entire metro. Car insurance in Colorado is higher than many states due to weather and accident rates.</li>
+        </ul>
+
+        <h2>Practical Steps After Moving to Denver</h2>
+
+        <h3>Vehicle Registration and Driver's License</h3>
+
+        <p>
+          Colorado requires new residents to register their vehicle and get a Colorado driver's license within 90 days of establishing residency. The process:
+        </p>
+
+        <ul>
+          <li>Make an appointment at the Denver Motor Vehicle office (appointments are strongly recommended—walk-in waits can be long)</li>
+          <li>Bring your current out-of-state license, proof of insurance, and your vehicle title or lienholder information</li>
+          <li>Your vehicle will need an emissions test if it's 1982 or newer (some exemptions apply for vehicles older than 7 years or newer than model year)</li>
+          <li>Budget for registration fees—Colorado bases vehicle registration on the vehicle's age and value</li>
+        </ul>
+
+        <h3>Voter Registration</h3>
+
+        <p>
+          Colorado has automatic voter registration and same-day registration. You can update your voter registration online at govotecolorado.gov.
+        </p>
+
+        <h3>Utilities in Denver</h3>
+
+        <ul>
+          <li><strong>Electricity and gas:</strong> Xcel Energy serves most of Denver metro</li>
+          <li><strong>Water:</strong> Denver Water or your municipal utility, depending on location</li>
+          <li><strong>Internet:</strong> Comcast/Xfinity has broad coverage; CenturyLink/Lumen is an alternative; some neighborhoods have fiber options through smaller providers</li>
+          <li><strong>Trash:</strong> Denver offers pay-as-you-throw trash service; suburban municipalities vary</li>
+        </ul>
+
+        <h3>Getting a Denver Library Card</h3>
+
+        <p>
+          The Denver Public Library system is excellent and often overlooked. Cards are free with proof of residency and give you access to an enormous collection of books, e-books, streaming services, tool lending programs, and more.
+        </p>
+
+        <h2>Getting Around Denver</h2>
+
+        <p>
+          Denver was designed for cars, and most residents drive. That said:
+        </p>
+
+        <ul>
+          <li><strong>Light rail and commuter rail:</strong> The RTD system has significantly expanded. Lines run to the airport, downtown, and several suburbs. Check if your commute lines up with the rail system before assuming you need to drive.</li>
+          <li><strong>Cycling:</strong> Denver is increasingly bike-friendly with a growing network of protected bike lanes. The Cherry Creek Trail, Bear Creek Trail, and High Line Canal offer car-free commuting options.</li>
+          <li><strong>E-scooters and bikes:</strong> Lime, Bird, and Denver B-Cycle all operate in the city.</li>
+          <li><strong>Traffic:</strong> I-25 and I-70 are consistently congested during peak hours. US-36 between Denver and Boulder is heavily used. Plan commutes accordingly.</li>
+        </ul>
+
+        <h2>The Denver Outdoors: What You Can Actually Do</h2>
+
+        <p>
+          This is what most people move here for:
+        </p>
+
+        <ul>
+          <li><strong>Skiing and snowboarding:</strong> World Ski resorts are 1–2 hours away. Vail, Breckenridge, Keystone, Loveland, and Arapahoe Basin are all accessible for day trips.</li>
+          <li><strong>Hiking:</strong> Rocky Mountain National Park is 1.5 hours away. Hundreds of trails are accessible from the western suburbs and mountain towns.</li>
+          <li><strong>Rock climbing:</strong> Eldorado Canyon and Clear Creek Canyon are just minutes from the city.</li>
+          <li><strong>Mountain biking:</strong> Exceptional trails in the foothills and mountains, from beginner-friendly to expert.</li>
+          <li><strong>Camping:</strong> Dozens of campgrounds within 2 hours of Denver. Book early, especially for summer weekends.</li>
+        </ul>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+          <p class="font-semibold text-secondary mb-2">Ready to Make Your Move to Denver?</p>
+          <p class="text-muted-foreground mb-4">
+            Legacy Moving Denver helps people relocate to the Denver metro area from across the country. Whether you're moving from California, Texas, the Midwest, or anywhere else, we handle your belongings with care and get you settled quickly. Get a free moving quote today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/get-quote" class={buttonVariants({ className: "bg-primary !text-white hover:bg-secondary hover:!text-white" })}>
+              Get a Free Quote
+            </a>
+            <a href="tel:7203401849" class={buttonVariants({ variant: 'outline', className: "border-primary text-primary hover:bg-primary hover:text-white" })}>
+              Call (720) 340-1849
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Content -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-2xl mb-6">More Moving Resources</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="/blog/best-denver-neighborhoods-for-families" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-lg mb-2 text-secondary">Best Denver Neighborhoods for Families</h3>
+            <p class="text-sm text-muted-foreground">Find your perfect Denver neighborhood</p>
+          </a>
+          <a href="/moving-from-california-to-colorado" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-lg mb-2 text-secondary">Moving from California to Colorado</h3>
+            <p class="text-sm text-muted-foreground">Your complete California to Colorado guide</p>
+          </a>
+          <a href="/services/long-distance-moving" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-lg mb-2 text-secondary">Long-Distance Moving Services</h3>
+            <p class="text-sm text-muted-foreground">Relocate to Denver from anywhere</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    color: #1e293b;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .prose h3 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+  }
+
+  .prose .lead {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: #4b5563;
+  }
+
+  .prose strong {
+    color: #0056b3;
+    font-weight: 600;
+  }
+
+  .prose a {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: #1e293b;
+  }
+
+  .prose ol, .prose ul {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.625rem;
+  }
+
+  .prose li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+</style>
