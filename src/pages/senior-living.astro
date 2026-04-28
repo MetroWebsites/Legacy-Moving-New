@@ -1,0 +1,191 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Senior Living Moving Partner | Legacy Moving Denver | Compassionate Senior Moves"
+  description="Legacy Moving Denver provides compassionate, patient, and professional moving services for senior living communities and their residents. White-glove care for life's most important transitions."
+>
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-secondary to-secondary/90 py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?w=1400&auto=format&q=80')] bg-cover bg-center opacity-10"></div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          For Senior Living Communities
+        </div>
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+          Compassionate Moves<br>
+          <span class="text-primary">For Life's Next Chapter</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
+          Moving a senior loved one is one of the most emotionally significant transitions a family faces. Our trained team handles every detail with patience, respect, and extraordinary care.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (720) 764-2299
+          </a>
+          <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
+            Partner With Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tagline Bar -->
+  <section class="py-10 bg-primary">
+    <div class="container text-center">
+      <p class="text-white font-display font-bold text-2xl md:text-3xl tracking-wide">
+        💛 Every Move Deserves <span class="underline underline-offset-4 decoration-white/60">Dignity &amp; Care.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto text-center">
+        {[
+          ["6,000+", "Moves Completed"],
+          ["5★", "Google Rated"],
+          ["A", "BBB Rating"],
+          ["100%", "Licensed & Insured"],
+          ["Denver", "Local Experts"],
+        ].map(([stat, label]) => (
+          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <div class="font-display font-bold text-3xl text-primary mb-1">{stat}</div>
+            <div class="text-sm text-muted-foreground">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services for Senior Living -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Senior-Focused Services</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">Moving Services That Honor Life's Transitions</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">We partner with senior living communities to provide a seamless, compassionate moving experience for every resident and their family.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {[
+          ["🤝", "Patient, Compassionate Crews", "Our movers are trained to work with seniors and their families. Unhurried, respectful, and thorough — every time."],
+          ["🏡", "Downsizing & Transition Moves", "Moving from a family home to a senior community involves difficult decisions. We help coordinate the process with care and sensitivity."],
+          ["🛋️", "Room Setup at the New Residence", "We don't just deliver — we set up each room according to your resident's preferences so they feel at home from day one."],
+          ["📦", "Full Packing & Unpacking Services", "We handle all the packing so families can focus on their loved one's emotional needs during the transition."],
+          ["🚗", "Local & In-Building Moves", "Moving between floors or wings within your community? We handle internal unit-to-unit moves quickly and quietly."],
+          ["🎁", "Preferred Rates for Residents", "Senior living communities who partner with us can offer their residents exclusive discounted moving rates."],
+        ].map(([icon, title, desc]) => (
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all">
+            <div class="text-3xl mb-4">{icon}</div>
+            <h3 class="font-display font-semibold text-lg text-secondary mb-2">{title}</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility -->
+  <section class="py-14 bg-secondary text-white">
+    <div class="container">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl mb-3">Denver's Most Trusted Senior Moving Partner</h2>
+        <p class="text-white/75 max-w-xl mx-auto">Fast, Professional, Stress-Free Moving for Residents Who Deserve More</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+        {[
+          "Licensed & Insured",
+          "5-Star Reviews",
+          "Locally Owned Denver Company",
+          "Professional Uniformed Movers",
+          "Background Checked Crews",
+          "Damage Protection Options",
+          "Patient & Compassionate Team",
+          "Preferred Resident Pricing",
+        ].map((badge) => (
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polyline points="20 6 9 17 4 12"/></svg>
+            {badge}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Family Peace of Mind -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">For Families</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-5">Peace of Mind for the Whole Family</h2>
+          <p class="text-muted-foreground mb-6">When families trust us with one of the most emotional moves of their lives, we take that responsibility seriously. We communicate clearly, move carefully, and treat every item like a memory.</p>
+          <ul class="space-y-3">
+            {[
+              "We work at the resident's pace — never rushed",
+              "Family members can be present throughout the move",
+              "We handle sentimental items with extra care",
+              "Clear, upfront pricing — no hidden fees",
+              "Dedicated contact for the family throughout",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-secondary font-medium">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-secondary text-white rounded-2xl p-8">
+          <div class="flex items-center gap-1 mb-4">
+            {[...Array(5)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="text-white/85 text-sm leading-relaxed mb-4">"Moving my mother into her new senior community was an emotional day for our whole family. The Legacy Moving team was so patient and kind. They treated her belongings — and her — with incredible respect."</p>
+          <p class="text-white/60 text-xs">— Verified Google Review, Denver Family</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary">
+    <div class="container text-center">
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Give Your Residents a Move That Honors Them</h2>
+      <p class="text-white/85 text-lg mb-8 max-w-xl mx-auto">Partner with Legacy Moving Denver to offer your community compassionate, professional moving services — and make every transition a positive experience.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (720) 764-2299
+        </a>
+        <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
+          Senior Living Partner Program
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preferred Partner Teaser -->
+  <section class="py-14 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-secondary/5 border border-secondary/15 rounded-2xl p-8">
+        <div>
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-secondary mb-3">Legacy Preferred Partner Program</h3>
+          <p class="text-muted-foreground max-w-xl">Priority scheduling, exclusive resident rates, a dedicated account rep, and referral bonuses — built for senior living communities who care about their residents' experience.</p>
+        </div>
+        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg whitespace-nowrap">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
