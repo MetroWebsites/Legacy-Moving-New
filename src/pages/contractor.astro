@@ -6,86 +6,279 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   title="Contractor Moving Partner | Legacy Moving Denver | Fast Furniture & Jobsite Removal"
   description="Legacy Moving Denver helps Denver contractors stay on schedule with fast furniture removal, jobsite clean-outs, and reliable crews. Delays cost money — we help you stay on track."
 >
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-secondary to-secondary/90 py-16 md:py-24 text-white overflow-hidden">
+  <!-- HERO: Split layout -->
+  <section class="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 py-16 md:py-20 text-white overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&auto=format&q=80')] bg-cover bg-center opacity-10"></div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          For Denver Contractors
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- LEFT: Content -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Contractor Partner Program
+          </div>
+
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+            Need Homes Cleared Fast?<br>
+            <span class="text-primary">We Keep Projects Moving.</span>
+          </h1>
+
+          <p class="text-white/80 text-lg mb-8 max-w-lg leading-relaxed">
+            Delays cost money. Legacy Moving Denver provides fast, reliable furniture removal and jobsite clean-out services so your crew can get to work on time — every time.
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            {[
+              "Fast Furniture Removal Before Remodels",
+              "Jobsite Clean-Out Services",
+              "Tight Scheduling Windows Available",
+              "Reliable Crews That Show Up Ready",
+              "Protect Floors & Walls During Removal",
+              "Recurring Contractor Pricing",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-white/90 text-sm">
+                <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-6 mb-8">
+            {[["6,000+","Moves Done"],["5★","Google Rated"],["A","BBB Rating"],["Denver","Local Experts"]].map(([n,l]) => (
+              <div>
+                <div class="font-display font-bold text-2xl text-primary">{n}</div>
+                <div class="text-white/60 text-xs mt-0.5">{l}</div>
+              </div>
+            ))}
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-7 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (720) 764-2299
+            </a>
+            <a href="#contractor-form" class="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white hover:bg-white/10 font-semibold py-3 px-7 rounded-xl transition-all text-sm">
+              Get Contractor Pricing ↓
+            </a>
+          </div>
         </div>
-        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-          Need Homes Cleared Fast?<br>
-          <span class="text-primary">We Keep Projects Moving.</span>
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
-          Delays cost money. Legacy Moving Denver provides fast, reliable furniture removal and jobsite clean-out services so your crew can get to work on time — every time.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (720) 764-2299
-          </a>
-          <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
-            Contractor Pricing
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+
+        <!-- RIGHT: Form -->
+        <div id="contractor-form" class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="bg-primary px-7 py-5">
+            <h2 class="font-display font-bold text-xl text-white">Get Contractor Pricing</h2>
+            <p class="text-white/80 text-sm mt-1">Tell us about your project — we'll respond fast.</p>
+          </div>
+          <div class="p-7">
+            <form class="space-y-4" name="contractor-partner" method="POST" action="/thank-you">
+              <input type="hidden" name="form-name" value="contractor-partner" />
+              <input type="hidden" name="partner-type" value="Contractor" />
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-fname">First Name *</label>
+                  <input type="text" id="c-fname" name="first-name" required placeholder="John" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-lname">Last Name *</label>
+                  <input type="text" id="c-lname" name="last-name" required placeholder="Doe" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-company">Company Name *</label>
+                <input type="text" id="c-company" name="company" required placeholder="Your contracting company" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-phone">Phone *</label>
+                  <input type="tel" id="c-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-email">Email *</label>
+                  <input type="email" id="c-email" name="email" required placeholder="you@company.com" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-service">Service Needed</label>
+                <select id="c-service" name="service-type" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                  <option value="" disabled selected>Select service type...</option>
+                  <option>Furniture Removal Before Remodel</option>
+                  <option>Jobsite Clean-Out</option>
+                  <option>Recurring Project Moves</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-projects">Avg. Projects / Month</label>
+                <select id="c-projects" name="monthly-projects" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                  <option value="" disabled selected>Select estimate...</option>
+                  <option>1–2 projects/month</option>
+                  <option>3–5 projects/month</option>
+                  <option>6–10 projects/month</option>
+                  <option>10+ projects/month</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="c-notes">Project Details</label>
+                <textarea id="c-notes" name="notes" rows="2" placeholder="Describe the scope, timeline, or any special requirements..." class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md text-base">
+                Get Contractor Pricing →
+              </button>
+              <p class="text-xs text-muted-foreground text-center">🔒 No spam. We'll only reach out about your project needs.</p>
+            </form>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- We Make YOU Look Good -->
-  <section class="py-10 bg-primary">
+  <!-- Tagline Bar -->
+  <section class="py-8 bg-primary">
     <div class="container text-center">
-      <p class="text-white font-display font-bold text-2xl md:text-3xl tracking-wide">
-        ⚡ Delays Cost Money. We Help You <span class="underline underline-offset-4 decoration-white/60">Stay on Schedule.</span> ⚡
+      <p class="text-white font-display font-bold text-xl md:text-2xl tracking-wide">
+        ⚡ Delays Cost Money. We Help You <span class="underline underline-offset-4 decoration-white/60">Stay on Schedule.</span>
       </p>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="py-12 bg-gray-50">
+  <!-- Quick Contact Form -->
+  <section class="py-14 bg-white border-b border-gray-100">
     <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto text-center">
-        {[
-          ["6,000+", "Moves Completed"],
-          ["5★", "Google Rated"],
-          ["A", "BBB Rating"],
-          ["100%", "Licensed & Insured"],
-          ["Denver", "Local Experts"],
-        ].map(([stat, label]) => (
-          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-            <div class="font-display font-bold text-3xl text-primary mb-1">{stat}</div>
-            <div class="text-sm text-muted-foreground">{label}</div>
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Form -->
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Get In Touch</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-2">Send Us a Message</h2>
+          <p class="text-muted-foreground mb-7">Need a fast quote or want to discuss recurring contractor pricing? Fill out the form and we'll respond quickly.</p>
+
+          <form class="space-y-4" name="contractor-contact" method="POST" action="/thank-you">
+            <input type="hidden" name="form-name" value="contractor-contact" />
+            <input type="hidden" name="source-page" value="Contractor Landing Page" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="cc-name">Your Name *</label>
+                <input type="text" id="cc-name" name="name" required placeholder="John Doe" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="cc-phone">Phone Number *</label>
+                <input type="tel" id="cc-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="cc-email">Email Address *</label>
+              <input type="email" id="cc-email" name="email" required placeholder="you@company.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="cc-company">Company Name</label>
+              <input type="text" id="cc-company" name="company" placeholder="Your contracting company" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="cc-message">Message *</label>
+              <textarea id="cc-message" name="message" required rows="4" placeholder="Tell us about your project, timeline, or any questions you have..." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md shadow-primary/20 text-base">
+              Send Message →
+            </button>
+            <p class="text-xs text-muted-foreground text-center">🔒 Your information is kept private. No spam, ever.</p>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="lg:pt-16">
+          <div class="bg-secondary rounded-2xl p-8 text-white mb-6">
+            <h3 class="font-display font-bold text-xl mb-6">Prefer to Talk Directly?</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Call or Text</p>
+                  <a href="tel:7207642299" class="text-white font-semibold text-lg hover:text-primary transition-colors">(720) 764-2299</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Email</p>
+                  <a href="mailto:info@legacymovingdenver.com" class="text-white font-semibold hover:text-primary transition-colors">info@legacymovingdenver.com</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Business Hours</p>
+                  <p class="text-white font-semibold">Mon–Sat: 8:00 AM – 6:00 PM</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        ))}
+
+          <div class="bg-primary/10 border border-primary/20 rounded-2xl p-6">
+            <p class="text-secondary font-semibold text-sm mb-1">🏗️ Contractor Partner Program</p>
+            <p class="text-muted-foreground text-sm">Get recurring contractor pricing, priority scheduling, and a dedicated account rep for your projects.</p>
+            <a href="/preferred-partner" class="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-3 hover:underline">Learn About the Program →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contractor Services -->
+  <!-- Trust Bar -->
+  <div class="bg-gray-50 border-y border-gray-200 py-4">
+    <div class="container">
+      <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        {[["⭐","5-Star Google Rating"],["🏆","BBB A-Rated"],["🛡️","Licensed & Insured"],["👔","Background Checked Crews"],["🚚","Same-Week Availability"],["🛠️","Floor & Wall Protection"]].map(([icon, label]) => (
+          <div class="flex items-center gap-2 text-sm font-medium text-secondary">
+            <span>{icon}</span><span>{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
-        <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Built for Contractors</span>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">Fast, Reliable Moving Services for Construction Projects</h2>
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Built for Contractors</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">Fast, Reliable Moving Services<br class="hidden md:block"/> for Construction Projects</h2>
         <p class="text-muted-foreground max-w-2xl mx-auto">We work around your project timeline — not the other way around.</p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
-          ["🏗️", "Fast Furniture Removal Before Remodels", "We clear out spaces quickly so your crew can start demo on schedule. No waiting, no excuses."],
-          ["🧹", "Jobsite Clean-Out Services", "Post-construction debris and leftover items removed efficiently. We leave the space ready for the next phase."],
-          ["⏱️", "Tight Scheduling Windows Available", "Early morning, evenings, weekends — we flex to your project timeline, not business hours."],
-          ["💪", "Reliable Crews That Show Up Ready", "Uniformed, professional movers who arrive on time, fully equipped, and ready to work hard."],
-          ["🛡️", "Protect Floors & Walls During Removal", "We use floor runners, door jamb protectors, and furniture pads to protect your client's finished surfaces."],
-          ["💰", "Recurring Contractor Pricing", "Ongoing project partners get preferred rates, dedicated scheduling, and a direct line to our team."],
+          ["🏗️","Fast Furniture Removal Before Remodels","We clear out spaces quickly so your crew can start demo on schedule. No waiting, no excuses."],
+          ["🧹","Jobsite Clean-Out Services","Post-construction debris and leftover items removed efficiently. We leave the space ready for the next phase."],
+          ["⏱️","Tight Scheduling Windows Available","Early morning, evenings, weekends — we flex to your project timeline, not business hours."],
+          ["💪","Reliable Crews That Show Up Ready","Uniformed, professional movers who arrive on time, fully equipped, and ready to work hard."],
+          ["🛡️","Protect Floors & Walls During Removal","Floor runners, door jamb protectors, and furniture pads to protect your client's finished surfaces."],
+          ["💰","Recurring Contractor Pricing","Ongoing project partners get preferred rates, dedicated scheduling, and a direct line to our team."],
         ].map(([icon, title, desc]) => (
-          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all">
-            <div class="text-3xl mb-4">{icon}</div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-2">{title}</h3>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-2xl mb-4">{icon}</div>
+            <h3 class="font-display font-semibold text-base text-secondary mb-2">{title}</h3>
             <p class="text-muted-foreground text-sm leading-relaxed">{desc}</p>
           </div>
         ))}
@@ -93,50 +286,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Credibility Boosters -->
-  <section class="py-14 bg-secondary text-white">
+  <!-- How It Works -->
+  <section class="py-16 bg-secondary text-white">
     <div class="container">
       <div class="text-center mb-10">
-        <h2 class="font-display font-bold text-3xl mb-3">Denver's Most Trusted Contractor Moving Partner</h2>
-        <p class="text-white/75 max-w-xl mx-auto">White-Glove Moving for Projects That Demand Precision</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-        {[
-          "Licensed & Insured",
-          "5-Star Reviews",
-          "Locally Owned Denver Company",
-          "Professional Uniformed Movers",
-          "Background Checked Crews",
-          "Floor & Wall Protection",
-          "Same Week Availability",
-          "Recurring Project Pricing",
-        ].map((badge) => (
-          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polyline points="20 6 9 17 4 12"/></svg>
-            {badge}
-          </span>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works for Contractors -->
-  <section class="py-16 bg-gray-50">
-    <div class="container">
-      <div class="text-center mb-10">
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-3">How We Work With Contractors</h2>
+        <span class="inline-block bg-primary/20 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Simple & Fast</span>
+        <h2 class="font-display font-bold text-3xl text-white mb-3">How We Work With Contractors</h2>
+        <p class="text-white/60 max-w-xl mx-auto">From first call to cleared jobsite — here's what to expect.</p>
       </div>
       <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-        {[
-          ["1", "You Call or Text", "Reach out with your project scope, timeline, and address. We respond fast."],
-          ["2", "We Quote Fast", "Transparent pricing within hours. No surprises on job day."],
-          ["3", "We Show Up Ready", "Our crew arrives with all equipment, on time, ready to work."],
-          ["4", "Project Stays on Track", "Space cleared, site protected, your timeline intact."],
-        ].map(([num, title, desc]) => (
-          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
-            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">{num}</div>
-            <h3 class="font-semibold text-secondary mb-2">{title}</h3>
-            <p class="text-muted-foreground text-sm">{desc}</p>
+        {[["1","You Call or Text","Reach out with your project scope, timeline, and address. We respond fast."],["2","We Quote Fast","Transparent pricing within hours. No surprises on job day."],["3","We Show Up Ready","Our crew arrives with all equipment, on time, ready to work."],["4","Project Stays on Track","Space cleared, site protected, your timeline intact."]].map(([num,title,desc]) => (
+          <div class="text-center">
+            <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white font-display font-bold text-2xl mx-auto mb-4 shadow-lg shadow-primary/30">{num}</div>
+            <h3 class="font-semibold text-white mb-2 text-sm">{title}</h3>
+            <p class="text-white/60 text-xs leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>
@@ -144,35 +307,32 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-primary">
+  <section class="py-14 bg-primary">
     <div class="container text-center">
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Ready to Keep Your Project on Schedule?</h2>
-      <p class="text-white/85 text-lg mb-8 max-w-xl mx-auto">Call today to set up recurring contractor pricing or get a fast quote for your next project.</p>
+      <h2 class="font-display font-bold text-3xl text-white mb-4">Ready to Keep Your Project on Schedule?</h2>
+      <p class="text-white/85 mb-8 max-w-xl mx-auto">Call today to set up recurring contractor pricing or get a fast quote for your next project.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (720) 764-2299
-        </a>
-        <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
-          Contractor Partner Program
-        </a>
+        <a href="#contractor-form" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-bold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">Get Contractor Pricing</a>
+        <a href="tel:7207642299" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">📞 (720) 764-2299</a>
       </div>
     </div>
   </section>
 
-  <!-- Preferred Partner Teaser -->
-  <section class="py-14 bg-white">
+  <!-- Partner Teaser -->
+  <section class="py-12 bg-secondary text-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-secondary/5 border border-secondary/15 rounded-2xl p-8">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h3 class="font-display font-bold text-2xl md:text-3xl text-secondary mb-3">Legacy Preferred Partner Program</h3>
-          <p class="text-muted-foreground max-w-xl">Priority scheduling, recurring contractor rates, a dedicated account rep, and monthly referral bonuses — built for contractors who move fast.</p>
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2">Legacy Preferred Partner Program</h3>
+          <p class="text-white/70 text-sm max-w-lg">Portfolio pricing, priority scheduling, dedicated account rep, and monthly referral bonuses — built for Denver contractors.</p>
         </div>
-        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg whitespace-nowrap">
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-bold py-3 px-7 rounded-xl transition-all hover:scale-105 whitespace-nowrap text-sm">View Full Partner Program →</a>
       </div>
     </div>
   </section>
+
+  <div class="fixed bottom-0 left-0 right-0 bg-secondary border-t-2 border-primary py-3 px-4 flex justify-center gap-3 z-40 md:hidden">
+    <a href="#contractor-form" class="flex-1 text-center bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Get Contractor Pricing</a>
+    <a href="tel:7207642299" class="flex-1 text-center bg-white/10 border border-white/20 text-white font-semibold py-2.5 rounded-lg text-sm">📞 (720) 764-2299</a>
+  </div>
 </BaseLayout>

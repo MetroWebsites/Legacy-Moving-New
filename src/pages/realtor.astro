@@ -6,87 +6,291 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   title="Realtor Moving Partner | Legacy Moving Denver | Priority Service for Realtors"
   description="Legacy Moving Denver is Denver's preferred moving partner for realtors. Priority scheduling, white-glove service, and a referral rewards program that makes YOU look good."
 >
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-secondary to-secondary/90 py-16 md:py-24 text-white overflow-hidden">
+  <!-- HERO: Split layout — left content, right form -->
+  <section class="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 py-16 md:py-20 text-white overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&auto=format&q=80')] bg-cover bg-center opacity-10"></div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          For Denver Realtors
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- LEFT: Content -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Realtor Partner Program
+          </div>
+
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+            Helping Denver Realtors<br>
+            <span class="text-primary">Close More Deals</span><br>
+            With Stress-Free Moves
+          </h1>
+
+          <p class="text-white/80 text-lg mb-8 max-w-lg leading-relaxed">
+            Your clients will remember who made moving easy. Partner with Legacy Moving Denver and make every closing day a celebration — not a headache.
+          </p>
+
+          <!-- Bullet benefits -->
+          <ul class="space-y-3 mb-8">
+            {[
+              "Last-Minute Moves Before Closing",
+              "White-Glove Packing for High-End Clients",
+              "Flexible Scheduling Around Closing Dates",
+              "Clean, Professional Crews That Reflect Your Brand",
+              "Priority Service for Realtor Partners",
+              "Referral Rewards Program",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-white/90 text-sm">
+                <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <!-- Mini stats -->
+          <div class="flex flex-wrap gap-6 mb-8">
+            <div>
+              <div class="font-display font-bold text-2xl text-primary">6,000+</div>
+              <div class="text-white/60 text-xs mt-0.5">Moves Completed</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl text-primary">5★</div>
+              <div class="text-white/60 text-xs mt-0.5">Google Rated</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl text-primary">A</div>
+              <div class="text-white/60 text-xs mt-0.5">BBB Rating</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl text-primary">Denver</div>
+              <div class="text-white/60 text-xs mt-0.5">Local Experts</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-7 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (720) 764-2299
+            </a>
+            <a href="#partner-form" class="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white hover:bg-white/10 font-semibold py-3 px-7 rounded-xl transition-all text-sm">
+              Apply to Partner Program ↓
+            </a>
+          </div>
         </div>
-        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-          Helping Denver Realtors<br>
-          <span class="text-primary">Close More Deals</span><br>
-          With Stress-Free Moves
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
-          Your clients will remember who made moving easy. Partner with Legacy Moving Denver and make every closing day a celebration — not a headache.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (720) 764-2299
-          </a>
-          <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
-            Become a Partner
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+
+        <!-- RIGHT: Contact Form Card -->
+        <div id="partner-form" class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="bg-primary px-7 py-5">
+            <h2 class="font-display font-bold text-xl text-white">Partner With Us</h2>
+            <p class="text-white/80 text-sm mt-1">Submit your info — we'll reach out within 1 business day.</p>
+          </div>
+          <div class="p-7">
+            <form class="space-y-4" name="realtor-partner" method="POST" action="/thank-you">
+              <input type="hidden" name="form-name" value="realtor-partner" />
+              <input type="hidden" name="partner-type" value="Realtor" />
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-fname">First Name *</label>
+                  <input type="text" id="r-fname" name="first-name" required placeholder="Jane" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-lname">Last Name *</label>
+                  <input type="text" id="r-lname" name="last-name" required placeholder="Smith" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-brokerage">Brokerage / Agency *</label>
+                <input type="text" id="r-brokerage" name="brokerage" required placeholder="Coldwell Banker, RE/MAX, Flourish Collective..." class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-phone">Phone *</label>
+                  <input type="tel" id="r-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-email">Email *</label>
+                  <input type="email" id="r-email" name="email" required placeholder="you@brokerage.com" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-volume">Avg. Clients / Month</label>
+                <select id="r-volume" name="monthly-clients" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                  <option value="" disabled selected>Select estimate...</option>
+                  <option>1–3 clients/month</option>
+                  <option>4–8 clients/month</option>
+                  <option>9–15 clients/month</option>
+                  <option>15+ clients/month</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="r-notes">Anything Else?</label>
+                <textarea id="r-notes" name="notes" rows="2" placeholder="Special requests, questions, or how you heard about us..." class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md text-base">
+                Apply to Realtor Partner Program →
+              </button>
+              <p class="text-xs text-muted-foreground text-center">🔒 No spam. Your info stays private. We'll only reach out about your partnership.</p>
+            </form>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- We Make YOU Look Good -->
-  <section class="py-10 bg-primary">
+  <section class="py-8 bg-primary">
     <div class="container text-center">
-      <p class="text-white font-display font-bold text-2xl md:text-3xl tracking-wide">
-        ⭐ We Make <span class="underline underline-offset-4 decoration-white/60">YOU</span> Look Good. ⭐
+      <p class="text-white font-display font-bold text-xl md:text-2xl tracking-wide">
+        ⭐ We Make <span class="underline underline-offset-4 decoration-white/60">YOU</span> Look Good. Every Single Move. ⭐
       </p>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="py-12 bg-gray-50">
+  <!-- Quick Contact Form -->
+  <section class="py-14 bg-white border-b border-gray-100">
     <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto text-center">
-        {[
-          ["6,000+", "Moves Completed"],
-          ["5★", "Google Rated"],
-          ["A", "BBB Rating"],
-          ["100%", "Licensed & Insured"],
-          ["Denver", "Local Experts"],
-        ].map(([stat, label]) => (
-          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-            <div class="font-display font-bold text-3xl text-primary mb-1">{stat}</div>
-            <div class="text-sm text-muted-foreground">{label}</div>
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Form -->
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Get In Touch</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-2">Send Us a Message</h2>
+          <p class="text-muted-foreground mb-7">Have a question or ready to get started? Fill out the form and our team will get back to you within one business day.</p>
+
+          <form class="space-y-4" name="realtor-contact" method="POST" action="/thank-you">
+            <input type="hidden" name="form-name" value="realtor-contact" />
+            <input type="hidden" name="source-page" value="Realtor Landing Page" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="rc-name">Your Name *</label>
+                <input type="text" id="rc-name" name="name" required placeholder="Jane Smith" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="rc-phone">Phone Number *</label>
+                <input type="tel" id="rc-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="rc-email">Email Address *</label>
+              <input type="email" id="rc-email" name="email" required placeholder="you@brokerage.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="rc-company">Brokerage / Company</label>
+              <input type="text" id="rc-company" name="company" placeholder="Coldwell Banker, RE/MAX, etc." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="rc-message">Message *</label>
+              <textarea id="rc-message" name="message" required rows="4" placeholder="How can we help you? Tell us about your clients, needs, or questions..." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md shadow-primary/20 text-base">
+              Send Message →
+            </button>
+            <p class="text-xs text-muted-foreground text-center">🔒 Your information is kept private. No spam, ever.</p>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="lg:pt-16">
+          <div class="bg-secondary rounded-2xl p-8 text-white mb-6">
+            <h3 class="font-display font-bold text-xl mb-6">Prefer to Talk Directly?</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Call or Text</p>
+                  <a href="tel:7207642299" class="text-white font-semibold text-lg hover:text-primary transition-colors">(720) 764-2299</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Email</p>
+                  <a href="mailto:info@legacymovingdenver.com" class="text-white font-semibold hover:text-primary transition-colors">info@legacymovingdenver.com</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Business Hours</p>
+                  <p class="text-white font-semibold">Mon–Sat: 8:00 AM – 6:00 PM</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        ))}
+
+          <div class="bg-primary/10 border border-primary/20 rounded-2xl p-6">
+            <p class="text-secondary font-semibold text-sm mb-1">🌟 Preferred Partner Program</p>
+            <p class="text-muted-foreground text-sm">Join Denver's top realtors in our partner program — priority scheduling, referral bonuses &amp; more.</p>
+            <a href="/preferred-partner" class="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-3 hover:underline">Learn About the Program →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Realtor Benefits -->
+  <!-- Trust Bar -->
+  <div class="bg-gray-50 border-y border-gray-200 py-4">
+    <div class="container">
+      <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        {[
+          ["⭐", "5-Star Google Rating"],
+          ["🏆", "BBB A-Rated"],
+          ["🛡️", "Licensed & Insured"],
+          ["👔", "Background Checked Crews"],
+          ["🚚", "Same-Week Availability"],
+          ["📋", "DOT #3462023"],
+        ].map(([icon, label]) => (
+          <div class="flex items-center gap-2 text-sm font-medium text-secondary">
+            <span>{icon}</span>
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Realtors Choose Us -->
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
-        <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Realtor-Specific Benefits</span>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">The Moving Company That Makes YOU Look Good</h2>
-        <p class="text-muted-foreground max-w-2xl mx-auto">We understand that your reputation is everything. Our realtor-friendly service is designed to reflect your professionalism at every step.</p>
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Why Realtors Choose Us</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">A Moving Company That Reflects<br class="hidden md:block"/> Your Reputation</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">When you refer a client to us, your name is on the line too. We treat every referral like family — on time, professional, and transparent from first call to final box.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
           ["🏃", "Last-Minute Moves Before Closing", "Tight closing dates happen. We keep priority slots available for realtor partners so your clients always have a crew ready."],
-          ["🤍", "White-Glove Packing for High-End Clients", "For luxury listings and high-value clients, we offer white-glove packing services that match the premium standard your brand represents."],
+          ["🤍", "White-Glove Packing for High-End Clients", "For luxury listings and high-value clients, we offer white-glove packing that matches the premium standard your brand represents."],
           ["📅", "Flexible Scheduling Around Closing Dates", "Closings shift. We shift with them. We coordinate directly with your timeline so your clients aren't left scrambling."],
-          ["👔", "Clean, Professional Crews That Reflect Your Brand", "Uniformed, background-checked, courteous movers who show up on time and leave the home better than they found it."],
+          ["👔", "Clean, Professional Crews", "Uniformed, background-checked, courteous movers who show up on time and leave the home better than they found it."],
           ["⭐", "Priority Service for Realtor Partners", "Enrolled partners go to the front of the line. Your referrals get same-week availability and a dedicated point of contact."],
           ["🎁", "Referral Rewards Program", "Every client you send our way earns you rewards. Cash bonuses, co-marketing opportunities, and VIP treatment for your clients."],
         ].map(([icon, title, desc]) => (
-          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all">
-            <div class="text-3xl mb-4">{icon}</div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-2">{title}</h3>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-2xl mb-4">{icon}</div>
+            <h3 class="font-display font-semibold text-base text-secondary mb-2">{title}</h3>
             <p class="text-muted-foreground text-sm leading-relaxed">{desc}</p>
           </div>
         ))}
@@ -94,29 +298,57 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Credibility Boosters -->
-  <section class="py-14 bg-secondary text-white">
+  <!-- Benefits Split: list + stat box -->
+  <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="text-center mb-10">
-        <h2 class="font-display font-bold text-3xl mb-3">Why Realtors Choose Legacy Moving</h2>
-        <p class="text-white/75 max-w-xl mx-auto">Protecting Your Reputation One Move at a Time</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-        {[
-          "Licensed & Insured",
-          "5-Star Reviews",
-          "Locally Owned Denver Company",
-          "Professional Uniformed Movers",
-          "Background Checked Crews",
-          "Damage Protection Options",
-          "Same Week Availability",
-          "Recommended by Flourish Collective",
-        ].map((badge) => (
-          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polyline points="20 6 9 17 4 12"/></svg>
-            {badge}
-          </span>
-        ))}
+      <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Partner Perks</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-5">What You Get as a<br/>Legacy Moving Partner</h2>
+          <p class="text-muted-foreground mb-7">We built this program to make you look great in front of every client, every time.</p>
+          <ul class="space-y-5">
+            {[
+              ["Priority Booking for Your Clients", "Skip the wait — your referrals go to the front of the line, especially around closing dates."],
+              ["Preferred Pricing Discount", "Clients referred by you receive a special rate — a closing gift that actually helps on moving day."],
+              ["Dedicated Realtor Hotline", "One number, one contact — get instant quotes and booking without going through general inquiries."],
+              ["Monthly Referral Bonuses", "Earn cash bonuses every month based on the referrals you send our way."],
+              ["Co-Marketing Opportunities", "We feature partner realtors on our website and social channels."],
+            ].map(([title, desc]) => (
+              <li class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary text-sm mb-0.5">{title}</h4>
+                  <p class="text-muted-foreground text-sm">{desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Stat box -->
+        <div class="bg-secondary rounded-2xl p-8 text-white">
+          <h3 class="font-display font-bold text-lg text-primary mb-6">Why Legacy Moving Denver?</h3>
+          <div class="grid grid-cols-2 gap-5 mb-6">
+            {[
+              ["6,000+", "Moves Completed"],
+              ["5★", "Google Rating"],
+              ["Since 2018", "Family-Owned"],
+              ["A", "BBB Rating"],
+            ].map(([num, label]) => (
+              <div class="text-center bg-white/10 rounded-xl p-4">
+                <div class="font-display font-bold text-3xl text-primary mb-1">{num}</div>
+                <div class="text-white/60 text-xs">{label}</div>
+              </div>
+            ))}
+          </div>
+          <p class="text-white/70 text-sm leading-relaxed mb-6">Licensed, insured, and background-checked crews. Transparent pricing. Same-week availability. We're the only Denver mover your clients will ever need.</p>
+          <a href="#partner-form" class="block w-full text-center bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] text-sm">
+            Apply to Partner Program →
+          </a>
+          <p class="text-white/40 text-xs text-center mt-3">DOT #3462023 · MC #1189363 · PUC #HHG-00682</p>
+        </div>
       </div>
     </div>
   </section>
@@ -125,13 +357,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   <section class="py-14 bg-white">
     <div class="container">
       <div class="max-w-2xl mx-auto bg-primary/5 border border-primary/15 rounded-2xl p-8 text-center">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <h3 class="font-display font-bold text-2xl text-secondary mb-3">Recommended by Flourish Collective</h3>
-        <p class="text-muted-foreground mb-4">
-          Legacy Moving Denver is the trusted moving partner recommended by <strong>Neil and Brittany Sanderlin</strong> at Flourish Collective. Their clients receive priority scheduling and dedicated service.
-        </p>
+        <p class="text-muted-foreground mb-4">Legacy Moving Denver is the trusted moving partner recommended by <strong>Neil and Brittany Sanderlin</strong> at Flourish Collective. Their clients receive priority scheduling and dedicated service.</p>
         <div class="flex items-center justify-center gap-1">
           {[...Array(5)].map(() => (
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -141,41 +371,76 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Emotional Hook + CTA -->
+  <!-- Testimonials -->
   <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-6">Your Clients Will Remember Who Made Moving Easy.</h2>
-        <p class="text-muted-foreground text-lg mb-8">
-          When the chaos of closing day clears, the realtor who handed them a card for Legacy Moving is the one they'll refer to their friends. Let's build that reputation together.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:7207642299" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (720) 764-2299
-          </a>
-          <a href="/preferred-partner" class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105">
-            Join Our Partner Program
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
+      <div class="text-center mb-10">
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">What Realtors Say</span>
+        <h2 class="font-display font-bold text-3xl text-secondary">Trusted by Denver's Top Agents</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {[
+          ["I've referred Legacy Moving to at least a dozen clients this year. Every single one has thanked me. The team is professional, on time, and treats people's belongings with real care.", "Sarah R.", "Realtor, RE/MAX Alliance – Denver"],
+          ["In real estate, your vendor list is your reputation. Legacy Moving has never let me down — not once. Fast, responsive, and the clients always rave about them.", "Marcus K.", "Senior Agent, Coldwell Banker – Cherry Creek"],
+          ["I gave my clients Legacy Moving's number as a closing gift. They called me the next week just to say how amazing the experience was. My go-to, always.", "Jessica L.", "Broker-Owner, LoDo Realty Group"],
+        ].map(([quote, name, title]) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[...Array(5)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#f59e0b" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <p class="text-muted-foreground text-sm leading-relaxed italic mb-4">"{quote}"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                {name.split(' ').map((n: string) => n[0]).join('')}
+              </div>
+              <div>
+                <div class="font-semibold text-secondary text-sm">{name}</div>
+                <div class="text-muted-foreground text-xs">{title}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <section class="py-14 bg-primary">
+    <div class="container text-center">
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Your Clients Will Remember Who Made Moving Easy.</h2>
+      <p class="text-white/85 text-lg mb-8 max-w-xl mx-auto">Join Denver's top real estate professionals who trust Legacy Moving Denver for every closing.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#partner-form" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-bold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">
+          Apply Now — It's Free
+        </a>
+        <a href="tel:7207642299" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
+          📞 Call (720) 764-2299
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Preferred Partner Teaser -->
-  <section class="py-14 bg-primary text-white">
+  <section class="py-12 bg-secondary text-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Legacy Preferred Partner Program</h3>
-          <p class="text-white/80 max-w-xl">Priority scheduling, monthly referral bonuses, dedicated account rep, and co-marketing opportunities — built specifically for Denver's top real estate professionals.</p>
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2">Legacy Preferred Partner Program</h3>
+          <p class="text-white/70 text-sm max-w-lg">Priority scheduling, monthly referral bonuses, dedicated account rep, and co-marketing — built for Denver's top real estate professionals.</p>
         </div>
-        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg whitespace-nowrap">
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-bold py-3 px-7 rounded-xl transition-all hover:scale-105 whitespace-nowrap text-sm">
+          View Full Partner Program →
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Sticky bottom CTA (mobile) -->
+  <div class="fixed bottom-0 left-0 right-0 bg-secondary border-t-2 border-primary py-3 px-4 flex justify-center gap-3 z-40 md:hidden">
+    <a href="#partner-form" class="flex-1 text-center bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Apply to Partner Program</a>
+    <a href="tel:7207642299" class="flex-1 text-center bg-white/10 border border-white/20 text-white font-semibold py-2.5 rounded-lg text-sm">📞 (720) 764-2299</a>
+  </div>
+
 </BaseLayout>

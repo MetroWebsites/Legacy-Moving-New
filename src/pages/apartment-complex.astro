@@ -6,86 +6,278 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   title="Apartment Complex Moving Partner | Legacy Moving Denver | Resident Moving Services"
   description="Legacy Moving Denver partners with Denver apartment complexes to provide seamless move-in and move-out services for residents. Reduce turnover stress and improve resident satisfaction."
 >
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-secondary to-secondary/90 py-16 md:py-24 text-white overflow-hidden">
+  <!-- HERO: Split layout -->
+  <section class="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 py-16 md:py-20 text-white overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&auto=format&q=80')] bg-cover bg-center opacity-10"></div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
-          For Apartment Complexes
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- LEFT -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/></svg>
+            Apartment Complex Partner Program
+          </div>
+
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+            Seamless Move-In &amp; Move-Out<br>
+            <span class="text-primary">For Your Residents</span>
+          </h1>
+
+          <p class="text-white/80 text-lg mb-8 max-w-lg leading-relaxed">
+            Give your residents a 5-star moving experience that reflects the quality of your property. We handle the logistics — you keep your reputation spotless.
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            {[
+              "Move-In & Move-Out Coordination",
+              "Fast Turnaround Between Tenants",
+              "Elevator & Common Area Protection",
+              "Packing Services for Residents",
+              "Preferred Vendor Discounts for Residents",
+              "Recurring Property Scheduling Blocks",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-white/90 text-sm">
+                <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-6 mb-8">
+            {[["6,000+","Moves Done"],["5★","Google Rated"],["A","BBB Rating"],["Denver","Local Experts"]].map(([n,l]) => (
+              <div>
+                <div class="font-display font-bold text-2xl text-primary">{n}</div>
+                <div class="text-white/60 text-xs mt-0.5">{l}</div>
+              </div>
+            ))}
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-7 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (720) 764-2299
+            </a>
+            <a href="#apt-form" class="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white hover:bg-white/10 font-semibold py-3 px-7 rounded-xl transition-all text-sm">
+              Set Up Vendor Agreement ↓
+            </a>
+          </div>
         </div>
-        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-          Seamless Move-In &amp; Move-Out<br>
-          <span class="text-primary">For Your Residents</span>
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
-          Give your residents a 5-star moving experience that reflects the quality of your property. We handle the logistics — you keep your reputation spotless.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/30">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call (720) 764-2299
-          </a>
-          <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
-            Partner With Us
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+
+        <!-- RIGHT: Form -->
+        <div id="apt-form" class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="bg-primary px-7 py-5">
+            <h2 class="font-display font-bold text-xl text-white">Set Up a Vendor Agreement</h2>
+            <p class="text-white/80 text-sm mt-1">Tell us about your property — we'll be in touch within 1 business day.</p>
+          </div>
+          <div class="p-7">
+            <form class="space-y-4" name="apartment-partner" method="POST" action="/thank-you">
+              <input type="hidden" name="form-name" value="apartment-partner" />
+              <input type="hidden" name="partner-type" value="Apartment Complex" />
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-fname">First Name *</label>
+                  <input type="text" id="ap-fname" name="first-name" required placeholder="Jane" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-lname">Last Name *</label>
+                  <input type="text" id="ap-lname" name="last-name" required placeholder="Smith" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-property">Property / Complex Name *</label>
+                <input type="text" id="ap-property" name="property-name" required placeholder="e.g. The Denver Flats" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-role">Your Role *</label>
+                <select id="ap-role" name="role" required class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                  <option value="" disabled selected>Select your role...</option>
+                  <option>Property Manager</option>
+                  <option>Leasing Manager</option>
+                  <option>Owner / Investor</option>
+                  <option>Community Director</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-phone">Phone *</label>
+                  <input type="tel" id="ap-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-email">Email *</label>
+                  <input type="email" id="ap-email" name="email" required placeholder="you@property.com" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-units">Number of Units</label>
+                <select id="ap-units" name="unit-count" class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                  <option value="" disabled selected>Approximate unit count...</option>
+                  <option>Under 50 units</option>
+                  <option>50–150 units</option>
+                  <option>151–300 units</option>
+                  <option>300+ units</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-secondary uppercase tracking-wide mb-1.5" for="ap-notes">Additional Details</label>
+                <textarea id="ap-notes" name="notes" rows="2" placeholder="Move-in/out volume, specific needs, or questions..." class="w-full border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md text-base">
+                Request Vendor Agreement →
+              </button>
+              <p class="text-xs text-muted-foreground text-center">🔒 No spam. We'll only reach out about your property partnership.</p>
+            </form>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Tagline Bar -->
-  <section class="py-10 bg-primary">
+  <section class="py-8 bg-primary">
     <div class="container text-center">
-      <p class="text-white font-display font-bold text-2xl md:text-3xl tracking-wide">
-        ⭐ We Make <span class="underline underline-offset-4 decoration-white/60">YOU</span> Look Good. ⭐
+      <p class="text-white font-display font-bold text-xl md:text-2xl tracking-wide">
+        ⭐ We Make <span class="underline underline-offset-4 decoration-white/60">YOU</span> Look Good. Every Single Move. ⭐
       </p>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="py-12 bg-gray-50">
+  <!-- Quick Contact Form -->
+  <section class="py-14 bg-white border-b border-gray-100">
     <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto text-center">
-        {[
-          ["6,000+", "Moves Completed"],
-          ["5★", "Google Rated"],
-          ["A", "BBB Rating"],
-          ["100%", "Licensed & Insured"],
-          ["Denver", "Local Experts"],
-        ].map(([stat, label]) => (
-          <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-            <div class="font-display font-bold text-3xl text-primary mb-1">{stat}</div>
-            <div class="text-sm text-muted-foreground">{label}</div>
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Form -->
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Get In Touch</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-2">Send Us a Message</h2>
+          <p class="text-muted-foreground mb-7">Interested in setting up a vendor agreement or learning about resident discounts? Fill out the form and we'll follow up fast.</p>
+
+          <form class="space-y-4" name="apartment-contact" method="POST" action="/thank-you">
+            <input type="hidden" name="form-name" value="apartment-contact" />
+            <input type="hidden" name="source-page" value="Apartment Complex Landing Page" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="ac-name">Your Name *</label>
+                <input type="text" id="ac-name" name="name" required placeholder="Jane Smith" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="ac-phone">Phone Number *</label>
+                <input type="tel" id="ac-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="ac-email">Email Address *</label>
+              <input type="email" id="ac-email" name="email" required placeholder="you@property.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="ac-property">Property / Complex Name</label>
+              <input type="text" id="ac-property" name="property" placeholder="e.g. The Denver Flats" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="ac-message">Message *</label>
+              <textarea id="ac-message" name="message" required rows="4" placeholder="Tell us about your property, number of units, or what you need..." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md shadow-primary/20 text-base">
+              Send Message →
+            </button>
+            <p class="text-xs text-muted-foreground text-center">🔒 Your information is kept private. No spam, ever.</p>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="lg:pt-16">
+          <div class="bg-secondary rounded-2xl p-8 text-white mb-6">
+            <h3 class="font-display font-bold text-xl mb-6">Prefer to Talk Directly?</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Call or Text</p>
+                  <a href="tel:7207642299" class="text-white font-semibold text-lg hover:text-primary transition-colors">(720) 764-2299</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Email</p>
+                  <a href="mailto:info@legacymovingdenver.com" class="text-white font-semibold hover:text-primary transition-colors">info@legacymovingdenver.com</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Business Hours</p>
+                  <p class="text-white font-semibold">Mon–Sat: 8:00 AM – 6:00 PM</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        ))}
+
+          <div class="bg-primary/10 border border-primary/20 rounded-2xl p-6">
+            <p class="text-secondary font-semibold text-sm mb-1">🏢 Apartment Complex Partner Program</p>
+            <p class="text-muted-foreground text-sm">Set up a preferred vendor agreement — exclusive resident discounts, priority booking &amp; referral bonuses.</p>
+            <a href="/preferred-partner" class="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-3 hover:underline">Learn About the Program →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- Trust Bar -->
+  <div class="bg-gray-50 border-y border-gray-200 py-4">
+    <div class="container">
+      <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        {[["⭐","5-Star Google Rating"],["🏆","BBB A-Rated"],["🛡️","Licensed & Insured"],["🏢","Common Area Protection"],["🚚","Same-Week Availability"],["📋","DOT #3462023"]].map(([icon,label]) => (
+          <div class="flex items-center gap-2 text-sm font-medium text-secondary"><span>{icon}</span><span>{label}</span></div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
-        <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Apartment Complex Services</span>
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Apartment Complex Services</span>
         <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">Fast, Flexible Moving for High-Turnover Properties</h2>
         <p class="text-muted-foreground max-w-2xl mx-auto">We understand the pace of property management. Our team moves as fast as your turnovers demand.</p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
-          ["🏠", "Move-In & Move-Out Coordination", "We work directly with your office to schedule resident moves without disrupting daily operations or clogging elevators."],
-          ["⚡", "Fast Turnaround Between Tenants", "Unit cleared, cleaned out, and ready for the next resident. We move at property management speed."],
-          ["📦", "Packing Services for Residents", "Offer your residents full-service packing as an amenity — a differentiator that helps with retention and reviews."],
-          ["🛗", "Elevator & Common Area Protection", "We use floor runners, furniture pads, and door protectors to preserve your property's common areas during every move."],
-          ["📋", "Preferred Vendor Discounts for Residents", "Offer your community exclusive discounted rates with Legacy Moving — a perk that sets your property apart."],
-          ["🔄", "Recurring Property Scheduling", "Ongoing partnerships mean we hold blocks of time specifically for your building's move-in/move-out calendar."],
-        ].map(([icon, title, desc]) => (
-          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all">
-            <div class="text-3xl mb-4">{icon}</div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-2">{title}</h3>
+          ["🏠","Move-In & Move-Out Coordination","We work directly with your office to schedule resident moves without disrupting daily operations or clogging elevators."],
+          ["⚡","Fast Turnaround Between Tenants","Unit cleared, cleaned out, and ready for the next resident. We move at property management speed."],
+          ["📦","Packing Services for Residents","Offer your residents full-service packing as an amenity — a differentiator that helps with retention and reviews."],
+          ["🛗","Elevator & Common Area Protection","Floor runners, furniture pads, and door protectors preserve your property's common areas during every move."],
+          ["📋","Preferred Vendor Discounts for Residents","Offer your community exclusive discounted rates with Legacy Moving — a perk that sets your property apart."],
+          ["🔄","Recurring Property Scheduling","Ongoing partnerships mean we hold blocks of time specifically for your building's move-in/out calendar."],
+        ].map(([icon,title,desc]) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
+            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-2xl mb-4">{icon}</div>
+            <h3 class="font-display font-semibold text-base text-secondary mb-2">{title}</h3>
             <p class="text-muted-foreground text-sm leading-relaxed">{desc}</p>
           </div>
         ))}
@@ -93,98 +285,71 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Credibility -->
-  <section class="py-14 bg-secondary text-white">
-    <div class="container">
-      <div class="text-center mb-10">
-        <h2 class="font-display font-bold text-3xl mb-3">Trusted by Denver's Top Properties</h2>
-        <p class="text-white/75 max-w-xl mx-auto">Protecting Your Property's Reputation One Move at a Time</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-        {[
-          "Licensed & Insured",
-          "5-Star Reviews",
-          "Locally Owned Denver Company",
-          "Professional Uniformed Movers",
-          "Background Checked Crews",
-          "Common Area Protection",
-          "Same Week Availability",
-          "Flexible Scheduling",
-        ].map((badge) => (
-          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polyline points="20 6 9 17 4 12"/></svg>
-            {badge}
-          </span>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Resident Experience Section -->
+  <!-- Review + Benefits Split -->
   <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
         <div>
-          <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">The Resident Experience</span>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">The Resident Experience</span>
           <h2 class="font-display font-bold text-3xl text-secondary mb-5">Happy Residents Leave Better Reviews</h2>
           <p class="text-muted-foreground mb-6">Moving is one of the most stressful moments in a person's life. When your property provides a trusted, seamless moving recommendation, residents notice — and they tell their friends.</p>
           <ul class="space-y-3">
-            {[
-              "5-star first impression on move-in day",
-              "Stress-free move-out experience",
-              "Professional movers who respect the building",
-              "On-time, efficient service every time",
-            ].map((item) => (
+            {["5-star first impression on move-in day","Stress-free move-out experience","Professional movers who respect the building","On-time, efficient service every time"].map((item) => (
               <li class="flex items-center gap-3 text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
                 <span class="text-secondary font-medium">{item}</span>
               </li>
             ))}
           </ul>
         </div>
         <div class="bg-secondary text-white rounded-2xl p-8">
-          <div class="flex items-center gap-1 mb-4">
-            {[...Array(5)].map(() => (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="flex gap-0.5 mb-4">
+            {[...Array(5)].map(() => (<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>))}
+          </div>
+          <p class="text-white/85 text-sm leading-relaxed mb-4 italic">"My apartment complex recommended Legacy Moving and I'm so glad they did. The crew was professional, fast, and took great care of the hallways. I'll never use anyone else."</p>
+          <p class="text-white/50 text-xs">— Verified Google Review, Denver Resident</p>
+          <div class="mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+            {[["6,000+","Moves Done"],["5★","Google Rated"],["A","BBB Rating"],["100%","Licensed & Insured"]].map(([n,l]) => (
+              <div class="text-center">
+                <div class="font-display font-bold text-2xl text-primary">{n}</div>
+                <div class="text-white/50 text-xs mt-0.5">{l}</div>
+              </div>
             ))}
           </div>
-          <p class="text-white/85 text-sm leading-relaxed mb-4">"My apartment complex recommended Legacy Moving and I'm so glad they did. The crew was professional, fast, and took great care of the hallways. I'll never use anyone else."</p>
-          <p class="text-white/60 text-xs">— Verified Google Review, Denver Resident</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-primary">
+  <section class="py-14 bg-primary">
     <div class="container text-center">
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Add Moving Services to Your Property's Amenities</h2>
-      <p class="text-white/85 text-lg mb-8 max-w-xl mx-auto">Contact us today to set up a preferred vendor agreement for your apartment complex.</p>
+      <h2 class="font-display font-bold text-3xl text-white mb-4">Add Moving Services to Your Property's Amenities</h2>
+      <p class="text-white/85 mb-8 max-w-xl mx-auto">Contact us today to set up a preferred vendor agreement for your apartment complex.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="tel:7207642299" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (720) 764-2299
-        </a>
-        <a href="/preferred-partner" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">
-          View Partner Program
-        </a>
+        <a href="#apt-form" class="inline-flex items-center gap-2 bg-white text-primary hover:bg-white/90 font-bold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg">Request Vendor Agreement</a>
+        <a href="tel:7207642299" class="inline-flex items-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3.5 px-8 rounded-xl transition-all">📞 (720) 764-2299</a>
       </div>
     </div>
   </section>
 
-  <!-- Preferred Partner Teaser -->
-  <section class="py-14 bg-white">
+  <!-- Partner Teaser -->
+  <section class="py-12 bg-secondary text-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-secondary/5 border border-secondary/15 rounded-2xl p-8">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h3 class="font-display font-bold text-2xl md:text-3xl text-secondary mb-3">Legacy Preferred Partner Program</h3>
-          <p class="text-muted-foreground max-w-xl">Exclusive resident discounts, priority scheduling, a dedicated account rep, and monthly referral bonuses — designed for apartment complexes and property managers.</p>
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2">Legacy Preferred Partner Program</h3>
+          <p class="text-white/70 text-sm max-w-lg">Exclusive resident discounts, priority scheduling, dedicated account rep, and monthly referral bonuses.</p>
         </div>
-        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-semibold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg whitespace-nowrap">
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-bold py-3 px-7 rounded-xl transition-all hover:scale-105 whitespace-nowrap text-sm">View Full Partner Program →</a>
       </div>
     </div>
   </section>
+
+  <div class="fixed bottom-0 left-0 right-0 bg-secondary border-t-2 border-primary py-3 px-4 flex justify-center gap-3 z-40 md:hidden">
+    <a href="#apt-form" class="flex-1 text-center bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Request Vendor Agreement</a>
+    <a href="tel:7207642299" class="flex-1 text-center bg-white/10 border border-white/20 text-white font-semibold py-2.5 rounded-lg text-sm">📞 (720) 764-2299</a>
+  </div>
 </BaseLayout>
