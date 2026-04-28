@@ -47,6 +47,109 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <!-- Quick Contact Form -->
+  <section class="py-14 bg-white border-b border-gray-100">
+    <div class="container">
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Form -->
+        <div>
+          <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Get In Touch</span>
+          <h2 class="font-display font-bold text-3xl text-secondary mb-2">Send Us a Message</h2>
+          <p class="text-muted-foreground mb-7">Have a question about the partner program or want to discuss your specific needs? Fill out the form and our team will respond within one business day.</p>
+
+          <form class="space-y-4" name="preferred-partner-contact" method="POST" action="/thank-you">
+            <input type="hidden" name="form-name" value="preferred-partner-contact" />
+            <input type="hidden" name="source-page" value="Preferred Partner Program Page" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="pp-name">Your Name *</label>
+                <input type="text" id="pp-name" name="name" required placeholder="Jane Smith" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-secondary mb-1.5" for="pp-phone">Phone Number *</label>
+                <input type="tel" id="pp-phone" name="phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="pp-email">Email Address *</label>
+              <input type="email" id="pp-email" name="email" required placeholder="you@company.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="pp-industry">Your Industry / Role</label>
+              <select id="pp-industry" name="industry" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors bg-white">
+                <option value="" disabled selected>Select your industry...</option>
+                <option value="realtor">Realtor / Real Estate Agent</option>
+                <option value="contractor">Contractor / Home Builder</option>
+                <option value="property-manager">Property Manager</option>
+                <option value="apartment-complex">Apartment Complex / HOA</option>
+                <option value="interior-designer">Interior Designer / Home Stager</option>
+                <option value="senior-living">Senior Living Community</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-secondary mb-1.5" for="pp-message">Message *</label>
+              <textarea id="pp-message" name="message" required rows="4" placeholder="Tell us about your business, clients, or any questions about the partner program..." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-display font-bold py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-md shadow-primary/20 text-base">
+              Send Message →
+            </button>
+            <p class="text-xs text-muted-foreground text-center">🔒 Your information is kept private. No spam, ever.</p>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="lg:pt-16">
+          <div class="bg-secondary rounded-2xl p-8 text-white mb-6">
+            <h3 class="font-display font-bold text-xl mb-6">Prefer to Talk Directly?</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Call or Text</p>
+                  <a href="tel:7207642299" class="text-white font-semibold text-lg hover:text-primary transition-colors">(720) 764-2299</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Email</p>
+                  <a href="mailto:info@legacymovingdenver.com" class="text-white font-semibold hover:text-primary transition-colors">info@legacymovingdenver.com</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/60 text-xs uppercase tracking-wide font-semibold mb-0.5">Business Hours</p>
+                  <p class="text-white font-semibold">Mon–Sat: 8:00 AM – 6:00 PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-primary/10 border border-primary/20 rounded-2xl p-6">
+            <p class="text-secondary font-semibold text-sm mb-2">⭐ Ready to Apply?</p>
+            <p class="text-muted-foreground text-sm mb-3">Skip the form above and jump straight to the full partner application below — it only takes 2 minutes.</p>
+            <a href="#apply" class="inline-flex items-center gap-1.5 bg-primary text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-all">Apply Now — It's Free →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Stats -->
   <section class="py-12 bg-gray-50">
     <div class="container">
