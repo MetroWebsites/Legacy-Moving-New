@@ -1,6 +1,13 @@
 ---
 import { buttonVariants } from "@/components/ui/button";
 import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide-react";
+
+interface Props {
+  phoneNumber?: string;
+}
+
+const { phoneNumber = '7203401849' } = Astro.props;
+const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 340-1849';
 ---
 
 <header
@@ -24,9 +31,9 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
           <span class="text-xs md:hidden font-medium">Email</span>
           <span class="hidden md:inline text-sm font-medium">info@legacymovingdenver.com</span>
         </a>
-        <a href="tel:7203401849" class="hidden md:flex items-center gap-2 hover:text-white/80 transition-colors">
+        <a href={`tel:${phoneNumber}`} class="hidden md:flex items-center gap-2 hover:text-white/80 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span class="text-sm font-medium">(720) 340-1849</span>
+          <span class="text-sm font-medium">{phoneDisplay}</span>
         </a>
       </div>
     </div>
@@ -52,7 +59,7 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
     <div class="md:hidden flex items-center gap-3">
       <!-- Phone call button (mobile only) -->
       <a 
-        href="tel:7203401849" 
+        href={`tel:${phoneNumber}`}
         class="flex items-center justify-center p-2 phone-link"
         aria-label="Call us"
       >
@@ -120,11 +127,11 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
       </a>
       <div class="ml-3 pl-3 border-l">
         <a
-          href="tel:7203401849"
+          href={`tel:${phoneNumber}`}
           class="inline-flex items-center justify-center px-5 py-2.5 rounded-md text-base font-semibold bg-primary text-white hover:bg-primary/90 shadow-sm phone-link"
         >
           <Phone size={18} className="mr-2" />
-          (720) 340-1849
+          {phoneDisplay}
         </a>
       </div>
     </nav>
@@ -138,9 +145,9 @@ import { Truck, MapPin, Phone, Menu, X, PhoneCall, ClipboardCheck } from "lucide
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
         Get a Quick Quote
       </a>
-      <a href="tel:7203401849" class="flex items-center justify-center bg-secondary text-white py-3 px-2 rounded-md font-medium phone-link">
+      <a href={`tel:${phoneNumber}`} class="flex items-center justify-center bg-secondary text-white py-3 px-2 rounded-md font-medium phone-link">
         <Phone size={16} className="mr-2" />
-        Call (720) 340-1849
+        Call {phoneDisplay}
       </a>
     </div>
 
