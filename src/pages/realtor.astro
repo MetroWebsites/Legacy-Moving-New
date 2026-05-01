@@ -1,9 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import FunnelLayout from "@/layouts/FunnelLayout.astro";
 import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
+import PartnerBenefitsSection from '../components/PartnerBenefitsSection.astro';
 ---
 
-<BaseLayout
+<FunnelLayout
   title="Realtor Moving Partner | Legacy Moving Denver | Priority Service for Realtors"
   description="Legacy Moving Denver is Denver's preferred moving partner for realtors. Priority scheduling, white-glove service, and a referral rewards program that makes YOU look good."
   phoneNumber="7207642299"
@@ -21,11 +22,21 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
             Realtor Partner Program
           </div>
 
-          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-4">
             Helping Denver Realtors<br>
             <span class="text-primary">Close More Deals</span><br>
             With Stress-Free Moves
           </h1>
+
+          <!-- 1,700+ Reviews Trust Signal -->
+          <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 mb-6">
+            <div class="flex gap-0.5">
+              {[...Array(5)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <span class="text-white/90 text-sm font-medium">Trusted by 1,700+ customers with five-star Google reviews</span>
+          </div>
 
           <p class="text-white/80 text-lg mb-8 max-w-lg leading-relaxed">
             Your clients will remember who made moving easy. Partner with Legacy Moving Denver and make every closing day a celebration — not a headache.
@@ -39,7 +50,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
               "Flexible Scheduling Around Closing Dates",
               "Clean, Professional Crews That Reflect Your Brand",
               "Priority Service for Realtor Partners",
-              "Referral Rewards Program",
+              "Preferred Partner Program with Quarterly Rewards",
             ].map((item) => (
               <li class="flex items-center gap-3 text-white/90 text-sm">
                 <span class="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
@@ -57,8 +68,8 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
               <div class="text-white/60 text-xs mt-0.5">Moves Completed</div>
             </div>
             <div>
-              <div class="font-display font-bold text-2xl text-primary">5★</div>
-              <div class="text-white/60 text-xs mt-0.5">Google Rated</div>
+              <div class="font-display font-bold text-2xl text-primary">1,700+</div>
+              <div class="text-white/60 text-xs mt-0.5">Five-Star Reviews</div>
             </div>
             <div>
               <div class="font-display font-bold text-2xl text-primary">A</div>
@@ -121,7 +132,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     <div class="container">
       <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
         {[
-          ["⭐", "5-Star Google Rating"],
+          ["⭐", "1,700+ Five-Star Google Reviews"],
           ["🏆", "BBB A-Rated"],
           ["🛡️", "Licensed & Insured"],
           ["👔", "Background Checked Crews"],
@@ -153,7 +164,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
           ["📅", "Flexible Scheduling Around Closing Dates", "Closings shift. We shift with them. We coordinate directly with your timeline so your clients aren't left scrambling."],
           ["👔", "Clean, Professional Crews", "Uniformed, background-checked, courteous movers who show up on time and leave the home better than they found it."],
           ["⭐", "Priority Service for Realtor Partners", "Enrolled partners go to the front of the line. Your referrals get same-week availability and a dedicated point of contact."],
-          ["🎁", "Referral Rewards Program", "Every client you send our way earns you rewards. Cash bonuses, co-marketing opportunities, and VIP treatment for your clients."],
+          ["🏆", "Quarterly Referral Competition", "Top partners compete every quarter for exclusive rewards — recognition, experiences, and real results."],
         ].map(([icon, title, desc]) => (
           <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all">
             <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-2xl mb-4">{icon}</div>
@@ -176,10 +187,10 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
           <ul class="space-y-5">
             {[
               ["Priority Booking for Your Clients", "Skip the wait — your referrals go to the front of the line, especially around closing dates."],
-              ["Preferred Pricing Discount", "Clients referred by you receive a special rate — a closing gift that actually helps on moving day."],
+              ["Moving Perks for Referred Clients", "Complimentary wardrobe boxes and TV box rentals — a closing gift your clients will actually use."],
               ["Dedicated Realtor Hotline", "One number, one contact — get instant quotes and booking without going through general inquiries."],
-              ["Monthly Referral Bonuses", "Earn cash bonuses every month based on the referrals you send our way."],
-              ["Co-Marketing Opportunities", "We feature partner realtors on our website and social channels."],
+              ["Quarterly Referral Competition", "Compete for exclusive rewards every quarter based on referrals and revenue generated."],
+              ["Co-Marketing & Social Exposure", "We feature partner realtors on our website and social channels."],
             ].map(([title, desc]) => (
               <li class="flex items-start gap-4">
                 <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -200,7 +211,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
           <div class="grid grid-cols-2 gap-5 mb-6">
             {[
               ["6,000+", "Moves Completed"],
-              ["5★", "Google Rating"],
+              ["1,700+", "Five-Star Reviews"],
               ["Since 2018", "Family-Owned"],
               ["A", "BBB Rating"],
             ].map(([num, label]) => (
@@ -244,6 +255,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
       <div class="text-center mb-10">
         <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">What Realtors Say</span>
         <h2 class="font-display font-bold text-3xl text-secondary">Trusted by Denver's Top Agents</h2>
+        <p class="text-muted-foreground mt-2 text-sm">1,700+ five-star Google reviews and counting.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
@@ -273,6 +285,9 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     </div>
   </section>
 
+  <!-- Preferred Partner Program — Full Section -->
+  <PartnerBenefitsSection />
+
   <!-- Bottom CTA Banner -->
   <section class="py-14 bg-primary">
     <div class="container text-center">
@@ -289,22 +304,26 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     </div>
   </section>
 
-  <!-- Preferred Partner Teaser -->
-  <section class="py-12 bg-secondary text-white">
+  <!-- Internal Cross-Links: Other partner pages -->
+  <section class="py-10 bg-secondary text-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <h3 class="font-display font-bold text-xl md:text-2xl mb-2">Legacy Preferred Partner Program</h3>
-          <p class="text-white/70 text-sm max-w-lg">Priority scheduling, monthly referral bonuses, dedicated account rep, and co-marketing — built for Denver's top real estate professionals.</p>
-        </div>
-        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-bold py-3 px-7 rounded-xl transition-all hover:scale-105 whitespace-nowrap text-sm">
-          View Full Partner Program →
-        </a>
+      <p class="text-white/50 text-xs text-center uppercase tracking-widest mb-5">Also Partnering With</p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        {[
+          ["🔨", "Contractors", "/contractor"],
+          ["🏢", "Apartment Complexes", "/apartment-complex"],
+          ["🛋️", "Interior Designers", "/interior-designer"],
+          ["💛", "Senior Living", "/senior-living"],
+          ["🏠", "Property Managers", "/property-manager"],
+          ["⭐", "Partner Program", "/preferred-partner"],
+        ].map(([icon, label, href]) => (
+          <a href={href} class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm px-4 py-2 rounded-full transition-all">
+            <span>{icon}</span><span>{label}</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-
-
 <MoverbaseRedirect />
-</BaseLayout>
+</FunnelLayout>
