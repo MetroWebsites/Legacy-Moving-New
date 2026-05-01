@@ -1,9 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import FunnelLayout from "@/layouts/FunnelLayout.astro";
 import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
+import PartnerBenefitsSection from '../components/PartnerBenefitsSection.astro';
 ---
 
-<BaseLayout
+<FunnelLayout
   title="Contractor Moving Partner | Legacy Moving Denver | Fast Furniture & Jobsite Removal"
   description="Legacy Moving Denver helps Denver contractors stay on schedule with fast furniture removal, jobsite clean-outs, and reliable crews. Delays cost money — we help you stay on track."
   phoneNumber="7207642299"
@@ -21,10 +22,20 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
             Contractor Partner Program
           </div>
 
-          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-4">
             Need Homes Cleared Fast?<br>
             <span class="text-primary">We Keep Projects Moving.</span>
           </h1>
+
+          <!-- 1,700+ Reviews Trust Signal -->
+          <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 mb-6">
+            <div class="flex gap-0.5">
+              {[...Array(5)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <span class="text-white/90 text-sm font-medium">1,700+ five-star Google reviews</span>
+          </div>
 
           <p class="text-white/80 text-lg mb-8 max-w-lg leading-relaxed">
             Delays cost money. Legacy Moving Denver provides fast, reliable furniture removal and jobsite clean-out services so your crew can get to work on time — every time.
@@ -49,7 +60,7 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
           </ul>
 
           <div class="flex flex-wrap gap-6 mb-8">
-            {[["6,000+","Moves Done"],["5★","Google Rated"],["A","BBB Rating"],["Denver","Local Experts"]].map(([n,l]) => (
+            {[["6,000+","Moves Done"],["1,700+","Five-Star Reviews"],["A","BBB Rating"],["Denver","Local Experts"]].map(([n,l]) => (
               <div>
                 <div class="font-display font-bold text-2xl text-primary">{n}</div>
                 <div class="text-white/60 text-xs mt-0.5">{l}</div>
@@ -102,12 +113,11 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     </div>
   </section>
 
-
   <!-- Trust Bar -->
   <div class="bg-gray-50 border-y border-gray-200 py-4">
     <div class="container">
       <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-        {[["⭐","5-Star Google Rating"],["🏆","BBB A-Rated"],["🛡️","Licensed & Insured"],["👔","Background Checked Crews"],["🚚","Same-Week Availability"],["🛠️","Floor & Wall Protection"]].map(([icon, label]) => (
+        {[["⭐","1,700+ Five-Star Google Reviews"],["🏆","BBB A-Rated"],["🛡️","Licensed & Insured"],["👔","Background Checked Crews"],["🚚","Same-Week Availability"],["🛠️","Floor & Wall Protection"]].map(([icon, label]) => (
           <div class="flex items-center gap-2 text-sm font-medium text-secondary">
             <span>{icon}</span><span>{label}</span>
           </div>
@@ -163,6 +173,9 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     </div>
   </section>
 
+  <!-- Preferred Partner Program — Full Section -->
+  <PartnerBenefitsSection />
+
   <!-- CTA -->
   <section class="py-14 bg-primary">
     <div class="container text-center">
@@ -175,19 +188,26 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
     </div>
   </section>
 
-  <!-- Partner Teaser -->
-  <section class="py-12 bg-secondary text-white">
+  <!-- Internal Cross-Links -->
+  <section class="py-10 bg-secondary text-white">
     <div class="container">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <h3 class="font-display font-bold text-xl md:text-2xl mb-2">Legacy Preferred Partner Program</h3>
-          <p class="text-white/70 text-sm max-w-lg">Portfolio pricing, priority scheduling, dedicated account rep, and monthly referral bonuses — built for Denver contractors.</p>
-        </div>
-        <a href="/preferred-partner" class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-bold py-3 px-7 rounded-xl transition-all hover:scale-105 whitespace-nowrap text-sm">View Full Partner Program →</a>
+      <p class="text-white/50 text-xs text-center uppercase tracking-widest mb-5">Also Partnering With</p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        {[
+          ["🏡", "Realtors", "/realtor"],
+          ["🏢", "Apartment Complexes", "/apartment-complex"],
+          ["🛋️", "Interior Designers", "/interior-designer"],
+          ["💛", "Senior Living", "/senior-living"],
+          ["🏠", "Property Managers", "/property-manager"],
+          ["⭐", "Partner Program", "/preferred-partner"],
+        ].map(([icon, label, href]) => (
+          <a href={href} class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm px-4 py-2 rounded-full transition-all">
+            <span>{icon}</span><span>{label}</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-
 <MoverbaseRedirect />
-</BaseLayout>
+</FunnelLayout>

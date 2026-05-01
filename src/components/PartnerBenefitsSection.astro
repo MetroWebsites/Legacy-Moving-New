@@ -1,0 +1,148 @@
+---
+// Shared Preferred Partner Program section
+// Used across all 7 funnel landing pages
+---
+
+<!-- ======================================================
+     PREFERRED PARTNER PROGRAM — Full Section
+     ====================================================== -->
+
+<!-- Core Benefits -->
+<section class="py-16 bg-white">
+  <div class="container">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Partnership</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-4">Preferred Partner Program</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto text-base leading-relaxed">
+          A structured referral partnership designed to reward professionals who consistently send clients our way. Built for long-term relationships — not one-time referrals.
+        </p>
+      </div>
+
+      <!-- Core Benefits Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        {[
+          ["🎁", "Moving Perks for Your Clients", "Complimentary wardrobe boxes and TV box rentals for every referred move — a tangible closing gift your clients will remember."],
+          ["📅", "Priority Scheduling", "Referred moves go to the front of the line. Your clients get access to slots that aren't offered to the general public."],
+          ["📣", "Co-Branded Marketing Materials", "Custom materials featuring your name alongside Legacy Moving — so you stand out in your market."],
+          ["📱", "Social Media Recognition", "Top partners are featured on our social channels, giving your brand exposure to our growing audience."],
+          ["👤", "Dedicated Support & Communication", "A direct line to your account rep — someone who knows your clients and holds your partnership accountable."],
+          ["👑", "White-Glove Client Experience", "Every referred client receives VIP treatment: uniformed crew, damage protection, and premium follow-through."],
+        ].map(([icon, title, desc]) => (
+          <div class="flex items-start gap-4 bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-primary/20 hover:bg-primary/5 transition-all">
+            <div class="w-11 h-11 bg-secondary rounded-xl flex items-center justify-center text-xl flex-shrink-0">{icon}</div>
+            <div>
+              <h3 class="font-semibold text-secondary text-sm mb-1">{title}</h3>
+              <p class="text-muted-foreground text-xs leading-relaxed">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Quarterly Competition Feature -->
+      <div class="bg-secondary rounded-2xl overflow-hidden mb-10">
+        <div class="bg-gradient-to-r from-yellow-500/20 via-yellow-400/10 to-transparent px-8 pt-8 pb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🏆</span>
+            <div>
+              <h3 class="font-display font-bold text-xl text-white">Quarterly Referral Competition</h3>
+              <p class="text-yellow-300 text-xs font-semibold uppercase tracking-widest mt-0.5">Refer · Compete · Win</p>
+            </div>
+          </div>
+          <p class="text-white/85 text-sm leading-relaxed max-w-2xl mb-3">
+            Send clients our way and join a quarterly competition built to reward our most engaged partners. Recognition, rewards, and a front-row seat to your impact — every three months.
+          </p>
+          <p class="text-white/60 text-xs">
+            Top partners are recognized each quarter based on <strong class="text-white/80">total referrals</strong> and <strong class="text-white/80">total revenue generated</strong>.
+          </p>
+        </div>
+
+        <div class="px-8 pb-8 grid md:grid-cols-2 gap-6">
+          <!-- Tiers -->
+          <div>
+            <h4 class="text-white/60 text-xs font-bold uppercase tracking-widest mb-4">Partner Tiers</h4>
+            <div class="space-y-3">
+              {[
+                ["🥉", "Bronze", "1–4 referrals / quarter", "border-amber-700/40 bg-amber-900/20"],
+                ["🥈", "Silver", "5–9 referrals / quarter", "border-gray-400/40 bg-gray-500/20"],
+                ["🥇", "Gold", "10+ referrals / quarter", "border-yellow-500/50 bg-yellow-500/10"],
+              ].map(([medal, tier, range, style]) => (
+                <div class={`flex items-center justify-between border rounded-xl px-4 py-3 ${style}`}>
+                  <div class="flex items-center gap-3">
+                    <span class="text-xl">{medal}</span>
+                    <span class="font-semibold text-white text-sm">{tier}</span>
+                  </div>
+                  <span class="text-white/60 text-xs">{range}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-white/40 text-xs mt-3">Higher tiers unlock additional perks, priority treatment, and competition eligibility.</p>
+          </div>
+
+          <!-- Rewards -->
+          <div>
+            <h4 class="text-white/60 text-xs font-bold uppercase tracking-widest mb-4">Winner Rewards</h4>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <p class="text-white/85 text-sm leading-relaxed mb-4">
+                Winners receive curated local experiences — including restaurant gift cards, event tickets, and exclusive outings.
+              </p>
+              <ul class="space-y-2">
+                {[
+                  "Restaurant gift cards & dining experiences",
+                  "Event tickets & local outings",
+                  "Exclusive partner recognition features",
+                ].map((reward) => (
+                  <li class="flex items-center gap-2 text-white/70 text-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                    {reward}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How It Works -->
+      <div class="bg-gray-50 rounded-2xl p-8 mb-10 border border-gray-100">
+        <h3 class="font-display font-bold text-xl text-secondary mb-6 text-center">How It Works</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {[
+            ["1", "Send a Referral", "Via form, QR code, or a quick call — your choice."],
+            ["2", "We Handle Everything", "Outreach, booking, and the full client experience."],
+            ["3", "Confirmation in 24–48 hrs", "You receive a confirmation once the referral is logged."],
+            ["4", "Track Your Progress", "Referrals are counted toward your tier and quarterly competition standing."],
+          ].map(([num, title, desc]) => (
+            <div class="text-center">
+              <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-base mx-auto mb-3 shadow-md shadow-primary/20">{num}</div>
+              <h4 class="font-semibold text-secondary text-sm mb-1">{title}</h4>
+              <p class="text-muted-foreground text-xs leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Trust Line + CTA -->
+      <div class="bg-primary/5 border border-primary/15 rounded-2xl p-7 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="max-w-xl">
+          <p class="text-secondary text-sm leading-relaxed mb-1">
+            <strong>Every referral is acknowledged.</strong> Only completed moves count toward tiers and competition — ensuring fairness and real results.
+          </p>
+          <p class="text-muted-foreground text-sm">
+            Become a preferred partner and start turning your network into a consistent advantage.
+          </p>
+        </div>
+        <a
+          href="/preferred-partner"
+          class="flex-shrink-0 inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-8 rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/20 whitespace-nowrap"
+        >
+          Apply — It's Free
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
