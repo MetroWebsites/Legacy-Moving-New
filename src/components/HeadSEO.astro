@@ -52,37 +52,70 @@ const { title, description, ogImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImage} />
 
-<!-- Google tag (gtag.js) - Google Ads -->
+<!-- Google tag (gtag.js) - Single load for both Google Ads + GA4 -->
+<!-- Fix: previously two separate async gtag.js requests — consolidated to one -->
 <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-10890296710"></script>
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  // Google Ads
   gtag('config', 'AW-10890296710');
-</script>
-
-<!-- Google tag (gtag.js) - Google Analytics 4 -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-6NR81FW8N5"></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Google Analytics 4
   gtag('config', 'G-6NR81FW8N5');
 </script>
 
-<!-- hCaptcha API Script - Load before React hydration -->
-<script is:inline src="https://js.hcaptcha.com/1/api.js"></script>
+<!-- hCaptcha: deferred load — script only injected when user interacts with a form.
+     This removes the 2.2s blocking hcaptcha/1/api.js load from initial page load. -->
+<script is:inline>
+  (function() {
+    var hcaptchaLoaded = false;
+
+    function loadHCaptcha() {
+      if (hcaptchaLoaded) return;
+      hcaptchaLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://js.hcaptcha.com/1/api.js';
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+
+    // Load on first focus/click on any form field
+    function attachListeners() {
+      var triggers = ['input', 'textarea', 'select', 'button[type="submit"]'];
+      triggers.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.addEventListener('focus', loadHCaptcha, { once: true, passive: true });
+          el.addEventListener('click', loadHCaptcha, { once: true, passive: true });
+        });
+      });
+      // Also fire on any form click as a fallback
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('click', loadHCaptcha, { once: true, passive: true });
+        form.addEventListener('focusin', loadHCaptcha, { once: true, passive: true });
+      });
+    }
+
+    // Run after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', attachListeners);
+    } else {
+      attachListeners();
+    }
+  })();
+</script>
 
 <!-- DO NOT REMOVE - Plausible Analytics must always be enabled -->
 <script is:inline>
   // Plausible Analytics - Dynamic Domain Detection
   // This script automatically detects the current domain and loads Plausible analytics
   (function() {
-    const hostname = window.location.hostname;
+    var hostname = window.location.hostname;
     
     // Only track production domains (exclude localhost, IP addresses, etc.)
     if (hostname !== 'localhost' && !hostname.match(/^\d+\.\d+\.\d+\.\d+$/)) {
-      const script = document.createElement('script');
+      var script = document.createElement('script');
       script.defer = true;
       script.setAttribute('data-domain', hostname);
       script.src = 'https://plausible.io/js/script.js';
