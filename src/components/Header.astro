@@ -46,12 +46,17 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
     <div class="flex items-center gap-2 -mt-1 md:ml-12 md:-mt-10">
       <a href="/" class="flex items-center">
         <picture>
-          <source srcset="/assets/logo.webp" type="image/webp" />
-          <img 
-            src="/assets/legacy-logo_nw_1c856f89.png" 
-            alt="Legacy Moving Denver Logo" 
-            width="280" 
-            height="65"
+          <!-- WebP: 1×=280px, 2×=560px for HiDPI screens -->
+          <source
+            type="image/webp"
+            srcset="/assets/logo.webp 1x, /assets/logo@2x.webp 2x"
+          />
+          <!-- PNG fallback (original, for very old browsers) -->
+          <img
+            src="/assets/legacy-logo_nw_1c856f89.png"
+            alt="Legacy Moving Denver Logo"
+            width="280"
+            height="86"
             class="h-12 w-auto md:h-20"
             fetchpriority="high"
             decoding="async"
