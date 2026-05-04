@@ -1,6 +1,5 @@
 ---
 import "@/styles/global.css";
-import "@/styles/fonts.css";
 
 interface Props {
   title?: string | undefined;
@@ -52,17 +51,53 @@ const { title, description, ogImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImage} />
 
-<!-- Google tag (gtag.js) - Single load for both Google Ads + GA4 -->
-<!-- Fix: previously two separate async gtag.js requests — consolidated to one -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-10890296710"></script>
+<!-- Preconnect to critical third-party origins — must come before their scripts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://lead.moverbase.net" />
+
+<!-- Google Fonts: loaded via <link> (not @import) so the browser can discover and
+     fetch it in parallel with other head resources instead of blocking on CSS parse. -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<!-- Fallback for no-JS -->
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" />
+</noscript>
+
+<!-- Google tag (gtag.js) — deferred until the browser is idle so it does not
+     block first paint or LCP.  requestIdleCallback fires after the page is
+     visually complete; setTimeout(…,0) is the fallback for Safari / older browsers. -->
 <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  // Google Ads
-  gtag('config', 'AW-10890296710');
-  // Google Analytics 4
-  gtag('config', 'G-6NR81FW8N5');
+  (function() {
+    function loadGTM() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-10890296710';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'AW-10890296710');
+      gtag('config', 'G-6NR81FW8N5');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGTM, { timeout: 4000 });
+    } else {
+      // Safari / older browsers: load after page load event completes
+      if (document.readyState === 'complete') {
+        setTimeout(loadGTM, 1);
+      } else {
+        window.addEventListener('load', function() { setTimeout(loadGTM, 1); });
+      }
+    }
+  })();
 </script>
 
 <!-- hCaptcha: deferred load — script only injected when user interacts with a form.
