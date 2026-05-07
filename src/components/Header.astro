@@ -50,6 +50,7 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
           <source
             type="image/webp"
             srcset="/assets/logo.webp 1x, /assets/logo@2x.webp 2x"
+            sizes="(max-width: 767px) 144px, 280px"
           />
           <!-- PNG fallback (original, for very old browsers) -->
           <img
@@ -60,6 +61,7 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
             class="h-12 w-auto md:h-20"
             fetchpriority="high"
             decoding="async"
+            sizes="(max-width: 767px) 144px, 280px"
           />
         </picture>
       </a>
