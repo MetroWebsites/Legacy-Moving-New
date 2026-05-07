@@ -20,9 +20,15 @@ const { title, description, ogImage, phoneNumber } = Astro.props;
     <div class="bg-white border-b border-gray-100 py-3 px-4 md:px-6">
       <div class="container flex items-center justify-between gap-3">
         <!-- Logo — NOT a link (closed funnel) -->
-        <span class="inline-flex items-center gap-2 select-none min-w-0" aria-label="Legacy Moving Denver">
-          <img src="/favicon.png" alt="Legacy Moving Denver" class="w-7 h-7 flex-shrink-0 md:w-8 md:h-8" />
-          <span class="font-display font-bold text-secondary text-sm md:text-lg leading-tight truncate">Legacy Moving <span class="text-primary">Denver</span></span>
+        <span class="inline-flex items-center select-none min-w-0" aria-label="Legacy Moving Denver">
+          <img
+            src="/assets/legacy-logo-full.webp"
+            alt="Legacy Moving Denver"
+            width="180"
+            height="55"
+            class="h-10 w-auto md:h-12 flex-shrink-0"
+            decoding="async"
+          />
         </span>
         <!-- Single call CTA in nav — always one line on every screen size -->
         <a
