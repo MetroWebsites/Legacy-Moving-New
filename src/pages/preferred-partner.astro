@@ -649,9 +649,13 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
               <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <h3 class="font-display font-bold text-2xl text-secondary mb-2">Application Received!</h3>
-              <p class="text-muted-foreground mb-1">Thank you for applying to the Legacy Preferred Partner Program.</p>
-              <p class="text-muted-foreground text-sm">Our team will review your application and reach out within <strong>24 business hours</strong>.</p>
+              <h3 class="font-display font-bold text-2xl text-secondary mb-3">Your email client just opened!</h3>
+              <p class="text-secondary font-medium mb-2">All your answers are pre-filled — just hit <strong>Send</strong>.</p>
+              <p class="text-muted-foreground text-sm mb-5">The application is addressed to <strong>info@legacymovingdenver.com</strong> with a copy to your email address. Our team will review and reach out within <strong>24 business hours</strong>.</p>
+              <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-left max-w-sm mx-auto">
+                <p class="text-amber-800 text-xs font-semibold uppercase tracking-wide mb-1">Didn't open?</p>
+                <p class="text-amber-700 text-sm">Your browser may have blocked it. Call us directly at <a href="tel:7207642299" class="font-semibold underline">(720) 764-2299</a> or email <a href="mailto:info@legacymovingdenver.com" class="font-semibold underline">info@legacymovingdenver.com</a>.</p>
+              </div>
             </div>
 
           </form>
@@ -781,10 +785,10 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
       e.preventDefault();
       if (!validateStep(TOTAL_STEPS)) return;
 
-      // Collect all form data
-      const data = new FormData(form);
+      // ── Collect all form data, grouping multi-value fields into arrays ──
+      const raw = new FormData(form);
       const payload = {};
-      for (const [key, value] of data.entries()) {
+      for (const [key, value] of raw.entries()) {
         if (payload[key]) {
           payload[key] = Array.isArray(payload[key])
             ? [...payload[key], value]
@@ -794,15 +798,128 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
         }
       }
 
-      // Submit to Netlify / API if available, otherwise just show success
-      const endpoint = '/api/forms/submit';
-      fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ form: 'partner-application', ...payload }),
-      }).catch(() => {
-        // Silently fail — still show success to user
-      }).finally(() => {
+      // ── Helper: pretty-print a field label from its name ──
+      function label(key) {
+        const map = {
+          legal_name:                   'Legal Business Name',
+          dba:                          'DBA / Trade Name',
+          business_type:                'Business Type',
+          years_in_business:            'Years in Business',
+          website:                      'Website',
+          social_profiles:              'Social Profiles',
+          service_area:                 'Service Area / Coverage Zones',
+          office_locations:             'Office Location(s)',
+          contact_name:                 'Full Name',
+          contact_title:                'Title / Role',
+          contact_email:                'Email',
+          contact_phone:                'Direct Phone',
+          preferred_contact:            'Preferred Communication Method',
+          team_size:                    'Team Size',
+          client_profile:               'Typical Client Profile',
+          re_license:                   'Real Estate License #',
+          re_license_state:             'License State',
+          has_insurance:                'Business Insurance / Liability Coverage',
+          google_rating:                'Google Review Average',
+          bbb_rating:                   'BBB Rating',
+          affiliations:                 'Industry Affiliations',
+          why_partner:                  'Why Partner with Legacy Moving',
+          current_mover_relationship:   'Current Moving Company Relationships',
+          monthly_referrals:            'Estimated Monthly Referrals',
+          desired_benefits:             'Looking for in Return',
+          intro_method:                 'How They Introduce Vendors to Clients',
+          cobranded_marketing:          'Open to Co-Branded Marketing',
+          joint_events:                 'Willing to Attend Joint Events',
+          expectations:                 'What They Expect from a Moving Partner',
+          past_issues:                  'Past Issues with Movers',
+          disclose_partnership:         'Disclosure Agreement',
+          code_of_conduct:              'Code of Conduct Agreement',
+          additional_notes:             'Additional Notes',
+        };
+        return map[key] || key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      }
+
+      // ── Helper: format a value (arrays → bullet list) ──
+      function val(v) {
+        if (Array.isArray(v)) return v.join(', ');
+        if (v === 'on') return 'Agreed ✓';
+        return v || '(not provided)';
+      }
+
+      // ── Build the email body grouped by section ──
+      const sections = [
+        {
+          heading: '1. COMPANY BASICS',
+          keys: ['legal_name','dba','business_type','years_in_business','website','social_profiles','service_area','office_locations'],
+        },
+        {
+          heading: '2. PRIMARY CONTACT',
+          keys: ['contact_name','contact_title','contact_email','contact_phone','preferred_contact'],
+        },
+        {
+          heading: '3. BUSINESS SCALE',
+          keys: ['team_size','client_profile'],
+        },
+        {
+          heading: '4. LICENSING & CREDIBILITY',
+          keys: ['re_license','re_license_state','has_insurance','google_rating','bbb_rating','affiliations'],
+        },
+        {
+          heading: '5. PARTNERSHIP FIT',
+          keys: ['why_partner','current_mover_relationship','monthly_referrals','desired_benefits'],
+        },
+        {
+          heading: '6. HOW THEY\'D WORK WITH US',
+          keys: ['intro_method','cobranded_marketing','joint_events'],
+        },
+        {
+          heading: '7. CLIENT EXPERIENCE STANDARDS',
+          keys: ['expectations','past_issues'],
+        },
+        {
+          heading: '8. COMPLIANCE & ETHICS',
+          keys: ['disclose_partnership','code_of_conduct','additional_notes'],
+        },
+      ];
+
+      let body = 'New Legacy Preferred Partner Application\n';
+      body    += '=========================================\n';
+      body    += 'Submitted: ' + new Date().toLocaleString() + '\n\n';
+
+      sections.forEach(({ heading, keys }) => {
+        body += heading + '\n';
+        body += '-'.repeat(heading.length) + '\n';
+        keys.forEach((k) => {
+          const v = payload[k];
+          if (v !== undefined && v !== '' && v !== null) {
+            body += label(k) + ': ' + val(v) + '\n';
+          }
+        });
+        body += '\n';
+      });
+
+      body += '=========================================\n';
+      body += 'Sent via Legacy Moving Denver partner application form.\n';
+      body += 'Reply directly to this email to respond to the applicant.\n';
+
+      // ── Derive applicant name + email for subject / reply-to ──
+      const applicantName  = payload['contact_name']  || 'New Applicant';
+      const applicantEmail = payload['contact_email'] || '';
+      const bizName        = payload['legal_name']    || '';
+
+      const subject = 'Partner Application — ' + (bizName || applicantName) + ' (' + (payload['business_type'] || 'Unknown Type') + ')';
+
+      // ── Build mailto: URI ──
+      const to      = 'info@legacymovingdenver.com';
+      const mailto  = 'mailto:' + to
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='    + encodeURIComponent(body)
+        + (applicantEmail ? '&cc=' + encodeURIComponent(applicantEmail) : '');
+
+      // ── Open the email client ──
+      window.location.href = mailto;
+
+      // ── Show success screen ──
+      setTimeout(() => {
         getSteps().forEach((s) => s.classList.add('hidden'));
         btnNext.classList.add('hidden');
         btnPrev.classList.add('hidden');
@@ -812,9 +929,9 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
         successMsg.classList.remove('hidden');
         progressBar.style.width = '100%';
         stepCounter.textContent = 'Complete!';
-        stepLabel.textContent = 'Application Submitted';
+        stepLabel.textContent   = 'Application Submitted';
         window.scrollTo({ top: document.getElementById('apply').offsetTop - 20, behavior: 'smooth' });
-      });
+      }, 300);
     });
 
     // Init
