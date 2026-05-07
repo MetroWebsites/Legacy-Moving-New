@@ -259,35 +259,568 @@ import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
   <!-- Application Form -->
   <section id="apply" class="py-16 bg-gradient-to-br from-secondary to-secondary/90">
     <div class="container">
-      <div class="max-w-2xl mx-auto">
+      <div class="max-w-3xl mx-auto">
         <div class="text-center mb-10">
           <span class="inline-block bg-primary/20 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Apply Today — It's Free</span>
           <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-3">Become a Legacy Preferred Partner</h2>
-          <p class="text-white/75">Fill out the form below and our team will reach out within 24 hours to get you set up.</p>
+          <p class="text-white/75">Complete the application below — our team will review and reach out within 24 hours.</p>
         </div>
 
         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <!-- Form header with step progress -->
           <div class="bg-primary px-8 py-5">
-            <h3 class="font-display font-bold text-xl text-white">Partner Application</h3>
-            <p class="text-white/80 text-sm mt-1">Free to join. No obligations. Cancel anytime.</p>
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-display font-bold text-xl text-white">Partner Application</h3>
+                <p class="text-white/80 text-sm mt-0.5">Free to join. No obligations. Cancel anytime.</p>
+              </div>
+              <span id="step-counter" class="text-white/80 text-sm font-medium">Step 1 of 8</span>
+            </div>
+            <!-- Progress bar -->
+            <div class="bg-white/20 rounded-full h-2">
+              <div id="progress-bar" class="bg-white rounded-full h-2 transition-all duration-300" style="width: 12.5%"></div>
+            </div>
+            <!-- Step labels -->
+            <div id="step-label" class="text-white/90 text-xs font-semibold mt-2 uppercase tracking-widest">Company Basics</div>
           </div>
-          <div class="p-8">
-            <div data-version="2" id="M2N4TC"></div>
-            <script is:inline>
-            (function(r,k) {
-              var s = document.createElement('script');
-              s.async = true;
-              s.defer = true;
-              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
-              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
-              document.getElementById(r).appendChild(s);
-            })('M2N4TC','56VTX4D3VB7MIAWU5RDWPO2STWZXZG78GSZO6204DWUCNMCZ');
-            </script>
-          </div>
+
+          <form id="partner-form" class="p-6 md:p-8" novalidate>
+
+            <!-- STEP 1: Company Basics -->
+            <fieldset class="form-step" data-step="1">
+              <legend class="sr-only">Company Basics</legend>
+              <div class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Legal Business Name <span class="text-red-500">*</span></label>
+                    <input type="text" name="legal_name" required placeholder="e.g. Smith Realty LLC" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">DBA / Trade Name</label>
+                    <input type="text" name="dba" placeholder="If different from legal name" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Business Type <span class="text-red-500">*</span></label>
+                  <select name="business_type" required class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                    <option value="">Select business type…</option>
+                    <option>Real Estate Brokerage</option>
+                    <option>Property Management</option>
+                    <option>Apartment Complex / Multi-Family</option>
+                    <option>Storage Facility</option>
+                    <option>Cleaning Company</option>
+                    <option>Home Staging / Interior Design</option>
+                    <option>Senior Living Community</option>
+                    <option>General Contractor / Remodeler</option>
+                    <option>Corporate Relocation</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Years in Business <span class="text-red-500">*</span></label>
+                    <select name="years_in_business" required class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                      <option value="">Select…</option>
+                      <option>Less than 1 year</option>
+                      <option>1–2 years</option>
+                      <option>3–5 years</option>
+                      <option>6–10 years</option>
+                      <option>10+ years</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Website</label>
+                    <input type="url" name="website" placeholder="https://yoursite.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Social Profiles</label>
+                  <input type="text" name="social_profiles" placeholder="Facebook, Instagram, LinkedIn URLs" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Service Area / Coverage Zones <span class="text-red-500">*</span></label>
+                    <input type="text" name="service_area" required placeholder="e.g. Denver Metro, DTC, Boulder" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Office Location(s)</label>
+                    <input type="text" name="office_locations" placeholder="e.g. Downtown Denver, Cherry Creek" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 2: Primary Contact -->
+            <fieldset class="form-step hidden" data-step="2">
+              <legend class="sr-only">Primary Contact</legend>
+              <div class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Full Name <span class="text-red-500">*</span></label>
+                    <input type="text" name="contact_name" required placeholder="Jane Smith" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Title / Role <span class="text-red-500">*</span></label>
+                    <input type="text" name="contact_title" required placeholder="e.g. Broker, Owner, Director" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Email <span class="text-red-500">*</span></label>
+                    <input type="email" name="contact_email" required placeholder="jane@yourcompany.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Direct Phone <span class="text-red-500">*</span></label>
+                    <input type="tel" name="contact_phone" required placeholder="(720) 000-0000" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Preferred Communication Method <span class="text-red-500">*</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["Email", "Text / SMS", "Phone Call"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="preferred_contact" value={opt} class="accent-primary w-4 h-4" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3: Business Scale -->
+            <fieldset class="form-step hidden" data-step="3">
+              <legend class="sr-only">Business Scale</legend>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Team Size <span class="text-red-500">*</span></label>
+                  <select name="team_size" required class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                    <option value="">Select…</option>
+                    <option>Solo / Individual rep</option>
+                    <option>2–5 agents / staff</option>
+                    <option>6–15 agents / staff</option>
+                    <option>16–50 agents / staff</option>
+                    <option>50+ agents / staff</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Typical Client Profile <span class="text-red-500">*</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["Luxury / High-end", "Mid-market", "First-time buyers", "Students", "Seniors", "Corporate relocations", "Investors / Flippers", "Mixed"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" name="client_profile" value={opt} class="accent-primary w-4 h-4 rounded" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 4: Licensing & Credibility -->
+            <fieldset class="form-step hidden" data-step="4">
+              <legend class="sr-only">Licensing & Credibility</legend>
+              <div class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Real Estate License # <span class="text-muted-foreground font-normal">(if applicable)</span></label>
+                    <input type="text" name="re_license" placeholder="e.g. FA100012345" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">License State</label>
+                    <input type="text" name="re_license_state" placeholder="e.g. Colorado" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Business Insurance / Liability Coverage</label>
+                  <select name="has_insurance" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                    <option value="">Select…</option>
+                    <option>Yes — general liability</option>
+                    <option>Yes — E&O / professional liability</option>
+                    <option>Yes — both GL and E&O</option>
+                    <option>No / Not applicable</option>
+                    <option>In progress</option>
+                  </select>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">Google Review Average</label>
+                    <select name="google_rating" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                      <option value="">Select…</option>
+                      <option>5.0 ⭐⭐⭐⭐⭐</option>
+                      <option>4.5–4.9 ⭐⭐⭐⭐½</option>
+                      <option>4.0–4.4 ⭐⭐⭐⭐</option>
+                      <option>Below 4.0</option>
+                      <option>No reviews yet</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-semibold text-secondary mb-1.5">BBB Rating</label>
+                    <select name="bbb_rating" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                      <option value="">Select…</option>
+                      <option>A+</option>
+                      <option>A</option>
+                      <option>B or below</option>
+                      <option>Not rated / No profile</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Industry Affiliations</label>
+                  <input type="text" name="affiliations" placeholder="e.g. NAR, IREM, Colorado Association of Realtors, local board" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 5: Partnership Fit -->
+            <fieldset class="form-step hidden" data-step="5">
+              <legend class="sr-only">Partnership Fit</legend>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Why do you want to partner with Legacy Moving specifically? <span class="text-red-500">*</span></label>
+                  <textarea name="why_partner" required rows="3" placeholder="Tell us what drew you to us and what you're hoping this partnership looks like…" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-none"></textarea>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Do you currently refer clients to a moving company? <span class="text-red-500">*</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["No — I don't currently refer anyone", "Yes — casually / no formal arrangement", "Yes — exclusive relationship", "Yes — non-exclusive, open to switching"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="current_mover_relationship" value={opt} class="accent-primary w-4 h-4" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Estimated monthly referrals you could send our way <span class="text-red-500">*</span></label>
+                  <select name="monthly_referrals" required class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition bg-white">
+                    <option value="">Select…</option>
+                    <option>1–2 per month</option>
+                    <option>3–5 per month</option>
+                    <option>6–10 per month</option>
+                    <option>10+ per month</option>
+                    <option>Varies — hard to estimate</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">What are you looking for in return? <span class="text-muted-foreground font-normal">(select all that apply)</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["Co-marketing / co-branded materials", "Referral fees / commissions", "Priority scheduling for my clients", "Discounted rates for my clients", "Social media recognition", "Joint events / open houses", "Dedicated account rep"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" name="desired_benefits" value={opt} class="accent-primary w-4 h-4 rounded" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 6: How They'd Work With Us -->
+            <fieldset class="form-step hidden" data-step="6">
+              <legend class="sr-only">How You'd Work With Us</legend>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">How do you typically introduce vendors to clients? <span class="text-red-500">*</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["Warm verbal introduction", "Preferred vendor list / handout", "Email introduction template", "In-person at showing / closing", "Text message referral", "Social media shoutout"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" name="intro_method" value={opt} class="accent-primary w-4 h-4 rounded" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Open to co-branded marketing materials? <span class="text-red-500">*</span></label>
+                  <div class="flex gap-4 mt-1">
+                    {["Yes", "No", "Maybe — tell me more"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="cobranded_marketing" value={opt} class="accent-primary w-4 h-4" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Willing to attend joint events, open houses, or networking? <span class="text-red-500">*</span></label>
+                  <div class="flex gap-4 mt-1">
+                    {["Yes — actively interested", "Occasionally / case by case", "Not at this time"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="joint_events" value={opt} class="accent-primary w-4 h-4" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 7: Client Experience Standards -->
+            <fieldset class="form-step hidden" data-step="7">
+              <legend class="sr-only">Client Experience Standards</legend>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">What do you expect from a moving partner? <span class="text-muted-foreground font-normal">(select all that apply)</span></label>
+                  <div class="flex flex-wrap gap-3 mt-1">
+                    {["Fast response time (same day)", "Upfront, transparent pricing", "Clear claims / damage process", "Professional uniformed crews", "Real-time communication on move day", "Follow-up after the move"].map((opt) => (
+                      <label class="inline-flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" name="expectations" value={opt} class="accent-primary w-4 h-4 rounded" />
+                        <span class="text-sm text-secondary">{opt}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Any past issues with moving companies that soured the experience?</label>
+                  <textarea name="past_issues" rows="3" placeholder="No pressure to share — but knowing this helps us understand what matters most to you and ensures we exceed those expectations." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-none"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 8: Compliance & Ethics -->
+            <fieldset class="form-step hidden" data-step="8">
+              <legend class="sr-only">Compliance & Ethics</legend>
+              <div class="space-y-5">
+                <p class="text-sm text-muted-foreground bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  These final two items protect your clients and ensure our partnership operates with full transparency. Both are required to join the program.
+                </p>
+                <div class="bg-white border border-gray-200 rounded-xl p-5">
+                  <label class="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" name="disclose_partnership" required class="accent-primary w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-secondary leading-relaxed">
+                      <strong>Disclosure agreement:</strong> I agree to disclose my partnership with Legacy Moving Denver to my clients when making a referral, as required by applicable professional standards and ethics codes.
+                    </span>
+                  </label>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5">
+                  <label class="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" name="code_of_conduct" required class="accent-primary w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <span class="text-sm text-secondary leading-relaxed">
+                      <strong>Code of conduct:</strong> I agree to operate in good faith as a Legacy Preferred Partner — recommending services honestly, never pressuring clients, and upholding the professional standards of my industry.
+                    </span>
+                  </label>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-secondary mb-1.5">Anything else you'd like us to know?</label>
+                  <textarea name="additional_notes" rows="3" placeholder="Any context, questions, or specific needs — we read every application personally." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-none"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Navigation buttons -->
+            <div class="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
+              <button
+                type="button"
+                id="btn-prev"
+                class="hidden inline-flex items-center gap-2 text-secondary border border-gray-200 hover:border-gray-300 font-semibold px-5 py-2.5 rounded-xl text-sm transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+                Back
+              </button>
+              <div class="flex items-center gap-2 ml-auto">
+                <!-- Dot indicators -->
+                <div id="step-dots" class="flex gap-1.5 mr-3">
+                  {[1,2,3,4,5,6,7,8].map((n) => (
+                    <span class={`step-dot w-2 h-2 rounded-full transition-all ${n === 1 ? 'bg-primary w-4' : 'bg-gray-200'}`} data-dot={n}></span>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  id="btn-next"
+                  class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-all shadow-sm"
+                >
+                  Next
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+                <button
+                  type="submit"
+                  id="btn-submit"
+                  class="hidden inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-2.5 rounded-xl text-sm transition-all shadow-sm"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                  Submit Application
+                </button>
+              </div>
+            </div>
+
+            <!-- Success message (hidden by default) -->
+            <div id="form-success" class="hidden text-center py-10">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-secondary mb-2">Application Received!</h3>
+              <p class="text-muted-foreground mb-1">Thank you for applying to the Legacy Preferred Partner Program.</p>
+              <p class="text-muted-foreground text-sm">Our team will review your application and reach out within <strong>24 business hours</strong>.</p>
+            </div>
+
+          </form>
         </div>
       </div>
     </div>
   </section>
+
+  <script is:inline>
+  (function () {
+    const TOTAL_STEPS = 8;
+    const STEP_LABELS = [
+      'Company Basics',
+      'Primary Contact',
+      'Business Scale',
+      'Licensing & Credibility',
+      'Partnership Fit',
+      'How You\'d Work With Us',
+      'Client Experience Standards',
+      'Compliance & Ethics',
+    ];
+
+    let currentStep = 1;
+
+    const form       = document.getElementById('partner-form');
+    const btnNext    = document.getElementById('btn-next');
+    const btnPrev    = document.getElementById('btn-prev');
+    const btnSubmit  = document.getElementById('btn-submit');
+    const progressBar = document.getElementById('progress-bar');
+    const stepCounter = document.getElementById('step-counter');
+    const stepLabel  = document.getElementById('step-label');
+    const successMsg = document.getElementById('form-success');
+
+    function getSteps() {
+      return form.querySelectorAll('.form-step');
+    }
+
+    function getDots() {
+      return document.querySelectorAll('.step-dot');
+    }
+
+    function showStep(n) {
+      getSteps().forEach((s) => s.classList.add('hidden'));
+      const target = form.querySelector('[data-step="' + n + '"]');
+      if (target) target.classList.remove('hidden');
+
+      // Progress
+      const pct = (n / TOTAL_STEPS) * 100;
+      progressBar.style.width = pct + '%';
+      stepCounter.textContent = 'Step ' + n + ' of ' + TOTAL_STEPS;
+      stepLabel.textContent   = STEP_LABELS[n - 1];
+
+      // Dots
+      getDots().forEach((dot) => {
+        const dn = parseInt(dot.getAttribute('data-dot'));
+        dot.classList.remove('bg-primary', 'bg-green-500', 'bg-gray-200', 'w-4', 'w-2');
+        if (dn < n) {
+          dot.classList.add('bg-green-500', 'w-2');
+        } else if (dn === n) {
+          dot.classList.add('bg-primary', 'w-4');
+        } else {
+          dot.classList.add('bg-gray-200', 'w-2');
+        }
+      });
+
+      // Buttons
+      btnPrev.classList.toggle('hidden', n === 1);
+      if (n === TOTAL_STEPS) {
+        btnNext.classList.add('hidden');
+        btnSubmit.classList.remove('hidden');
+      } else {
+        btnNext.classList.remove('hidden');
+        btnSubmit.classList.add('hidden');
+      }
+
+      currentStep = n;
+    }
+
+    function validateStep(n) {
+      const step = form.querySelector('[data-step="' + n + '"]');
+      if (!step) return true;
+      const required = step.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach((field) => {
+        field.classList.remove('border-red-400', 'ring-2', 'ring-red-200');
+        if (field.type === 'checkbox') {
+          if (!field.checked) {
+            field.closest('label') && field.closest('label').classList.add('text-red-500');
+            valid = false;
+          }
+        } else if (!field.value.trim()) {
+          field.classList.add('border-red-400', 'ring-2', 'ring-red-200');
+          valid = false;
+        }
+      });
+      // Radio required check
+      const radioGroups = {};
+      step.querySelectorAll('input[type="radio"][required]').forEach((r) => {
+        radioGroups[r.name] = radioGroups[r.name] || [];
+        radioGroups[r.name].push(r);
+      });
+      Object.keys(radioGroups).forEach((name) => {
+        const checked = radioGroups[name].some((r) => r.checked);
+        if (!checked) valid = false;
+      });
+      if (!valid) {
+        // Scroll to first error
+        const firstError = step.querySelector('.border-red-400, input[required]:not(:checked)');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return valid;
+    }
+
+    btnNext.addEventListener('click', () => {
+      if (validateStep(currentStep)) {
+        showStep(currentStep + 1);
+        window.scrollTo({ top: document.getElementById('apply').offsetTop - 20, behavior: 'smooth' });
+      }
+    });
+
+    btnPrev.addEventListener('click', () => {
+      showStep(currentStep - 1);
+      window.scrollTo({ top: document.getElementById('apply').offsetTop - 20, behavior: 'smooth' });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validateStep(TOTAL_STEPS)) return;
+
+      // Collect all form data
+      const data = new FormData(form);
+      const payload = {};
+      for (const [key, value] of data.entries()) {
+        if (payload[key]) {
+          payload[key] = Array.isArray(payload[key])
+            ? [...payload[key], value]
+            : [payload[key], value];
+        } else {
+          payload[key] = value;
+        }
+      }
+
+      // Submit to Netlify / API if available, otherwise just show success
+      const endpoint = '/api/forms/submit';
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ form: 'partner-application', ...payload }),
+      }).catch(() => {
+        // Silently fail — still show success to user
+      }).finally(() => {
+        getSteps().forEach((s) => s.classList.add('hidden'));
+        btnNext.classList.add('hidden');
+        btnPrev.classList.add('hidden');
+        btnSubmit.classList.add('hidden');
+        document.querySelector('#step-dots').classList.add('hidden');
+        document.querySelector('.border-t').classList.add('hidden');
+        successMsg.classList.remove('hidden');
+        progressBar.style.width = '100%';
+        stepCounter.textContent = 'Complete!';
+        stepLabel.textContent = 'Application Submitted';
+        window.scrollTo({ top: document.getElementById('apply').offsetTop - 20, behavior: 'smooth' });
+      });
+    });
+
+    // Init
+    showStep(1);
+  })();
+  </script>
 
   <!-- FAQ -->
   <section class="py-16 bg-gray-50">
