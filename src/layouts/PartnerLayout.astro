@@ -1,0 +1,126 @@
+---
+import HeadSEO from "@/components/HeadSEO.astro";
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+  ogImage?: URL | undefined;
+  phoneNumber?: string | undefined;
+  partnerName?: string | undefined;
+  partnerLogo?: string | undefined;
+  partnerLogoAlt?: string | undefined;
+  partnerAccentColor?: string | undefined;
+}
+
+const {
+  title,
+  description,
+  ogImage,
+  phoneNumber = "7207642299",
+  partnerName = "",
+  partnerLogo = "",
+  partnerLogoAlt = "",
+  partnerAccentColor = "#b8963e",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <HeadSEO title={title} description={description} ogImage={ogImage} />
+    <style define:vars={{ partnerAccent: partnerAccentColor }}>
+      .partner-divider { color: var(--partnerAccent); }
+      .partner-accent-bg { background-color: var(--partnerAccent); }
+      .partner-accent-text { color: var(--partnerAccent); }
+      .partner-accent-border { border-color: var(--partnerAccent); }
+    </style>
+  </head>
+  <body class="bg-background min-h-screen font-sans antialiased">
+
+    <!-- Co-branded nav: both logos + phone CTA -->
+    <div class="bg-white border-b border-gray-100 py-3 px-4 md:px-6 shadow-sm">
+      <div class="container flex items-center justify-between gap-4">
+
+        <!-- Left: both logos with "×" separator -->
+        <div class="flex items-center gap-3 md:gap-5 min-w-0">
+          <!-- Legacy Moving Denver logo -->
+          <a href="/" class="flex-shrink-0" aria-label="Legacy Moving Denver">
+            <img
+              src="/assets/legacy-logo-full.webp"
+              alt="Legacy Moving Denver"
+              width="140"
+              height="43"
+              class="h-8 w-auto md:h-10 flex-shrink-0"
+              decoding="async"
+            />
+          </a>
+
+          <!-- Divider -->
+          <span class="partner-accent-text font-bold text-xl md:text-2xl flex-shrink-0 select-none leading-none" aria-hidden="true">×</span>
+
+          <!-- Partner logo -->
+          {partnerLogo && (
+            <img
+              src={partnerLogo}
+              alt={partnerLogoAlt}
+              width="140"
+              height="43"
+              class="h-8 w-auto md:h-10 flex-shrink-0 object-contain"
+              decoding="async"
+            />
+          )}
+        </div>
+
+        <!-- Right: call CTA -->
+        <a
+          href={`tel:${phoneNumber}`}
+          class="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-3 py-2 md:px-5 text-sm transition-all shadow-sm flex-shrink-0 whitespace-nowrap"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="whitespace-nowrap">(720) 764-2299</span>
+        </a>
+
+      </div>
+    </div>
+
+    <main class="flex-auto">
+      <slot />
+    </main>
+
+    <!-- Co-branded footer -->
+    <footer class="bg-secondary text-white py-10 mt-0">
+      <div class="container">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+          <!-- Logos -->
+          <div class="flex items-center gap-4">
+            <img src="/assets/legacy-logo-full.webp" alt="Legacy Moving Denver" class="h-7 w-auto opacity-80" width="120" height="37" />
+            {partnerLogo && (
+              <>
+                <span class="partner-accent-text font-bold text-lg opacity-80 select-none">×</span>
+                <img src={partnerLogo} alt={partnerLogoAlt} class="h-7 w-auto opacity-80 object-contain brightness-0 invert" width="120" height="37" />
+              </>
+            )}
+          </div>
+
+          <!-- License line -->
+          <p class="text-white/40 text-xs text-center">
+            DOT #3462023 · MC #1189363 · PUC #HHG-00682 · Licensed & Insured
+          </p>
+
+          <!-- Phone -->
+          <a href={`tel:${phoneNumber}`} class="text-primary font-semibold text-sm hover:text-primary/80 transition-colors">
+            (720) 764-2299
+          </a>
+
+        </div>
+        {partnerName && (
+          <p class="text-center text-white/30 text-xs mt-5">
+            A preferred partnership between Legacy Moving Denver and {partnerName}.
+            This page is shared exclusively with {partnerName}'s clients.
+          </p>
+        )}
+      </div>
+    </footer>
+
+  </body>
+</html>
