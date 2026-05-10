@@ -1,0 +1,333 @@
+---
+import PartnerLayout from "@/layouts/PartnerLayout.astro";
+---
+
+<PartnerLayout
+  title="Ashley Strickland's Moving Page | Legacy Moving Denver × Strickland Group"
+  description="Ashley Strickland of the Strickland Group recommends Legacy Moving Denver for all her clients. Get priority scheduling, white-glove service, and 1,700+ five-star reviews behind every move."
+  partnerName="Strickland Group"
+  partnerLogo="/assets/partners/strickland-group-logo.webp"
+  partnerLogoAlt="Strickland Group"
+  partnerAccentColor="#b8963e"
+>
+
+  <!-- ══════════════════════════════════════════════
+       HERO — Co-branded split: Ashley left, form right
+  ══════════════════════════════════════════════ -->
+  <section class="relative bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#162d4a] text-white overflow-hidden py-14 md:py-20">
+    <!-- Subtle gold texture overlay -->
+    <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#b8963e 0,#b8963e 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        <!-- LEFT: Ashley intro -->
+        <div>
+          <!-- Co-brand eyebrow -->
+          <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6 border"
+               style="background:rgba(184,150,62,0.15);border-color:rgba(184,150,62,0.35);color:#d4ab5a;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#b8963e" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Gold Partner — Exclusive to Ashley's Clients
+          </div>
+
+          <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
+            Moving Made Easy<br>
+            <span style="color:#d4ab5a;">For Ashley's Clients</span>
+          </h1>
+
+          <p class="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
+            When Ashley Strickland refers you to Legacy Moving Denver, you're not just hiring a mover — you're getting a team that treats your move with the same care and professionalism Ashley brings to every closing.
+          </p>
+
+          <!-- Ashley's photo + quote card -->
+          <div class="flex items-start gap-5 bg-white/8 border border-white/15 rounded-2xl p-5 mb-8 backdrop-blur-sm">
+            <img
+              src="/assets/partners/ashley-strickland.webp"
+              alt="Ashley Strickland, Strickland Group"
+              width="72"
+              height="108"
+              class="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 ring-2"
+              style="ring-color:#b8963e;"
+              loading="eager"
+              decoding="async"
+            />
+            <div>
+              <blockquote class="text-white/90 text-sm leading-relaxed italic mb-2">
+                "I refer Legacy Moving Denver to every one of my clients because I know they'll be in great hands. Their team is professional, punctual, and genuinely cares about making the experience stress-free — which means my clients remember their closing for all the right reasons."
+              </blockquote>
+              <cite class="not-italic text-xs font-bold" style="color:#d4ab5a;">
+                Ashley Strickland · Strickland Group · Denver, CO
+              </cite>
+            </div>
+          </div>
+
+          <!-- Mini stats row -->
+          <div class="flex flex-wrap gap-6">
+            <div>
+              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">1,700+</div>
+              <div class="text-white/60 text-xs mt-0.5">Five-Star Reviews</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">6,000+</div>
+              <div class="text-white/60 text-xs mt-0.5">Moves Completed</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">A+</div>
+              <div class="text-white/60 text-xs mt-0.5">BBB Rating</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">Same-Day</div>
+              <div class="text-white/60 text-xs mt-0.5">Availability</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Moverbase quote form -->
+        <div>
+          <div class="bg-white p-5 md:p-7 rounded-2xl shadow-2xl">
+            <!-- Form header -->
+            <div class="text-center mb-4">
+              <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:#b8963e;">Priority Quote — Ashley's Clients</p>
+              <h2 class="font-display font-bold text-xl text-secondary">Get Your Free Moving Quote</h2>
+              <p class="text-xs text-muted-foreground mt-1">Referred by Ashley Strickland? Mention her name for priority scheduling.</p>
+            </div>
+
+            <!-- Moverbase widget — using realtor widget ID: CXMO7Y -->
+            <div data-version="3" id="CXMO7Y_ashley"></div>
+            <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('CXMO7Y_ashley','CI3HUBUVG6AYFTIDBQ6U6PRKS42TKKB4KRZ8U0QQZWP2JVDD');
+            </script>
+
+            <!-- Trust micro-line -->
+            <p class="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              No commitment · Free estimate · We'll contact you within the hour
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       WHAT TO EXPECT — 3-step reassurance
+  ══════════════════════════════════════════════ -->
+  <section class="py-14 md:py-16 bg-white">
+    <div class="container max-w-4xl mx-auto">
+
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl text-secondary mb-3">What Ashley's Clients Can Expect</h2>
+        <p class="text-muted-foreground max-w-xl mx-auto">We don't just move boxes — we protect relationships. Here's how every move works.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          {
+            step: "01",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+            title: "Submit Your Quote",
+            desc: "Fill out the form above or call us directly. Mention Ashley Strickland for priority scheduling and a dedicated move coordinator.",
+          },
+          {
+            step: "02",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+            title: "We Confirm & Plan",
+            desc: "Your move coordinator will reach out within the hour to confirm details, answer questions, and lock in your date — even on short notice.",
+          },
+          {
+            step: "03",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.579l-1.393-4.18A1 1 0 0 0 18.845 11H10"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>`,
+            title: "Move Day, Stress-Free",
+            desc: "Our uniformed, background-checked crew arrives on time, handles everything with care, and leaves your new space exactly how you want it.",
+          },
+        ].map(({ step, icon, title, desc }) => (
+          <div class="relative bg-gray-50 rounded-xl p-6 border border-gray-100">
+            <div class="absolute top-4 right-4 font-display font-bold text-5xl text-gray-100 select-none leading-none">{step}</div>
+            <div class="relative z-10">
+              <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4" set:html={icon}></div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{title}</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SERVICES INCLUDED
+  ══════════════════════════════════════════════ -->
+  <section class="py-14 md:py-16 bg-gray-50 border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto">
+
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl text-secondary mb-3">Every Service Your Move Might Need</h2>
+        <p class="text-muted-foreground max-w-xl mx-auto">Whether you're moving a condo or a 5-bedroom home, we have you covered end-to-end.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>`,
+            title: "Local Moving",
+            desc: "Denver metro moves with same-day availability and flexible scheduling around your closing date.",
+          },
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.579l-1.393-4.18A1 1 0 0 0 18.845 11H10"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>`,
+            title: "Long Distance",
+            desc: "Careful, detailed service for moves out of state — coordinated from door to door.",
+          },
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>`,
+            title: "Full Packing Service",
+            desc: "We pack everything — dishes, artwork, furniture — using quality materials so nothing arrives broken.",
+          },
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15 2 2 4-4"/><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`,
+            title: "Load & Unload Only",
+            desc: "Already have a truck? We'll handle the heavy lifting so you don't have to.",
+          },
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
+            title: "Short-Term Storage",
+            desc: "Bridge the gap between your old home and new one with secure, climate-friendly storage.",
+          },
+          {
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
+            title: "Same-Day Moves",
+            desc: "Closing sooner than expected? We specialize in last-minute moves that still feel first-class.",
+          },
+        ].map(({ icon, title, desc }) => (
+          <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3" set:html={icon}></div>
+            <h3 class="font-semibold text-secondary mb-1">{title}</h3>
+            <p class="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SOCIAL PROOF — Reviews
+  ══════════════════════════════════════════════ -->
+  <section class="py-14 md:py-16 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto">
+
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-1.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          ))}
+        </div>
+        <h2 class="font-display font-bold text-3xl text-secondary mb-2">1,700+ Five-Star Reviews on Google</h2>
+        <p class="text-muted-foreground max-w-xl mx-auto">Don't just take Ashley's word for it — here's what real customers say.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        {[
+          {
+            name: "Jennifer M.",
+            stars: 5,
+            text: "Absolutely incredible service! The crew was on time, professional, and handled all my furniture with such care. My realtor recommended them and I couldn't be happier — will 100% use again.",
+            date: "Google Review",
+          },
+          {
+            name: "David R.",
+            stars: 5,
+            text: "Legacy Moving made a stressful day completely manageable. They communicated clearly, showed up when they said they would, and not a single item was damaged. Highly recommend!",
+            date: "Google Review",
+          },
+          {
+            name: "Sarah T.",
+            stars: 5,
+            text: "Our realtor connected us with Legacy and it was the best referral we've ever gotten. Fast, friendly, efficient — and the price was exactly what was quoted. Zero surprises.",
+            date: "Google Review",
+          },
+        ].map(({ name, stars, text, date }) => (
+          <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[...Array(stars)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 italic">"{text}"</p>
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-sm text-secondary">{name}</span>
+              <span class="text-xs text-muted-foreground">{date}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <a
+          href="https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline"
+        >
+          Read all 1,700+ reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       BOTTOM CTA — full-width
+  ══════════════════════════════════════════════ -->
+  <section class="py-14 text-white" style="background:linear-gradient(135deg,#1e3a5f 0%,#162d4a 100%);">
+    <div class="container max-w-2xl mx-auto text-center">
+      <!-- Ashley avatar small -->
+      <img
+        src="/assets/partners/ashley-strickland.webp"
+        alt="Ashley Strickland"
+        width="56"
+        height="56"
+        class="w-14 h-14 rounded-full object-cover object-top mx-auto mb-4 ring-2"
+        style="ring-color:#b8963e;"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="text-sm font-medium mb-2" style="color:#d4ab5a;">Referred by Ashley Strickland · Strickland Group</p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">
+        Ready to Make Your Move?
+      </h2>
+      <p class="text-white/80 text-lg mb-8 max-w-lg mx-auto">
+        Get a free, no-obligation quote and experience the white-glove service Ashley's clients have come to expect.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:7207642299"
+          class="inline-flex items-center justify-center gap-2 font-semibold rounded-lg px-6 py-3 text-white transition-all shadow-lg hover:brightness-110"
+          style="background:#b8963e;"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (720) 764-2299
+        </a>
+        <a
+          href="#CXMO7Y_ashley"
+          class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 font-semibold rounded-lg px-6 py-3 text-white transition-all"
+          onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"
+        >
+          Get a Free Quote Online
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+      <!-- Licence strip -->
+      <p class="text-white/30 text-xs mt-10">
+        DOT #3462023 · MC #1189363 · PUC #HHG-00682 · Licensed &amp; Insured · Denver, Colorado
+      </p>
+    </div>
+  </section>
+
+</PartnerLayout>
