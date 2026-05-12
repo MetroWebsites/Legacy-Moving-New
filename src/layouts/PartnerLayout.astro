@@ -40,10 +40,10 @@ const {
     <div class="bg-white border-b border-gray-100 py-3 px-4 md:px-6 shadow-sm">
       <div class="container flex items-center justify-between gap-4">
 
-        <!-- Left: both logos with "×" separator -->
+        <!-- Left: Legacy logo + optional partner logo with "×" separator -->
         <div class="flex items-center gap-3 md:gap-5 min-w-0">
-          <!-- Legacy Moving Denver logo -->
-          <a href="/" class="flex-shrink-0" aria-label="Legacy Moving Denver">
+          <!-- Legacy Moving Denver logo — unlinked on funnel pages -->
+          <span class="flex-shrink-0 select-none" aria-label="Legacy Moving Denver">
             <img
               src="/assets/legacy-logo-full.webp"
               alt="Legacy Moving Denver"
@@ -52,21 +52,21 @@ const {
               class="h-8 w-auto md:h-10 flex-shrink-0"
               decoding="async"
             />
-          </a>
+          </span>
 
-          <!-- Divider -->
-          <span class="partner-accent-text font-bold text-xl md:text-2xl flex-shrink-0 select-none leading-none" aria-hidden="true">×</span>
-
-          <!-- Partner logo -->
+          <!-- Divider + partner logo — only rendered when a partnerLogo is passed -->
           {partnerLogo && (
-            <img
-              src={partnerLogo}
-              alt={partnerLogoAlt}
-              width="140"
-              height="43"
-              class="h-8 w-auto md:h-10 flex-shrink-0 object-contain"
-              decoding="async"
-            />
+            <>
+              <span class="partner-accent-text font-bold text-xl md:text-2xl flex-shrink-0 select-none leading-none" aria-hidden="true">×</span>
+              <img
+                src={partnerLogo}
+                alt={partnerLogoAlt}
+                width="140"
+                height="43"
+                class="h-8 w-auto md:h-10 flex-shrink-0 object-contain"
+                decoding="async"
+              />
+            </>
           )}
         </div>
 
