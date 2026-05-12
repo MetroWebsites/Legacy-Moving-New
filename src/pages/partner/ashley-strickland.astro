@@ -25,14 +25,14 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
         <div>
           <!-- Co-brand eyebrow -->
           <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6 border"
-               style="background:rgba(184,150,62,0.15);border-color:rgba(184,150,62,0.35);color:#d4ab5a;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#b8963e" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+               style="background:rgba(21,101,240,0.15);border-color:rgba(21,101,240,0.4);color:#93c5fd;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#1565f0" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Gold Partner — Exclusive to Ashley's Clients
           </div>
 
           <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
             Moving Made Easy<br>
-            <span style="color:#d4ab5a;">For Ashley's Clients</span>
+            <span class="text-primary">For Ashley's Clients</span>
           </h1>
 
           <p class="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
@@ -40,14 +40,14 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
           </p>
 
           <!-- Ashley's photo + quote card -->
-          <div class="flex items-start gap-5 bg-white/8 border border-white/15 rounded-2xl p-5 mb-8 backdrop-blur-sm">
+          <div class="flex flex-col items-center sm:flex-row sm:items-start gap-4 bg-white/8 border border-white/15 rounded-2xl p-5 mb-8 backdrop-blur-sm text-center sm:text-left">
             <img
               src="/assets/partners/ashley-strickland.webp"
               alt="Ashley Strickland, Strickland Group"
-              width="72"
-              height="108"
-              class="w-16 h-16 rounded-full object-cover object-top flex-shrink-0 ring-2"
-              style="ring-color:#b8963e;"
+              width="120"
+              height="120"
+              class="w-28 h-28 rounded-full object-cover object-top flex-shrink-0 ring-4 mx-auto sm:mx-0"
+              style="ring-color:var(--primary);"
               loading="eager"
               decoding="async"
             />
@@ -55,7 +55,7 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
               <blockquote class="text-white/90 text-sm leading-relaxed italic mb-2">
                 "I refer Legacy Moving Denver to every one of my clients because I know they'll be in great hands. Their team is professional, punctual, and genuinely cares about making the experience stress-free — which means my clients remember their closing for all the right reasons."
               </blockquote>
-              <cite class="not-italic text-xs font-bold" style="color:#d4ab5a;">
+              <cite class="not-italic text-xs font-bold text-blue-300">
                 Ashley Strickland ·
                 <a href="https://sgcolorado.com/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:opacity-80 transition-opacity">Strickland Group</a>
                 · Denver, CO
@@ -66,19 +66,19 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
           <!-- Mini stats row -->
           <div class="flex flex-wrap gap-6">
             <div>
-              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">1,700+</div>
+              <div class="font-display font-bold text-2xl text-primary">1,700+</div>
               <div class="text-white/60 text-xs mt-0.5">Five-Star Reviews</div>
             </div>
             <div>
-              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">6,000+</div>
+              <div class="font-display font-bold text-2xl text-primary">6,000+</div>
               <div class="text-white/60 text-xs mt-0.5">Moves Completed</div>
             </div>
             <div>
-              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">A</div>
+              <div class="font-display font-bold text-2xl text-primary">A</div>
               <div class="text-white/60 text-xs mt-0.5">BBB Rated</div>
             </div>
             <div>
-              <div class="font-display font-bold text-2xl" style="color:#d4ab5a;">Same-Day</div>
+              <div class="font-display font-bold text-2xl text-primary">Same-Day</div>
               <div class="text-white/60 text-xs mt-0.5">Availability</div>
             </div>
           </div>
@@ -89,7 +89,7 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
           <div class="bg-white p-5 md:p-7 rounded-2xl shadow-2xl">
             <!-- Form header -->
             <div class="text-center mb-4">
-              <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:#b8963e;">Priority Quote — Ashley's Clients</p>
+              <p class="text-xs font-bold uppercase tracking-widest mb-1 text-primary">Priority Quote — Ashley's Clients</p>
               <h2 class="font-display font-bold text-xl text-secondary">Get Your Free Moving Quote</h2>
               <p class="text-xs text-muted-foreground mt-1">Referred by Ashley Strickland? Mention her name for priority scheduling.</p>
             </div>
@@ -295,12 +295,11 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
         alt="Ashley Strickland"
         width="56"
         height="56"
-        class="w-14 h-14 rounded-full object-cover object-top mx-auto mb-4 ring-2"
-        style="ring-color:#b8963e;"
+        class="w-14 h-14 rounded-full object-cover object-top mx-auto mb-4 ring-2 ring-primary"
         loading="lazy"
         decoding="async"
       />
-      <p class="text-sm font-medium mb-2" style="color:#d4ab5a;">
+      <p class="text-sm font-medium mb-2 text-blue-300">
         Referred by Ashley Strickland ·
         <a href="https://sgcolorado.com/" target="_blank" rel="noopener" class="underline underline-offset-2 hover:opacity-80 transition-opacity">Strickland Group</a>
       </p>
@@ -314,7 +313,7 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
         <a
           href="tel:7207642299"
           class="inline-flex items-center justify-center gap-2 font-semibold rounded-lg px-6 py-3 text-white transition-all shadow-lg hover:brightness-110"
-          style="background:#b8963e;"
+          class="bg-primary hover:bg-primary/90"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call (720) 764-2299
