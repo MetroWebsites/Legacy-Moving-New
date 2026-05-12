@@ -71,14 +71,14 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
       >
         <div class="flex flex-col sm:flex-row">
 
-          <!-- Left: photo -->
-          <div class="sm:w-48 md:w-56 flex-shrink-0 bg-gray-100 overflow-hidden">
+          <!-- Left: photo — centered circle on mobile, full-bleed column on sm+ -->
+          <div class="flex justify-center sm:block sm:w-48 md:w-56 flex-shrink-0 bg-white sm:bg-gray-100 pt-6 pb-2 sm:pt-0 sm:pb-0 overflow-hidden">
             <img
               src="/assets/partners/ashley-strickland.webp"
               alt="Ashley Strickland — Strickland Group"
               width="224"
-              height="336"
-              class="w-full h-56 sm:h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              height="224"
+              class="w-36 h-36 sm:w-full sm:h-full rounded-full sm:rounded-none object-cover object-top group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               decoding="async"
             />
