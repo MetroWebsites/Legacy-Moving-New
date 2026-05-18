@@ -1,273 +1,550 @@
 ---
 import PartnerLayout from "@/layouts/PartnerLayout.astro";
+import { Image } from "astro:assets";
+import truckImage from "../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg";
+import packingImage from "../assets/working-ad-legacy-moving-denver_nw_c7ceaf8e.jpeg";
+import teamImage from "../assets/308748956_459885262825080_6269738357866645302_n_nw_0489b96e.jpg";
+import furnitureImage from "../assets/290197457_539473571254356_3082118749704086809_n_nw_a389c17b.jpg";
 ---
 
 <PartnerLayout
-  title="Partner Clients | Legacy Moving Denver | Trusted by Denver's Top Professionals"
-  description="Access your personalized Legacy Moving Denver moving page, shared by your trusted professional. Get priority scheduling, white-glove service, and 1,700+ five-star reviews behind every move."
+  title="Legacy Moving Denver | Denver's Top-Rated Moving Company"
+  description="Legacy Moving Denver — 1,700+ five-star reviews, family-owned since 2018. Local and long-distance moving, packing, storage, and a preferred partner program for Denver professionals."
 >
 
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 py-16 md:py-20 text-white overflow-hidden">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&auto=format&q=60')] bg-cover bg-center opacity-10"></div>
-    <div class="container relative z-10 text-center max-w-3xl mx-auto">
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Preferred Partner Network
-      </div>
-
-      <h1 class="font-display font-bold text-4xl md:text-5xl leading-tight mb-5">
-        Your Trusted Mover,<br>
-        <span class="text-primary">Recommended by Someone You Trust</span>
-      </h1>
-
-      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-        Denver's top realtors, contractors, and design professionals partner with Legacy Moving Denver because they know their clients deserve nothing less. Find your partner's page below and get started with priority service.
-      </p>
-
-      <!-- Trust row -->
-      <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/70">
-        <div class="flex items-center gap-1.5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <span>1,700+ five-star Google reviews</span>
-        </div>
-        <div class="flex items-center gap-1.5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Licensed &amp; Insured</span>
-        </div>
-        <div class="flex items-center gap-1.5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span>Family-owned since 2018</span>
-        </div>
-        <div class="flex items-center gap-1.5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Same-day availability</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ──────────────────────────────────────────────
-       GOLD PARTNERS (individual co-branded pages)
-  ─────────────────────────────────────────────── -->
-  <section class="py-14 md:py-20 bg-white">
-    <div class="container max-w-5xl mx-auto">
-
-      <!-- Section header -->
-      <div class="flex items-center gap-3 mb-10">
-        <div class="flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
-             style="background:#b8963e22; color:#b8963e;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#b8963e" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Gold Partners
-        </div>
-        <div class="flex-1 h-px bg-gray-200"></div>
-      </div>
-
-      <!-- Ashley Strickland card -->
-      <a
-        href="/partner/ashley-strickland"
-        class="group block rounded-2xl border border-gray-200 hover:border-[#b8963e]/60 bg-white shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
-      >
-        <div class="flex flex-col sm:flex-row">
-
-          <!-- Left: photo — centered circle on mobile, full-bleed column on sm+ -->
-          <div class="flex justify-center sm:block sm:w-48 md:w-56 flex-shrink-0 bg-white sm:bg-gray-100 pt-6 pb-2 sm:pt-0 sm:pb-0 overflow-hidden">
-            <img
-              src="/assets/partners/ashley-strickland.webp"
-              alt="Ashley Strickland — Strickland Group"
-              width="224"
-              height="224"
-              class="w-36 h-36 sm:w-full sm:h-full rounded-full sm:rounded-none object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          <!-- Right: info -->
-          <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
-            <div>
-              <!-- Dual-logo lockup -->
-              <div class="flex items-center gap-3 mb-5 flex-wrap">
-                <img
-                  src="/assets/legacy-logo-full.webp"
-                  alt="Legacy Moving Denver"
-                  width="100"
-                  height="31"
-                  class="h-6 w-auto"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span class="font-bold text-lg leading-none" style="color:#b8963e;" aria-hidden="true">×</span>
-                <img
-                  src="/assets/partners/strickland-group-logo.webp"
-                  alt="Strickland Group"
-                  width="110"
-                  height="38"
-                  class="h-6 w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <h2 class="font-display font-bold text-2xl text-secondary mb-1 group-hover:text-primary transition-colors">
-                Ashley Strickland
-              </h2>
-              <p class="text-sm font-medium mb-3" style="color:#b8963e;">
-                Gold Preferred Partner · Strickland Group
-              </p>
-              <p class="text-muted-foreground text-sm leading-relaxed max-w-lg">
-                Denver-based realtor with The Strickland Group, specializing in residential sales across the metro. Ashley's clients receive exclusive priority scheduling, white-glove packing, and seamless move coordination — every time.
-              </p>
-
-              <!-- Mini trust tags -->
-              <div class="flex flex-wrap gap-2 mt-4">
-                {["Priority Scheduling", "White-Glove Service", "Realtor Specialist", "Denver Metro"].map(tag => (
-                  <span class="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{tag}</span>
-                ))}
-              </div>
-            </div>
-
-            <!-- CTA row -->
-            <div class="flex items-center justify-between mt-6 pt-5 border-t border-gray-100">
-              <span class="text-sm text-muted-foreground">Referred by Ashley Strickland? This page is just for you.</span>
-              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
-                Get your quote
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </span>
-            </div>
-          </div>
-        </div>
+  <!-- ══════════════════════════════════════════════
+       SERVICE BAR (mirrors homepage)
+  ══════════════════════════════════════════════ -->
+  <section class="w-full bg-white border-b border-gray-200">
+    <div class="flex w-full">
+      <a href="tel:7207642299" class="flex-1 flex items-center justify-center py-4 px-2 bg-primary text-white font-semibold text-sm sm:text-base hover:bg-secondary transition-colors duration-300 border-r border-white whitespace-nowrap gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Local Moving
       </a>
-
-      <!-- Future Gold partner placeholder (subtle, not linked) -->
-      <div class="mt-4 rounded-2xl border border-dashed border-gray-200 bg-gray-50 p-6 flex items-center gap-4 text-gray-400">
-        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-gray-500">Your page could be here</p>
-          <p class="text-xs text-gray-400 mt-0.5">Gold partners earn a co-branded page after 10+ referrals. <a href="/preferred-partner" class="text-primary hover:underline">Apply to the program →</a></p>
-        </div>
-      </div>
-
+      <a href="tel:7207642299" class="flex-1 flex items-center justify-center py-4 px-2 bg-gray-700 text-white font-semibold text-sm sm:text-base hover:bg-secondary transition-colors duration-300 border-r border-white whitespace-nowrap gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.579l-1.393-4.18A1 1 0 0 0 18.845 11H10"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+        Long Distance
+      </a>
+      <a href="tel:7207642299" class="flex-1 flex items-center justify-center py-4 px-2 bg-gray-500 text-white font-semibold text-sm sm:text-base hover:bg-secondary transition-colors duration-300 whitespace-nowrap gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15 2 2 4-4"/><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        Labor Only
+      </a>
     </div>
   </section>
 
-  <!-- ──────────────────────────────────────────────
-       ALL PARTNER CATEGORIES
-  ─────────────────────────────────────────────── -->
-  <section class="py-14 md:py-20 bg-gray-50">
-    <div class="container max-w-5xl mx-auto">
+  <!-- ══════════════════════════════════════════════
+       HERO — dark navy + truck photo behind overlay
+  ══════════════════════════════════════════════ -->
+  <section class="relative bg-secondary text-white overflow-hidden">
+    <!-- Background truck photo (desktop) -->
+    <div class="absolute inset-0 hidden md:block">
+      <Image
+        src={truckImage}
+        alt="Legacy Moving Denver truck"
+        class="w-full h-full object-cover opacity-30"
+        widths={[800, 1400, 1920]}
+        sizes="100vw"
+        quality={40}
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-secondary/80 to-secondary/60"></div>
+    </div>
+    <!-- Background photo (mobile) -->
+    <div class="absolute inset-0 md:hidden opacity-15 mix-blend-overlay">
+      <Image
+        src={truckImage}
+        alt="Legacy Moving Denver truck"
+        class="w-full h-full object-cover"
+        widths={[400, 700]}
+        sizes="100vw"
+        quality={35}
+        loading="eager"
+      />
+    </div>
 
-      <div class="text-center mb-12">
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-3">
-          Are You a Professional?
-        </h2>
-        <p class="text-muted-foreground text-lg max-w-xl mx-auto">
-          We work closely with Denver's top professionals across every industry that touches real estate and relocation. Find your industry below.
+    <div class="container relative z-10 grid lg:grid-cols-2 gap-6 md:gap-10 pt-10 md:pt-14 lg:pt-20 pb-8 md:pb-12 lg:pb-16 px-4 md:px-0">
+      <!-- LEFT: headline + trust pill row -->
+      <div class="flex flex-col justify-center">
+        <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-5 w-fit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="#1565f0" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="text-blue-300">Denver's Most-Reviewed Mover</span>
+        </div>
+
+        <h1 class="font-display font-bold text-3xl md:text-5xl lg:text-6xl leading-tight mb-5">
+          Your Highly Recommended,<br class="hidden md:block">
+          <span class="text-primary">Accredited Denver Movers</span>
+        </h1>
+
+        <p class="text-white/80 text-base md:text-lg leading-relaxed mb-7 max-w-xl">
+          Legacy Moving Denver is a family-owned company serving the Denver metro since 2018. With over 1,700 five-star reviews and 6,000+ successful moves, we've built our reputation one move at a time.
         </p>
+
+        <!-- Trust pill row -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          {[
+            { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`, text: "1,700+ Google Reviews" },
+            { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`, text: "Licensed & Insured" },
+            { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`, text: "Family-Owned Since 2018" },
+            { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, text: "Same-Day Available" },
+          ].map(({ icon, text }) => (
+            <div class="inline-flex items-center gap-1.5 text-xs text-white/75 bg-white/8 border border-white/15 rounded-full px-3 py-1.5">
+              <span set:html={icon} />
+              {text}
+            </div>
+          ))}
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:7207642299" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-7 py-3.5 transition-all shadow-lg text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (720) 764-2299
+          </a>
+          <a href="/preferred-partner" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-lg px-7 py-3.5 transition-all text-base">
+            Partner With Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Partner category grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- RIGHT: stats + team photo card -->
+      <div class="flex flex-col gap-4">
+        <!-- Team photo card -->
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative aspect-[4/3]">
+          <Image
+            src={teamImage}
+            alt="Legacy Moving Denver crew"
+            class="w-full h-full object-cover"
+            widths={[400, 700, 900]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={50}
+            loading="eager"
+          />
+          <div class="absolute bottom-0 left-0 right-0 p-4" style="background:linear-gradient(to top,rgba(30,45,61,0.9),transparent);">
+            <div class="flex items-center gap-1.5 mb-1">
+              {[...Array(5)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+              <span class="text-white/80 text-xs ml-1">4.9 · 1,700+ reviews</span>
+            </div>
+            <p class="text-white text-sm font-semibold">The Legacy Moving Denver team — your neighbors since 2018</p>
+          </div>
+        </div>
+        <!-- Quick stats row -->
+        <div class="grid grid-cols-4 gap-2">
+          {[
+            { stat: "1,700+", label: "5-Star Reviews" },
+            { stat: "6,000+", label: "Moves Done" },
+            { stat: "A Rated", label: "BBB Accredited" },
+            { stat: "Same Day", label: "Availability" },
+          ].map(({ stat, label }) => (
+            <div class="bg-white/8 border border-white/15 rounded-xl p-3 text-center backdrop-blur-sm">
+              <div class="font-display font-bold text-sm md:text-base text-primary leading-tight">{stat}</div>
+              <div class="text-white/55 text-xs mt-0.5 leading-tight">{label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ══════════════════════════════════════════════
+       SCROLLING TRUST BADGES (mirrors homepage)
+  ══════════════════════════════════════════════ -->
+  <section class="bg-white pt-2 md:pt-3 pb-4 md:pb-6 overflow-hidden border-y border-gray-200">
+    <div class="container px-2 md:px-4">
+      <div class="flex items-center gap-3 md:gap-0">
+        <div class="w-1/3 md:w-1/4 pr-3 md:pr-6 border-r border-gray-300">
+          <h3 class="text-gray-900 font-bold text-xs md:text-base lg:text-lg xl:text-xl text-center leading-tight">
+            Where Proven Local Trust Meets<br class="hidden md:block"/> Nationwide Standards
+          </h3>
+        </div>
+        <div class="w-2/3 md:w-3/4 pl-3 md:pl-6 relative overflow-hidden">
+          <div class="clients-scroll-container">
+            <div class="clients-scroll-content">
+              <a href="https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/google-guaranteed.webp" alt="Google" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.yelp.com/biz/legacy-moving-denver-denver-2" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/yelp.webp" alt="Yelp" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-2">★★★★★</span></div>
+              </a>
+              <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/facebook-colorful.webp" alt="Facebook" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.bbb.org/us/co/lakewood/profile/moving-companies/legacy-moving-llc-1296-1000116791" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/bbb-square.webp" alt="BBB" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://mapq.st/45jRwvi" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/mapquest.webp" alt="MapQuest" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars">★★★★★</span></div>
+              </a>
+              <a href="https://www.trustindex.io/reviews/legacymovingdenver.com-1" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/trustindex.webp" alt="Trustindex" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-7">★★★★★</span></div>
+              </a>
+              <a href="https://www.homeadvisor.com/rated.legacydeliveryandmoving.107671725.html" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/homeadvisor-elite.webp" alt="HomeAdvisor Elite" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.angi.com/companylist/us/co/denver/legacy-moving-denver-reviews-10178798.htm" target="_blank" rel="noopener" class="clients-trust-badge">
+                <img src="/images/trust-badges/angi-super-service-2025.webp" alt="Angi Super Service 2025" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <!-- Duplicates for seamless loop -->
+              <a href="https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/google-guaranteed.webp" alt="" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.yelp.com/biz/legacy-moving-denver-denver-2" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/yelp.webp" alt="" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-2">★★★★★</span></div>
+              </a>
+              <a href="https://www.facebook.com/LegacyMovingDenver" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/facebook-colorful.webp" alt="" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.bbb.org/us/co/lakewood/profile/moving-companies/legacy-moving-llc-1296-1000116791" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/bbb-square.webp" alt="" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://mapq.st/45jRwvi" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/mapquest.webp" alt="" class="clients-badge-logo" width="100" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars">★★★★★</span></div>
+              </a>
+              <a href="https://www.trustindex.io/reviews/legacymovingdenver.com-1" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/trustindex.webp" alt="" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-7">★★★★★</span></div>
+              </a>
+              <a href="https://www.homeadvisor.com/rated.legacydeliveryandmoving.107671725.html" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/homeadvisor-elite.webp" alt="" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+              <a href="https://www.angi.com/companylist/us/co/denver/legacy-moving-denver-reviews-10178798.htm" target="_blank" rel="noopener" class="clients-trust-badge" aria-hidden="true">
+                <img src="/images/trust-badges/angi-super-service-2025.webp" alt="" class="clients-badge-logo" width="80" height="35" loading="lazy" decoding="async" />
+                <div class="clients-badge-rating"><span class="clients-stars clients-stars-4-8">★★★★★</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .clients-scroll-container { position:relative; overflow:hidden; width:100%; }
+    .clients-scroll-content {
+      display:flex; gap:0.5rem; animation:clients-scroll 22s linear infinite;
+      width:max-content; will-change:transform; transform:translateZ(0);
+    }
+    @media(min-width:768px){ .clients-scroll-content{ gap:1.5rem; animation-duration:28s; } }
+    @keyframes clients-scroll {
+      0%{ transform:translate3d(0,0,0); }
+      100%{ transform:translate3d(calc(-50% - 0.25rem),0,0); }
+    }
+    @media(min-width:768px){
+      @keyframes clients-scroll {
+        0%{ transform:translate3d(0,0,0); }
+        100%{ transform:translate3d(calc(-50% - 0.75rem),0,0); }
+      }
+    }
+    .clients-scroll-container:hover .clients-scroll-content{ animation-play-state:paused; }
+    .clients-trust-badge {
+      display:flex; flex-direction:column; align-items:center; gap:0.25rem;
+      padding:0.5rem; background:white; border-radius:8px; min-width:90px;
+      flex-shrink:0; text-decoration:none; transition:transform 0.2s;
+    }
+    @media(min-width:768px){ .clients-trust-badge{ gap:0.5rem; padding:1rem; min-width:140px; } }
+    .clients-trust-badge:hover{ transform:translateY(-2px); }
+    .clients-badge-logo{ height:35px; width:auto; max-width:80px; object-fit:contain; }
+    @media(min-width:768px){ .clients-badge-logo{ height:50px; max-width:100px; } }
+    .clients-badge-rating{ font-size:0.75rem; font-weight:600; color:#1f2937; text-align:center; }
+    @media(min-width:768px){ .clients-badge-rating{ font-size:0.875rem; } }
+    .clients-stars{ color:#FFA500; font-size:0.875rem; margin-right:0.25rem; }
+    @media(min-width:768px){ .clients-stars{ font-size:1rem; } }
+    .clients-stars-4-2{ background:linear-gradient(to right,#FFA500 0%,#FFA500 87%,#D3D3D3 87%,#D3D3D3 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .clients-stars-4-7{ background:linear-gradient(to right,#FFA500 0%,#FFA500 94%,#D3D3D3 94%,#D3D3D3 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .clients-stars-4-8{ background:linear-gradient(to right,#FFA500 0%,#FFA500 96%,#D3D3D3 96%,#D3D3D3 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  </style>
+
+  <!-- ══════════════════════════════════════════════
+       WHY CHOOSE LEGACY — card grid with team photo bg
+  ══════════════════════════════════════════════ -->
+  <section class="relative py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
+    <div class="absolute inset-0 opacity-8" style="width:100%;height:100%;contain:strict;">
+      <Image
+        src={teamImage}
+        alt="Legacy Moving Denver team"
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        widths={[320, 640, 960, 1400]}
+        sizes="100vw"
+        quality={20}
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <!-- Left sticky column -->
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-8">
+            <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+              <span class="text-gray-900">Why Choose</span><br/>
+              <span class="text-primary">Legacy Moving</span><br/>
+              <span class="text-gray-900">Denver?</span>
+            </h2>
+            <p class="text-muted-foreground text-base md:text-lg mb-7 leading-relaxed">
+              Over 1,700 five-star reviews and thousands of successful moves — here's what sets us apart from every other mover in Denver.
+            </p>
+            <a href="tel:7207642299" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-6 py-3 transition-all shadow-md w-full sm:w-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (720) 764-2299
+            </a>
+            <div class="mt-7 pt-7 border-t border-gray-200">
+              <a href="https://www.bbb.org/us/co/lakewood/profile/moving-companies/legacy-moving-llc-1296-1000116791" target="_blank" rel="noopener">
+                <img src="/images/trust-badges/bbb-horizontal.webp" alt="BBB Accredited Business" class="w-32 h-auto object-contain mb-2" width="128" height="50" loading="lazy" decoding="async" />
+              </a>
+              <p class="text-sm font-semibold text-gray-900">BBB Accredited Business</p>
+              <p class="text-xs text-muted-foreground mt-1">A Rated · Licensed &amp; Insured Since 2018</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: reasons grid -->
+        <div class="lg:col-span-8">
+          <div class="grid sm:grid-cols-2 gap-5">
+            {[
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/></svg>`, title: "1,700+ Five-Star Reviews", desc: "One of Denver's highest-rated movers on Google, Yelp, and Facebook — consistently.", href: "https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`, title: "Transparent Pricing", desc: "Clear upfront quotes with no hidden fees, no bait-and-switch, and no surprises on moving day.", href: "tel:7207642299" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, title: "Same-Day Availability", desc: "Closing faster than expected? We specialize in last-minute and same-day moves across the Denver metro.", href: "tel:7207642299" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`, title: "Licensed & Insured", desc: "DOT #3462023 · MC #1189363 · PUC #HHG-00682. Every move is fully covered for your peace of mind.", href: "/preferred-partner" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`, title: "Background-Checked Crews", desc: "Every member of our team is vetted, trained, and uniformed. Your home and belongings are in safe hands.", href: "/preferred-partner" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`, title: "Family-Owned Since 2018", desc: "We're your neighbors. Legacy Moving Denver was built in this community and we take that seriously.", href: "/preferred-partner" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>`, title: "Local &amp; Long Distance", desc: "Moving across the street or across the country — same professional experience, same care.", href: "tel:7207642299" },
+              { icon: `<svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`, title: "Full-Service Options", desc: "Packing, loading, storage, unpacking — we can handle as much or as little as you need.", href: "tel:7207642299" },
+            ].map(({ icon, title, desc, href }) => (
+              <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20">
+                <a href={href} class="block p-6">
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300" set:html={icon}></div>
+                    <div>
+                      <h3 class="font-bold text-base mb-1.5 text-gray-900 group-hover:text-primary transition-colors">{title}</h3>
+                      <p class="text-sm text-muted-foreground leading-relaxed" set:html={desc}></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CALL TO ACTION — dark band
+  ══════════════════════════════════════════════ -->
+  <section class="bg-secondary py-10">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-white">Ready to Make Your Move?</h2>
+        <p class="text-white/85 text-lg mb-7">
+          Contact us today for a free, no-obligation quote and experience the Legacy Moving Denver difference.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:7207642299" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-7 py-3.5 transition-all shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (720) 764-2299
+          </a>
+          <a href="/preferred-partner" class="inline-flex items-center justify-center gap-2 bg-white text-secondary hover:bg-primary hover:text-white font-semibold rounded-lg px-7 py-3.5 transition-all shadow-md">
+            Become a Preferred Partner
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SERVICES GRID
+  ══════════════════════════════════════════════ -->
+  <section class="relative py-12 md:py-16 bg-gray-50">
+    <div class="absolute inset-0 opacity-5" style="width:100%;height:100%;contain:strict;">
+      <Image
+        src={packingImage}
+        alt="Legacy Moving services"
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        widths={[320, 640, 960]}
+        sizes="100vw"
+        quality={20}
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-3 text-secondary">Our Moving Services</h2>
+        <p class="text-muted-foreground max-w-2xl mx-auto">From single-item deliveries to full home packing and long-distance moves, we've got every corner of your relocation covered.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         {[
           {
-            href: "/realtor",
-            emoji: "🏡",
-            label: "Realtors",
-            desc: "Priority scheduling and white-glove service your clients will remember at every closing.",
-            color: "from-blue-50 to-white",
-            border: "hover:border-blue-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect width="16" height="16" x="2" y="6" rx="2"/><path d="M12 6V2"/><path d="M17 12h5"/><path d="M2 12h5"/></svg>`,
+            title: "Local Moving",
+            desc: "Denver metro moves with same-day availability and flexible scheduling.",
           },
           {
-            href: "/contractor",
-            emoji: "🔨",
-            label: "Contractors",
-            desc: "Reliable move coordination for staging, renovation resets, and client relocations.",
-            color: "from-orange-50 to-white",
-            border: "hover:border-orange-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.579l-1.393-4.18A1 1 0 0 0 18.845 11H10"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>`,
+            title: "Long Distance Moving",
+            desc: "Careful, coordinated service for out-of-state moves — door to door.",
           },
           {
-            href: "/apartment-complex",
-            emoji: "🏢",
-            label: "Apartment Complexes",
-            desc: "Streamlined resident move-in and move-out programs for property management teams.",
-            color: "from-purple-50 to-white",
-            border: "hover:border-purple-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>`,
+            title: "Residential Moving",
+            desc: "Stress-free apartment and home moves with expert care for all belongings.",
           },
           {
-            href: "/interior-designer",
-            emoji: "🛋️",
-            label: "Interior Designers",
-            desc: "White-glove furniture delivery and careful placement for design-forward moves.",
-            color: "from-pink-50 to-white",
-            border: "hover:border-pink-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2"></path></svg>`,
+            title: "Commercial Moving",
+            desc: "Fast, efficient office relocations with minimal business downtime.",
           },
           {
-            href: "/senior-living",
-            emoji: "🌿",
-            label: "Senior Living",
-            desc: "Compassionate, patient crews specially trained for senior transitions.",
-            color: "from-green-50 to-white",
-            border: "hover:border-green-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>`,
+            title: "Packing Services",
+            desc: "Professional packing with quality materials — nothing arrives broken.",
           },
           {
-            href: "/property-manager",
-            emoji: "🗝️",
-            label: "Property Managers",
-            desc: "Volume scheduling and tenant coordination that keeps your properties running smoothly.",
-            color: "from-teal-50 to-white",
-            border: "hover:border-teal-300",
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m12 15 2 2 4-4"></path><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>`,
+            title: "Loading & Unloading",
+            desc: "Have your own truck? Our crew handles all the heavy lifting.",
           },
-        ].map(({ href, emoji, label, desc, color, border }) => (
-          <a
-            href={href}
-            class={`group block rounded-xl border border-gray-200 ${border} bg-gradient-to-br ${color} p-6 transition-all duration-200 hover:shadow-md`}
-          >
-            <div class="text-3xl mb-3">{emoji}</div>
-            <h3 class="font-display font-bold text-lg text-secondary mb-1 group-hover:text-primary transition-colors">{label}</h3>
-            <p class="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-            <span class="inline-flex items-center gap-1 text-xs text-primary font-semibold mt-3">
-              Partner page
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </a>
+        ].map(({ svg, title, desc }) => (
+          <div class="bg-white rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-primary/20">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3" set:html={svg}></div>
+            <h3 class="font-display font-semibold text-lg mb-1.5 text-secondary">{title}</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       REVIEWS — 3-up cards
+  ══════════════════════════════════════════════ -->
+  <section class="py-14 md:py-16 bg-white border-t border-gray-100">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-1.5 mb-3">
+          {[...Array(5)].map(() => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          ))}
+        </div>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-2">What Denver Says About Us</h2>
+        <p class="text-muted-foreground max-w-xl mx-auto">Over 1,700 reviews across Google, Yelp, and Facebook — here's a sample.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        {[
+          { name: "Marcus T.", stars: 5, text: "I've moved five times in Denver and Legacy was by far the best experience. They showed up on time, wrapped everything carefully, and finished under the estimated time. The price was exactly what they quoted. Will 100% use again.", src: "Google" },
+          { name: "Rachel K.", stars: 5, text: "My realtor recommended Legacy Moving and I'm so glad she did. The crew was professional, friendly, and made a stressful day feel manageable. Not a single scratch on any of my furniture. Genuinely impressive.", src: "Google" },
+          { name: "Brian W.", stars: 5, text: "These guys are the real deal. Called them for a same-day move when my original company fell through and they came through without breaking a sweat. Fast, careful, and honest about pricing. Highly recommend.", src: "Google" },
+        ].map(({ name, stars, text, src }) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+            <div class="flex gap-0.5 mb-3">
+              {[...Array(stars)].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f97316" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed mb-4 italic">"{text}"</p>
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-sm text-secondary">{name}</span>
+              <span class="text-xs text-muted-foreground">{src}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <a href="https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
+          Read all 1,700+ reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PREFERRED PARTNER PROGRAM CTA — big section
+  ══════════════════════════════════════════════ -->
+  <section class="relative py-16 md:py-20 overflow-hidden text-white">
+    <div class="absolute inset-0">
+      <Image
+        src={furnitureImage}
+        alt="Legacy Moving Denver professional service"
+        class="w-full h-full object-cover"
+        widths={[640, 1200, 1800]}
+        sizes="100vw"
+        quality={35}
+        loading="lazy"
+      />
+      <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(30,45,61,0.94) 0%,rgba(21,101,240,0.85) 100%);"></div>
+    </div>
+    <div class="container relative z-10 max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="text-blue-200">Preferred Partner Program</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-5 leading-tight">
+        Are You a Denver Professional?<br>
+        <span class="text-primary">Let's Build Something Together.</span>
+      </h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+        Realtors, contractors, interior designers, property managers, and senior living advisors — if your clients move, we want to be your go-to recommendation. Our Preferred Partner Program is built to make you look good every single time.
+      </p>
+
+      <!-- Partner type pills -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        {["Realtors", "Contractors", "Apartment Complexes", "Interior Designers", "Senior Living", "Property Managers"].map(tag => (
+          <span class="text-xs font-semibold bg-white/15 border border-white/25 rounded-full px-3.5 py-1.5 text-white/90">{tag}</span>
         ))}
       </div>
 
-      <!-- Apply CTA -->
-      <div class="mt-12 text-center">
-        <p class="text-muted-foreground text-sm mb-4">Not in one of these categories? We still want to work with you.</p>
-        <a
-          href="/preferred-partner"
-          class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg px-6 py-3 transition-all shadow-md hover:shadow-lg"
-        >
-          Apply to the Preferred Partner Program
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+      <!-- 3-col benefit cards -->
+      <div class="grid sm:grid-cols-3 gap-4 mb-10 text-left">
+        {[
+          { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`, title: "Your Reputation Protected", desc: "We treat every referred client like a VIP — because your name is on the line, not just ours." },
+          { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`, title: "Priority Scheduling", desc: "Partners get priority access to our calendar — even for last-minute requests around closings and move-ins." },
+          { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`, title: "A Co-Branded Page", desc: "Top referrers earn their own co-branded landing page — your photo, your quote, your clients, all in one place." },
+        ].map(({ icon, title, desc }) => (
+          <div class="bg-white/10 border border-white/20 rounded-xl p-5 backdrop-blur-sm">
+            <div class="w-10 h-10 bg-primary/30 rounded-lg flex items-center justify-center mb-3" set:html={icon}></div>
+            <h3 class="font-semibold text-white text-sm mb-1.5">{title}</h3>
+            <p class="text-white/70 text-xs leading-relaxed">{desc}</p>
+          </div>
+        ))}
       </div>
 
+      <a href="/preferred-partner" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg px-8 py-4 text-base transition-all shadow-xl hover:shadow-2xl">
+        Apply to the Preferred Partner Program
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <p class="text-white/40 text-xs mt-5">No cost to join · No minimums · Cancel anytime</p>
     </div>
   </section>
 
-  <!-- ──────────────────────────────────────────────
-       WHY TRUST US — abbreviated for this page
-  ─────────────────────────────────────────────── -->
-  <section class="py-14 md:py-16 bg-white border-t border-gray-100">
+  <!-- ══════════════════════════════════════════════
+       FINAL STATS + LICENCE STRIP
+  ══════════════════════════════════════════════ -->
+  <section class="py-12 md:py-14 bg-white border-t border-gray-100">
     <div class="container max-w-4xl mx-auto">
-
-      <div class="text-center mb-10">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-3">Why Denver Professionals Trust Us</h2>
-        <p class="text-muted-foreground max-w-xl mx-auto">When your name is on the recommendation, you need a moving company that never lets you down.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mb-10">
         {[
           { stat: "1,700+", label: "Five-Star Reviews", sub: "Google, Yelp, Facebook" },
           { stat: "6,000+", label: "Moves Completed", sub: "Across Denver Metro" },
-          { stat: "A", label: "BBB Rated", sub: "Accredited Business" },
+          { stat: "A Rated", label: "BBB Accredited", sub: "Trusted & Verified" },
           { stat: "Since '18", label: "Family-Owned", sub: "Local Denver roots" },
         ].map(({ stat, label, sub }) => (
           <div class="flex flex-col items-center gap-1">
@@ -277,12 +554,9 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
           </div>
         ))}
       </div>
-
-      <!-- Licence strip -->
-      <p class="text-center text-xs text-muted-foreground mt-10">
+      <p class="text-center text-xs text-muted-foreground">
         DOT #3462023 · MC #1189363 · PUC #HHG-00682 · Licensed &amp; Insured · Denver, Colorado
       </p>
-
     </div>
   </section>
 
