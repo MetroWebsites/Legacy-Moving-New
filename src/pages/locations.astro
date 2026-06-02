@@ -1,0 +1,221 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { MapPin } from 'lucide-react';
+
+const cities = [
+  {
+    name: "Denver",
+    slug: "denver",
+    description: "The Mile High City. We handle downtown high-rises, Capitol Hill apartments, elevator reservations, parking permits, and suburban neighborhoods across Denver proper.",
+    highlights: ["Downtown condos & lofts", "Capitol Hill & Highland apartments", "Cherry Creek & Wash Park homes", "LoDo, RiNo, Five Points"],
+  },
+  {
+    name: "Lakewood",
+    slug: "lakewood",
+    description: "Our home base. We're headquartered in Lakewood — which means faster response times, crews who know every neighborhood, and no travel time padding in your quote.",
+    highlights: ["Belmar & Green Mountain", "Solterra & West Lakewood", "Bear Creek & West Colfax", "Light rail corridor moves"],
+  },
+  {
+    name: "Aurora",
+    slug: "aurora",
+    description: "Colorado's third-largest city. From Tallyn's Reach to the Anschutz corridor and Buckley Space Force Base moves, we serve all of Aurora's diverse neighborhoods.",
+    highlights: ["Tallyn's Reach & Southlands", "Anschutz medical campus area", "Stapleton-adjacent communities", "Military & PCS moves"],
+  },
+  {
+    name: "Littleton",
+    slug: "littleton",
+    description: "Historic downtown, planned subdivisions, and quiet residential neighborhoods. Littleton moves are some of our smoothest — great street access and a community that plans ahead.",
+    highlights: ["Historic Downtown Littleton", "Columbine Valley area", "Centennial-adjacent neighborhoods", "Platte Park & Ken Caryl"],
+  },
+  {
+    name: "Centennial",
+    slug: "centennial",
+    description: "Heavily HOA-governed but well-maintained. Centennial moves require some advance coordination with associations — we help you navigate that.",
+    highlights: ["Smoky Hill & Southglenn", "Cherry Knolls & Piney Creek", "Saddle Rock & Willow Creek", "DTC & Arapahoe Rd corridor"],
+  },
+  {
+    name: "Highlands Ranch",
+    slug: "highlands-ranch",
+    description: "One of the most HOA-intensive communities in Colorado. We know the HRCA and sub-HOA rules and help Highlands Ranch families plan moves that comply from the start.",
+    highlights: ["Northridge, Eastridge, Westridge", "Southridge & Backcountry", "Firelight & Highlands Ranch Town Center", "Large home specialists"],
+  },
+  {
+    name: "Arvada",
+    slug: "arvada",
+    description: "A city in transition — the historic charm of Olde Town meets new development in Candelas. We handle everything from tight older streets to wide-access new builds.",
+    highlights: ["Olde Town Arvada", "Candelas & West Woods", "Whisper Creek & Ralston Fields", "Gold Line light rail moves"],
+  },
+  {
+    name: "Westminster",
+    slug: "westminster",
+    description: "Spanning old and new Westminster — from mature tree-lined neighborhoods to Orchard Town Center developments. Good street access makes Westminster moves efficient.",
+    highlights: ["Standley Lake & Westminster Center", "The Orchard & Hidden Lake", "Legacy Ridge & Walnut Creek", "US-36 corridor apartments"],
+  },
+  {
+    name: "Thornton",
+    slug: "thornton",
+    description: "One of the fastest-growing cities in Colorado. From older ranches in the south to new subdivisions near 144th, we handle the full range of Thornton moves.",
+    highlights: ["Eastlake & Heritage Creek", "Thornton Town Center", "North Glenn area", "Light rail TOD apartments"],
+  },
+  {
+    name: "Englewood",
+    slug: "englewood",
+    description: "Compact, dense, and urban-adjacent. Englewood has tight older streets and newer CityCenter development near the light rail. Our crews know how to work in both.",
+    highlights: ["Englewood CityCenter", "Broadway Corridor", "Cherry Knolls & Bates-Logan", "Apartment-heavy neighborhoods"],
+  },
+  {
+    name: "Wheat Ridge",
+    slug: "wheat-ridge",
+    description: "Eclectic, older, and right next door to our Lakewood base. Wheat Ridge's character is unique — bungalows, ranch homes, and new infill development side by side.",
+    highlights: ["38th Avenue Corridor", "Crown Hill & Prospect Valley", "Bel Aire & Fruitdale", "Ward Road light rail area"],
+  },
+  {
+    name: "Parker",
+    slug: "parker",
+    description: "A major family destination in the south metro. Large homes, strong HOAs, and a growing community. We handle Parker's scale and HOA logistics with experience.",
+    highlights: ["Pradera & Idyllwilde", "Challenger Park & Lincoln Creek", "Stroh Ranch & Sierra Ridge", "Mainstreet Parker area"],
+  },
+  {
+    name: "Broomfield",
+    slug: "broomfield",
+    description: "Colorado's unique city-county hybrid. Anthem, Broadlands, and the US-36 tech corridor create a mix of residential and corporate moving needs — all handled by Legacy.",
+    highlights: ["Anthem & Anthem Ranch", "Broadlands & Willow Run", "Flatiron Crossing area", "Corporate campus relocations"],
+  },
+  {
+    name: "Castle Rock",
+    slug: "castle-rock",
+    description: "One of Colorado's fastest-growing cities. The Meadows, Cobblestone Ranch, and surrounding communities all have active HOAs. We know Castle Rock's requirements inside and out.",
+    highlights: ["The Meadows & Cobblestone Ranch", "Crystal Valley Ranch & Terrain", "Downtown Castle Rock", "New construction moves"],
+  },
+];
+---
+
+<BaseLayout
+  title="Locations We Serve | Legacy Moving Denver — Denver Metro Moving Company"
+  description="Legacy Moving Denver serves 14 cities across the Denver metro. Find your city and learn what to expect from your move — neighborhoods, HOA rules, parking tips, and more."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16 md:py-20">
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">Locations We Serve</h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          Legacy Moving Denver serves 14 cities across the Denver metro — from the urban core to the southern and northwest suburbs. Click your city to see local moving tips, neighborhood details, HOA guidance, and what to expect from your specific move.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-primary hover:text-white font-semibold' })}>
+            Get Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-primary border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold phone-link' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- City Grid -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+            Our Service Areas
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Every city page covers moving costs, apartment requirements, HOA rules, parking permits, neighborhoods, and why Legacy Moving is the right choice for your area.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cities.map((city) => (
+            <a
+              href={`/cities/${city.slug}`}
+              class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-primary/30 flex flex-col"
+            >
+              <div class="p-6 flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <MapPin size={20} className="text-primary" />
+                  </div>
+                  <h2 class="font-display font-bold text-xl text-secondary group-hover:text-primary transition-colors">
+                    {city.name}, CO
+                  </h2>
+                </div>
+                <p class="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {city.description}
+                </p>
+                <ul class="space-y-1">
+                  {city.highlights.map((highlight) => (
+                    <li class="flex items-center gap-2 text-xs text-muted-foreground">
+                      <span class="text-primary font-bold">✓</span>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="px-6 pb-5">
+                <span class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                  View {city.name} Moving Guide →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Our Service Area -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary text-center">
+          One Company. The Whole Denver Metro.
+        </h2>
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+          <p class="mb-4">
+            Moving within the Denver metro means understanding that every city operates a little differently. Downtown Denver has parking permit requirements and high-rise elevator reservations. Highlands Ranch has multi-layered HOA governance. Castle Rock has growing planned communities with strict move-in protocols. Wheat Ridge has tight older streets that need a specific approach.
+          </p>
+          <p class="mb-4">
+            Legacy Moving serves all 14 of these markets with the same professional crew, the same licensed and insured operation, and the same commitment to honest pricing. We don't just know how to move furniture — we know how to navigate the specific logistics of each community, what each HOA expects, and how to plan a move that runs smoothly from first call to final box.
+          </p>
+          <p>
+            Whether you're moving within your city, between Denver metro cities, or making a long-distance move out of Colorado, we handle it all. Call us or get a quote online — we're ready to help.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-secondary text-white hover:bg-primary font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', variant: 'outline', className: 'border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold phone-link' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary py-16">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">
+          Don't See Your City?
+        </h2>
+        <p class="text-white/90 text-lg mb-8">
+          We serve the full Denver metro and Front Range. If your city isn't listed, call us — we likely serve your area. We handle moves throughout Jefferson, Denver, Arapahoe, Douglas, Adams, and Boulder counties.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-secondary hover:text-white font-semibold' })}>
+            Get a Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border border-white text-white hover:bg-secondary/80 phone-link' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
