@@ -73,6 +73,51 @@
       "permanent": true
     },
     {
+      "source": "/castle-pines-co",
+      "destination": "/cities/castle-pines",
+      "permanent": true
+    },
+    {
+      "source": "/lone-tree-co",
+      "destination": "/cities/lone-tree",
+      "permanent": true
+    },
+    {
+      "source": "/greenwood-village-co",
+      "destination": "/cities/greenwood-village",
+      "permanent": true
+    },
+    {
+      "source": "/commerce-city-co",
+      "destination": "/cities/commerce-city",
+      "permanent": true
+    },
+    {
+      "source": "/brighton-co",
+      "destination": "/cities/brighton",
+      "permanent": true
+    },
+    {
+      "source": "/frederick-co",
+      "destination": "/cities/frederick",
+      "permanent": true
+    },
+    {
+      "source": "/longmont-co",
+      "destination": "/cities/longmont",
+      "permanent": true
+    },
+    {
+      "source": "/erie-co",
+      "destination": "/cities/erie",
+      "permanent": true
+    },
+    {
+      "source": "/lafayette-co",
+      "destination": "/cities/lafayette",
+      "permanent": true
+    },
+    {
       "source": "/about",
       "destination": "/about-us",
       "permanent": true
