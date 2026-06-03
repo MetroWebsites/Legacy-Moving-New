@@ -1,0 +1,275 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import { buttonVariants } from "@/components/ui/button";
+import { MapPin, Phone, Clock, Award } from 'lucide-react';
+import heroImage from '../../assets/truck-in-driveway-legacy-moving-denver_nw_b9c9f7fe.jpeg';
+
+const cityName = "Commerce City";
+const cityState = "CO";
+---
+
+<BaseLayout
+  title={`Professional Movers in ${cityName}, ${cityState} | Legacy Moving Denver`}
+  description={`Top-rated moving company serving ${cityName}, ${cityState}. Local & long-distance moving, packing, loading services. Licensed, insured movers with 1,700+ 5-star reviews. Call (720) 340-1849 for a free quote.`}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-secondary to-secondary/90 text-white py-16">
+    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+      <Image 
+        src={heroImage} 
+        alt={`Legacy Moving Denver truck in ${cityName}`}
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl mb-6">
+          Commerce City Moving Company | Professional Movers in Commerce City, CO
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          Moving to or from Commerce City? Legacy Moving provides professional, careful moving services throughout Commerce City and the north Denver metro. From Buffalo Run and The Lakes to Reunion and River Run, our crews handle every move with professionalism and honest pricing. Licensed, insured, and trusted — call for your free quote today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-primary hover:text-white font-semibold' })}>
+            Get Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-primary border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold phone-link' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+            Complete Moving Services in {cityName}
+          </h2>
+          <p class="text-muted-foreground text-lg">
+            From newer master-planned communities like Reunion to established neighborhoods near the city core, we handle every Commerce City move with expertise and care.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Local Moving</h3>
+            <p class="text-muted-foreground">
+              Efficient local moves within {cityName} and throughout the north Denver metro. We connect Commerce City to Denver, Aurora, Thornton, Brighton, and the growing communities along I-76 and E-470.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Long Distance</h3>
+            <p class="text-muted-foreground">
+              Interstate moving from Commerce City to anywhere in the US. We handle the full process — packing, loading, transport coordination, and delivery — so your long-distance move is as smooth as a local one.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Packing Services</h3>
+            <p class="text-muted-foreground">
+              Full-service packing for your Commerce City home. We bring all materials and handle everything from fragile kitchen items to large furniture, so you can focus on the transition.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Loading & Unloading</h3>
+            <p class="text-muted-foreground">
+              Labor-only services for Commerce City residents who've rented their own truck or arranged a container. We load efficiently and protect your belongings throughout the process.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Commercial Moving</h3>
+            <p class="text-muted-foreground">
+              Office and business relocation in Commerce City. The city's growing commercial and industrial base creates ongoing commercial moving needs — we schedule around your operations.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Storage Solutions</h3>
+            <p class="text-muted-foreground">
+              Flexible storage options for Commerce City residents between homes. Whether you need a few days or a few months, we have secure storage available during your transition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Know About Moving in Commerce City -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+          What to Know Before Moving in Commerce City
+        </h2>
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+          <p class="mb-4">
+            Commerce City has changed dramatically over the past decade. Once known primarily as an industrial hub, the city has seen major residential development — especially in its northern sections along E-470. Reunion is one of the most successful master-planned communities in the Denver metro, with tens of thousands of residents, its own commercial amenities, and a strong community association that governs how moves happen within the neighborhood.
+          </p>
+          <p class="mb-4">
+            Reunion is governed by the Reunion Metro District and a community HOA. Moving into Reunion requires advance notification to the HOA, and trucks must use designated access routes. The community has invested heavily in its parks, trails, and common areas, and the HOA actively enforces rules that protect those amenities. Give yourself at least one to two weeks before your move to confirm the requirements with the HOA office.
+          </p>
+          <p class="mb-4">
+            The Lakes at Dunes Park, Buffalo Run Golf Course area, and River Run are other Commerce City residential communities with their own governance. Not all of Commerce City is HOA-governed, but the major master-planned communities are. If you're moving into an older area of Commerce City near the city center or along Highway 2, HOA restrictions are less common — but the street layout and parking near older homes requires planning for large moving trucks.
+          </p>
+          <p class="mb-4">
+            Dick's Sporting Goods Park — home of the Colorado Rapids — and the Colorado National Speedway are Commerce City landmarks, and the city has significant industrial and logistics activity near I-270. This means move days that involve peak industrial traffic on major corridors may require adjusted scheduling. We factor road conditions and traffic into your crew's arrival time.
+          </p>
+          <p>
+            Commerce City is about 25–30 minutes from our Lakewood base. We regularly serve it alongside neighboring <a href="/cities/aurora" class="text-primary hover:underline">Aurora</a>, <a href="/cities/thornton" class="text-primary hover:underline">Thornton</a>, and <a href="/cities/brighton" class="text-primary hover:underline">Brighton</a>. All are within our standard service area with no additional fees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apartment & HOA Moving Tips -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary text-center">
+          HOA Rules, Apartment Moves & Local Tips for Commerce City
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Reunion HOA Requirements</h3>
+            <p class="text-muted-foreground mb-3">Moving into Reunion requires advance coordination with the HOA office. Trucks must use approved access routes and moves must stay within permitted hours. The Reunion community association is actively managed.</p>
+            <ul class="space-y-1 text-sm text-muted-foreground">
+              <li>✓ Contact Reunion HOA at least 7–14 days before moving</li>
+              <li>✓ Confirm approved truck access routes</li>
+              <li>✓ Typical move hours: 8am–6pm in managed communities</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Apartment & Townhome Moves</h3>
+            <p class="text-muted-foreground mb-3">Commerce City has apartment communities and townhome developments that require coordination with management. We're familiar with standard apartment move protocols — notify property managers and confirm elevator or truck access ahead of time.</p>
+            <ul class="space-y-1 text-sm text-muted-foreground">
+              <li>✓ Notify apartment management at least one week in advance</li>
+              <li>✓ Confirm elevator availability and move-in rules</li>
+              <li>✓ Reserve parking near your unit for move day</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">Commerce City Neighborhoods We Serve</h3>
+            <p class="text-muted-foreground">We move clients throughout Commerce City including Reunion, River Run, The Lakes at Dunes Park, Buffalo Run area, Rose Hill, Adams City neighborhoods, and the newer developments along E-470. All are within our standard service area.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-secondary">New Construction Moves</h3>
+            <p class="text-muted-foreground">Commerce City continues to see active new construction in its northern sections. Moving into a newly built home means protecting fresh paint, new flooring, and sometimes navigating an active construction site. We bring floor protection and door jamb guards as standard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+            Why {cityName} Residents Choose Legacy Moving
+          </h2>
+          <p class="text-muted-foreground text-lg">
+            Professional movers trusted throughout the north Denver metro — from Reunion to the city center.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Award size={24} className="text-primary" />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2 text-secondary">1,700+ Five-Star Reviews</h3>
+              <p class="text-muted-foreground">
+                Denver metro's highest-rated moving company. Commerce City clients note our punctuality, professionalism, and careful handling across all types of homes and communities.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <MapPin size={24} className="text-primary" />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2 text-secondary">North Denver Metro Experts</h3>
+              <p class="text-muted-foreground">
+                We know the HOA communities, access routes, and traffic patterns throughout Commerce City, Thornton, Aurora, and Brighton. No learning curve on move day.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Clock size={24} className="text-primary" />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2 text-secondary">On-Time Crews</h3>
+              <p class="text-muted-foreground">
+                We schedule Commerce City crews with traffic and travel time built in. Your crew arrives when they say they will, ready to work — not running late from another job across town.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Phone size={24} className="text-primary" />
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2 text-secondary">Transparent Pricing</h3>
+              <p class="text-muted-foreground">
+                We quote Commerce City moves based on your actual home and services. No surprise fees. Licensed, fully insured, and upfront about everything from start to finish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Cities -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-display font-bold text-2xl md:text-3xl mb-6 text-secondary">Also Serving Nearby Cities</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/cities/thornton" class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-medium text-secondary hover:bg-primary hover:text-white hover:border-primary transition-colors">Thornton</a>
+          <a href="/cities/aurora" class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-medium text-secondary hover:bg-primary hover:text-white hover:border-primary transition-colors">Aurora</a>
+          <a href="/cities/denver" class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-medium text-secondary hover:bg-primary hover:text-white hover:border-primary transition-colors">Denver</a>
+          <a href="/cities/brighton" class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-medium text-secondary hover:bg-primary hover:text-white hover:border-primary transition-colors">Brighton</a>
+          <a href="/cities/westminster" class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-medium text-secondary hover:bg-primary hover:text-white hover:border-primary transition-colors">Westminster</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-secondary py-16">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">
+          Ready to Move in {cityName}?
+        </h2>
+        <p class="text-white/90 text-lg mb-8">
+          Get your free moving quote today. Our Commerce City moving specialists know the local communities and are ready to plan your move from start to finish.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/get-quote" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-primary hover:text-white font-semibold' })}>
+            Get Free Quote
+          </a>
+          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-primary border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold phone-link' })}>
+            Call (720) 340-1849
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
