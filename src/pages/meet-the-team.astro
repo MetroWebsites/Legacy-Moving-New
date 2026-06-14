@@ -85,30 +85,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Crew / Field Leads — Coming Soon -->
-  <section class="py-16 bg-gray-50 border-y border-gray-100">
-    <div class="container">
-      <div class="text-center mb-12">
-        <span class="inline-block bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">Field Leads & Crew Chiefs</span>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-3">The Ones in the Truck</h2>
-        <p class="text-muted-foreground max-w-xl mx-auto">Our experienced crew leads are the heart of every move. Profiles coming soon.</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-4xl mx-auto">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <div class="group flex flex-col items-center text-center">
-            <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-dashed border-primary/20 flex flex-col items-center justify-center mb-2 group-hover:border-primary/50 transition-colors overflow-hidden shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary/30"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
-            </div>
-            <p class="text-xs font-bold text-secondary">Crew Lead</p>
-            <p class="text-[10px] text-muted-foreground">Coming Soon</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- Meet Our Movers — Slideshow -->
   <section class="py-16 bg-secondary text-white" id="our-movers">
     <div class="container">
@@ -124,27 +100,27 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         <div class="overflow-hidden rounded-2xl shadow-2xl" id="slides-track-wrapper">
           <div class="flex transition-transform duration-500 ease-in-out" id="slides-track">
             {[
-              { url: "https://www.genspark.ai/api/files/s/OA0MRh55", alt: "Legacy Moving Denver crew with truck" },
-              { url: "https://www.genspark.ai/api/files/s/KmOEcXrX", alt: "Legacy Moving Denver crew at truck rear" },
-              { url: "https://www.genspark.ai/api/files/s/DHcdc4yG", alt: "Legacy Moving Denver movers at house door" },
-              { url: "https://www.genspark.ai/api/files/s/ftQYeDQ0", alt: "Legacy Moving Denver crew with truck at house" },
-              { url: "https://www.genspark.ai/api/files/s/dRxgUQAi", alt: "Legacy Moving Denver crew with two trucks" },
-              { url: "https://www.genspark.ai/api/files/s/aXeZ0og6", alt: "Legacy Moving Denver three man crew" },
-              { url: "https://www.genspark.ai/api/files/s/tglGj5TT", alt: "Legacy Moving Denver crew at truck rear" },
-              { url: "https://www.genspark.ai/api/files/s/1j9Ssx0F", alt: "Legacy Moving Denver two movers with truck" },
-              { url: "https://www.genspark.ai/api/files/s/d1SutXjw", alt: "Legacy Moving Denver three movers in neighborhood" },
-              { url: "https://www.genspark.ai/api/files/s/twHmL73s", alt: "Legacy Moving Denver movers with loaded truck" },
-              { url: "https://www.genspark.ai/api/files/s/DHC5KrHk", alt: "Legacy Moving Denver crew with two trucks on street" },
-              { url: "https://www.genspark.ai/api/files/s/81oyOixZ", alt: "Legacy Moving Denver four man crew" },
-              { url: "https://www.genspark.ai/api/files/s/gayh6w8G", alt: "Legacy Moving Denver crew with blue truck" },
-              { url: "https://www.genspark.ai/api/files/s/uS50yMV2", alt: "Legacy Moving Denver four movers with blue truck" },
-              { url: "https://www.genspark.ai/api/files/s/xOF6dRNy", alt: "Legacy Moving Denver three movers with blue truck" },
-              { url: "https://www.genspark.ai/api/files/s/GlRGhqa7", alt: "Legacy Moving Denver three movers" },
-              { url: "https://www.genspark.ai/api/files/s/t8YMvoF0", alt: "Legacy Moving Denver four movers at truck" },
-              { url: "https://www.genspark.ai/api/files/s/WDW63ukl", alt: "Legacy Moving Denver three movers outside" },
-              { url: "https://www.genspark.ai/api/files/s/6DJ3PsjB", alt: "Legacy Moving Denver two movers on truck lift" },
-              { url: "https://www.genspark.ai/api/files/s/PB2xkZom", alt: "Legacy Moving Denver two movers" },
-              { url: "https://www.genspark.ai/api/files/s/XgVXfiDR", alt: "Legacy Moving Denver two movers at truck" },
+              { url: "/assets/team/movers-01.jpg", alt: "Legacy Moving Denver crew with truck" },
+              { url: "/assets/team/movers-02.jpg", alt: "Legacy Moving Denver crew at truck rear" },
+              { url: "/assets/team/movers-03.jpg", alt: "Legacy Moving Denver movers at house door" },
+              { url: "/assets/team/movers-04.jpg", alt: "Legacy Moving Denver crew with truck at house" },
+              { url: "/assets/team/movers-05.jpg", alt: "Legacy Moving Denver crew with two trucks" },
+              { url: "/assets/team/movers-06.jpg", alt: "Legacy Moving Denver three man crew" },
+              { url: "/assets/team/movers-07.jpg", alt: "Legacy Moving Denver crew at truck rear" },
+              { url: "/assets/team/movers-08.jpg", alt: "Legacy Moving Denver two movers with truck" },
+              { url: "/assets/team/movers-09.jpg", alt: "Legacy Moving Denver three movers in neighborhood" },
+              { url: "/assets/team/movers-10.jpg", alt: "Legacy Moving Denver movers with loaded truck" },
+              { url: "/assets/team/movers-11.jpg", alt: "Legacy Moving Denver crew with two trucks on street" },
+              { url: "/assets/team/movers-12.jpg", alt: "Legacy Moving Denver four man crew" },
+              { url: "/assets/team/movers-13.jpg", alt: "Legacy Moving Denver crew with blue truck" },
+              { url: "/assets/team/movers-14.jpg", alt: "Legacy Moving Denver four movers with blue truck" },
+              { url: "/assets/team/movers-15.jpg", alt: "Legacy Moving Denver three movers with blue truck" },
+              { url: "/assets/team/movers-16.jpg", alt: "Legacy Moving Denver three movers" },
+              { url: "/assets/team/movers-17.jpg", alt: "Legacy Moving Denver four movers at truck" },
+              { url: "/assets/team/movers-18.jpg", alt: "Legacy Moving Denver three movers outside" },
+              { url: "/assets/team/movers-19.jpg", alt: "Legacy Moving Denver two movers on truck lift" },
+              { url: "/assets/team/movers-20.jpg", alt: "Legacy Moving Denver two movers" },
+              { url: "/assets/team/movers-21.jpg", alt: "Legacy Moving Denver two movers at truck" },
             ].map(({ url, alt }) => (
               <div class="min-w-full">
                 <img
@@ -185,27 +161,27 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       <div class="mt-8 max-w-3xl mx-auto overflow-x-auto pb-2 hide-scrollbar">
         <div class="flex gap-2 w-max mx-auto" id="thumb-strip">
           {[
-            "https://www.genspark.ai/api/files/s/OA0MRh55",
-            "https://www.genspark.ai/api/files/s/KmOEcXrX",
-            "https://www.genspark.ai/api/files/s/DHcdc4yG",
-            "https://www.genspark.ai/api/files/s/ftQYeDQ0",
-            "https://www.genspark.ai/api/files/s/dRxgUQAi",
-            "https://www.genspark.ai/api/files/s/aXeZ0og6",
-            "https://www.genspark.ai/api/files/s/tglGj5TT",
-            "https://www.genspark.ai/api/files/s/1j9Ssx0F",
-            "https://www.genspark.ai/api/files/s/d1SutXjw",
-            "https://www.genspark.ai/api/files/s/twHmL73s",
-            "https://www.genspark.ai/api/files/s/DHC5KrHk",
-            "https://www.genspark.ai/api/files/s/81oyOixZ",
-            "https://www.genspark.ai/api/files/s/gayh6w8G",
-            "https://www.genspark.ai/api/files/s/uS50yMV2",
-            "https://www.genspark.ai/api/files/s/xOF6dRNy",
-            "https://www.genspark.ai/api/files/s/GlRGhqa7",
-            "https://www.genspark.ai/api/files/s/t8YMvoF0",
-            "https://www.genspark.ai/api/files/s/WDW63ukl",
-            "https://www.genspark.ai/api/files/s/6DJ3PsjB",
-            "https://www.genspark.ai/api/files/s/PB2xkZom",
-            "https://www.genspark.ai/api/files/s/XgVXfiDR",
+            "/assets/team/movers-01.jpg",
+            "/assets/team/movers-02.jpg",
+            "/assets/team/movers-03.jpg",
+            "/assets/team/movers-04.jpg",
+            "/assets/team/movers-05.jpg",
+            "/assets/team/movers-06.jpg",
+            "/assets/team/movers-07.jpg",
+            "/assets/team/movers-08.jpg",
+            "/assets/team/movers-09.jpg",
+            "/assets/team/movers-10.jpg",
+            "/assets/team/movers-11.jpg",
+            "/assets/team/movers-12.jpg",
+            "/assets/team/movers-13.jpg",
+            "/assets/team/movers-14.jpg",
+            "/assets/team/movers-15.jpg",
+            "/assets/team/movers-16.jpg",
+            "/assets/team/movers-17.jpg",
+            "/assets/team/movers-18.jpg",
+            "/assets/team/movers-19.jpg",
+            "/assets/team/movers-20.jpg",
+            "/assets/team/movers-21.jpg",
           ].map((url, i) => (
             <button
               class="thumb-btn flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden border-2 border-white/20 hover:border-primary transition-colors opacity-60 hover:opacity-100"
@@ -263,7 +239,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     dotsContainer.appendChild(dot);
   }
 
-  function goTo(n) {
+  function goTo(n, skipScroll) {
     current = (n + TOTAL) % TOTAL;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
     // Update dots
@@ -279,10 +255,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       btn.classList.toggle('border-white/20', i !== current);
       btn.classList.toggle('opacity-60', i !== current);
     });
-    // Scroll active thumb into view
-    const activeThumb = thumbBtns[current];
-    if (activeThumb) {
-      activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    // Scroll active thumb into view — skip on init to prevent page auto-scroll
+    if (!skipScroll) {
+      const activeThumb = thumbBtns[current];
+      if (activeThumb) {
+        activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     }
     resetAuto();
   }
@@ -308,8 +286,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
   });
 
-  // Start auto-advance
+  // Start auto-advance — pass skipScroll=true to avoid scrolling page on load
   resetAuto();
-  goTo(0);
+  goTo(0, true);
 })();
 </script>
