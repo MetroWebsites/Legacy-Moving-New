@@ -239,7 +239,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     dotsContainer.appendChild(dot);
   }
 
-  function goTo(n, skipScroll) {
+  function goTo(n) {
     current = (n + TOTAL) % TOTAL;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
     // Update dots
@@ -255,12 +255,15 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       btn.classList.toggle('border-white/20', i !== current);
       btn.classList.toggle('opacity-60', i !== current);
     });
-    // Scroll active thumb into view — skip on init to prevent page auto-scroll
-    if (!skipScroll) {
-      const activeThumb = thumbBtns[current];
-      if (activeThumb) {
-        activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
+    // Scroll active thumb into view inside the strip (never scrolls the page)
+    const thumbStrip = document.getElementById('thumb-strip');
+    const activeThumb = thumbBtns[current];
+    if (thumbStrip && activeThumb) {
+      const stripRect = thumbStrip.parentElement.getBoundingClientRect();
+      const thumbRect = activeThumb.getBoundingClientRect();
+      const offset = activeThumb.offsetLeft - thumbStrip.parentElement.scrollLeft;
+      const center = offset - (stripRect.width / 2) + (thumbRect.width / 2);
+      thumbStrip.parentElement.scrollBy({ left: center, behavior: 'smooth' });
     }
     resetAuto();
   }
@@ -286,8 +289,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
   });
 
-  // Start auto-advance — pass skipScroll=true to avoid scrolling page on load
+  // Start auto-advance
   resetAuto();
-  goTo(0, true);
+  goTo(0);
 })();
 </script>
