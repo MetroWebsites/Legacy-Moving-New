@@ -1,0 +1,212 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/packing.jpg";
+---
+
+<BaseLayout
+  title="Antique Moving Services Denver | Expert Antique Furniture Movers Colorado | Legacy Moving"
+  description="Professional antique moving in Denver and across Colorado. Antique furniture, china, porcelain, heirloom pieces, vintage collectibles, and estate items. Custom wrapping, careful handling, and white-glove service. Free quotes."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver antique movers carefully wrapping a vintage armoire with custom moving blankets" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-5 rounded-full bg-primary/25 text-white text-sm font-semibold">Denver's Antique Moving Specialists</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
+            Antique Moving in Denver — <span class="text-primary">Heirlooms Handled with Respect</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
+            Antique pieces carry history, sentimental value, and often considerable monetary worth. Our crew approaches every piece with the understanding that it cannot be replaced — and moves it accordingly.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+            <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+          </div>
+        </div>
+        <div id="quote-form" class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <p class="font-display font-bold text-xl text-secondary mb-4 text-center">Get Your Free Antique Moving Quote</p>
+          <div data-version="4" id="56AIR8-antique"></div>
+          <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('56AIR8-antique','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+          </script>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:hidden">
+          <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+          <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="font-medium text-secondary">Licensed & Insured</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg><span class="font-medium text-secondary">1,700+ Five-Star Reviews</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><span class="font-medium text-secondary">Custom Wrapping & Padding</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="font-medium text-secondary">Heirloom-Grade Care</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Antiques Require Specialists -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+            Moving Antiques Is Different from <span class="text-primary">Moving Furniture</span>
+          </h2>
+          <div class="space-y-5 text-gray-700">
+            <p>
+              A contemporary sectional sofa can take a bump without consequence. Your great-grandmother's Victorian settee cannot. Antique furniture is typically constructed with hide glue joints, thin veneers, and handmade hardware — all of which were designed for a gentler era, not a moving truck.
+            </p>
+            <p>
+              Veneer is particularly vulnerable. The thin wood layers bonded to the substrate can lift, crack, or chip if the piece is bumped against a wall, dragged across a floor, or improperly wrapped with materials that catch and pull. Carved details on drawer pulls, pediments, and decorative moldings are equally fragile — they have survived decades in your family's care and can be undone in a single moment of careless moving.
+            </p>
+            <p>
+              Our crew approaches antiques with a different mindset than standard furniture. We move more slowly, use softer padding materials, apply furniture blankets before anything else touches the piece, and take the time to assess each item individually rather than treating everything the same. We also understand when removable elements — mirrors, marble tops, shelving units — should be taken apart and transported separately for their protection.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <h3 class="font-display font-bold text-xl text-secondary mb-4">Antiques & Heirlooms We Move</h3>
+            <ul class="space-y-3">
+              {[
+                ["Antique Furniture", "Armoires, dressers, tables, chairs, sideboards, and cabinets from any era"],
+                ["China & Porcelain", "Individual pieces and full china sets requiring custom cell packing"],
+                ["Crystal & Glassware", "Wrapped individually in acid-free tissue with foam cell boxes"],
+                ["Vintage Clocks", "Mantle clocks, bracket clocks, and shelf clocks with mechanical movements"],
+                ["Heirloom Jewelry Cases", "Velvet-lined cases and display cabinets"],
+                ["Estate Collections", "Full estate and downsizing moves handled with care and discretion"],
+                ["Vintage Textiles", "Rugs, tapestries, and vintage linens requiring careful rolling or flat transport"],
+              ].map(([type, desc]) => (
+                <li class="flex gap-3 items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-0.5 flex-shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <span class="font-semibold text-secondary text-sm">{type}</span>
+                    <span class="text-gray-600 text-sm"> — {desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          How We Move <span class="text-primary">Your Antiques</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {[
+          ["Pre-Move Assessment", "We discuss each antique piece — its age, condition, fragility, and any known vulnerabilities. This conversation shapes every decision that follows."],
+          ["Soft-First Wrapping", "Moving blankets go on the piece before anything hard touches it. Corners, protruding carvings, and glass surfaces get additional foam corner protection."],
+          ["Careful Disassembly", "Marble tops, mirrors, removable shelving, and detachable elements are wrapped and transported separately to eliminate stress on joints and veneer."],
+          ["China & Breakables Packed in Cells", "Fine china, crystal, and porcelain are wrapped individually in acid-free tissue and placed in divided boxes — never stacked without proper separation."],
+          ["Controlled Loading & Placement in Truck", "Antique pieces are loaded last (out first) and placed in positions where they won't shift. Soft items like blankets buffer any potential contact points."],
+          ["White-Glove Delivery & Unwrapping", "At the destination, we carefully unwrap and inspect each piece with you present. We place items exactly where you want them and don't rush the process."],
+        ].map(([step, desc], i) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white">{i + 1}</div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{step}</h3>
+              <p class="text-gray-600 text-sm">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">Antique Moving <span class="text-primary">FAQs</span></h2>
+      <div class="space-y-4">
+        {[
+          ["Should I get my antiques appraised before a move?", "Yes — if your antiques have significant monetary value, a current appraisal from a certified appraiser is valuable before any move. It establishes value for insurance purposes and gives you a documented condition record. This is something to arrange before move day, not after."],
+          ["What packing materials do you use for antiques?", "We use high-quality moving blankets, foam corner protectors, soft stretch wrap, and for breakables, acid-free tissue paper and divided cell boxes. For particularly valuable pieces, we can source custom crating materials."],
+          ["Can you move an antique armoire or wardrobe with a mirror?", "Yes. Mirrors are removed from the piece before moving and transported separately in padded mirror boxes or wrapped in blankets. This protects both the mirror and the joint where it attaches to the frame."],
+          ["Do you move entire estates?", "Yes. Legacy Moving handles estate moves, downsizing moves, and partial-estate moves with the care and discretion these situations require. We understand the emotional weight of these moves and approach them with patience."],
+          ["What if I'm not sure if a piece can be disassembled?", "Tell us what you have and we'll advise. Some antiques should never be disassembled (hide glue joints don't tolerate repeated disassembly well). Others have natural removal points — marble tops, mirrors, crown moldings. We'll make the right call based on the piece."],
+          ["Can you move antiques to storage?", "Yes. We recommend climate-controlled storage for antiques. Denver's low humidity can cause wood to crack and veneer to lift over time. A climate-controlled unit maintains stable humidity and temperature — much better for your pieces long-term."],
+        ].map(([q, a]) => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');">
+              <h3 class="font-display font-semibold text-lg text-secondary pr-4">{q}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 flex-shrink-0"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100"><p class="text-muted-foreground">{a}</p></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Antiques?</h2>
+      <p class="text-white/90 text-lg mb-8">Contact Legacy Moving for careful, professional antique moving in Denver. Free quotes, fully insured.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80" })}>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-xl text-secondary mb-5">More Specialty Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/specialty-items" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">All Specialty Moving</a>
+        <a href="/services/fine-art-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Fine Art Moving</a>
+        <a href="/services/grandfather-clock-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Grandfather Clocks</a>
+        <a href="/services/piano-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Piano Moving</a>
+        <a href="/services/packing-services" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Packing Services</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Antique Moving Services Denver",
+    "description": "Professional antique moving in Denver, Colorado. Antique furniture, china, porcelain, heirloom pieces, vintage collectibles. Custom wrapping, white-glove handling, and careful transport.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": { "@type": "PostalAddress", "streetAddress": "8805 W. 14th Ave, Suite 300", "addressLocality": "Lakewood", "addressRegion": "CO", "postalCode": "80215", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "City", "name": "Denver" },
+    "serviceType": "Antique Moving"
+  }
+  </script>
+</BaseLayout>

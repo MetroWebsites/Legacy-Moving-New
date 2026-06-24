@@ -1,0 +1,213 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/residential.jpg";
+---
+
+<BaseLayout
+  title="Grandfather Clock Moving Denver | Heirloom Clock Movers Colorado | Legacy Moving"
+  description="Expert grandfather clock moving in Denver and across Colorado. Proper pendulum removal, movement securing, bell packing, and careful transport. We protect your family heirloom from first touch to final placement. Free quotes."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver carefully securing a tall grandfather clock for transport" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-5 rounded-full bg-primary/25 text-white text-sm font-semibold">Heirloom Clock Moving Specialists</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
+            Grandfather Clock Moving in Denver — <span class="text-primary">Precision & Respect</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
+            Grandfather clocks are among the most mechanically delicate items in any home. Moving one without proper preparation can damage the movement, shatter the pendulum, or misalign the striking mechanism. We know exactly how to prepare and move yours safely.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+            <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+          </div>
+        </div>
+        <div id="quote-form" class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <p class="font-display font-bold text-xl text-secondary mb-4 text-center">Get Your Free Clock Moving Quote</p>
+          <div data-version="4" id="56AIR8-clock"></div>
+          <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('56AIR8-clock','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+          </script>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:hidden">
+          <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+          <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="font-medium text-secondary">Licensed & Insured</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="font-medium text-secondary">Movement Secured Before Transport</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg><span class="font-medium text-secondary">1,700+ Five-Star Reviews</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="font-medium text-secondary">Heirloom-Grade Care</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Grandfather Clocks Need Specialists -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+            Why Grandfather Clocks Are <span class="text-primary">Among the Most Fragile Items to Move</span>
+          </h2>
+          <div class="space-y-5 text-gray-700">
+            <p>
+              From the outside, a grandfather clock looks like a tall wooden cabinet. But inside, it's a precision timekeeping instrument with hundreds of interlocking mechanical parts — gears, springs, weights, chimes, and a pendulum assembly that must swing in perfect balance. None of these components are designed to withstand the jarring, tilting, or vibration of a vehicle in motion.
+            </p>
+            <p>
+              The pendulum is the most immediate concern. On most grandfather clocks, the pendulum rod hooks onto a suspension spring inside the movement. If the clock tips during movement, the pendulum can swing freely and strike the case walls, crack glass panels, or even snap the suspension spring. Chains and cables on weight-driven movements can tangle if the weights aren't removed. And chime rod assemblies — the beautiful mechanism that produces the Westminster or Whittington chime — can bend or break if the movement is not properly secured.
+            </p>
+            <p>
+              Our crew knows the correct preparation procedure for grandfather clocks: pendulum removed and wrapped, weights removed and tagged, chains secured, movement stabilized, and the entire piece padded and transported upright. After delivery, we reinstall components and confirm the clock is set up correctly before we leave.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <h3 class="font-display font-bold text-xl text-secondary mb-4">Clock Styles We Move</h3>
+            <ul class="space-y-3">
+              {[
+                ["Grandfather Clocks (Longcase)", "Full-height floor clocks, 6–8 feet tall, with pendulum and weight-driven or spring-driven movements"],
+                ["Grandmother Clocks", "Shorter versions (4–5 ft) of the traditional floor clock, same careful preparation required"],
+                ["Vienna Regulator Clocks", "Precision wall-hanging clocks with exposed pendulums requiring careful wall removal"],
+                ["Bracket & Mantel Clocks", "Smaller mechanical clocks with delicate chime mechanisms"],
+                ["Antique & Heirloom Clocks", "Pre-1900 clocks requiring extra care for aged wood, hand-painted dials, and period hardware"],
+              ].map(([type, desc]) => (
+                <li class="flex gap-3 items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-0.5 flex-shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <span class="font-semibold text-secondary text-sm">{type}</span>
+                    <span class="text-gray-600 text-sm"> — {desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Our Grandfather Clock <span class="text-primary">Moving Process</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {[
+          ["Stop & Secure the Movement", "We begin by stopping the clock and allowing the pendulum to come to rest. The movement is assessed to understand the configuration before any removal begins."],
+          ["Remove the Pendulum", "The pendulum is carefully lifted off its hook and wrapped in soft padding. On clocks with a separate pendulum rod and bob, these are wrapped individually."],
+          ["Remove Weights & Secure Chains", "All weights are removed and individually wrapped and labeled. Chains and cables are secured to prevent tangling during transport."],
+          ["Protect the Case", "The clock case — including the bonnet (top hood), trunk (body), and base — is wrapped in furniture blankets with foam corner protection on protruding moldings."],
+          ["Transport Upright", "Grandfather clocks must travel upright. We secure the clock against the truck wall with proper strapping and padding to prevent any movement during transit."],
+          ["Reinstall & Set Up at Destination", "At the new location, we reinstall weights, hang the pendulum, and set the clock level on its base. We confirm it's running before we leave."],
+        ].map(([step, desc], i) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white">{i + 1}</div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{step}</h3>
+              <p class="text-gray-600 text-sm">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-5">
+        <p class="text-sm text-amber-800"><strong>Note:</strong> After any move, a grandfather clock may require slight regulation (speed adjustment) to keep accurate time in its new environment. This is normal and can be done by the owner following the clock's manual, or by a clockmaker. We don't provide clock repair services, but we'll flag any pre-existing issues we observe during the move.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">Grandfather Clock Moving <span class="text-primary">FAQs</span></h2>
+      <div class="space-y-4">
+        {[
+          ["How much does it cost to move a grandfather clock in Denver?", "Most grandfather clock moves in Denver range from $150–$350 for a local move, depending on clock size, disassembly complexity, and access at both locations. Contact us for a specific quote based on your clock."],
+          ["Do I need to have a clockmaker service the clock before moving?", "Not typically for a local move. However, if your clock has known mechanical issues — a worn suspension spring, a movement that stops randomly — it's worth having a clockmaker inspect it before the move. Moving a clock in poor mechanical condition can exacerbate existing problems."],
+          ["Will moving my grandfather clock knock it out of time?", "It may require minor regulation after the move as it settles into its new position and environment. Most grandfather clock owners can adjust beat and rate using the owner's manual. If you're unfamiliar with the process, a local clockmaker can set it up precisely."],
+          ["Can you move a grandfather clock up or down stairs?", "Yes. Stair moves require additional crew members to maintain control of the clock's height and balance. Please include stair information when requesting your quote so we can assign appropriate crew."],
+          ["What if my clock is very old or particularly valuable?", "For heirloom clocks with significant historical or monetary value, let us know during the assessment. We'll take additional precautions and may recommend third-party specialty packaging for extremely rare pieces."],
+          ["Can I move just the clock, not the whole home?", "Absolutely. We move single specialty items all the time. A grandfather clock move can be scheduled as a standalone service — no need for a full household move."],
+        ].map(([q, a]) => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');">
+              <h3 class="font-display font-semibold text-lg text-secondary pr-4">{q}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 flex-shrink-0"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100"><p class="text-muted-foreground">{a}</p></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Grandfather Clock?</h2>
+      <p class="text-white/90 text-lg mb-8">Call Legacy Moving for careful, expert clock moving in Denver. Free quotes — no obligation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80" })}>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-xl text-secondary mb-5">More Specialty Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/specialty-items" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">All Specialty Moving</a>
+        <a href="/services/piano-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Piano Moving</a>
+        <a href="/services/antique-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Antique Moving</a>
+        <a href="/services/fine-art-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Fine Art Moving</a>
+        <a href="/services/large-furniture-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Large Furniture</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Grandfather Clock Moving Services Denver",
+    "description": "Expert grandfather clock moving in Denver, Colorado. Proper pendulum removal, movement securing, weight removal, and careful transport. Heirloom-grade care from first touch to final setup.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": { "@type": "PostalAddress", "streetAddress": "8805 W. 14th Ave, Suite 300", "addressLocality": "Lakewood", "addressRegion": "CO", "postalCode": "80215", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "City", "name": "Denver" },
+    "serviceType": "Grandfather Clock Moving"
+  }
+  </script>
+</BaseLayout>

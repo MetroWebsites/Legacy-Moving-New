@@ -1,0 +1,212 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/packing.jpg";
+---
+
+<BaseLayout
+  title="Fine Art Moving Denver | White-Glove Art Movers Colorado | Legacy Moving"
+  description="Expert fine art moving in Denver and across Colorado. Paintings, sculptures, photography, and mixed media. Custom crating, acid-free materials, climate-controlled transport, and white-glove installation. Fully insured."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver fine art movers carefully wrapping and packing valuable artwork for transport" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-5 rounded-full bg-primary/25 text-white text-sm font-semibold">White-Glove Fine Art Moving</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
+            Fine Art Moving <span class="text-primary">in Denver</span> — Handled with Precision
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
+            Your artwork represents financial investment, personal history, and irreplaceable creative work. Our white-glove art movers bring the materials, training, and care this irreplaceable property deserves.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+            <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+          </div>
+        </div>
+        <div id="quote-form" class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <p class="font-display font-bold text-xl text-secondary mb-4 text-center">Get Your Free Art Moving Quote</p>
+          <div data-version="4" id="56AIR8-art"></div>
+          <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('56AIR8-art','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+          </script>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:hidden">
+          <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+          <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="font-medium text-secondary">Licensed & Insured</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg><span class="font-medium text-secondary">White-Glove Handling</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><span class="font-medium text-secondary">Acid-Free Materials</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M1 6c0-1.1.9-2 2-2h4l2 3H7c-1.1 0-2 .9-2 2v9h16V9c0-1.1-.9-2-2-2h-1l2-3h4c1.1 0 2 .9 2 2v13c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2z"/></svg><span class="font-medium text-secondary">Climate-Controlled Transport</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Fine Art Needs Specialists -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+            Why Fine Art Demands <span class="text-primary">Expert Care</span>
+          </h2>
+          <div class="space-y-5 text-gray-700">
+            <p>
+              A scratch on a canvas, a cracked glazing layer, a puncture from a corner guard — any of these can diminish or destroy the value and integrity of a work of fine art. Unlike standard household items, artwork cannot be re-purchased if damaged. The materials, the artist's hand, the provenance — all of it is unique and irreplaceable.
+            </p>
+            <p>
+              Oil paintings are particularly vulnerable. The dried paint film is rigid but brittle, and can crack under impact, pressure, or sudden temperature change. Canvas stretchers can warp in transit. Varnish layers can cloud when exposed to moisture or extreme cold. Framed works under glass face additional risks from any jarring movement.
+            </p>
+            <p>
+              Our fine art moving team uses archival-grade materials — acid-free tissue paper, conservation foam, glassine, and custom-cut Ethafoam inserts. Works are wrapped individually, never stacked face-to-face, and transported vertically in padded racks when possible. We also handle climate-sensitive transport for works that cannot tolerate temperature fluctuations — a genuine concern in Colorado's dramatic seasonal swings.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <h3 class="font-display font-bold text-xl text-secondary mb-4">Artwork We Move</h3>
+            <ul class="space-y-3">
+              {[
+                ["Oil Paintings", "On canvas, panel, or board — framed or unframed, with glass or without"],
+                ["Watercolors & Pastels", "Particularly fragile media requiring UV-protection wrapping"],
+                ["Photography & Prints", "Archival wrapping prevents pressure and static transfer"],
+                ["Sculptures", "3D works in bronze, stone, ceramic, glass, and mixed media"],
+                ["Large-Format Art", "Oversized canvases and installations requiring custom packaging"],
+                ["Limited Edition Prints", "Numbered works requiring documentation of condition"],
+                ["Photography Collections", "Multiple works moved with individual wrapping and cataloging"],
+              ].map(([type, desc]) => (
+                <li class="flex gap-3 items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-0.5 flex-shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <span class="font-semibold text-secondary text-sm">{type}</span>
+                    <span class="text-gray-600 text-sm"> — {desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Our Fine Art Moving <span class="text-primary">Process</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {[
+          ["Inventory & Condition Documentation", "We photograph and document the condition of each piece before packing begins. This creates a clear record and protects both parties."],
+          ["Archival-Grade Wrapping", "Each work is wrapped individually in glassine or acid-free tissue, then surrounded by conservation foam or Ethafoam to prevent any contact damage."],
+          ["Custom Crating When Needed", "For high-value or particularly fragile works, custom wooden crates with foam interiors provide the maximum protection during transport."],
+          ["Vertical Transport in Padded Racks", "Paintings and framed works travel vertically in padded racks inside our truck — never laid flat or stacked. This prevents pressure damage and glass stress."],
+          ["Climate-Aware Transport", "For temperature-sensitive works, we minimize transit time and use insulated packaging. For collections requiring strict climate control, we can coordinate with dedicated art transport carriers."],
+          ["Careful Installation", "At the destination, we carefully unwrap, inspect, and assist with placement. We don't rush the unpacking of valuable art — each piece gets the attention it deserves."],
+        ].map(([step, desc], i) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white">{i + 1}</div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{step}</h3>
+              <p class="text-gray-600 text-sm">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">Fine Art Moving <span class="text-primary">FAQs</span></h2>
+      <div class="space-y-4">
+        {[
+          ["Do you move artwork as part of a full household move?", "Yes. If you're doing a full residential move with Legacy Moving, we can provide white-glove art handling as part of that service. Let us know during the quote process that you have fine art so we can assign appropriate personnel and materials."],
+          ["Should I insure my art separately for the move?", "Yes, we strongly recommend it. Our liability insurance covers your move, but for high-value art collections, a rider on your homeowner's policy or a standalone fine art insurance policy specifically covering transit provides the strongest protection. Talk to your insurance provider before the move."],
+          ["Can you move sculptures and three-dimensional works?", "Yes. Sculptures require custom foam-lined crating and careful loading techniques depending on the medium (bronze, ceramic, glass, stone, mixed media). We assess each piece individually and create appropriate packaging."],
+          ["How should I prepare my artwork for a move?", "If you have hanging works, remove them from walls prior to our arrival. If any works have loose elements, note these for our crew. High-value pieces should be insured and documented (photographed, appraised) before the move. We handle all packing."],
+          ["Do you hang art at the destination?", "We assist with placement and can carefully position art against walls for your review. Full installation services (picture-hanging, gallery-wall setup) are available as an add-on — let us know when requesting your quote."],
+          ["What if my art requires climate control beyond your truck's capability?", "For extremely temperature-sensitive works or long-distance moves where climate control is critical, we can connect you with Denver-based fine art transport specialists who use purpose-built climate-controlled vehicles. We'll be upfront if your collection warrants that level of service."],
+        ].map(([q, a]) => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');">
+              <h3 class="font-display font-semibold text-lg text-secondary pr-4">{q}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 flex-shrink-0"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100"><p class="text-muted-foreground">{a}</p></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Art Collection?</h2>
+      <p class="text-white/90 text-lg mb-8">Contact Legacy Moving for white-glove art moving in Denver. Free quotes, no obligation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80" })}>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-xl text-secondary mb-5">More Specialty Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/specialty-items" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">All Specialty Moving</a>
+        <a href="/services/antique-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Antique Moving</a>
+        <a href="/services/piano-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Piano Moving</a>
+        <a href="/services/grandfather-clock-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Grandfather Clocks</a>
+        <a href="/services/packing-services" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Packing Services</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fine Art Moving Services Denver",
+    "description": "Expert fine art moving in Denver, Colorado. Paintings, sculptures, photography, and mixed media. Custom crating, acid-free materials, climate-controlled transport, and white-glove installation.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": { "@type": "PostalAddress", "streetAddress": "8805 W. 14th Ave, Suite 300", "addressLocality": "Lakewood", "addressRegion": "CO", "postalCode": "80215", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "City", "name": "Denver" },
+    "serviceType": "Fine Art Moving"
+  }
+  </script>
+</BaseLayout>
