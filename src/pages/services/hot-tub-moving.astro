@@ -1,0 +1,214 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/commercial.jpg";
+---
+
+<BaseLayout
+  title="Hot Tub Moving Denver | Spa & Hot Tub Movers Colorado | Legacy Moving"
+  description="Professional hot tub and spa moving in Denver and across Colorado. Spa dollies, proper drainage coordination, deck navigation, and teams trained for 500–900 lb spa transport. Fully insured. Free quotes."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver hot tub movers using a spa dolly to move a large outdoor hot tub" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-5 rounded-full bg-primary/25 text-white text-sm font-semibold">Denver's Hot Tub Moving Specialists</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
+            Hot Tub & Spa Moving in Denver — <span class="text-primary">Heavy, Awkward, Done Right</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
+            A hot tub can weigh 500–900 pounds when empty, and presents significant access challenges — tight side yards, narrow gates, deck steps, and soft landscaping that won't support a standard dolly. We have the equipment and the experience to handle yours.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+            <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+          </div>
+        </div>
+        <div id="quote-form" class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <p class="font-display font-bold text-xl text-secondary mb-4 text-center">Get Your Free Hot Tub Moving Quote</p>
+          <div data-version="4" id="56AIR8-hottub"></div>
+          <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('56AIR8-hottub','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+          </script>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:hidden">
+          <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+          <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="font-medium text-secondary">Licensed & Insured</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg><span class="font-medium text-secondary">1,700+ Five-Star Reviews</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span class="font-medium text-secondary">Spa Dolly Equipment</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="font-medium text-secondary">Fully Trained Crew</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hot Tubs Need Specialists -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+            Why Hot Tub Moving Requires <span class="text-primary">Specialized Teams</span>
+          </h2>
+          <div class="space-y-5 text-gray-700">
+            <p>
+              A hot tub is one of the most logistically challenging items to move. It's large, heavy, and completely rigid — there's no folding, disassembling, or breaking it into manageable pieces. Standard hot tubs measure 7 to 8 feet per side and weigh 500 to 900 pounds when fully drained. The shell is fiberglass and relatively fragile for its size, meaning it can crack under uneven pressure if improperly handled.
+            </p>
+            <p>
+              The real challenge is access. Most hot tubs live in backyards behind gates that were never designed for a 900-pound rectangle. Side yard clearances of 36–42 inches are common in Denver. Decks, raised patios, and landscape obstacles further complicate the path. A specialized spa dolly — a low-profile four-wheeled platform with an adjustable frame — allows us to tilt, roll, and maneuver the tub through spaces that a standard moving dolly can't navigate.
+            </p>
+            <p>
+              Electrical disconnection is another consideration. Most hot tubs are hardwired to a 240V circuit. The electrical must be properly disconnected by a qualified electrician before we can move the spa. We can advise on the sequence of steps and coordinate the timing — but the electrical work itself is performed by licensed electricians, not our crew.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <h3 class="font-display font-bold text-xl text-secondary mb-4">What We Handle</h3>
+            <ul class="space-y-3">
+              {[
+                ["Standard Hot Tubs", "4-6 person acrylic/fiberglass hot tubs (most common residential sizes)"],
+                ["Large Swim Spas", "Longer swim spa units up to 14 feet — require additional crew"],
+                ["Inflatable Spa Relocation", "Portable hot tubs requiring controlled drain, deflation, and careful transport"],
+                ["Deck-Mounted Spas", "Spas recessed into or built onto existing decks requiring careful extraction"],
+                ["New Hot Tub Placement", "We move new deliveries from truck drop-off to final backyard location"],
+                ["Hot Tub Removal", "Full hot tub removal and haul-away for replacements or renovations"],
+              ].map(([type, desc]) => (
+                <li class="flex gap-3 items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-0.5 flex-shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <span class="font-semibold text-secondary text-sm">{type}</span>
+                    <span class="text-gray-600 text-sm"> — {desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <p class="text-sm text-amber-800"><strong>Important:</strong> Your hot tub must be fully drained before we arrive. 240V electrical connections must be disconnected by a licensed electrician before our crew touches the spa. We're happy to help coordinate the sequence — just ask when booking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Our Hot Tub Moving <span class="text-primary">Process</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {[
+          ["Pre-Move Access Assessment", "We discuss the access route in detail — gate widths, deck steps, soil conditions, pathway length. For complex setups, a site visit may be arranged before scheduling."],
+          ["Verify Drain & Electrical Disconnect", "We confirm the tub is fully drained and the electrical has been properly disconnected by your electrician before the crew begins any work."],
+          ["Spa Dolly Positioning", "The hot tub is carefully tilted and the spa dolly slid underneath. The tub is secured on the dolly with straps to prevent shifting during movement."],
+          ["Careful Navigation to the Truck", "Working slowly through the access path — around corners, over thresholds, across lawns with plywood protection as needed — the crew moves as one coordinated team."],
+          ["Loading & Securing for Transport", "The tub is loaded onto the truck using a hydraulic lift gate or ramps, positioned securely, and strapped to prevent any movement in transit."],
+          ["Delivery & Final Placement", "At the destination, the reverse process places the hot tub exactly where you want it. We confirm it's level and positioned for optimal electrical reconnection before we leave."],
+        ].map(([step, desc], i) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white">{i + 1}</div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{step}</h3>
+              <p class="text-gray-600 text-sm">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">Hot Tub Moving <span class="text-primary">FAQs</span></h2>
+      <div class="space-y-4">
+        {[
+          ["How much does it cost to move a hot tub in Denver?", "Hot tub moving costs in Denver typically range from $350–$700 for a local move, depending on spa size, weight, access difficulty, distance, and crew size required. Swim spas are priced higher. Contact us for a free, accurate quote."],
+          ["Do I need to have the hot tub drained before you arrive?", "Yes — the hot tub must be completely drained before our crew can move it. Water adds hundreds of pounds of weight that make safe moving impossible and creates slip hazards. If your spa has a self-drain function, run it the day before. If not, you'll need to drain it manually or use a submersible pump."],
+          ["Who disconnects the electrical?", "A licensed electrician must disconnect the 240V circuit before we move the tub. This is a safety and legal requirement — our crew does not perform electrical work. Once the move is complete at the new location, you'll need a licensed electrician to reconnect. We can provide referrals."],
+          ["Can you move a hot tub through a narrow side gate?", "Most standard hot tubs require 36–42 inches of gate clearance minimum. If your gate is narrower, we'll discuss options — sometimes a gate panel can be temporarily removed to add clearance. If access truly isn't possible through the gate, we look at alternatives (deck over the fence, etc.)."],
+          ["Will moving the hot tub damage my lawn or landscaping?", "We use plywood protection on soft ground to distribute weight and prevent the dolly wheels from sinking. We take care to minimize turf damage, but some compression is normal on soft Colorado soil. We'll flag any concerns before we start moving."],
+          ["Can you remove an old hot tub for disposal?", "Yes. We offer hot tub removal and haul-away services. This is a popular option for homeowners replacing a spa or removing one during a renovation. Contact us for disposal pricing."],
+        ].map(([q, a]) => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');">
+              <h3 class="font-display font-semibold text-lg text-secondary pr-4">{q}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 flex-shrink-0"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100"><p class="text-muted-foreground">{a}</p></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Hot Tub?</h2>
+      <p class="text-white/90 text-lg mb-8">Call Legacy Moving for expert hot tub and spa moving in Denver. Free quotes — no obligation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80" })}>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-xl text-secondary mb-5">More Specialty Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/specialty-items" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">All Specialty Moving</a>
+        <a href="/services/gun-safe-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Gun Safe Moving</a>
+        <a href="/services/pool-table-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Pool Table Moving</a>
+        <a href="/services/fitness-equipment-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Fitness Equipment</a>
+        <a href="/services/large-furniture-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Large Furniture</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hot Tub Moving Services Denver",
+    "description": "Professional hot tub and spa moving in Denver, Colorado. Spa dollies, proper drainage coordination, deck navigation, and teams trained for 500–900 lb spa transport.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": { "@type": "PostalAddress", "streetAddress": "8805 W. 14th Ave, Suite 300", "addressLocality": "Lakewood", "addressRegion": "CO", "postalCode": "80215", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "City", "name": "Denver" },
+    "serviceType": "Hot Tub Moving"
+  }
+  </script>
+</BaseLayout>

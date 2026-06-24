@@ -1,0 +1,215 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/commercial.jpg";
+---
+
+<BaseLayout
+  title="Gun Safe Moving Denver | Heavy Safe Movers Colorado | Legacy Moving"
+  description="Professional gun safe and heavy safe moving in Denver and across Colorado. From 200 lb handgun safes to 1,500 lb vault-style units. Heavy-duty dollies, stair walkers, and trained crews. Free quotes, fully insured."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver gun safe movers using heavy duty dollies to move a large gun safe" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <span class="inline-block px-4 py-1 mb-5 rounded-full bg-primary/25 text-white text-sm font-semibold">Denver's Heavy Safe Moving Specialists</span>
+          <h1 class="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
+            Gun Safe & Heavy Safe <span class="text-primary">Moving in Denver</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
+            Gun safes weigh anywhere from 200 to 1,500 pounds and can destroy floors, walls, and backs when moved incorrectly. Our trained crew uses the right equipment to move yours safely — and get it exactly where you need it.
+          </p>
+          <div class="hidden lg:flex flex-col sm:flex-row gap-4">
+            <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+            <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+          </div>
+        </div>
+        <div id="quote-form" class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <p class="font-display font-bold text-xl text-secondary mb-4 text-center">Get Your Free Safe Moving Quote</p>
+          <div data-version="4" id="56AIR8-safe"></div>
+          <script is:inline>
+            (function(r,k) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.defer = true;
+              s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+              s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+              document.getElementById(r).appendChild(s);
+            })('56AIR8-safe','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+          </script>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:hidden">
+          <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold" })}>Get a Free Quote</a>
+          <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="font-medium text-secondary">Licensed & Insured</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg><span class="font-medium text-secondary">1,700+ Five-Star Reviews</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="font-medium text-secondary">Heavy-Duty Equipment</span></div>
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="font-medium text-secondary">Floor & Wall Protection</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Professionals for Safe Moving -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+            Why Gun Safes Require <span class="text-primary">Trained Movers</span>
+          </h2>
+          <div class="space-y-5 text-gray-700">
+            <p>
+              Gun safes are among the most challenging items to move in any home. Even a mid-size rifle safe weighs 500–800 pounds, with dense steel construction that creates an extremely high, narrow center of gravity. The slightest tip without proper control can result in the safe toppling — causing serious injury, floor damage, or wall destruction.
+            </p>
+            <p>
+              Larger vault-style safes — common in Colorado gun storage and with high-value collections — can weigh 1,200 to 1,500 pounds. These require specialized heavy-duty dollies rated for the load, proper rigging straps, and a crew that understands weight distribution and controlled movement across all floor types.
+            </p>
+            <p>
+              Stair moves with heavy safes introduce additional complexity. A loaded stair-walking dolly must be handled by trained operators who understand how to control descent and prevent runaway momentum. Our crews train specifically on stair-safe moves and won't attempt a stair descent without the right equipment in place.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+            <h3 class="font-display font-bold text-xl text-secondary mb-4">Safe Types We Move</h3>
+            <ul class="space-y-3">
+              {[
+                ["Handgun & Pistol Safes", "200–400 lbs, often installed in closets or under desks"],
+                ["Long Gun & Rifle Safes", "300–700 lbs, typically upright with shelving"],
+                ["Large Gun Safes", "600–1,000 lbs, full-height vault with multiple locking bolts"],
+                ["Vault-Style Safes", "1,000–1,500+ lbs, commercial-grade construction"],
+                ["Fireproof Document Safes", "Heavy fire-rated safes for homes and offices"],
+                ["Jewelry & Cash Safes", "Floor safes, wall safes, and heavy freestanding units"],
+              ].map(([type, desc]) => (
+                <li class="flex gap-3 items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-0.5 flex-shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <div>
+                    <span class="font-semibold text-secondary text-sm">{type}</span>
+                    <span class="text-gray-600 text-sm"> — {desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <p class="text-sm text-amber-800 font-medium">⚠️ Important: Please empty your safe before our crew arrives. We do not move safes with firearms or ammunition inside for safety and insurance reasons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Our Safe Moving <span class="text-primary">Process</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {[
+          ["Pre-Move Assessment", "We need to know your safe's weight and dimensions, current location, destination, stair count, floor type, and any tight hallways or door clearances. An accurate assessment prevents surprises."],
+          ["Floor & Stair Protection", "Heavy moving blankets, plywood runners on hardwood, and door jamb protection installed before the safe ever moves. A 700-lb safe on an unprotected hardwood floor will leave gouges — we prevent that."],
+          ["Heavy-Duty Dolly Setup", "We use dollies specifically rated for safe weights. The safe is tilted, the dolly positioned underneath, and the load secured with heavy-duty straps before any movement."],
+          ["Controlled Movement", "Slow, deliberate movement with full crew communication. Corners are navigated with deliberate coordination. No rushing, no improvising."],
+          ["Stair Descent or Ascent", "Stair moves use a powered stair-walking dolly or a controlled team carry with spotters. Every step is called and coordinated."],
+          ["Final Placement", "Your safe is placed exactly where you want it — including on carpeted closet floors, concrete garage slabs, or basement rooms. We help you think through placement for optimal security and access."],
+        ].map(([step, desc], i) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white">{i + 1}</div>
+            <div>
+              <h3 class="font-display font-bold text-lg text-secondary mb-2">{step}</h3>
+              <p class="text-gray-600 text-sm">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-secondary text-center">Gun Safe Moving <span class="text-primary">FAQs</span></h2>
+      <div class="space-y-4">
+        {[
+          ["How much does it cost to move a gun safe in Denver?", "Safe moving costs depend primarily on weight, stair count, and distance. A 400–600 lb safe moved locally without stairs typically runs $175–$300. Safes over 800 lbs or moves involving stairs are priced accordingly. Contact us for a free quote based on your specific safe."],
+          ["Does my safe need to be empty?", "Yes. For safety and insurance reasons, firearms and ammunition must be removed before we arrive. This is non-negotiable. We understand discretion and won't inquire about contents beyond confirming the safe is empty."],
+          ["Can you move a safe down basement stairs?", "Yes, this is one of our most common safe jobs. Basement stair moves require additional crew and time but are absolutely manageable with the right equipment. Please provide stair count and any landing turns when requesting your quote."],
+          ["Will you install or bolt down the safe at the destination?", "We will place the safe at your desired location. Bolting or anchoring the safe to the floor or wall involves drilling and fastening, which we don't provide as a standard service — but we can recommend locksmiths and safe technicians in the Denver area who offer this service."],
+          ["Can you move a safe that's already bolted down?", "No — a bolted safe needs to be unbolted before we can move it. You'll need to arrange for the safe to be unbolted prior to our arrival. If the combination or lock is not working, a locksmith will need to address that beforehand as well."],
+          ["What if the safe is too heavy for my floor?", "This is a valid concern for safes over 1,000 lbs on upper floors or over finished basements. We can discuss your floor structure during the assessment. In some cases, plywood distribution plates or load calculations may be needed — we'll flag any concerns before the move."],
+        ].map(([q, a]) => (
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <button class="w-full p-6 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset hover:bg-gray-50 transition-colors" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180');">
+              <h3 class="font-display font-semibold text-lg text-secondary pr-4">{q}</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 flex-shrink-0"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer hidden">
+              <div class="p-6 pt-0 border-t border-gray-100"><p class="text-muted-foreground">{a}</p></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Safe?</h2>
+      <p class="text-white/90 text-lg mb-8">Call Denver's heavy safe moving specialists for a fast, accurate quote.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold phone-link" })}>Call (720) 340-1849</a>
+        <a href="#quote-form" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80" })}>Get a Free Quote</a>
+      </div>
+      <p class="mt-6 text-white/80 text-sm">📍 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215 &nbsp;|&nbsp; 🕒 Mon–Sat: 8am–6pm</p>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-xl text-secondary mb-5">More Specialty Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/specialty-items" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">All Specialty Moving</a>
+        <a href="/services/piano-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Piano Moving</a>
+        <a href="/services/pool-table-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Pool Table Moving</a>
+        <a href="/services/hot-tub-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Hot Tub Moving</a>
+        <a href="/services/large-furniture-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Large Furniture</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Gun Safe & Heavy Safe Moving Services Denver",
+    "description": "Professional gun safe and heavy safe moving in Denver, Colorado. From 200 lb handgun safes to 1,500 lb vault-style units. Heavy-duty dollies, stair walkers, floor protection, and trained crews.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": { "@type": "PostalAddress", "streetAddress": "8805 W. 14th Ave, Suite 300", "addressLocality": "Lakewood", "addressRegion": "CO", "postalCode": "80215", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "City", "name": "Denver" },
+    "serviceType": "Safe Moving"
+  }
+  </script>
+</BaseLayout>

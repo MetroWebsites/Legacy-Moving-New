@@ -1,0 +1,414 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import movingImage from "../../assets/services/residential.jpg";
+---
+
+<BaseLayout
+  title="Specialty Moving Services Denver | Expert Movers for Pianos, Safes, Art & More"
+  description="Legacy Moving Denver specializes in moving oversized, fragile, and high-value items. Pianos, pool tables, gun safes, fine art, antiques, grandfather clocks, hot tubs, and more. Fully insured white-glove service throughout the Denver metro area."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-secondary py-20 md:py-28 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 mix-blend-overlay">
+      <Image src={movingImage} alt="Legacy Moving Denver specialty item movers carefully handling valuable furniture" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="container relative z-10 text-center max-w-4xl mx-auto">
+      <span class="inline-block px-4 py-1 mb-6 rounded-full bg-primary/25 text-white text-sm font-semibold tracking-wide uppercase">White-Glove Specialty Moving</span>
+      <h1 class="font-display font-bold text-4xl md:text-6xl mb-6 leading-tight">
+        Specialty Item Moving <span class="text-primary">Done Right</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10">
+        Some items demand more than a standard move. Our trained specialists handle Denver's most challenging, valuable, and irreplaceable belongings — from concert grand pianos to antique grandfather clocks — with the precision and care they deserve.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact-form" class={buttonVariants({ size: "lg", className: "bg-primary text-white hover:bg-primary/90 font-semibold text-lg px-8" })}>
+          Get a Free Quote
+        </a>
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold text-lg px-8 phone-link" })}>
+          Call (720) 340-1849
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b border-gray-100">
+    <div class="container">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="font-medium text-secondary">Fully Licensed & Insured</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span class="font-medium text-secondary">1,700+ Five-Star Reviews</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span class="font-medium text-secondary">Specialized Equipment</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="font-medium text-secondary">On-Time Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Content -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-secondary">
+          When Standard Moving <span class="text-primary">Isn't Enough</span>
+        </h2>
+      </div>
+      <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+        <p>
+          Most moving companies can carry boxes and furniture. But certain items — a vintage baby grand, a 900-pound gun safe, a delicate oil painting worth tens of thousands of dollars — require a completely different level of skill, equipment, and accountability. That's exactly what Legacy Moving's specialty team delivers.
+        </p>
+        <p>
+          We've spent years perfecting our processes for Denver's most challenging moves. Our crews receive hands-on training for each category of specialty item, using purpose-built equipment, proper rigging techniques, and protective materials designed specifically for items that can't be replaced if something goes wrong.
+        </p>
+        <p>
+          Whether you're moving a single piano across town or relocating an entire collection of fine art and antiques, we approach every job with the same discipline: careful assessment, thorough preparation, expert execution, and transparent communication from the first call to the final delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Services Grid -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Our Specialty <span class="text-primary">Moving Services</span>
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Click any category to learn more about how we handle that specific item type — including our process, specialized equipment, and what you can expect on move day.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Piano Moving -->
+        <a href="/services/piano-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Piano Moving</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Grand pianos, baby grands, upright and console pianos. Specialized piano boards, proper lifting techniques, climate-controlled transport.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Pool Table Moving -->
+        <a href="/services/pool-table-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Pool Table Moving</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Professional disassembly, careful slate handling, and expert reassembly and re-leveling. We protect the felt and ensure your table plays perfectly after the move.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Gun Safe Moving -->
+        <a href="/services/gun-safe-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Gun Safes & Heavy Safes</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">From 200 lb handgun safes to 1,500 lb vault-style units. Heavy-duty dollies, stair walkers, and a team trained in safe rigging and placement.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Fine Art Moving -->
+        <a href="/services/fine-art-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Fine Art Moving</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Paintings, sculptures, photography, and mixed media. Custom crating, acid-free materials, climate-controlled transport, and white-glove installation.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Antique Moving -->
+        <a href="/services/antique-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Antique Moving</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Antique furniture, porcelain, china, vintage collectibles, and heirloom pieces. Careful wrapping, custom padding, and handlers who understand the value of age and provenance.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Grandfather Clock Moving -->
+        <a href="/services/grandfather-clock-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Grandfather Clocks</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Proper pendulum, chain, and movement securing before transport. We understand the delicate mechanics inside these heirloom timepieces and move them accordingly.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Large Furniture Moving -->
+        <a href="/services/large-furniture-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0z"/><path d="M4 18v2"/><path d="M20 18v2"/><path d="M12 4v9"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Large Furniture</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Sectional sofas, oversized beds, armoires, entertainment centers, and custom pieces that require disassembly planning, tight-space navigation, or crane-assisted rigging.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Hot Tub Moving -->
+        <a href="/services/hot-tub-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M2 12h20"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M4 12V6a2 2 0 0 1 2-2h2"/><path d="M12 4v8"/><path d="M18 6a2 2 0 0 0-2-2h-2"/><path d="M6 6V4"/><path d="M18 6V4"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Hot Tub Moving</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Spa dollies, careful electrical disconnection coordination, and teams experienced in maneuvering 500–900 lb hot tubs through gates, over decks, and into tight spaces.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Fitness Equipment Moving -->
+        <a href="/services/fitness-equipment-moving" class="group bg-white rounded-xl shadow-md border border-gray-100 p-8 hover:border-primary hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-secondary mb-3 group-hover:text-primary transition-colors">Fitness Equipment</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Treadmills, weight racks, cable machines, Pelotons, and full home gym setups. Proper disassembly, floor protection, and reassembly in your new space.</p>
+          <span class="inline-flex items-center mt-4 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Legacy for Specialty Moves -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Why Denver Trusts Legacy Moving for <span class="text-primary">High-Value Items</span>
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Specialty moving isn't a side service for us — it's a discipline we've invested in deeply.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">Specialty-Trained Crews</h3>
+          <p class="text-gray-600 text-sm">Our movers receive item-specific training — not just general moving techniques. Piano crews know piano mechanics. Safe crews know rigging and load ratings.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">Purpose-Built Equipment</h3>
+          <p class="text-gray-600 text-sm">Piano boards, spa dollies, stair-climbing hand trucks, furniture sliders, custom pads, and the right strapping for each situation — we don't improvise on specialty jobs.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">No Hidden Fees</h3>
+          <p class="text-gray-600 text-sm">Specialty moves have specialty pricing — we quote it upfront. No surprise charges for stairs, tight spaces, or extended carry distances. What we quote is what you pay.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">Comprehensive Insurance</h3>
+          <p class="text-gray-600 text-sm">Legacy Moving is fully licensed and insured in Colorado. For high-value specialty items, we carry coverage that protects you if the unexpected occurs.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">Denver-Area Experience</h3>
+          <p class="text-gray-600 text-sm">We know Denver's neighborhoods — the narrow historic staircases in Capitol Hill, the split-levels in Highlands Ranch, the tight garage access in Cherry Creek. Local knowledge matters.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-secondary mb-2">1,700+ Five-Star Reviews</h3>
+          <p class="text-gray-600 text-sm">Our reputation is built on jobs done right. Read what Denver customers say about their specialty moving experiences with Legacy on Google.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-16 md:py-20 bg-secondary text-white">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">
+          How a Specialty Move <span class="text-primary">Works</span>
+        </h2>
+        <p class="text-white/85 text-lg">
+          Every specialty move follows a structured process designed to eliminate surprises.
+        </p>
+      </div>
+      <div class="space-y-6">
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white text-lg">1</div>
+          <div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Detailed Assessment</h3>
+            <p class="text-white/80">We ask the right questions upfront — item dimensions, weight, current location, destination placement, stair counts, door widths, elevator access. No surprises on move day.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white text-lg">2</div>
+          <div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Accurate Upfront Quote</h3>
+            <p class="text-white/80">Based on the assessment, we provide a transparent price that includes crew size, equipment, time, and any specialty requirements. No bait-and-switch pricing.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white text-lg">3</div>
+          <div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Proper Preparation</h3>
+            <p class="text-white/80">The right crew arrives with the right equipment — pre-staged, padded, and ready. We protect floors, doorframes, and walls before the item ever moves.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white text-lg">4</div>
+          <div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Expert Execution</h3>
+            <p class="text-white/80">Trained specialists handle disassembly, securing, loading, transport, unloading, and placement — with careful attention to the unique requirements of each item type.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 font-bold text-white text-lg">5</div>
+          <div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Reassembly & Final Inspection</h3>
+            <p class="text-white/80">We reassemble, re-level, and reinstall items correctly at the destination. You inspect the result before we leave — your satisfaction is the only measure of a successful move.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form" class="py-16 md:py-20 bg-gray-50">
+    <div class="container max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">
+          Get a Free <span class="text-primary">Specialty Moving Quote</span>
+        </h2>
+        <p class="text-lg text-muted-foreground">
+          Tell us about your item and we'll provide a fast, accurate quote — usually within a few hours.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <div data-version="4" id="56AIR8"></div>
+        <script is:inline>
+          (function(r,k) {
+            var s = document.createElement('script');
+            s.async = true;
+            s.defer = true;
+            s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
+            s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); });
+            document.getElementById(r).appendChild(s);
+          })('56AIR8','PE277BJIM3OAT6PP0J8IF0BJ5VH5WR8SG2NIKF7AD92OR5EF');
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move Your Specialty Item?</h2>
+      <p class="text-white/90 text-lg mb-8">
+        Call or text us today for a free, no-obligation quote. Our specialty team is ready.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:7203401849" class={buttonVariants({ size: "lg", className: "bg-white !text-secondary hover:bg-white/90 font-semibold text-lg phone-link" })}>
+          Call (720) 340-1849
+        </a>
+        <a href="sms:7203401849" class={buttonVariants({ size: "lg", className: "bg-secondary border border-white text-white hover:bg-secondary/80 text-lg" })}>
+          💬 Text Us
+        </a>
+      </div>
+      <p class="mt-6 text-white/80 text-sm">
+        📍 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215 &nbsp;|&nbsp; 🕒 Mon–Sat: 8am–6pm
+      </p>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="container max-w-4xl mx-auto text-center">
+      <h3 class="font-display font-bold text-2xl text-secondary mb-6">Explore More Legacy Moving Services</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/services/local-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Local Moving</a>
+        <a href="/services/residential-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Residential Moving</a>
+        <a href="/services/long-distance-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Long Distance Moving</a>
+        <a href="/services/packing-services" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Packing Services</a>
+        <a href="/services/storage-solutions" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Storage Solutions</a>
+        <a href="/services/commercial-moving" class="px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 hover:border-primary hover:text-primary transition-colors">Commercial Moving</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Specialty Moving Services",
+    "description": "Professional specialty moving services for pianos, pool tables, gun safes, fine art, antiques, grandfather clocks, large furniture, hot tubs, and fitness equipment in Denver, Colorado.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Legacy Moving Denver",
+      "telephone": "+17203401849",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8805 W. 14th Ave, Suite 300",
+        "addressLocality": "Lakewood",
+        "addressRegion": "CO",
+        "postalCode": "80215",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Denver"
+    },
+    "serviceType": "Specialty Item Moving"
+  }
+  </script>
+</BaseLayout>
