@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import residentialImage from '../../assets/services/residential.jpg';
 
 const pageTitle = "What Should Families With Kids Do to Make Moving Day Easier When Relocating in Denver Colorado | Expert Tips";
 const pageDescription = "Discover proven strategies to help families with children navigate moving day stress-free in Denver. From school transitions to keeping routines intact, learn how to make your family's relocation smooth and positive.";
@@ -9,8 +11,10 @@ const publishDate = "July 26, 2026";
 <BaseLayout pageTitle={pageTitle} description={pageDescription}>
   <div class="blog-post">
     <article>
-      <header class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/residential.webp'); background-size: cover; background-position: center; padding: 4rem 2rem; text-align: center; color: white; margin-bottom: 3rem;">
-        <div style="max-width: 800px; margin: 0 auto;">
+      <header class="hero" style="position: relative; padding: 4rem 2rem; text-align: center; color: white; margin-bottom: 3rem; overflow: hidden; min-height: 400px;">
+        <Image src={residentialImage} alt="Families moving with kids in Denver Colorado" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" />
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); z-index: 1;"></div>
+        <div style="position: relative; max-width: 800px; margin: 0 auto; z-index: 2;">
           <p style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; opacity: 0.9;">{publishDate}</p>
           <h1 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; font-weight: bold;">What Should Families With Kids Do to Make Moving Day Easier When Relocating in Denver Colorado</h1>
           <p style="font-size: 1.2rem; opacity: 0.95; margin-top: 1.5rem;">Expert guidance for a smooth, stress-free family relocation in the Denver metro area</p>

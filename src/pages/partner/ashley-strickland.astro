@@ -328,4 +328,87 @@ import PartnerLayout from "@/layouts/PartnerLayout.astro";
     </div>
   </section>
 
+  <!-- Auto-populate STRICKLAND promo code in Moverbase widget -->
+  <script is:inline>
+  (function() {
+    // Function to attempt to populate the reference code field
+    function populateReferenceCode() {
+      // Wait for the Moverbase widget iframe to load
+      var attempts = 0;
+      var maxAttempts = 50; // Try for up to 10 seconds (50 * 200ms)
+      
+      var checkInterval = setInterval(function() {
+        attempts++;
+        
+        // Look for input fields that might be the reference code field
+        // Common field names: reference, referral, promo, code, coupon
+        var possibleSelectors = [
+          'input[name*="reference" i]',
+          'input[name*="referral" i]',
+          'input[name*="promo" i]',
+          'input[name*="code" i]',
+          'input[name*="coupon" i]',
+          'input[placeholder*="reference" i]',
+          'input[placeholder*="referral" i]',
+          'input[placeholder*="promo" i]',
+          'input[placeholder*="code" i]',
+          'input[id*="reference" i]',
+          'input[id*="referral" i]',
+          'input[id*="promo" i]',
+          'input[id*="code" i]'
+        ];
+        
+        var fieldFound = false;
+        
+        for (var i = 0; i < possibleSelectors.length; i++) {
+          var fields = document.querySelectorAll(possibleSelectors[i]);
+          
+          if (fields && fields.length > 0) {
+            // Found potential field(s)
+            for (var j = 0; j < fields.length; j++) {
+              var field = fields[j];
+              
+              // Check if field is visible and not already filled
+              if (field.offsetParent !== null && !field.value) {
+                // Populate with STRICKLAND
+                field.value = 'STRICKLAND';
+                
+                // Trigger change and input events to ensure the form recognizes the value
+                var changeEvent = new Event('change', { bubbles: true });
+                var inputEvent = new Event('input', { bubbles: true });
+                field.dispatchEvent(changeEvent);
+                field.dispatchEvent(inputEvent);
+                
+                fieldFound = true;
+                console.log('Auto-populated reference code: STRICKLAND');
+                break;
+              }
+            }
+            
+            if (fieldFound) break;
+          }
+        }
+        
+        // Stop checking if field was found or max attempts reached
+        if (fieldFound || attempts >= maxAttempts) {
+          clearInterval(checkInterval);
+          
+          if (!fieldFound && attempts >= maxAttempts) {
+            console.log('Reference code field not found after ' + maxAttempts + ' attempts');
+          }
+        }
+      }, 200); // Check every 200ms
+    }
+    
+    // Start checking after page loads and Moverbase widget initializes
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(populateReferenceCode, 1000); // Give widget 1 second to initialize
+      });
+    } else {
+      setTimeout(populateReferenceCode, 1000);
+    }
+  })();
+  </script>
+
 </PartnerLayout>
