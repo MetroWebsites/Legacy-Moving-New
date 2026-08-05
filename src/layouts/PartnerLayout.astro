@@ -27,6 +27,17 @@ const {
 <html lang="en">
   <head>
     <HeadSEO title={title} description={description} ogImage={ogImage} />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10890296710"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-10890296710');
+    </script>
+    
     <style define:vars={{ partnerAccent: partnerAccentColor }}>
       .partner-divider { color: var(--partnerAccent); }
       .partner-accent-bg { background-color: var(--partnerAccent); }
