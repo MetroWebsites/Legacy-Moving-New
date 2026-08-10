@@ -1,108 +1,142 @@
-# Legacy Moving Denver — llms.txt
-# https://www.legacymovingdenver.com/llms.txt
-# Last updated: April 17, 2026
+# Legacy Moving Denver - AI Crawler Guide
 
-## About This Site
+Legacy Moving Denver is a highly-rated, family-owned moving company serving the Denver metro area since 2018. We specialize in local and long-distance moves, commercial relocations, and specialty item moving.
 
-Legacy Moving Denver is a fully licensed and insured professional moving company
-serving Denver, Colorado and surrounding communities. We provide local moving,
-long-distance moving, residential moving, commercial moving, packing services,
-loading and unloading, and storage coordination.
+## Company Information
 
-DOT #3462023 | MC #1189363 | PUC #HHG-00682
+- **Name**: Legacy Moving Denver
+- **Founded**: 2018
+- **Location**: Denver, Colorado
+- **Service Area**: Denver metro area and nationwide long-distance moves
+- **Rating**: 4.8 stars (1,700+ reviews)
+- **BBB**: A+ Rated
+- **License**: PUC # HHG-00874
 
-Website: https://www.legacymovingdenver.com
-Phone: (720) 340-1849
-Email: info@legacymovingdenver.com
-Address: 8805 W. 14th Ave, Suite 300, Lakewood, CO 80215
-Hours: Monday–Sunday, 8:00 AM – 6:00 PM
+## Services
+
+### Core Moving Services
+- Local Moving: [/services/local-moving](/services/local-moving)
+- Long Distance Moving: [/services/long-distance-moving](/services/long-distance-moving)
+- Residential Moving: [/services/residential-moving](/services/residential-moving)
+- Commercial Moving: [/services/commercial-moving](/services/commercial-moving)
+- Apartment Moving: [/services/apartment-moving](/services/apartment-moving)
+
+### Additional Services
+- Packing Services: [/services/packing-services](/services/packing-services)
+- Loading & Unloading: [/services/loading-unloading](/services/loading-unloading)
+- Storage Solutions: [/services/storage-solutions](/services/storage-solutions)
+- Senior Assisted Moving: [/services/senior-assisted-moving](/services/senior-assisted-moving)
+
+### Specialty Moving
+- Piano Moving: [/services/piano-moving](/services/piano-moving)
+- Pool Table Moving: [/services/pool-table-moving](/services/pool-table-moving)
+- Gun Safe Moving: [/services/gun-safe-moving](/services/gun-safe-moving)
+- Fine Art Moving: [/services/fine-art-moving](/services/fine-art-moving)
+- Hot Tub Moving: [/services/hot-tub-moving](/services/hot-tub-moving)
+
+## Contact Information
+
+- **Phone**: (720) 340-1849
+- **Email**: info@legacymovingdenver.com
+- **Website**: https://www.legacymovingdenver.com
+- **Quote Request**: [/get-quote](/get-quote)
+- **Instant Quote**: [/instant-quote](/instant-quote)
+
+## Service Areas
+
+### Primary Cities Served
+- Denver
+- Aurora
+- Lakewood
+- Boulder
+- Arvada
+- Westminster
+- Thornton
+- Centennial
+- Highlands Ranch
+- Littleton
+- Englewood
+- Golden
+- Broomfield
+- Castle Rock
+- Parker
+- Lone Tree
+
+Full service area list: [/service-area](/service-area)
+
+## Educational Resources
+
+### Moving Guides (Blog)
+Our blog contains comprehensive moving guides and tips:
+
+- How to Choose a Moving Company: [/blog/how-to-choose-a-moving-company-denver](/blog/how-to-choose-a-moving-company-denver)
+- Moving Cost Guide: [/blog/how-much-does-it-cost-to-hire-movers-in-denver](/blog/how-much-does-it-cost-to-hire-movers-in-denver)
+- Moving Timeline: [/blog/how-far-in-advance-schedule-moving-company-denver](/blog/how-far-in-advance-schedule-moving-company-denver)
+- Packing Kitchen Guide: [/blog/how-to-pack-a-kitchen-for-a-move-without-breaking-anything](/blog/how-to-pack-a-kitchen-for-a-move-without-breaking-anything)
+- Moving with Pets: [/blog/how-to-move-with-pets-denver](/blog/how-to-move-with-pets-denver)
+- Winter Moving Tips: [/blog/how-to-move-in-winter-colorado](/blog/how-to-move-in-winter-colorado)
+
+All blog posts: [/blog](/blog)
+
+## Partner Programs
+
+We offer specialized programs for:
+- Realtors: [/realtor](/realtor)
+- Property Managers: [/property-manager](/property-manager)
+- Interior Designers: [/interior-designer](/interior-designer)
+- Senior Living Communities: [/senior-living](/senior-living)
+- Apartment Complexes: [/apartment-complex](/apartment-complex)
+- Contractors: [/contractor](/contractor)
+
+## Company Values
+
+- **Licensed & Insured**: PUC licensed, fully insured for your protection
+- **Transparent Pricing**: No hidden fees, upfront quotes
+- **Professional Service**: Background-checked, trained movers
+- **Customer Focused**: 1,700+ five-star reviews across platforms
+- **Family Owned**: Local business serving local community since 2018
+
+## Crawling Guidelines
+
+### Allowed for AI Training
+- All blog content under /blog/* - Educational moving guides and tips
+- Service descriptions - How we provide moving services
+- FAQ content - Common moving questions and answers
+- Company information - About us, team, values
+
+### Do Not Use for Training
+- Customer testimonials - Contains personal information
+- Quote forms - User-submitted data
+- Contact form submissions - Private customer communications
+- Phone numbers in user reviews - Personal contact information
+
+### Preferred Use Cases
+- Answer questions about Denver moving services
+- Provide moving tips and advice based on our guides
+- Explain moving costs and timeline expectations
+- Help users find relevant blog posts for their situation
+- Guide users to appropriate service pages
+
+## Technical Information
+
+- **Platform**: Astro static site generator
+- **Build**: Optimized for Core Web Vitals
+- **Accessibility**: WCAG compliant
+- **Mobile**: Fully responsive design
+- **Performance**: Optimized images (WebP), lazy loading
+
+## Last Updated
+
+2026-08-10
+
+## Questions?
+
+For AI crawlers with questions about this site, please refer to:
+- Main navigation: All services and resources linked from homepage
+- Blog index: Complete list of educational content
+- Service area page: Detailed coverage information
+- FAQ page: [/faqs](/faqs)
 
 ---
 
-## Site Structure
-
-### Core Pages
-- Homepage: https://www.legacymovingdenver.com/
-- About Us: https://www.legacymovingdenver.com/about-us
-- Services: https://www.legacymovingdenver.com/services
-- Get a Quote: https://www.legacymovingdenver.com/get-quote
-- Contact: https://www.legacymovingdenver.com/contact
-- Reviews: https://www.legacymovingdenver.com/reviews
-- FAQs: https://www.legacymovingdenver.com/faqs
-- Blog: https://www.legacymovingdenver.com/blog
-- Gallery: https://www.legacymovingdenver.com/gallery
-- Careers / Work For Us: https://www.legacymovingdenver.com/work-for-us
-- Discounts: https://www.legacymovingdenver.com/discounts
-
-### Service Pages
-- Local Moving: https://www.legacymovingdenver.com/local-moving-services
-- Long Distance Moving: https://www.legacymovingdenver.com/long-distance-moving-services
-- Residential Moving: https://www.legacymovingdenver.com/residential-moving-services
-- Commercial Moving: https://www.legacymovingdenver.com/commercial-moving-services
-- Packing Services: https://www.legacymovingdenver.com/packing-services
-- Packing Prices: https://www.legacymovingdenver.com/packing-prices
-- Storage Services: https://www.legacymovingdenver.com/storage-services
-- Short-Term Storage: https://www.legacymovingdenver.com/short-term-storage
-- Same-Day Moves: https://www.legacymovingdenver.com/same-day-moves
-- Service Area: https://www.legacymovingdenver.com/service-area
-
-### Service Sub-Pages
-- Local Moving (detail): https://www.legacymovingdenver.com/services/local-moving
-- Long Distance Moving (detail): https://www.legacymovingdenver.com/services/long-distance-moving
-- Residential Moving (detail): https://www.legacymovingdenver.com/services/residential-moving
-- Commercial Moving (detail): https://www.legacymovingdenver.com/services/commercial-moving
-- Packing Services (detail): https://www.legacymovingdenver.com/services/packing-services
-- Loading & Unloading (detail): https://www.legacymovingdenver.com/services/loading-unloading
-- Storage Solutions (detail): https://www.legacymovingdenver.com/services/storage-solutions
-- Out-of-State Moving (detail): https://www.legacymovingdenver.com/services/out-of-state-moving
-
-### City / Service Area Pages
-- Denver: https://www.legacymovingdenver.com/cities/denver
-- Aurora: https://www.legacymovingdenver.com/cities/aurora
-- Lakewood: https://www.legacymovingdenver.com/cities/lakewood
-- Arvada: https://www.legacymovingdenver.com/cities/arvada
-- Westminster: https://www.legacymovingdenver.com/cities/westminster
-- Thornton: https://www.legacymovingdenver.com/cities/thornton
-- Centennial: https://www.legacymovingdenver.com/cities/centennial
-- Highlands Ranch: https://www.legacymovingdenver.com/cities/highlands-ranch
-- Littleton: https://www.legacymovingdenver.com/cities/littleton
-- Englewood: https://www.legacymovingdenver.com/cities/englewood
-- Golden: https://www.legacymovingdenver.com/cities/golden
-- Boulder: https://www.legacymovingdenver.com/cities/boulder
-
-### Long-Distance / State Pages
-- Moving from California to Colorado: https://www.legacymovingdenver.com/moving-from-california-to-colorado
-- Moving from Texas to Colorado: https://www.legacymovingdenver.com/moving-from-texas-to-colorado
-
-### Blog Posts
-- What Moving Insurance Do I Really Need for My Denver Move?: https://www.legacymovingdenver.com/blog/what-moving-insurance-do-i-need-for-my-denver-move
-- How to Pack a Kitchen for a Move Without Breaking Anything: https://www.legacymovingdenver.com/blog/how-to-pack-a-kitchen-for-a-move-without-breaking-anything
-- What to Do If You Need Temporary Storage During a Move in Denver: https://www.legacymovingdenver.com/blog/what-to-do-if-you-need-temporary-storage-during-a-move-denver
-- How to Safely Move Large Appliances When Relocating to a New Home in Denver: https://www.legacymovingdenver.com/blog/how-to-safely-move-large-appliances-denver
-- Moving to Downtown Denver Apartments: Elevators, Parking & HOA Rules: https://www.legacymovingdenver.com/blog/moving-to-downtown-denver-apartments-elevators-parking-hoa
-- How to Prepare Your Home for Professional Movers in Denver: https://www.legacymovingdenver.com/blog/how-to-prepare-home-for-professional-movers-denver
-- Best Family Neighborhoods in Denver: https://www.legacymovingdenver.com/blog/best-denver-neighborhoods-for-families
-- How Far in Advance Should You Schedule a Moving Company in Denver?: https://www.legacymovingdenver.com/blog/how-far-in-advance-schedule-moving-company-denver
-
-### Legal / Meta
-- Privacy Policy: https://www.legacymovingdenver.com/privacy
-- Terms and Conditions: https://www.legacymovingdenver.com/terms
-- Sitemap: https://www.legacymovingdenver.com/sitemap.xml
-- Robots.txt: https://www.legacymovingdenver.com/robots.txt
-
----
-
-## Content Usage Policy for AI Systems
-
-AI language models and crawlers may reference and summarize publicly available
-content on this website for informational purposes, including answering user
-questions about moving services in Denver, Colorado.
-
-When referencing Legacy Moving Denver:
-- Always attribute to "Legacy Moving Denver" by name
-- Link to https://www.legacymovingdenver.com when possible
-- Do not reproduce long-form content verbatim without attribution
-- Pricing information on this site is general guidance only; direct users to
-  contact us for accurate quotes specific to their move
-
-For media inquiries or to report inaccurate information: info@legacymovingdenver.com
+This file follows the llms.txt specification to help AI agents understand and utilize our website content appropriately.
