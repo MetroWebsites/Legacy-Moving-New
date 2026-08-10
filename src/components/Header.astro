@@ -46,10 +46,10 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
     <div class="flex items-center gap-2 -mt-1 md:ml-12 md:-mt-10">
       <a href="/" class="flex items-center">
         <picture>
-          <!-- WebP: 1×=280px, 2×=560px for HiDPI screens -->
+          <!-- WebP: Optimized for actual display size (280x86) -->
           <source
             type="image/webp"
-            srcset="/assets/logo.webp 1x, /assets/logo@2x.webp 2x"
+            srcset="/assets/logo.webp 144w, /assets/logo-optimized.webp 280w"
             sizes="(max-width: 767px) 144px, 280px"
           />
           <!-- PNG fallback (original, for very old browsers) -->
@@ -61,7 +61,6 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
             class="h-12 w-auto md:h-20"
             fetchpriority="high"
             decoding="async"
-            sizes="(max-width: 767px) 144px, 280px"
           />
         </picture>
       </a>

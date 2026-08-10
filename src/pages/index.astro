@@ -642,9 +642,9 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
 
 
   <!-- Why Choose Legacy Moving Section -->
-  <section class="relative py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white">
+  <section class="relative py-8 md:py-12 bg-gradient-to-br from-gray-50 to-white" style="min-height: 600px;">
     <!-- Background Image with Transparency.
-         CLS fix: contain:strict + explicit w/h prevent reflow when image loads.
+         CLS fix: contain:strict + explicit w/h + min-height prevent reflow when image loads.
          Mobile perf: smaller widths + lower quality = less bytes on small screens. -->
     <div class="absolute inset-0 opacity-10" style="width:100%;height:100%;contain:strict;">
       <Image
@@ -875,7 +875,7 @@ import movingImage from '../assets/img_4114-legacy-moving-denver_nw_9a9d79b0.jpe
         decoding="async"
         widths={[320, 640, 960, 1400]}
         sizes="100vw"
-        quality={20}
+        quality={15}
       />
     </div>
     
