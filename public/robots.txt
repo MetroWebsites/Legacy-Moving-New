@@ -31,3 +31,6 @@ Allow: /
 
 User-agent: ia_archiver
 Allow: /
+
+# Sitemap
+Sitemap: https://www.legacymovingdenver.com/sitemap.xml
