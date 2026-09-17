@@ -2,7 +2,7 @@
 title: "How Do You Move During Winter Snowstorms in Denver Colorado Without Delays or Damage to Your Belongings"
 excerpt: "Master the art of winter moving in Denver with proven strategies for handling snow, ice, and unpredictable weather while keeping your belongings safe and your move on schedule."
 author: "Legacy Moving Denver"
-date: 2024-08-27
+publishDate: "2026-08-27"
 category: "Moving Tips"
 image: "/blog-winter-moving.jpg"
 ---
