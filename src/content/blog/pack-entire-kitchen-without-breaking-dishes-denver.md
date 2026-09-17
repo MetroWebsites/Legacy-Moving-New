@@ -2,7 +2,7 @@
 title: "How Do You Pack an Entire Kitchen for a Move in Denver Colorado Without Breaking Dishes or Glassware"
 excerpt: "Learn professional techniques for packing every item in your kitchen safely, from delicate crystal to cast iron skillets, with detailed strategies specifically for Denver moves."
 author: "Legacy Moving Denver"
-date: 2024-09-12
+publishDate: "2026-09-12"
 category: "Packing Tips"
 image: "/blog-pack-kitchen.jpg"
 ---

@@ -2,7 +2,7 @@
 title: "What Should You Do the Night Before Moving Day in Denver Colorado to Ensure Everything Goes Smoothly"
 excerpt: "Master the critical 24 hours before your Denver move with a complete checklist covering final preparations, last-minute packing, and essential strategies for a smooth moving day."
 author: "Legacy Moving Denver"
-date: 2024-09-08
+publishDate: "2026-09-08"
 category: "Moving Tips"
 image: "/blog-night-before-moving.jpg"
 ---
