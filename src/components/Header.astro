@@ -97,12 +97,21 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
       >
         Home
       </a>
-      <a
-        href="/about-us"
-        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
-      >
-        About Us
-      </a>
+      <div class="relative group">
+        <a 
+          href="/about-us"
+          class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium flex items-center' })}
+          aria-haspopup="true"
+        >
+          About Us
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="absolute left-0 top-full pt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
+          <div class="py-1">
+            <a href="/meet-the-team" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Team</a>
+          </div>
+        </div>
+      </div>
       <div class="relative group">
         <a 
           href="/services"
@@ -134,12 +143,6 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
         class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
       >
         Discounts
-      </a>
-      <a
-        href="/meet-the-team"
-        class={buttonVariants({ variant: 'ghost', className: 'text-base lg:text-lg font-medium' })}
-      >
-        Our Team
       </a>
       <a
         href="/contact"
@@ -175,7 +178,18 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
 
     <nav class="container flex flex-col py-4">
       <a href="/" class="py-2 px-4 hover:bg-muted rounded">Home</a>
-      <a href="/about-us" class="py-2 px-4 hover:bg-muted rounded">About Us</a>
+      
+      <!-- Mobile About Us Dropdown -->
+      <div class="mobile-dropdown">
+        <button id="mobile-about-button" class="flex items-center justify-between w-full py-2 px-4 hover:bg-muted rounded text-left">
+          <span>About Us</span>
+          <svg id="mobile-about-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="mobile-about-dropdown" class="hidden pl-4 mt-1 mb-2 border-l border-gray-200 ml-4 space-y-1">
+          <a href="/about-us" class="block py-2 px-4 hover:bg-muted rounded">About Us</a>
+          <a href="/meet-the-team" class="block py-2 px-4 hover:bg-muted rounded">Our Team</a>
+        </div>
+      </div>
       
       <!-- Mobile Services Dropdown -->
       <div class="mobile-dropdown">
@@ -200,7 +214,6 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
       </div>
       
       <a href="/discounts" class="py-2 px-4 hover:bg-muted rounded">Discounts</a>
-      <a href="/meet-the-team" class="py-2 px-4 hover:bg-muted rounded">Our Team</a>
       <a href="/contact" class="py-2 px-4 hover:bg-muted rounded">Contact</a>
     </nav>
   </div>
@@ -233,6 +246,19 @@ const phoneDisplay = phoneNumber === '7207642299' ? '(720) 764-2299' : '(720) 34
         mobileServicesDropdown.classList.toggle('hidden');
         // Rotate the icon when dropdown is open/closed
         mobileServicesIcon.classList.toggle('rotate-180');
+      });
+    }
+    
+    // About Us dropdown toggle for mobile
+    const mobileAboutButton = document.getElementById('mobile-about-button');
+    const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+    const mobileAboutIcon = document.getElementById('mobile-about-icon');
+    
+    if (mobileAboutButton && mobileAboutDropdown && mobileAboutIcon) {
+      mobileAboutButton.addEventListener('click', () => {
+        mobileAboutDropdown.classList.toggle('hidden');
+        // Rotate the icon when dropdown is open/closed
+        mobileAboutIcon.classList.toggle('rotate-180');
       });
     }
   });
