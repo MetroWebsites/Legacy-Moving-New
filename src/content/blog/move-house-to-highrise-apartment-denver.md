@@ -2,7 +2,7 @@
 title: "How Do You Move From a House to a High Rise Apartment in Denver Colorado Without Stress"
 excerpt: "Navigate the unique challenges of downsizing from a house to a high-rise apartment in Denver with expert strategies for building regulations, space planning, and smooth transitions."
 author: "Legacy Moving Denver"
-date: 2024-09-04
+publishDate: "2026-09-04"
 category: "Moving Tips"
 image: "/blog-house-to-highrise.jpg"
 ---

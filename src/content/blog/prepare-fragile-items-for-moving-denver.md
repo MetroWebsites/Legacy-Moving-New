@@ -2,7 +2,7 @@
 title: "What Is the Best Way to Prepare Fragile Items Like TVs, Glassware, and Artwork for a Move in Denver Colorado"
 excerpt: "Learn professional techniques for packing and protecting your most delicate belongings during a Denver move, from antique china to flat-screen TVs and irreplaceable artwork."
 author: "Legacy Moving Denver"
-date: 2024-08-23
+publishDate: "2026-08-23"
 category: "Packing Tips"
 image: "/blog-fragile-packing.jpg"
 ---

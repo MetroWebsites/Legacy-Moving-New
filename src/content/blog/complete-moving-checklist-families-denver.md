@@ -2,7 +2,7 @@
 title: "What Should Be on a Complete Moving Checklist for Families Relocating Within Denver Colorado"
 excerpt: "A comprehensive timeline-based moving checklist designed specifically for Denver families, covering everything from 8 weeks before your move through the first week in your new home."
 author: "Legacy Moving Denver"
-date: 2024-08-31
+publishDate: "2026-08-31"
 category: "Moving Tips"
 image: "/blog-moving-checklist.jpg"
 ---
