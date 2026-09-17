@@ -1,424 +1,626 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import MoverbaseRedirect from '../components/MoverbaseRedirect.astro';
 import { buttonVariants } from "@/components/ui/button";
-import { Calculator, DollarSign, TruckIcon, Clock, MapPin, Package } from "lucide-react";
-import { Image } from 'astro:assets';
-import heroImage from '../assets/services/hero.jpg';
+import { Phone, Calculator, TrendingUp, Home, Truck, Package, Clock, MapPin, DollarSign, CheckCircle2, AlertCircle } from "lucide-react";
 ---
 
 <BaseLayout
-  title="Denver Movers Cost Calculator | Local Moving Company Cost | Free Estimate"
-  description="Calculate your Denver moving costs instantly. Get accurate pricing for local moving company services in Denver Colorado. Free moving cost estimates with transparent rates and no hidden fees."
-  ogImage={new URL("/social-preview.jpg", Astro.site)}
+  title="Moving Cost Calculator Denver | Denver Movers Cost Guide | Legacy Moving"
+  description="Understand Denver movers cost and local moving company pricing. Get instant quotes by calling (720) 340-1849. Learn what factors affect your moving costs in Denver, Colorado."
 >
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-20">
-    <div class="absolute inset-0 opacity-20 mix-blend-overlay">
-      <Image 
-        src={heroImage} 
-        alt="Denver movers cost calculator" 
-        class="w-full h-full object-cover"
-      />
-    </div>
+  <section class="relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
     <div class="container relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="flex justify-center mb-6">
-          <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <Calculator size={32} className="text-white" />
-          </div>
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <Calculator class="w-5 h-5" />
+          <span class="text-sm font-medium">Understanding Denver Movers Cost</span>
         </div>
-        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-6">Denver Moving Cost Calculator</h1>
-        <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-          Legacy Moving is a full-service Denver moving company providing residential, commercial, and long-distance moves throughout Denver, Lakewood and beyond. Get a free, no-obligation quote today.
+        
+        <h1 class="font-display font-bold text-4xl md:text-6xl mb-6">
+          Denver Moving Cost Calculator & Price Guide
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+          Get accurate moving cost estimates for your Denver move. Understand local moving company cost factors and get an instant quote today.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:7203401849" 
+            class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-8 rounded-lg transition-all text-lg shadow-lg hover:shadow-xl"
+          >
+            <Phone class="w-6 h-6" />
+            Call for Instant Quote: (720) 340-1849
+          </a>
+          <a 
+            href="/get-quote" 
+            class={buttonVariants({ variant: 'outline', className: 'bg-white hover:bg-white/90 text-secondary border-white py-4 px-8 text-lg font-semibold' })}
+          >
+            Get Online Quote
+          </a>
+        </div>
+        
+        <p class="mt-6 text-white/80 text-sm">
+          💬 Speak directly with our team for the most accurate pricing | Available 7 days a week
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Calculator Form Section -->
-  <section class="py-16 bg-gray-50">
+  <!-- Understanding Denver Movers Cost Section -->
+  <section class="py-16 bg-white">
     <div class="container">
       <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg shadow-xl p-8 md:p-12">
-          <div class="text-center mb-8">
-            <h2 class="font-display font-bold text-3xl text-secondary mb-4">Calculate Your Moving Costs</h2>
-            <p class="text-muted-foreground text-lg">
-              Fill out the form below to get an exact cost estimate for your Denver area move. Our team will provide a detailed quote within 24 hours.
-            </p>
-          </div>
-
-          <!-- Moverbase Quote Widget -->
-          <div data-version="10" id="J8QDKR-cost-calc"></div>
-          <script is:inline>
-          (function(r,k) {
-            var s = document.createElement('script');
-            s.async = true;
-            s.defer = true;
-            s.src = 'https://lead.moverbase.net/js/mbwidgetcls.js?v=66';
-            s.addEventListener('load', function() { window.MBWidget.init(r, k, false, true); } );
-            document.getElementById(r).appendChild(s);
-          })('J8QDKR-cost-calc','JGCB6TGFN7N3NTTDOGMQUK1S9L3A4N73LYF2ZX4H248K97JD');
-          </script>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Local Moving Company Cost Information -->
-  <section class="py-16">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-8 text-center">Understanding Denver Movers Cost</h2>
-        
-        <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-muted-foreground text-lg">
-            When planning your move in Denver, understanding local moving company costs is essential for budgeting accurately. Legacy Moving Denver provides transparent pricing that reflects the true cost of professional moving services in the Denver metropolitan area.
+        <div class="text-center mb-12">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">Understanding Denver Movers Cost</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Denver movers cost varies based on several key factors. As a trusted local moving company in Denver, we believe in transparent pricing and helping you understand what influences your moving costs.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <!-- Local Moving Costs -->
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <MapPin size={24} className="text-primary" />
-              </div>
-              <h3 class="font-display font-semibold text-xl text-secondary">Local Moving Company Cost</h3>
+        <div class="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8 mb-12">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+              <Phone class="w-6 h-6 text-white" />
             </div>
-            <p class="text-muted-foreground mb-4">
-              Denver local moves (within the metro area) are typically charged by the hour. Our competitive rates include:
-            </p>
-            <ul class="space-y-2 text-muted-foreground">
-              <li class="flex items-start gap-2">
-                <span class="text-primary font-bold">✓</span>
-                <span><strong>2 Movers + Truck:</strong> Competitive hourly rates</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary font-bold">✓</span>
-                <span><strong>3 Movers + Truck:</strong> Competitive hourly rates</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary font-bold">✓</span>
-                <span><strong>4+ Movers:</strong> Custom team pricing</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-primary font-bold">✓</span>
-                <span>No hidden fees or fuel surcharges</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Long Distance Moving Costs -->
-          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <TruckIcon size={24} className="text-secondary" />
-              </div>
-              <h3 class="font-display font-semibold text-xl text-secondary">Long Distance Moving Cost</h3>
+            <div>
+              <h3 class="font-display font-bold text-2xl mb-2 text-secondary">Get Your Exact Moving Cost Now</h3>
+              <p class="text-muted-foreground mb-4">
+                While this guide helps you understand Denver movers cost factors, the fastest way to get an accurate quote for your specific move is to call us directly. Our team can provide instant pricing based on your exact needs.
+              </p>
+              <a 
+                href="tel:7203401849" 
+                class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                <Phone class="w-5 h-5" />
+                Call (720) 340-1849 for Instant Quote
+              </a>
             </div>
-            <p class="text-muted-foreground mb-4">
-              Out-of-state moves and long-distance relocations are priced based on distance and volume:
-            </p>
-            <ul class="space-y-2 text-muted-foreground">
-              <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold">✓</span>
-                <span><strong>Distance:</strong> Calculated per mile</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold">✓</span>
-                <span><strong>Weight/Volume:</strong> Based on inventory</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold">✓</span>
-                <span><strong>Custom Services:</strong> Packing, storage options</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold">✓</span>
-                <span>Binding estimates available</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What Affects Moving Costs -->
+  <!-- Key Cost Factors Section -->
   <section class="py-16 bg-gray-50">
     <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-8 text-center">What Affects Denver Movers Cost?</h2>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Factor 1 -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <Clock size={24} className="text-primary" />
-            </div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">Time & Distance</h3>
-            <p class="text-muted-foreground text-sm">
-              Local moves are billed hourly, while long-distance relocations factor in mileage and estimated travel time between Denver and your destination.
-            </p>
-          </div>
-
-          <!-- Factor 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <Package size={24} className="text-primary" />
-            </div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">Home Size & Volume</h3>
-            <p class="text-muted-foreground text-sm">
-              The size of your home and the amount of belongings directly impact local moving company cost. Studio apartments cost less than 4-bedroom homes.
-            </p>
-          </div>
-
-          <!-- Factor 3 -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <DollarSign size={24} className="text-primary" />
-            </div>
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">Additional Services</h3>
-            <p class="text-muted-foreground text-sm">
-              Packing services, specialty item handling (pianos, gun safes), and short-term storage add to the base moving cost.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Average Denver Moving Costs -->
-  <section class="py-16">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-8 text-center">Average Denver Moving Costs by Home Size</h2>
-        
-        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-8 mb-8">
-          <div class="overflow-x-auto">
-            <table class="w-full">
-              <thead>
-                <tr class="border-b-2 border-secondary/20">
-                  <th class="text-left py-3 px-4 font-display font-semibold text-secondary">Home Size</th>
-                  <th class="text-left py-3 px-4 font-display font-semibold text-secondary">Local Move Cost</th>
-                  <th class="text-left py-3 px-4 font-display font-semibold text-secondary">Estimated Time</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200">
-                <tr class="hover:bg-white/50">
-                  <td class="py-3 px-4 text-muted-foreground">Studio / 1BR Apartment</td>
-                  <td class="py-3 px-4 font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></td>
-                  <td class="py-3 px-4 text-muted-foreground">3-4 hours</td>
-                </tr>
-                <tr class="hover:bg-white/50">
-                  <td class="py-3 px-4 text-muted-foreground">2 Bedroom Home</td>
-                  <td class="py-3 px-4 font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></td>
-                  <td class="py-3 px-4 text-muted-foreground">4-6 hours</td>
-                </tr>
-                <tr class="hover:bg-white/50">
-                  <td class="py-3 px-4 text-muted-foreground">3 Bedroom Home</td>
-                  <td class="py-3 px-4 font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></td>
-                  <td class="py-3 px-4 text-muted-foreground">6-8 hours</td>
-                </tr>
-                <tr class="hover:bg-white/50">
-                  <td class="py-3 px-4 text-muted-foreground">4+ Bedroom Home</td>
-                  <td class="py-3 px-4 font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></td>
-                  <td class="py-3 px-4 text-muted-foreground">8-12+ hours</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Long Distance Moving Costs -->
-  <section class="py-16 bg-gray-50">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-8 text-center">Long Distance Moving Cost From Denver</h2>
-        
-        <div class="prose prose-lg max-w-none mb-8">
-          <p class="text-muted-foreground">
-            Long-distance moving costs from Denver vary significantly based on destination and the size of your move. Unlike local moves, long-distance relocations are typically priced based on:
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 text-secondary">What Affects Local Moving Company Cost in Denver?</h2>
+          <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Understanding these factors helps you plan your budget and get the most accurate Denver movers cost estimate.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-8">
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="font-display font-semibold text-xl text-secondary mb-4">Weight-Based Pricing</h3>
-            <ul class="space-y-3 text-muted-foreground">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Factor 1: Home Size -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <Home class="w-6 h-6 text-primary" />
+            </div>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Home Size & Volume</h3>
+            <p class="text-muted-foreground mb-4">
+              The size of your home and the volume of belongings directly impact Denver movers cost. Larger homes require more time, more crew members, and larger trucks.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
               <li class="flex items-start gap-2">
-                <span class="text-primary font-bold mt-1">•</span>
-                <span><strong>Average 2BR Home:</strong> 4,000-6,000 lbs</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Studio/1BR: Smaller crew, less time</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-primary font-bold mt-1">•</span>
-                <span><strong>Average 3BR Home:</strong> 7,000-9,000 lbs</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>2-3BR: Standard residential move</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-primary font-bold mt-1">•</span>
-                <span><strong>Cost per pound:</strong> Varies by distance</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>4+BR: Larger crew, more equipment</span>
               </li>
             </ul>
           </div>
 
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="font-display font-semibold text-xl text-secondary mb-4">Distance Examples</h3>
-            <ul class="space-y-3 text-muted-foreground">
+          <!-- Factor 2: Distance -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <MapPin class="w-6 h-6 text-primary" />
+            </div>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Move Distance</h3>
+            <p class="text-muted-foreground mb-4">
+              Local moving company cost in Denver depends on whether you're moving within the city, to Denver suburbs, or long-distance.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
               <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold mt-1">•</span>
-                <span><strong>Denver to Phoenix:</strong> ~600 miles</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Local Denver: Hourly rate typically applies</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold mt-1">•</span>
-                <span><strong>Denver to Los Angeles:</strong> ~1,000 miles</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Denver metro: May affect travel time</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="text-secondary font-bold mt-1">•</span>
-                <span><strong>Denver to Seattle:</strong> ~1,300 miles</span>
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Long-distance: Calculated differently</span>
               </li>
             </ul>
           </div>
-        </div>
 
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <h3 class="font-display font-semibold text-2xl text-secondary mb-6 text-center">Estimated Long Distance Moving Costs</h3>
-          <div class="space-y-4">
-            <div class="flex justify-between items-center py-3 border-b border-gray-200">
-              <span class="text-muted-foreground"><strong>1 Bedroom</strong> (Denver to 500 miles)</span>
-              <span class="font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></span>
+          <!-- Factor 3: Time of Year -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <Clock class="w-6 h-6 text-primary" />
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-200">
-              <span class="text-muted-foreground"><strong>2 Bedroom</strong> (Denver to 1,000 miles)</span>
-              <span class="font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></span>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Timing & Season</h3>
+            <p class="text-muted-foreground mb-4">
+              Denver movers cost can vary by season, day of week, and time of month. Peak times typically have higher demand.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Summer months: Peak moving season</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Weekends: Higher demand periods</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Month-end: Busiest moving days</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Factor 4: Services Needed -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <Package class="w-6 h-6 text-primary" />
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-200">
-              <span class="text-muted-foreground"><strong>3 Bedroom</strong> (Denver to 1,500 miles)</span>
-              <span class="font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></span>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Additional Services</h3>
+            <p class="text-muted-foreground mb-4">
+              Beyond basic moving, additional services affect your total local moving company cost. We offer various services to meet your needs.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Packing services: Full or partial</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Storage solutions: Short or long-term</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Specialty items: Pianos, safes, etc.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Factor 5: Access & Logistics -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <Truck class="w-6 h-6 text-primary" />
             </div>
-            <div class="flex justify-between items-center py-3">
-              <span class="text-muted-foreground"><strong>4+ Bedroom</strong> (Denver to 2,000+ miles)</span>
-              <span class="font-semibold text-secondary"><a href="/get-quote" class="font-bold text-secondary hover:text-primary transition-colors">Contact for quote</a></span>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Access Challenges</h3>
+            <p class="text-muted-foreground mb-4">
+              Denver neighborhoods vary widely. Access challenges at either location can affect the time required and therefore the Denver movers cost.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Stairs or elevator access</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Long carry distances</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Parking restrictions or permits</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Factor 6: Crew Size -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <TrendingUp class="w-6 h-6 text-primary" />
             </div>
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Crew Size & Equipment</h3>
+            <p class="text-muted-foreground mb-4">
+              The number of professional movers and equipment needed impacts local moving company cost. We match crew size to your move's requirements.
+            </p>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>2-person crew: Small apartments</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>3-person crew: Standard homes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <CheckCircle2 class="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>4+ crew: Large homes or complex moves</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Legacy Moving Denver -->
-  <section class="py-16">
+  <!-- Call to Action Banner -->
+  <section class="py-12 bg-primary">
     <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-3xl text-secondary mb-8 text-center">Why Denver Residents Choose Legacy Moving</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">✓ Transparent Pricing</h3>
-            <p class="text-muted-foreground">
-              We provide upfront local moving company cost estimates with no surprise fees. What we quote is what you pay.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">✓ Licensed & Insured</h3>
-            <p class="text-muted-foreground">
-              Fully licensed (DOT #3462023, MC #1189363) and insured for your peace of mind on every Denver move.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">✓ Local Denver Experts</h3>
-            <p class="text-muted-foreground">
-              We know Denver neighborhoods, building requirements, and the challenges of local moves in Colorado.
-            </p>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-            <h3 class="font-display font-semibold text-lg text-secondary mb-3">✓ Professional Crews</h3>
-            <p class="text-muted-foreground">
-              Experienced, background-checked movers who treat your belongings with care from start to finish.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Ready to Move with Trusted Denver Movers?</h2>
-        <p class="text-lg text-white/90 mb-8">
-          Contact our Denver moving company today for a free, no-obligation quote for your local, residential, commercial or long-distance move.
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Ready to Get Your Exact Denver Movers Cost?</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Stop guessing about your moving costs. Call us now for an instant, accurate quote based on your specific needs. Our team is ready to help you plan your Denver move.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#J8QDKR-cost-calc" class={buttonVariants({ size: 'lg', className: 'bg-white !text-secondary hover:bg-gray-100 font-semibold transition-colors' })}>
-            Get Your Free Quote
+          <a 
+            href="tel:7203401849" 
+            class="inline-flex items-center justify-center gap-2 bg-white hover:bg-white/90 text-primary font-semibold py-4 px-8 rounded-lg transition-all text-lg shadow-lg"
+          >
+            <Phone class="w-6 h-6" />
+            (720) 340-1849
           </a>
-          <a href="tel:7203401849" class={buttonVariants({ size: 'lg', className: 'bg-secondary border-2 border-white text-white hover:bg-secondary/80 phone-link transition-colors' })} data-google-link="https://maps.app.goo.gl/9YhGXwHp1TMi6xoG9">
-            Call (720) 340-1849
+          <a 
+            href="/get-quote" 
+            class="inline-flex items-center justify-center bg-secondary hover:bg-secondary/90 text-white font-semibold py-4 px-8 rounded-lg transition-all text-lg"
+          >
+            Get Online Quote
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEO Content Section -->
-  <section class="py-12 bg-gray-50">
+  <!-- Denver-Specific Cost Information -->
+  <section class="py-16 bg-white">
     <div class="container">
       <div class="max-w-4xl mx-auto">
-        <h2 class="font-display font-bold text-2xl md:text-3xl text-secondary mb-6">Understanding Local Moving Company Cost in Denver</h2>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-8 text-secondary text-center">Denver-Specific Moving Cost Factors</h2>
         
         <div class="prose prose-lg max-w-none">
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-            When researching Denver movers cost, it's important to understand what factors into professional moving rates. At Legacy Moving Denver, we believe in complete transparency when it comes to local moving company cost.
+          <p class="text-muted-foreground mb-6">
+            As a local moving company serving Denver and the surrounding areas, we understand the unique factors that affect Denver movers cost. The Mile High City presents specific challenges and considerations that influence moving pricing.
           </p>
-          
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-            Our Denver moving cost calculator helps you estimate expenses based on your specific needs, whether you're moving locally within the Denver metro area or planning a long-distance relocation out of Colorado.
+
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+            <div class="flex items-start gap-3">
+              <AlertCircle class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 class="font-semibold text-lg text-secondary mb-2">Why Call for Your Quote?</h3>
+                <p class="text-muted-foreground">
+                  Every Denver move is unique. While online calculators provide estimates, speaking with our experienced team ensures you get accurate pricing that accounts for your specific situation. We'll ask the right questions to give you a precise quote—no surprises on moving day.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="font-display font-bold text-2xl text-secondary mb-4 mt-8">Denver Neighborhood Considerations</h3>
+          <p class="text-muted-foreground mb-4">
+            Different Denver neighborhoods impact local moving company cost in various ways. Historic neighborhoods like Capitol Hill often have narrow streets and limited parking, requiring special permits. Downtown high-rises have strict building rules and elevator reservations. Mountain-adjacent areas like Evergreen involve longer drives and elevation changes.
           </p>
-          
-          <h3 class="font-display font-semibold text-xl md:text-2xl text-secondary mb-4">Factors That Determine Denver Movers Cost</h3>
-          
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-            Several key factors influence the final local moving company cost for your Denver move:
+
+          <h3 class="font-display font-bold text-2xl text-secondary mb-4 mt-8">Weather and Seasonal Factors</h3>
+          <p class="text-muted-foreground mb-4">
+            Denver's weather significantly impacts moving logistics. Summer is peak moving season with higher demand. Winter moves require extra preparation for snow and ice. Spring and fall offer moderate weather but can bring sudden storms. Understanding how Denver's climate affects your move helps you plan and budget appropriately.
           </p>
-          
-          <ul class="space-y-3 mb-8 ml-6">
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Distance</strong> – Local moves within Denver are charged hourly, while long-distance moves factor in mileage</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Home size</strong> – More rooms and belongings require more time and labor</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Stairs and elevators</strong> – Multi-story homes or buildings without elevators require additional effort</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Specialty items</strong> – Pianos, gun safes, and antiques need special handling</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Packing services</strong> – Professional packing adds convenience but increases cost</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed"><strong>Time of year</strong> – Summer moves are typically more expensive due to high demand</li>
-          </ul>
-          
-          <h3 class="font-display font-semibold text-xl md:text-2xl text-secondary mb-4">How to Save Money on Your Denver Move</h3>
-          
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-            While professional Denver movers cost money, there are ways to reduce expenses without sacrificing quality:
-          </p>
-          
-          <ul class="space-y-3 mb-8 ml-6">
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed">Book during off-peak seasons (fall and winter) for better rates</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed">Declutter before moving to reduce volume and time</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed">Do your own packing to save on labor costs</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed">Schedule mid-month or mid-week moves for potential discounts</li>
-            <li class="text-base md:text-lg text-gray-700 leading-relaxed">Compare quotes from licensed local moving companies</li>
-          </ul>
-          
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-            Ready to get started? Use our moving cost calculator above or <a href="/contact" class="text-primary font-semibold hover:underline">contact us</a> for a detailed, no-obligation quote for your Denver move.
+
+          <h3 class="font-display font-bold text-2xl text-secondary mb-4 mt-8">Local vs. Long-Distance Denver Moves</h3>
+          <p class="text-muted-foreground mb-4">
+            Denver movers cost varies significantly between local and long-distance moves. Local Denver moves within the metro area typically use hourly rates. Moves to nearby cities like Boulder, Fort Collins, or Colorado Springs may have different pricing structures. Long-distance moves from or to Denver are calculated based on distance and weight.
           </p>
         </div>
       </div>
     </div>
   </section>
-<MoverbaseRedirect />
+
+  <!-- How We Calculate Your Cost -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-8 text-secondary text-center">How Legacy Moving Determines Your Denver Movers Cost</h2>
+        
+        <div class="space-y-6 mb-12">
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-bold text-primary">1</span>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Initial Consultation</h3>
+                <p class="text-muted-foreground">
+                  When you call us at <a href="tel:7203401849" class="text-primary font-semibold hover:underline">(720) 340-1849</a>, we'll discuss your move in detail. We ask about home size, inventory, distance, special items, and any potential challenges. This conversation helps us provide the most accurate Denver movers cost estimate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-bold text-primary">2</span>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Detailed Assessment</h3>
+                <p class="text-muted-foreground">
+                  Based on your information, we assess all factors affecting your local moving company cost: crew size needed, estimated time required, equipment and supplies, any additional services, and potential access challenges. Our experience with Denver moves ensures accurate estimates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-bold text-primary">3</span>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">Transparent Quote</h3>
+                <p class="text-muted-foreground">
+                  We provide a clear, upfront quote with no hidden fees. You'll understand exactly what's included and why. Our transparent pricing builds trust and helps you budget confidently for your Denver move.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-bold text-primary">4</span>
+              </div>
+              <div>
+                <h3 class="font-display font-semibold text-xl mb-2 text-secondary">No Surprises on Moving Day</h3>
+                <p class="text-muted-foreground">
+                  Our accurate estimates mean no surprises when we arrive. We start charging when we're on-site and ready to work—not when we leave our location. This fair approach to Denver movers cost has earned us thousands of satisfied customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8 text-center">
+          <h3 class="font-display font-bold text-2xl mb-4 text-secondary">Get Your Personalized Denver Movers Cost Quote</h3>
+          <p class="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            The best way to understand your exact moving cost is to speak with our experienced team. We'll provide a detailed, accurate quote based on your specific situation—no obligation, no pressure.
+          </p>
+          <a 
+            href="tel:7203401849" 
+            class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-8 rounded-lg transition-all text-lg shadow-lg"
+          >
+            <Phone class="w-6 h-6" />
+            Call (720) 340-1849 Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ways to Save on Moving Costs -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-8 text-secondary text-center">How to Manage Your Local Moving Company Cost</h2>
+        
+        <p class="text-lg text-muted-foreground mb-8 text-center max-w-2xl mx-auto">
+          While Denver movers cost depends on many factors, there are ways to make your move more budget-friendly without sacrificing quality.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Declutter Before Moving</h3>
+            <p class="text-muted-foreground">
+              Reducing your volume of belongings decreases Denver movers cost. Donate, sell, or discard items you no longer need. Less to move means less time and lower costs.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Choose Off-Peak Times</h3>
+            <p class="text-muted-foreground">
+              Moving during off-peak seasons (fall and winter), weekdays, or mid-month can sometimes offer more availability and potentially better rates than peak times.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Pack Yourself</h3>
+            <p class="text-muted-foreground">
+              While we offer professional packing services, packing your own belongings can reduce your total local moving company cost. We're happy to provide packing tips and materials.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Plan Ahead</h3>
+            <p class="text-muted-foreground">
+              Booking your move early ensures better availability and helps you plan effectively. Last-minute moves can be more challenging to accommodate and may limit your options.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Be Prepared on Moving Day</h3>
+            <p class="text-muted-foreground">
+              Having everything packed and ready when movers arrive saves time. Clear pathways, reserve parking, and handle any building requirements in advance.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Ask About Discounts</h3>
+            <p class="text-muted-foreground">
+              We offer various discounts including military, early bird, and bundle savings. Ask our team about current promotions when you call for your Denver movers cost quote.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+          <div class="flex items-start gap-3">
+            <DollarSign class="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+            <div>
+              <h3 class="font-semibold text-lg text-secondary mb-2">Transparent Pricing Guarantee</h3>
+              <p class="text-muted-foreground">
+                We believe in honest, transparent pricing. When you call for your quote, we'll explain all costs clearly. No hidden fees, no surprise charges. Our reputation is built on trust and fair pricing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Legacy Moving Section -->
+  <section class="py-16 bg-gradient-to-br from-secondary/5 to-secondary/10">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-8 text-secondary text-center">Why Denver Residents Trust Legacy Moving</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Local Denver Expertise</h3>
+            <p class="text-muted-foreground">
+              We know Denver neighborhoods inside and out. Our familiarity with local areas ensures efficient moves and accurate Denver movers cost estimates.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Experienced Professional Team</h3>
+            <p class="text-muted-foreground">
+              Our trained movers treat your belongings with care. Years of experience mean efficient, damage-free moves that often complete faster than expected.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Transparent Pricing</h3>
+            <p class="text-muted-foreground">
+              We provide clear, upfront pricing with no hidden fees. You'll understand your local moving company cost before committing, and we honor our quotes.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Fully Licensed & Insured</h3>
+            <p class="text-muted-foreground">
+              Your peace of mind matters. We're fully licensed and insured, protecting your belongings and providing professional service you can trust.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Thousands of Satisfied Customers</h3>
+            <p class="text-muted-foreground">
+              Our reputation speaks for itself. Read our reviews to see why Denver families and businesses trust us with their most important possessions.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <CheckCircle2 class="w-12 h-12 text-primary mb-4" />
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Comprehensive Services</h3>
+            <p class="text-muted-foreground">
+              From packing to storage to specialty item handling, we offer complete moving solutions. One company for all your Denver moving needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-16 bg-secondary text-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display font-bold text-3xl md:text-5xl mb-6">Get Your Denver Movers Cost Quote Today</h2>
+        <p class="text-xl text-white/90 mb-8">
+          Stop wondering about your moving costs. Our friendly team is ready to provide an accurate, detailed quote for your Denver move. Call now or request a quote online—either way, you'll get the information you need to plan confidently.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a 
+            href="tel:7203401849" 
+            class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-8 rounded-lg transition-all text-lg shadow-lg hover:shadow-xl"
+          >
+            <Phone class="w-6 h-6" />
+            Call (720) 340-1849
+          </a>
+          <a 
+            href="/get-quote" 
+            class="inline-flex items-center justify-center bg-white hover:bg-white/90 text-secondary font-semibold py-4 px-8 rounded-lg transition-all text-lg"
+          >
+            Request Online Quote
+          </a>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80 text-sm">
+          <div class="flex items-center gap-2">
+            <CheckCircle2 class="w-5 h-5" />
+            <span>No obligation quotes</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <CheckCircle2 class="w-5 h-5" />
+            <span>Instant phone quotes available</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <CheckCircle2 class="w-5 h-5" />
+            <span>Available 7 days a week</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-12 text-secondary text-center">Denver Movers Cost FAQ</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How much do movers cost in Denver?</h3>
+            <p class="text-muted-foreground">
+              Denver movers cost varies based on home size, distance, services needed, and timing. The best way to get an accurate quote is to call us at (720) 340-1849. We'll discuss your specific needs and provide a detailed estimate. Every move is unique, and speaking with our team ensures you get pricing tailored to your situation.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">What's included in your local moving company cost?</h3>
+            <p class="text-muted-foreground">
+              Our local moving company cost includes professional movers, truck and equipment, basic insurance coverage, and fuel. Additional services like packing, storage, or specialty item handling are quoted separately. We'll explain exactly what's included when you call for your quote.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do you charge for travel time?</h3>
+            <p class="text-muted-foreground">
+              Unlike some companies, we don't start charging until we arrive at your location and are ready to work. Our fair pricing approach means you only pay for actual moving time, not the time it takes us to get to you. This is one reason Denver residents trust Legacy Moving.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">How can I get the most accurate Denver movers cost estimate?</h3>
+            <p class="text-muted-foreground">
+              The most accurate way to understand your Denver movers cost is to call us at (720) 340-1849. Our experienced team will ask the right questions about your move and provide a detailed, accurate quote. We can often provide instant quotes over the phone for straightforward moves.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Are there hidden fees I should know about?</h3>
+            <p class="text-muted-foreground">
+              Absolutely not. We believe in transparent pricing. When we provide your quote, we'll explain all costs clearly. If any additional charges might apply (like difficult access fees), we'll discuss those upfront. No surprises, no hidden fees—that's our guarantee.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-display font-semibold text-xl mb-3 text-secondary">Do you offer any discounts on moving costs?</h3>
+            <p class="text-muted-foreground">
+              Yes! We offer military discounts, early bird discounts, and bundle discounts when you combine services. Ask about current promotions when you call. We're committed to providing excellent value along with exceptional service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
