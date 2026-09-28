@@ -28,14 +28,14 @@ const formattedDate = new Date(post.data.publishDate).toLocaleDateString('en-US'
 
 // Extract TL;DR from content and remove it from the body
 const contentText = post.body;
-const tldrMatch = contentText.match(/## TL;DR\s+([\s\S]*?)(?=\n---|\n##)/i);
+const tldrMatch = contentText.match(/## TL;DR\s*\n+([\s\S]*?)(?=\n+---)/i);
 const tldrContent = tldrMatch ? tldrMatch[1].trim() : null;
 
 // Remove TL;DR section and separator from the content
 let cleanedContent = contentText;
 if (tldrContent) {
-  // Remove the TL;DR section and the following separator
-  cleanedContent = contentText.replace(/## TL;DR[\s\S]*?---\s*\n/i, '');
+  // Remove the TL;DR section and the following separator (including all whitespace and dashes)
+  cleanedContent = contentText.replace(/## TL;DR\s*\n+[\s\S]*?\n+---\s*\n+/i, '');
 }
 
 // Create a modified post object with cleaned content
@@ -106,27 +106,27 @@ const { Content } = await modifiedPost.render();
   )}
 
   <!-- Blog Content -->
-  <article class="py-12 md:py-20 bg-white">
+  <article class="py-16 md:py-24 bg-white">
     <div class="container">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg md:prose-xl max-w-none
           prose-headings:font-display prose-headings:font-bold prose-headings:text-secondary prose-headings:scroll-mt-20
-          prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mt-20 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b-2 prose-h2:border-gray-200
-          prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mt-12 prose-h3:mb-6 prose-h3:text-primary
-          prose-p:text-gray-700 prose-p:leading-[1.8] prose-p:mb-8 prose-p:text-[18px] md:prose-p:text-[19px]
+          prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mt-24 prose-h2:mb-10 prose-h2:pb-5 prose-h2:border-b-2 prose-h2:border-gray-200
+          prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mt-16 prose-h3:mb-8 prose-h3:text-primary
+          prose-p:text-gray-700 prose-p:leading-[2] prose-p:mb-10 prose-p:text-[19px] md:prose-p:text-[20px]
           prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-secondary prose-a:transition-colors
           prose-strong:text-secondary prose-strong:font-semibold
-          prose-ul:my-8 prose-ul:space-y-4 prose-li:my-0 prose-li:text-gray-700 prose-li:leading-relaxed prose-li:pl-2
-          prose-ol:my-8 prose-ol:space-y-4 prose-ol:pl-6
-          prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:pr-6 prose-blockquote:italic prose-blockquote:bg-gray-50 prose-blockquote:py-6 prose-blockquote:my-10 prose-blockquote:rounded-r-lg
+          prose-ul:my-10 prose-ul:space-y-5 prose-li:my-0 prose-li:text-gray-700 prose-li:leading-[1.9] prose-li:pl-2 prose-li:text-[18px]
+          prose-ol:my-10 prose-ol:space-y-5 prose-ol:pl-6
+          prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-8 prose-blockquote:pr-8 prose-blockquote:italic prose-blockquote:bg-gray-50 prose-blockquote:py-8 prose-blockquote:my-12 prose-blockquote:rounded-r-lg
           prose-code:text-primary prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-[16px]
-          prose-pre:bg-gray-900 prose-pre:text-gray-100">
+          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:my-10">
           <Content />
         </div>
 
         <!-- Helpful Links Section -->
-        <div class="mt-20 pt-16 border-t-2 border-gray-200">
-          <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-10 text-center">Helpful Resources & Services</h2>
+        <div class="mt-24 pt-20 border-t-2 border-gray-200">
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-secondary mb-12 text-center">Helpful Resources & Services</h2>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <!-- Services Column -->
             <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
@@ -176,7 +176,7 @@ const { Content } = await modifiedPost.render();
         </div>
 
         <!-- CTA Section -->
-        <div class="mt-20 p-8 md:p-12 bg-gradient-to-br from-primary via-primary to-secondary rounded-2xl text-white text-center shadow-2xl">
+        <div class="mt-24 p-8 md:p-12 bg-gradient-to-br from-primary via-primary to-secondary rounded-2xl text-white text-center shadow-2xl">
           <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Ready to Get Started?</h2>
           <p class="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Get a free, no-obligation quote from Denver's most trusted moving professionals. We're here to make your move stress-free!
