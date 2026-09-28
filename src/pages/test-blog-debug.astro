@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const post = posts.find(p => p.slug === 'hardest-neighborhoods-denver-to-move-into');
+
+const contentText = post.body;
+const tldrMatch = contentText.match(/##\s*TL;DR\s*\n\s*\n([\s\S]*?)\n\s*\n---/i);
+const tldrContent = tldrMatch ? tldrMatch[1].trim() : null;
+
+let cleanedContent = contentText;
+if (tldrContent) {
+  cleanedContent = contentText.replace(/##\s*TL;DR\s*\n\s*\n[\s\S]*?\n\s*\n---\s*\n\s*\n/i, '');
+}
+
+const modifiedPost = { ...post, body: cleanedContent };
+const { Content } = await modifiedPost.render();
+---
+
+<html>
+<body style="font-family: sans-serif; padding: 40px;">
+  <h1>DEBUG: Blog TL;DR Test</h1>
+  
+  <h2>TL;DR Match Result:</h2>
+  <p><strong>Found:</strong> {tldrMatch ? 'YES' : 'NO'}</p>
+  {tldrContent && <p><strong>Content:</strong> {tldrContent.substring(0, 100)}...</p>}
+  
+  <h2>Original Body (first 500 chars):</h2>
+  <pre style="background: #f0f0f0; padding: 10px;">{contentText.substring(0, 500)}</pre>
+  
+  <h2>Cleaned Body (first 500 chars):</h2>
+  <pre style="background: #f0f0f0; padding: 10px;">{cleanedContent.substring(0, 500)}</pre>
+  
+  <h2>Rendered Content (checking for TL;DR):</h2>
+  <div style="border: 2px solid red; padding: 20px;">
+    <Content />
+  </div>
+</body>
+</html>
