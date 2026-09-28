@@ -28,14 +28,15 @@ const formattedDate = new Date(post.data.publishDate).toLocaleDateString('en-US'
 
 // Extract TL;DR from content and remove it from the body
 const contentText = post.body;
-const tldrMatch = contentText.match(/## TL;DR\s*\n+([\s\S]*?)(?=\n+---)/i);
+// Match: ## TL;DR + newlines + content + newlines + ---
+const tldrMatch = contentText.match(/##\s*TL;DR\s*\n\s*\n([\s\S]*?)\n\s*\n---/i);
 const tldrContent = tldrMatch ? tldrMatch[1].trim() : null;
 
 // Remove TL;DR section and separator from the content
 let cleanedContent = contentText;
 if (tldrContent) {
-  // Remove the TL;DR section and the following separator (including all whitespace and dashes)
-  cleanedContent = contentText.replace(/## TL;DR\s*\n+[\s\S]*?\n+---\s*\n+/i, '');
+  // Remove the entire TL;DR block: header + blank line + content + blank line + separator + blank line
+  cleanedContent = contentText.replace(/##\s*TL;DR\s*\n\s*\n[\s\S]*?\n\s*\n---\s*\n\s*\n/i, '');
 }
 
 // Create a modified post object with cleaned content
