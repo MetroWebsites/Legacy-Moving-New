@@ -31,11 +31,14 @@ const contentText = post.body;
 const tldrMatch = contentText.match(/##\s*TL;DR\s*\n\s*\n([\s\S]*?)\n\s*\n---/i);
 const tldrContent = tldrMatch ? tldrMatch[1].trim() : null;
 
-// Render the content and get the HTML
-const { Content, remarkPluginFrontmatter } = await post.render();
-
-// Create a component wrapper that will strip TL;DR from rendered output
+// Import marked for markdown rendering
 import { marked } from 'marked';
+
+// Configure marked for better HTML output
+marked.setOptions({
+  gfm: true,
+  breaks: false,
+});
 
 // Remove TL;DR section from markdown before rendering
 let cleanedMarkdown = contentText;
@@ -120,7 +123,13 @@ const cleanedHtml = marked.parse(cleanedMarkdown);
           prose-ol:my-10 prose-ol:space-y-5 prose-ol:pl-6
           prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-8 prose-blockquote:pr-8 prose-blockquote:italic prose-blockquote:bg-gray-50 prose-blockquote:py-8 prose-blockquote:my-12 prose-blockquote:rounded-r-lg
           prose-code:text-primary prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-[16px]
-          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:my-10"
+          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:my-10
+          [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:mt-24 [&>h2]:mb-10 [&>h2]:pb-5 [&>h2]:border-b-2 [&>h2]:border-gray-200 [&>h2]:font-bold [&>h2]:text-secondary
+          [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:mt-16 [&>h3]:mb-8 [&>h3]:font-bold [&>h3]:text-primary
+          [&>p]:text-gray-700 [&>p]:leading-[2] [&>p]:mb-10 [&>p]:text-[19px] [&>p]:md:text-[20px]
+          [&>ul]:my-10 [&>ul]:space-y-5 [&>ul>li]:text-gray-700 [&>ul>li]:leading-[1.9] [&>ul>li]:text-[18px]
+          [&>ol]:my-10 [&>ol]:space-y-5 [&>ol>li]:text-gray-700 [&>ol>li]:leading-[1.9] [&>ol>li]:text-[18px]
+          [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-8 [&>blockquote]:pr-8 [&>blockquote]:italic [&>blockquote]:bg-gray-50 [&>blockquote]:py-8 [&>blockquote]:my-12 [&>blockquote]:rounded-r-lg"
           set:html={cleanedHtml}
         />
 
