@@ -108,8 +108,8 @@ const cleanedHtml = marked.parse(cleanedMarkdown);
     </section>
   )}
 
-  <!-- YouTube Video Embed (for specific posts) -->
-  {post.slug === 'how-to-move-in-winter-colorado' && (
+  <!-- YouTube Video Embed (for winter moving posts) -->
+  {(post.slug === 'how-to-move-in-winter-colorado' || post.slug === 'moving-during-winter-snowstorms-denver') && (
     <section class="py-8 bg-white border-b border-gray-100">
       <div class="container">
         <div class="max-w-4xl mx-auto">
