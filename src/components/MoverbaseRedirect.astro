@@ -16,6 +16,8 @@
   function goToThankYou() {
     if (redirected) return;
     redirected = true;
+    // Set marker for OpenAI conversion tracking
+    sessionStorage.setItem('oaiq_form_submitted', Date.now().toString());
     window.location.href = '/thank-you';
   }
 
