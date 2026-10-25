@@ -27,6 +27,28 @@ const { title, description, ogImage, phoneNumber } = Astro.props;
       gtag('config', 'AW-10890296710');
     </script>
     
+    <!-- OpenAI Ads Pixel -->
+    <script is:inline>
+      (function (w, d, s, u) {
+        if (w.oaiq) return;
+        var q = function () {
+          q.q.push(arguments);
+        };
+        q.q = [];
+        w.oaiq = q;
+        var js = d.createElement(s);
+        js.async = true;
+        js.src = u;
+        var f = d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(js, f);
+      })(window, document, "script",
+        "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+
+      oaiq("init", {
+        pixelId: "TyWRCUcVaqToVzUnYAqYMd"
+      });
+    </script>
+    
     <!-- Google Preferred Source -->
     <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
   </head>
