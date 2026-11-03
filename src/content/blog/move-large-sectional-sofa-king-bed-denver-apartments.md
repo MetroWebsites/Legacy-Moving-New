@@ -4,7 +4,7 @@ excerpt: "Expert guide to moving large furniture through tight spaces in Denver 
 author: "Legacy Moving Denver"
 publishDate: "2026-10-29"
 category: "Moving Tips"
-image: "/blog-moving-large-furniture.jpg"
+image: "/assets/309176241_463151985831741_8693431453641592885_n_nw_61b2546f.jpg"
 ---
 
 ## TL;DR

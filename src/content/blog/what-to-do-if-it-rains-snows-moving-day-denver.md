@@ -4,7 +4,7 @@ excerpt: "Expert guide for handling rain or snow on moving day in Denver. Learn 
 author: "Legacy Moving Denver"
 publishDate: "2026-10-17"
 category: "Moving Tips"
-image: "/blog-moving-in-snow.jpg"
+image: "/assets/290541806_541513624383684_3034649141908408247_n_nw_c5992a26.jpg"
 ---
 
 ## TL;DR

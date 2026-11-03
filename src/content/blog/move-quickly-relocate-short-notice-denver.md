@@ -4,7 +4,7 @@ excerpt: "Complete guide to executing a fast move in Denver when time is limited
 author: "Legacy Moving Denver"
 publishDate: "2026-11-02"
 category: "Moving Tips"
-image: "/blog-quick-move.jpg"
+image: "/assets/280785533_509889867546060_7925665260940644382_n_nw_e0fdf7c2.jpg"
 ---
 
 ## TL;DR

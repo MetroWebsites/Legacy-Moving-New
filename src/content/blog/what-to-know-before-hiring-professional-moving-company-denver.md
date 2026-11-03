@@ -4,7 +4,7 @@ excerpt: "Complete guide to hiring professional movers in Denver. Learn how to e
 author: "Legacy Moving Denver"
 publishDate: "2026-10-25"
 category: "Moving Tips"
-image: "/blog-hiring-movers.jpg"
+image: "/assets/291802820_544444377423942_7482233800768716362_n_nw_2086b3a4.jpg"
 ---
 
 ## TL;DR
