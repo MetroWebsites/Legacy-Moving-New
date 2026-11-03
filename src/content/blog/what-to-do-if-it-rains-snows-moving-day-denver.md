@@ -1,10 +1,10 @@
 ---
 title: "What Should You Do If It Rains or Snows on Moving Day in Denver Colorado"
-description: "Expert guide for handling rain or snow on moving day in Denver. Learn how to protect your belongings, work safely, and keep your move on track during bad weather."
-pubDate: 2026-10-17
+excerpt: "Expert guide for handling rain or snow on moving day in Denver. Learn how to protect your belongings, work safely, and keep your move on track during bad weather."
 author: "Legacy Moving Denver"
-image: "/blog-images/moving-in-snow.jpg"
-tags: ["moving tips", "weather", "Denver moving", "winter moving"]
+publishDate: "2026-10-17"
+category: "Moving Tips"
+image: "/blog-moving-in-snow.jpg"
 ---
 
 ## TL;DR

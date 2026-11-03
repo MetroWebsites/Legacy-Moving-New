@@ -1,10 +1,10 @@
 ---
 title: "How Do You Prepare Your Garage, Tools, and Equipment for a Move in Denver Colorado"
-description: "Complete guide to preparing your garage, tools, and equipment for moving day in Denver. Learn expert tips for organizing, packing, and transporting workshop items safely."
-pubDate: 2026-10-13
+excerpt: "Complete guide to preparing your garage, tools, and equipment for moving day in Denver. Learn expert tips for organizing, packing, and transporting workshop items safely."
 author: "Legacy Moving Denver"
-image: "/blog-images/garage-moving.jpg"
-tags: ["moving tips", "garage organization", "Denver moving", "packing tools"]
+publishDate: "2026-10-13"
+category: "Moving Tips"
+image: "/blog-garage-moving.jpg"
 ---
 
 ## TL;DR

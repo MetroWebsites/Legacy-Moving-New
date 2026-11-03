@@ -1,10 +1,10 @@
 ---
 title: "How Do You Move Quickly If You Need to Relocate on Short Notice in Denver Colorado"
-description: "Complete guide to executing a fast move in Denver when time is limited. Learn strategies for quick packing, finding last-minute movers, and handling urgent relocations efficiently."
-pubDate: 2026-11-02
+excerpt: "Complete guide to executing a fast move in Denver when time is limited. Learn strategies for quick packing, finding last-minute movers, and handling urgent relocations efficiently."
 author: "Legacy Moving Denver"
-image: "/blog-images/quick-move.jpg"
-tags: ["moving tips", "quick move", "Denver moving", "last minute"]
+publishDate: "2026-11-02"
+category: "Moving Tips"
+image: "/blog-quick-move.jpg"
 ---
 
 ## TL;DR
