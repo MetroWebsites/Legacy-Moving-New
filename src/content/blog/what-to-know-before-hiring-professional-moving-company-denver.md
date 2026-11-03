@@ -1,10 +1,10 @@
 ---
 title: "What Should You Know Before Hiring a Professional Moving Company in Denver Colorado"
-description: "Complete guide to hiring professional movers in Denver. Learn how to evaluate moving companies, avoid scams, get accurate quotes, and ensure a smooth moving experience."
-pubDate: 2026-10-25
+excerpt: "Complete guide to hiring professional movers in Denver. Learn how to evaluate moving companies, avoid scams, get accurate quotes, and ensure a smooth moving experience."
 author: "Legacy Moving Denver"
-image: "/blog-images/hiring-movers.jpg"
-tags: ["moving tips", "hiring movers", "Denver moving", "moving company"]
+publishDate: "2026-10-25"
+category: "Moving Tips"
+image: "/blog-hiring-movers.jpg"
 ---
 
 ## TL;DR
