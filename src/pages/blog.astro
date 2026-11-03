@@ -26,6 +26,7 @@ const contentPostsFormatted = contentPosts.map(post => ({
   excerpt: post.data.excerpt,
   publishDate: post.data.publishDate,
   readTime: post.data.readTime || '10 min read',
+  image: post.data.image, // ✅ Include the image from frontmatter
   source: 'content'
 }));
 
@@ -97,7 +98,8 @@ const blogImages = [
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedPosts.map((post, index) => {
-            const blogImage = blogImages[index % blogImages.length];
+            // Use the post's specific image if available, otherwise fallback to cycling through default images
+            const blogImage = post.image || blogImages[index % blogImages.length];
             const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', { 
               month: 'short', 
               day: 'numeric', 
@@ -108,11 +110,19 @@ const blogImages = [
             return (
               <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
                 <div class="h-48 relative overflow-hidden">
-                  <Image
-                    src={blogImage}
-                    alt={post.title}
-                    class="w-full h-full object-cover"
-                  />
+                  {post.image ? (
+                    <img
+                      src={blogImage}
+                      alt={post.title}
+                      class="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={blogImage}
+                      alt={post.title}
+                      class="w-full h-full object-cover"
+                    />
+                  )}
                   <div class="absolute inset-0 bg-gradient-to-br from-primary/50 to-secondary/60"></div>
                 </div>
                 <div class="p-6">
