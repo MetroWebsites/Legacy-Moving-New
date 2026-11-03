@@ -4,7 +4,7 @@ excerpt: "Expert guide to packing and protecting fragile decorations, collectibl
 author: "Legacy Moving Denver"
 publishDate: "2026-10-21"
 category: "Moving Tips"
-image: "/blog-packing-fragile-items.jpg"
+image: "/assets/286405649_528124749055905_2037865130007546246_n_nw_9052c031.jpg"
 ---
 
 ## TL;DR
