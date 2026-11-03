@@ -1,10 +1,10 @@
 ---
 title: "How Do You Move a Large Sectional Sofa or King Size Bed in Denver Colorado Apartments"
-description: "Expert guide to moving large furniture through tight spaces in Denver apartments. Learn professional techniques for maneuvering sectionals, king beds, and oversized furniture."
-pubDate: 2026-10-29
+excerpt: "Expert guide to moving large furniture through tight spaces in Denver apartments. Learn professional techniques for maneuvering sectionals, king beds, and oversized furniture."
 author: "Legacy Moving Denver"
-image: "/blog-images/moving-large-furniture.jpg"
-tags: ["moving tips", "apartment moving", "Denver moving", "large furniture"]
+publishDate: "2026-10-29"
+category: "Moving Tips"
+image: "/blog-moving-large-furniture.jpg"
 ---
 
 ## TL;DR

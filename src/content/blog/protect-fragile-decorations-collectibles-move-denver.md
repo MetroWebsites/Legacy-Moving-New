@@ -1,10 +1,10 @@
 ---
 title: "How Do You Protect Fragile Decorations and Collectibles During a Move in Denver Colorado"
-description: "Expert guide to packing and protecting fragile decorations, collectibles, and precious items during your Denver move. Learn professional techniques for safe transport."
-pubDate: 2026-10-21
+excerpt: "Expert guide to packing and protecting fragile decorations, collectibles, and precious items during your Denver move. Learn professional techniques for safe transport."
 author: "Legacy Moving Denver"
-image: "/blog-images/packing-fragile-items.jpg"
-tags: ["moving tips", "packing", "Denver moving", "fragile items"]
+publishDate: "2026-10-21"
+category: "Moving Tips"
+image: "/blog-packing-fragile-items.jpg"
 ---
 
 ## TL;DR
