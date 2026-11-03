@@ -4,7 +4,7 @@ excerpt: "Complete guide to preparing your garage, tools, and equipment for movi
 author: "Legacy Moving Denver"
 publishDate: "2026-10-13"
 category: "Moving Tips"
-image: "/blog-garage-moving.jpg"
+image: "/assets/284059597_519238709944509_8637124780552865201_n_nw_ff3449aa.jpg"
 ---
 
 ## TL;DR
